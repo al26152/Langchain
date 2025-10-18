@@ -1,0 +1,15 @@
+# Secrets file
+.env
+
+# Python virtual environment
+.venv/
+
+# Local databases
+chroma_db/
+chroma_db_test/
+
+# Python cache
+__pycache__/
+
+# VS Code settings
+.vscode/

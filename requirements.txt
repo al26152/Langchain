@@ -1,0 +1,10 @@
+python-dotenv
+langchain
+langchain-openai
+langchain-community # <--- Make sure this line is present
+openai
+chromadb
+unstructured[md,html] # <--- And this line with extras
+lxml
+markdown
+tiktoken
