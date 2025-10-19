@@ -1,0 +1,252 @@
+"""
+analyze_pipeline.py
+
+STRATEGIC ANALYSIS PIPELINE
+
+PURPOSE:
+  Loads pre-ingested documents from ChromaDB and performs multi-source
+  strategic analysis. Generates comprehensive reports that synthesize
+  insights across multiple documents while tracking document recency.
+
+FEATURES:
+  - Multi-source synthesis (forces answers to cite 3+ sources)
+  - Document recency tracking (flags old/expiring/archival documents)
+  - Source diversity metrics (shows unique documents per query)
+  - Explicit source citations (with dates for context)
+  - Strategic filtering (highlights aging strategies)
+
+WORKFLOW:
+  1. Loads existing ChromaDB (no ingestion needed)
+  2. Builds multi-source aware QA chain
+  3. Executes strategic sample queries
+  4. Flags old/expiring documents in results
+  5. Generates Markdown report with source citations and dates
+  6. Reports source diversity metrics
+
+RECENCY FLAGS (added to source citations):
+  - RECENT: Document <1 year old
+  - OLDER DOCUMENT: 1-2 years old
+  - AGING: 2-4 years old
+  - ARCHIVAL: >4 years old
+  - STRATEGY EXPIRING: Multi-year strategy ending in <1 year
+  - NO DATE: Unable to determine publication date
+
+USAGE:
+  python analyze_pipeline.py
+
+PREREQUISITES:
+  - Must run ingest_pipeline.py first to populate ChromaDB
+  - Requires OpenAI API key in .env
+
+OUTPUT:
+  - strategic_analysis_output_multi_source.md: Full analysis report
+  - Console display of progress
+
+COST:
+  - OpenAI GPT-4o API calls (~$5 per 1M input tokens, $15 per 1M output tokens)
+"""
+
+import os
+import sys
+from io import StringIO
+from collections import defaultdict
+from datetime import datetime, timedelta
+
+from langchain_chroma import Chroma
+from langchain_openai import OpenAIEmbeddings, ChatOpenAI
+from langchain.chains import RetrievalQA
+from langchain_core.prompts import PromptTemplate
+
+from utils import auto_tag  # Just to ensure .env is loaded
+
+# --- CONFIGURATION ——————————————————————————————————————————————————
+
+STORE_DIR = "chroma_db_test"
+
+# --- MULTI-SOURCE SYNTHESIS PROMPT ———————————————————————————————————
+
+def get_recency_flag(doc_date: str, year_range_end: str = None) -> str:
+    """
+    Generate recency flag based on document date.
+
+    Args:
+        doc_date: Publication date (YYYY-MM-DD format) or None
+        year_range_end: End year for strategy documents or None
+
+    Returns:
+        Recency flag string (e.g., "[RECENT]", "[OLDER DOCUMENT - 2+ YEARS]")
+    """
+    if not doc_date:
+        return "[NO DATE]"
+
+    try:
+        doc_datetime = datetime.strptime(doc_date, "%Y-%m-%d")
+        today = datetime.now()
+        days_old = (today - doc_datetime).days
+        years_old = days_old / 365.25
+
+        # Check if strategy is expiring soon
+        if year_range_end:
+            try:
+                end_year = int(year_range_end)
+                years_until_expiry = end_year - today.year
+                if years_until_expiry <= 1 and years_until_expiry >= 0:
+                    return f"[STRATEGY EXPIRES {year_range_end}]"
+            except (ValueError, TypeError):
+                pass
+
+        # Recency flags
+        if years_old < 1:
+            return "[RECENT]"
+        elif years_old < 2:
+            return "[RECENT - 1 YEAR]"
+        elif years_old < 4:
+            return "[OLDER DOCUMENT - 2+ YEARS]"
+        else:
+            return "[ARCHIVAL - 4+ YEARS]"
+
+    except (ValueError, TypeError):
+        return "[DATE FORMAT ERROR]"
+
+
+MULTI_SOURCE_STRATEGIC_PROMPT = """You are an AI assistant specialized in strategic analysis of health documents.
+
+Your task is to synthesize information from MULTIPLE sources to provide comprehensive insights.
+
+IMPORTANT INSTRUCTIONS:
+1. You have received context from multiple documents and document sections.
+2. For your answer, YOU MUST explicitly cite and synthesize information from AT LEAST 3 different sources.
+3. When mentioning a fact or insight, reference which document(s) it comes from using the format [Source: filename].
+4. Look for patterns, contradictions, and complementary perspectives across the sources.
+5. Clearly separate different viewpoints or priorities from different documents.
+6. If sources agree on a point, highlight this consensus. If they differ, explain the difference.
+
+CONTEXT FROM MULTIPLE SOURCES:
+{context}
+
+QUESTION: {question}
+
+ANSWER (Must cite at least 3 different sources and synthesize across them):"""
+
+
+def analyze_source_coverage(source_documents):
+    """Analyze how many unique sources were retrieved."""
+    source_counts = defaultdict(int)
+    for doc in source_documents:
+        source = doc.metadata.get("source", "Unknown")
+        source_counts[source] += 1
+    return source_counts
+
+
+def main():
+    """Main analysis pipeline."""
+    # Capture output for Markdown
+    original_stdout = sys.stdout
+    captured_output = StringIO()
+    sys.stdout = captured_output
+
+    print("# Strategic Analysis Pipeline - Multi-Source Enhanced\n")
+    print("## Initialization\n")
+    print("Starting analysis of ingested documents...\n")
+
+    # Check ChromaDB exists
+    if not os.path.exists(STORE_DIR):
+        sys.stdout = original_stdout
+        print(f"[ERROR] ChromaDB not found at {STORE_DIR}")
+        print("Please run ingest_pipeline.py first to ingest documents.")
+        return
+
+    # Initialize embeddings and load ChromaDB
+    print("## Loading Vector Store\n")
+    embeddings = OpenAIEmbeddings()
+    print("[OK] Initialized OpenAI Embeddings client.\n")
+
+    vectordb = Chroma(persist_directory=STORE_DIR, embedding_function=embeddings)
+    print("[OK] ChromaDB loaded.\n")
+
+    # Check if database has content
+    try:
+        all_db_data = vectordb._collection.get(include=["metadatas"])
+        total_chunks = len(all_db_data.get("metadatas", []))
+        if total_chunks == 0:
+            sys.stdout = original_stdout
+            print("[ERROR] ChromaDB is empty. No documents to analyze.")
+            print("Please run ingest_pipeline.py first.")
+            return
+        print(f"Found **{total_chunks}** chunks in ChromaDB.\n")
+    except Exception as e:
+        sys.stdout = original_stdout
+        print(f"[ERROR] Could not access ChromaDB: {e}")
+        return
+
+    # Build QA chain
+    print("## Building Multi-Source Strategic QA Chain\n")
+    qa_llm = ChatOpenAI(model="gpt-4o", temperature=0.5)
+    multi_source_prompt = PromptTemplate.from_template(MULTI_SOURCE_STRATEGIC_PROMPT)
+    print("Using MULTI-SOURCE aware prompt to force synthesis across documents.\n")
+
+    qa = RetrievalQA.from_chain_type(
+        llm=qa_llm,
+        chain_type="stuff",
+        retriever=vectordb.as_retriever(search_kwargs={"k": 10}),  # Retrieve 10 chunks
+        return_source_documents=True,
+        chain_type_kwargs={"prompt": multi_source_prompt}
+    )
+
+    print("## Executing Sample Strategic Queries\n")
+    sample_queries = [
+        "What are the overarching strategic priorities for the health sector outlined in these documents?",
+        "Analyze the key challenges and obstacles identified in achieving these priorities.",
+        "Identify emerging trends or innovative approaches discussed for future development.",
+        "What are the primary workforce development strategies across documents?",
+        "Compare community health initiatives versus acute care services."
+    ]
+
+    for i, query in enumerate(sample_queries):
+        print(f"\n### Query {i+1}: {query}\n")
+        response = qa.invoke({"query": query})
+        print(f"**Answer:**\n{response['result']}\n")
+
+        if "source_documents" in response and response["source_documents"]:
+            # Analyze source diversity
+            sources_used = analyze_source_coverage(response["source_documents"])
+            unique_sources = len(sources_used)
+            print(f"**Source Summary:** {unique_sources} unique document(s) referenced\n")
+
+            # Show all retrieved chunks with date flags
+            print("**All Retrieved Chunks:**")
+            for j, doc in enumerate(response["source_documents"]):
+                src = doc.metadata.get("source", "N/A")
+                theme = doc.metadata.get("theme", "N/A")
+                elem = doc.metadata.get("element_type", "N/A")
+                doc_date = doc.metadata.get("date")
+                year_range_end = doc.metadata.get("year_range_end")
+
+                # Get recency flag
+                flag = get_recency_flag(doc_date, year_range_end)
+
+                # Display source with date and flag
+                print(f"- {j+1}. `{src}` {flag}")
+                if doc_date:
+                    print(f"    Published: {doc_date} | Theme: {theme}")
+                else:
+                    print(f"    Theme: {theme}")
+                print(f"    Snippet: {doc.page_content[:200].replace(chr(10), ' ')}...\n")
+
+    print("---\n[COMPLETE] Multi-source strategic analysis complete.\n")
+
+    # Save Markdown output
+    sys.stdout = original_stdout
+    md_output_path = "strategic_analysis_output_multi_source.md"
+    with open(md_output_path, "w", encoding="utf-8") as md_file:
+        md_file.write(captured_output.getvalue())
+
+    print(f"\nANALYSIS REPORT SAVED: {md_output_path}")
+    print("\nYou can now:")
+    print("- Review the full analysis report in strategic_analysis_output_multi_source.md")
+    print("- Run interactive_query_multi_source.py for ad-hoc queries")
+    print("- Re-run this pipeline with different sample queries as needed")
+
+
+if __name__ == "__main__":
+    main()

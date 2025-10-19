@@ -19,6 +19,7 @@ from langchain_core.prompts import PromptTemplate
 from langchain_core.documents import Document
 
 from utils import auto_tag
+from clean_doc import clean_docs
 from unstructured.partition.auto import partition
 from unstructured.documents.elements import Title, NarrativeText, ListItem, Table, Text
 
@@ -107,6 +108,19 @@ def main():
         print(f"[ERROR] Document path `{DOCS_PATH}` does not exist. Please add your documents.")
         sys.stdout = original_stdout
         return
+
+    # --- CLEANUP: Only run if new files are detected ---
+    print("## Checking for New Files\n")
+    docs_files = set([f for f in os.listdir(DOCS_PATH) if f.endswith((".md", ".txt"))])
+    new_files = docs_files - existing_sources_in_db
+
+    if new_files:
+        print(f"Detected **{len(new_files)}** new file(s) to process.")
+        print(f"Running filename cleanup on new files...\n")
+        clean_docs(docs_path=DOCS_PATH, verbose=True)
+        print()
+    else:
+        print(f"No new files detected. Skipping cleanup.\n")
 
     print(f"## Processing Documents from `{DOCS_PATH}`\n")
     processed_files_count = 0
