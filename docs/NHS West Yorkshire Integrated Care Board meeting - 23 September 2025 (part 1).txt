@@ -1,0 +1,1018 @@
+# tactiq.io free youtube transcript
+# No title found
+# https://www.youtube.com/watch/YRzcBG_zD0M
+
+00:00:13.280 Hello and welcome to the public meeting of the uh West Yorkshire ICB.
+00:00:21.359 Um welcome observers online.
+00:00:27.680 Skip the meeting. So uh welcome everybody and just for us
+00:00:34.559 to recognize that this is a meeting held in public not a public meeting and there is an opportunity shortly for public
+00:00:40.960 questions on items on the agenda uh which we have already received. Uh and please can we ask you not to take any
+00:00:47.920 filming or photos during the meeting due to the need to respect the privacy of those who are here watching. We do live
+00:00:55.600 stream on our website and share photos via our social media should you wish to view these and we also ensure that all
+00:01:02.160 the necessary consents are in place to do this. So I'll just go around the table um and intro have introductions of
+00:01:09.439 our board members. So I'm Nadam Miraza your acting chair and on my left I have
+00:01:15.040 Hello my name is Rob Webster. I'm the chief executive Hi everyone Ian Holmes director of
+00:01:20.799 strategy and partnerships and deputy chief executive. Hello everybody. Jonathan Webb. I'm the
+00:01:26.960 uh director of finance and deputy chief executive. Afternoon all strategy non-exec member
+00:01:33.280 to the board. Good afternoon. Beverly Giri, director of nursing.
+00:01:38.720 Hello, I'm Richard Vortri. I'm the member for primary medical services.
+00:01:44.079 Hello everybody. Kim Schutler. I'm the representative for the VCSE. Hello, I'm Robin Tugnham. I'm the place
+00:01:50.320 lead for Calderell and chief executive of Caladell Council. Hello everyone. I'm Victoria Eaton. I'm
+00:01:57.600 director of public health for leads and here on behalf of all five directors of public health across West Yorkshire.
+00:02:05.439 Hello everyone. My name is Tim Riley. I'm the place lead for the city of Leeds.
+00:02:10.720 Hi everybody. I'm Hannah Davis um chief executeds here on behalf of the six local health watch working across West
+00:02:17.120 Yorkshire. Hello everybody. I am Jay Maidley. I'm a non-exact member of the board and chair of the audit committee.
+00:02:25.120 Hello, I'm Anthony Keley. I'm the director for the ICB organizational change program.
+00:02:31.599 Hello, my name is Fatima Kha and I am the West Yorkshire inclusivity champion, which is a role that is shared between
+00:02:37.120 local government and the health and care system. Hi everyone, I'm Karen Jackson. I'm the
+00:02:43.120 community sector. I'm the lead for community services in West Yorkshire.
+00:02:49.120 Good afternoon. I'm Tim Swift. I'm the chair of the West Yorkshire Health and Care Partnership Board and a counselor
+00:02:54.160 in Cedardale. Hello everyone. I'm Deborra Taylor and I'm here on behalf of Lou Orrea, interim
+00:03:00.720 director of planning and performance. Hello everyone. My name is Shoka Talihan
+00:03:06.319 and I'm the chief digital and information officer for the West Yorkshire ICB.
+00:03:11.840 Good afternoon. Afternoon. I'm Theres Patton, place lead for Bradford District in Craraven Place and chief executive of Bradford District Care Trust.
+00:03:19.599 Good afternoon everyone. I'm Sarah Monroe here as sector lead for mental health learn disability and autism and chief executive of Leading York
+00:03:25.599 Partnership and Le Community Healthcare Trust. Uh good afternoon. My name is James
+00:03:31.920 Thomas. I'm the medical director for the West Yorkshire Integrated Care Board.
+00:03:37.680 Afternoon. I'm Vicky Dutchburn. I'm the interim place um accountable officer for Kirkley's.
+00:03:44.319 Hi Ed Whiting, chief executive lead city council for the other West Yorkshire local authorities.
+00:03:50.799 Hi I'm Kate Sims. I'm the director of people for the ICB. Hello I'm Brendan Brown. I'm the chief
+00:03:56.640 exec representing the acute sector. Hello everyone. I'm Elie Brown. I'm the
+00:04:02.000 place lead for weightfield district. Good afternoon everyone. Majin, non-exec
+00:04:08.000 member of the ICB. Hi everyone, Amy Willlet, head of corporate governance for the ICB.
+00:04:14.640 Hello, my name is Laura Ellison, the ICB's director of corporate affairs. Thank you all and welcome again. We have
+00:04:20.959 a number of apologies, so I'll just pass to Laura to go to tell us who these are.
+00:04:26.240 Thank you. Yes, so we have apologies from Lou A or Deborah Taylor is deputizing. We also have a number of
+00:04:32.320 individuals who'll be um leaving at different points. So, just to run through those quickly, um AC will be leaving at quarter past 2. Magic Hussein
+00:04:39.840 will be leaving at 2 but returning at 2:30. Brendan Brown and Sarah Monroe are both leaving at 3:00. Um Rob Webster
+00:04:46.800 will be leaving at 3 and returning at 4:00 and Karen Jackson and will be leaving at 4:00. And TZ Patton at 4:30.
+00:04:53.600 I think that's everybody. Thank you.
+00:04:59.199 Thank you for that, Laura. Um declarations of interest. Uh we keep a register of interest for board members
+00:05:04.960 and these can be found at declarationsmydeclarations.co.uk.
+00:05:10.000 Uh and those in attendance are asked to uh declare any interest presenting an
+00:05:15.199 actual potential conflict arising from any matters on today's meeting.
+00:05:20.639 Jane uh yeah thanks Nadra. It's it's in the register of interest, but there are references, I think, in the chairs and
+00:05:27.120 chief execs report to some partnership working with the University of Leeds where I have my full-time job as CFO.
+00:05:32.720 Thanks. Can you note that for me as well, please? Thank you. Thank you. Thank you for that. Um,
+00:05:40.160 throughout the meeting, a reference will be made to organizational change and it's recognized that all members of the
+00:05:46.000 board should declare a direct financial and professional interest in this. So,
+00:05:51.039 that's recorded. Thank you. So if we go to uh the minutes of the last meeting
+00:05:56.720 held on the 24th of June. Um are there any uh points of accuracy?
+00:06:04.240 Um any items that are not on the action log or in the on the agenda? No. Okay.
+00:06:13.199 Um can we approve the minutes as a correct record? Okay. And I now invite Laura um and
+00:06:20.560 action owners to provide an update on all these actions. Thank you. Thank you, chair. Um if I just direct
+00:06:26.800 members of the board to page 46 of the pack, you'll find the uh list of open actions there. Um the first one uh
+00:06:33.280 relates to the digital strategy. So I'm just going to ask Sha Alakan, our chief digital and information officer, just to give a brief update. Thank you.
+00:06:40.160 Thank you. Thank you, Laura. I think the digital data and technology strategy was was uh uh one of the focus areas for us
+00:06:47.680 and then we did the initial work on discovery where we engaged around all the stakeholders across West Yorkshire
+00:06:54.560 ICB that includes all the partners as well within the ICS system and we
+00:07:00.160 conducted around over 100 sessions with individuals and in a group to understand
+00:07:06.080 the u the current requirements the gaps uh the expectations and and especially
+00:07:11.759 how how we can uh address all those in the context of of the government's and and NHS future plans and we were uh
+00:07:20.240 almost we completed that and we submitted into our executive management team but then we got the uh structural
+00:07:27.680 changes in in March and which of course impacted the the work especially with
+00:07:33.360 regards to the the strategic part because we still need some clarities from the NHS England about how the
+00:07:39.680 digital data and technology will be structured in future and until we we
+00:07:44.880 will have the full clarity on that I think we will we will be working on uh all the important things but the
+00:07:51.120 strategy will come once we will have the clarity from from from the national teams
+00:07:58.879 thank you if I move to the second action which relates to some joint work with the combined authority I don't know
+00:08:04.160 Fatima whether you're in a position to give an update on that please thank you Laura um so obviously This was
+00:08:10.479 an action from a couple of months ago. The Healthier Working Lives Board is now active and met in public yesterday. Um
+00:08:16.720 there's also some information available online. So my suggestion would be that we close the action, but if colleagues
+00:08:22.400 are still interested, we can sign post individuals to the meeting in public and the papers as appropriate.
+00:08:30.319 Thank you. I'm just going to jump over the next action as as Lou is not able to be with us today. We'll come back to that next ahead of next time. Um and
+00:08:37.360 just the final action which relates to um It was in relation to the risk register and specialized commissioning.
+00:08:42.399 If I can just pass to Ian please. Yes, thanks Laura. So this was about the delegation of um specialized
+00:08:48.880 commissioning from NHS England to ICBS. Um you remember that we took on the delegation in April and the plan at that
+00:08:54.320 time was to take on the staff. So the staff will be transferred in July this year. Um that got thrown into a bit of
+00:09:00.560 uncertainty as a result of the organizational change. So we don't have the staff. Um and what we've learned in
+00:09:06.640 the last couple of weeks is that there's an expectation that ICBS will become legally responsible for commissioning
+00:09:12.000 most um of these services from NHS England from April 2027. So we'll take on the legal responsibility from 2027
+00:09:18.720 and that's when the staff will transfer. So what that means is we've got an 18-month period from now to 2027 when
+00:09:25.040 we've got the delegation. We don't have the staff um and and obviously both organizations are going through a
+00:09:30.240 significant process of change. that's the risk um that we can now capture and sort of crystallize in that way I think
+00:09:35.440 now that we've got that certainty around the timelines um and that's what we'll we'll we'll do as part of the next risk
+00:09:40.800 cycle okay
+00:09:46.640 thank you Laura um now we've moved to the uh item on public questions we have received a number of of of questions for
+00:09:53.360 which we have responses so if I just pass over to Laura but before I do just to say that we really welcome questions
+00:10:00.000 from the members of to the public on items for our agenda. Uh and we also welcome um any issues, complaints, etc.
+00:10:08.320 that people have through our PAL service and we also very much welcome compliments which we find very
+00:10:14.480 motivating for our staff and for ourselves as board members. So thank you Laura.
+00:10:20.720 Thank you. Yes, we've um received five questions today. So I'll just take them in turn. Um so question one's been
+00:10:26.320 received from Alistister Bailey. What savings have the ICB and trusts identified using the NHS supply chain?
+00:10:32.640 And what actions have the ICB taken to ensure the NHS supply chain is the preferred procurement method to ensure
+00:10:38.399 best value spend and recurrent in-ear savings? I'm going to pass to uh Jonathan to respond. Thanks.
+00:10:47.040 Thank you. Thank you for the question. So I'll take this question in two parts. Um so firstly um answer in relation to
+00:10:53.760 the use of the NHS supply chain by the ICB and then follow that by providing overview of how the trust in West
+00:10:59.600 Yorkshire use supply chain. Um I thought it'd also be helpful to remind colleagues that NHS supply chain um is a
+00:11:06.560 national organization that's operated by a company called supply chain coordination limited otherwise known as
+00:11:13.040 SSCL. Um, SSCL is a company that's wholly owned by the Secretary of State
+00:11:19.279 for Health and Social Care, which means it's 100% publicly owned. Um, its role
+00:11:25.120 is to manage the procurement and logistics for the NHS in England, and it sources everything from medical
+00:11:30.480 equipment to food and office supplies. Um, the first its first duty um is to
+00:11:37.040 NHS and patients with service um quality and long-term value in mind rather than
+00:11:42.640 short-term profit. Um what it does allow is centralized buying power which means better discounts and it does mean the
+00:11:49.120 NHS can negotiate better prices than individual um trusts buying alone. Um
+00:11:55.120 and it also can often help to have a single supply chain to standardize products which can help in relation to
+00:12:01.680 safety and training. So in terms of the ICB um our role our core role is to
+00:12:08.160 commission and contract for healthare services um and as such there are very few instances where we directly use NHS
+00:12:15.519 supply chain because the requirement for medical consumables devices etc are covered within our contracts that we
+00:12:22.639 hold with NHS providers as opposed to directly with with providers. So not a
+00:12:27.680 material for for us directly. Um in terms of trust though um it is a very
+00:12:33.040 different story. Uh so all trusts in West Yorkshire work closely with NHS
+00:12:38.480 supply chain um on identifying what savings opportunities there might be. Um
+00:12:44.480 that happens um across West Yorkshire. It happens um on specific areas of work
+00:12:50.240 across West Yorkshire and it also happens at individual trust level. Um
+00:12:56.240 those savings um are tracked um to make sure that where we use energ supply chain we are getting best value for
+00:13:03.600 money um and for the first quarter of this year round about 1.6 million pounds
+00:13:09.040 worth of savings were delivered in the first quarter with a further 1.6
+00:13:14.079 identified in being worked up. um based on the first quarters worth of um volume
+00:13:20.720 of contracts that we let through supply chain, we think that this year we'll use round about 150 million pounds worth of
+00:13:27.839 supplies that come through that route. Um and that value um is increasing year on year. Um it's probably also
+00:13:34.639 worthwhile saying that we do have um a lead for director and commercial and
+00:13:40.000 procurement services across West Yorkshire. uh they're employed by one of the trusts and they lead on that
+00:13:47.040 procurement collaboration um approach across across the trusts. Um they also
+00:13:52.240 sit on the regional advisory board foreign to supply chain for the north where um savings spend and barriers to
+00:14:00.399 to uh using supply chain further are monitored discussed and challenged. So I
+00:14:06.399 hope that provides um a response to that question. Thank you. I'll move swiftly on to uh
+00:14:13.040 the next set of questions. We've received three questions from John Puntis. The first question, Healthw
+00:14:18.160 Watch is mentioned as an important element within the West Yorkshire IC. Does the board agree with the recommendation in the Dash report
+00:14:24.399 accepted in the 10-year plan that Healthwatch England should be transferred into a new directorate for patient experience within the DHSC? And
+00:14:31.519 if not, what plans does it have to make sure there is still an independent voice for patients with detailed local knowledge that can hold services to
+00:14:38.240 accounts? Going to pass to Ian to respond. Thanks. Yeah, thanks Lauren. Thanks very much
+00:14:43.360 Dr. Punis for the question. So I guess I'd start by saying we hugely value the partnership and the relationship that
+00:14:49.440 we've got with Healthw Watch and that we have had with Healthw Watch um since the creation of this board and previously
+00:14:54.639 through through previous arrangements. Um I think we've spoken quite a lot about dentistry at these meetings. I think it was Healthwatch organizations
+00:15:00.880 that identified um the issues and challenges with dentistry in this country long before other partners did.
+00:15:06.240 So that insight and that ability to work with communities to understand what's really going on is something that's
+00:15:11.279 really important. Um you know I think over the years we've worked hard to ensure that all of our works informed by
+00:15:17.680 uh people's experience of services. Um people's insight into how services could be made better. Um and we remain
+00:15:23.760 committed to working in that way as we uh move them through the next evolution of ICBS towards a more strategic
+00:15:29.120 commissioning organization. Um in terms of specific comment about um the importance of the independence of this
+00:15:35.519 voice um that's something that we'd agree with. Um you know we think as a high performing health care system we
+00:15:41.199 want to have independent voice and we want to have that kind of honesty and that challenge into the work that we're doing. Um clearly health watch are still
+00:15:47.839 with us for hopefully the next 18 months, couple of years and we'll continue to work in that way with healthwatch. Um and we've already
+00:15:54.880 started to think about what arrangements we might put in place um you know if and when those arrangements change so that
+00:16:00.240 we are building in that independent voice. So Hannah's around the table as well. I don't know whether there's anything that you want to add Hannah.
+00:16:06.240 Um yeah I suppose I just uh importantly for the public I think just to say that health watch is still here in your local
+00:16:11.759 places. Um, as as Ian mentioned, it needs uh I can't say the word. It needs to change in legislation um uh to to
+00:16:19.519 abolish healthwatch and that probably won't happen uh at at the earliest we think uh spring 2027. So, we're very
+00:16:26.560 much business as usual. Would encourage the public to share your experiences with us. We're very much heard in our
+00:16:32.160 local spaces as well influencing health and care services. uh and and and and our advice and inquiry lines are still
+00:16:39.120 open as well for those people struggling to navigate health and care services. So, please do work with your local health watch. Um I suppose just to echo
+00:16:45.839 what you've said, Ian, I think the relationship that we've had with yourselves has just been um has been brilliant. You've you've you've asked us
+00:16:52.480 to speak truth to power. Uh and I think that's totally the role that we've played and and we would agree it's an
+00:16:57.680 important feature of a robust health and care system. Um, of course we don't agree with the findings of the dash
+00:17:03.199 review, but but actually there's maybe opportunity there as well. Um, uh, from a from a healthwatch leads perspective.
+00:17:09.199 We've had really positive conversations locally around retaining the strengths of what we do in healthwatch leads, but
+00:17:15.280 actually building on them as well. Um, in the dash review, there were some, you know, uh, the driver of the dash review
+00:17:21.839 we would all agree, well, we would agree with which is people, members of the public, patients keep sharing their
+00:17:27.679 feedback. how do we make sure that that results in even more action and more improvements in health and care and I
+00:17:33.120 think that's the opportunity we've got here. Um but just to say we're very keen to still play our part at West Yorkshire
+00:17:38.559 level as well. Uh we're totally committed to that but particularly within our local places looking forward to working with partners about taking it
+00:17:44.960 to that next chapter and being even more impactful.
+00:17:50.320 Thanks Hannah. Onto the next question which is with reference to the chief executives report to the board in June.
+00:17:55.840 Does the board agree that the 2.8% An 8% uplift in the spending review was relatively positive given, for example,
+00:18:01.200 that the Nfield Trust echoed concerns of many that the settlement was not adequate in relation to the scale of demand, inflation, staff pay pressures,
+00:18:08.480 new treatments, and the transformation ambitions. Does the board agree with the prime minister that funding is sufficient to fund the reforms, service
+00:18:14.960 improvements, and new technology set out in the 10-year plan? And what is being done to support those ICB staff
+00:18:20.160 wondering if they will still have a job in the near future given the lack of progress due to unaffordability of redundancy payments? I'm going to pass
+00:18:27.120 to Jonathan and then to Kate to respond. Thanks.
+00:18:33.280 Thanks Laura and thanks Dr. Pontes for the question. As you said, we'll take this question in two parts. Um so um the
+00:18:40.320 first thing to say is you're right to point out that the 2.8% uplift which was referenced in the last chief execs
+00:18:46.160 report was described as relatively positive um in the context of recent spending reviews. Um and I think that
+00:18:52.720 description reflects the fact that um compared with some expectations and the settlement for other government
+00:18:59.200 departments that uplift was welcome um and provides a measure of stability for planning purposes. Um however as you
+00:19:07.200 note um there are some commentators including Nfield Trust and others in the sector um that have said that that
+00:19:12.880 settlement doesn't really match the scale of pressure which which we face as the NHS isn't part of the wider care
+00:19:19.520 system. Um so we know that demands continues to rise. We know that inflation and pay costs are significant.
+00:19:26.160 Um and the ambition to um invest in technology and transformation does require sustained resource. Um our role
+00:19:34.640 uh within West Yorkshire as the integrated care board is to make sure that we use the resources that we do
+00:19:40.559 have available that 6.1 billion that I referred to earlier in the context of 2425
+00:19:46.880 um are used as effectively as possible. um making sure that we protect services
+00:19:52.160 um and also drive um innovation and improvement where we can. Um in terms of
+00:19:57.760 whether that fund settlement is sufficient to uh deliver um all of the reforms and ambition of the 10-year
+00:20:04.799 plan. Um ultimately that's a matter for government and parliament. Um I think
+00:20:09.840 locally as a board um we recognize that the funding environment is challenging
+00:20:14.960 um and we will continue to prioritize um improvement for patients, staff and communities. Um but it is also clear
+00:20:22.000 that in some instances choices and trade-offs will have to be made. Um what we are committed to is to continue to
+00:20:28.880 work with um our partners uh with NHS England um and indeed with the government to make the case that level
+00:20:36.000 of investment that required uh to meet uh the needs of our population is made
+00:20:41.360 while also being transparent about the pressures um that we face and the steps that we're taking to to manage them.
+00:20:48.480 Thank you. So for the last part of the question which is with regards to our staff what we're doing to support them
+00:20:53.919 particularly in this time of uncertainty with regards to their employment and the question of the matter of affordability
+00:20:59.760 of redundancy the ICB has in place we do have in place a range of support offers
+00:21:04.960 for our colleagues to access these include some external support we've we've commissioned some what we call
+00:21:11.120 outplacement support services which will include everything from practical support such as CV writing and interview
+00:21:18.720 preparation for future career roles. But also within that package, there is
+00:21:24.240 something about resilience coaching. We recognize through an organizational change. This is a really challenging
+00:21:29.360 time. And something about that moving people through change is is is something really important to us. And then it's
+00:21:35.679 important to say that internally we have really wellestablished well-being services together with our active staff
+00:21:42.159 networks who are really supporting our staff and of course our trade union representatives. Thank you.
+00:21:49.200 Thank you. Moving swiftly on to our next question. So with reference to the mention of workforce reform and
+00:21:54.400 industrial unrest in the report to the board from the chief executive, does the board agree that it is fundamentally unfair for staff at Airdale Hospital
+00:22:01.200 employed by AGH solutions to have worse pay terms and conditions for doing the same work as those staff who were
+00:22:06.640 transferred under 2P regulations? I'm going to pass to Rob.
+00:22:13.600 Yeah, thank you for thank you for the question Dr. Pontis. I think it's rarerale hospital and its wholly owned
+00:22:20.320 subsidiary to uh design and deploy the arrangements that it wants within uh the
+00:22:26.799 constitutional arrangements and the legal arrangements that are in place. I don't think it's for me or the board to
+00:22:32.640 comment. Thanks Robert. Just moving on to our
+00:22:37.679 final question now uh which is from Shelley. Duty of Cander is a general duty to be open and transparent with
+00:22:43.600 people receiving care from the NHS. It is clear that the lead's NHS trust has failed this in midwifery, neonatal and
+00:22:50.159 all health care. Otherwise, they would not be included as one of the 14 trusts that are part of the national maternity
+00:22:55.280 investigation. What are you going to do um to uphold and ensure proper duty of cander and
+00:23:01.120 ensure a robust culture of cander moving forwards? Um I'm just going to give a response because it is later on our
+00:23:06.720 agenda. So, thank you very much for the question, Shelley. Um Beverly Giri, our director of nursing, is going to be speaking a little bit later in the
+00:23:12.880 meeting with an update from the West Yorkshire and Harriet local maternity and neonatal system and she'll be updating the board on the national
+00:23:18.880 maternity investigation as part of that item. Thank you.
+00:23:24.320 Okay, thank you Laura. Thank you for your questions and and for the responses here. Um just to sort of re reiterate,
+00:23:31.919 individuals are always welcome to contact us at the ICB and there is a in more further information on our website
+00:23:38.240 on how to do this particularly around public inquiries and also the opportunity to submit freedom of
+00:23:43.840 information requests or seek assistance through our complaints and PAL service
+00:23:49.360 as I mentioned earlier. Thank you all for that. We now move on to the next item which is the board assurance
+00:23:55.679 framework. Bora, thank you. Um so the board assurance framework or
+00:24:01.120 or BAF as we more commonly refer to it provides the board with a mechanism for the effective and focused management of
+00:24:06.799 the principal risks that we face um to meeting our objectives um as an organization. This quarter the focus has
+00:24:13.520 been on reviewing the place level asurances. Um there is a summary of um all the changes that have been made um
+00:24:19.600 within the report. There's been a really significant focus on um how organizational change has affected our
+00:24:25.600 risks. Um you should see some some of that narrative come through the AAA reports that are later on the agenda um
+00:24:31.600 detailing some of those discussions that happened at our five place committees. We've also mapped the um today's agenda
+00:24:38.320 against the BAF um which helps us to be able to demonstrate how our work is focusing on on those key risks um and
+00:24:44.720 helps to make sure that we've got our risk appetite in our mind as we're as we're working through today's discussions. That was all I was going to
+00:24:50.640 say by way of introduction um chair but obviously really happy to take questions or um some of the place lead might want
+00:24:56.000 to reflect on the discussions that happened this cycle
+00:25:01.760 any questions or reflections
+00:25:10.159 thanks Laura thanks Nadira uh I have a question uh and observation I think uh
+00:25:15.360 it's linked to our standing risk um 2199
+00:25:20.480 around cyber security and uh in the wake of what's happening with sort of the Heathro incident uh I was reflecting on
+00:25:27.600 our assurance gaps as it stands I think because we know that it's a standing critical risk uh with the or ongoing
+00:25:33.919 sort of organizational changes and what you uh mentioned shock in terms of your
+00:25:38.960 update to the digital strategy waiting for NHS it'll be keen to get some assurance that within this transitional
+00:25:45.440 phase we are not uh losing sight of our business continuity plans and uh resilience around a cyber incident
+00:25:52.000 because it'll bring it down to our knees specifically around rans ransomware and so forth. So it will be useful to see
+00:25:58.320 how we are working with region and providers ensuring that uh at west
+00:26:03.440 Yorkshire we have robust plans around mitigating some of those challenges.
+00:26:12.320 Thank you. Thank you SC. I think it's it's a very very important point and as I mentioned that all the important areas
+00:26:18.640 we are we are working and cyber security is of course the top of the agenda so we
+00:26:23.840 are working with our uh national colleagues our NHS England uh where we have we are getting a lot of central
+00:26:29.840 services at the same time we have come up with cyber security framework also for west Yorkshire ICB and this is in
+00:26:37.120 collaboration with all the all the partners across across the west Yorkshire uh ICS
+00:26:43.520 and then we are implementing uh a lot of those recommendations based on our
+00:26:48.880 recent assessment on cyber security. So this is an agenda where we are continuously working um in coll in close
+00:26:55.760 collaboration with our regional colleagues and our national colleagues as well and and also we are we are engaged with partners as well to to
+00:27:02.240 strengthen. Thank you. Uh I think in the update the
+00:27:07.279 the in the assurance gap there's lack of assurance of NHS in relation to core GP clinical systems and oversight of GP
+00:27:14.720 business continuity plans. So it will be useful to see specific updates on that one if that's fine. Thank you.
+00:27:21.039 Okay. Thank you. Are there any oh Jane thank you. Um so it's really uh helpful
+00:27:27.600 to see the updates from the places in terms of the risk assessments this time around. When I look at um it's page 58
+00:27:34.559 in the pack where we see the heat map in terms of the place risk assessments and
+00:27:39.919 the and the overall ICB position bearing in mind the conversations that you know we will have no doubt today about
+00:27:46.480 organizational change we're acutely aware of the funding pressures which which are evident in terms of increased
+00:27:52.799 risk assessments on this on this uh heat map but we also see increases in terms
+00:27:58.720 of risk scoring against um 2.1 one which is the risk and our ability to
+00:28:04.399 collectively recruit and retain staff across health and care impacting on the quality and safety of services. I
+00:28:10.559 wondered if um you know with with all those pressures in which we are working it would be good to hear some
+00:28:16.080 reflections from maybe the places that have increased their risk scoring in this area in terms of how they are
+00:28:22.399 trying to you know mitigate against um the challenging environment in which we're operating.
+00:28:29.919 Any place TZ. Yeah. So, it is a concern um as um the
+00:28:36.159 organizational change time scale um goes on. What we've done across Bradford
+00:28:41.440 Craraven and across other places is adopt um a program of um stop goals for
+00:28:47.679 really important work. So, if you look at the statute of work we've got to do, that's obviously a priority. But when we've got other work that we do, we do a
+00:28:53.520 lot of work with partners. It's really important and valuable work. But actually, if you've got a decreasing workforce, we have to really focus on
+00:28:59.200 that area. um we do that work and then where we have specific areas. So what's happened
+00:29:04.399 as the organizational change piece has gone on is that we've lost staff. We've got a vacancy freeze across the ICB
+00:29:10.320 obviously because that's important that we do and we've lost staff disproportionately. So you might have a certain team where you've lost a lot of
+00:29:16.080 staff and they're really struggling and they might have such responsibilities. You might have another team where they haven't lost any. So we have adopted um
+00:29:23.520 a conversation where we take it across places. Can we have some mutual aid and support? uh and if that is good then we
+00:29:29.520 uh have done that but if not then we raise that with the ICB actually to try and get some support for some temporary
+00:29:35.679 staff to resolve those areas of um issue. Uh it's it's worked so far but it
+00:29:41.120 is difficult and challenging and the longer this goes on the more difficult it is for staff but I think what's
+00:29:46.159 important in terms of the risk mitigation is that we keep a a watchful eye on it. We review it weekly in Bradford and Craven and I know other
+00:29:51.840 places do the same. Thank you TZ. It's really helpful to hear how place is working in partnership
+00:29:57.919 with trusts and others within that. Thank you Vicki.
+00:30:04.000 Okay.
+00:30:11.679 It's just in response, you know, to the point that Terz has just said. We talked there, you mentioned about that kind of
+00:30:17.120 vacancy pause. We we actually do have an active review panel um that's meeting
+00:30:22.240 and and as you rightly say TZ, the longer this goes on, we we do need to we continue to revisit sort of requests
+00:30:29.039 from from all of our places. Um a number of us are on a the the future design
+00:30:34.240 group and we constantly are looking at things like the rep prioritization of of of all of our priorities. So there is
+00:30:40.320 something about the length of time. Um but I just wanted to clarify that there isn't a full vacancy freeze. It's it's
+00:30:46.640 it's just a review of absolutely everything as you'd expect Jane. Um but people are still open to to submit
+00:30:52.880 things to the panel. Thank you. Any other questions? One place.
+00:31:01.919 Okay. Um so we've had a quick review of the updated board assurance framework here.
+00:31:08.799 Um and I think there will be some mention in the place AAA reports later on about some of these risks. Um and we
+00:31:16.799 just want to ensure that the framework is referenced and used throughout our discussions this afternoon with a
+00:31:21.919 particular focus on on on the risk appetite to inform decisions. So thank you for that.
+00:31:29.200 I know I now go into the next item which is my chair's report.
+00:31:34.799 Um, so I have a a brief report here that hopefully you've all read. Um, I've
+00:31:40.720 highlighted some of the activities and uh initiatives and work that I've been involved with. Uh, but just also to
+00:31:48.000 mention that a lot of my time has been taken up with meeting people around the board uh in our place and uh voluntary
+00:31:55.440 and other organizations as well. uh and also because we're in a time of uh uh
+00:32:02.399 change within our organization um I've also been meeting with uh uh the
+00:32:08.240 regional office especially the regional director and other members of NHSE etc
+00:32:14.000 found these very useful particularly meeting with other chief executives and chairs in particular
+00:32:20.880 I'm just coming to the body of my report okay just a
+00:32:32.240 What do I do?
+00:32:45.519 It's not on this really. It's having a little help here.
+00:32:51.360 It has never been my strong point. So, shocker than AC. Forgive me for this. Um
+00:32:58.799 okay.
+00:33:04.080 So of course we've just had the annual general meeting um which was brief but
+00:33:10.480 covered a lot of the relevant and important items such as receiving the annual report and accounts and uh really
+00:33:18.159 big thank you to everybody who brought those papers together and particularly our audit committee at the ICB for their
+00:33:25.600 oversight here. Um we had uh a board development day where we've last a few
+00:33:32.880 months ago where we've initiated discussions around uh organizational change and we'll be having another one
+00:33:39.039 on the 14th of October where we will continue and and get into more detail about these discussions uh particularly
+00:33:45.760 around the future ICB composition and that's really of relevance to to our our
+00:33:50.960 board here. Um we've recently had an integrated care
+00:33:56.399 partnerships quarterly meeting. Um there is in more information about that on on
+00:34:02.320 our website as well and the next one will is scheduled to take place on the 18th of November. Um I'm really pleased
+00:34:09.440 to say that I've been able to support recruitment of non-exec directors um in with our partners particularly Bradford
+00:34:16.239 Teaching Hospitals where we recruited uh two uh very very capable individuals one
+00:34:22.239 of whom is sitting at the end of this table Tim Swift who has also started in September and we have a we'll be
+00:34:29.199 welcoming a second Ned at Bradford Hospitals who will be starting shortly.
+00:34:35.359 Um early on um in the AGM um the healthy
+00:34:40.800 working life board was mentioned by by Rob and I think Rob is going to say a little bit more about that uh later on.
+00:34:46.800 Uh I have to say that this is a very very welcome and uh uh important
+00:34:52.239 appropriate and timely initiative for our for for West Yorkshire. Uh and
+00:34:57.520 really sort of honored and pleased to have been invited to be a member of that board. Um, we met yesterday and uh
+00:35:05.440 received a a report of the work to date and there was a call for us as an ICB to
+00:35:12.320 be open to uh providing job opportunities particularly for people
+00:35:18.000 who are part of the healthy working life project and campaigns. The essence of
+00:35:23.359 which is to make sure that 15,500 people who are not in work at the moment
+00:35:30.880 because of ill health and poor health have those access and opportunities to finding appropriate long-term and
+00:35:37.839 sustainable work. So, and this has been funded by u the department for work and
+00:35:43.760 pensions. So, we're really pleased to be as a system part of that and hoping that as a system we really make a dent in in
+00:35:50.720 this issue. In terms of tackling inequalities, um
+00:35:55.760 I've been supporting the NHS race and health observatory over the last few years. Uh they've had a road show around
+00:36:02.800 uh pay gaps and progressions for minoritized ethnic um staff in the NHS.
+00:36:08.720 Very very significant. And I'm really pleased to say that uh uh one of the members of the board Fatwah Khan Sha has
+00:36:15.760 recently been elected as the West Yorkshire chair for this group. and we expect to hear a lot more. Thank you for
+00:36:22.560 that one. Um what else? I mean it's really clear that
+00:36:28.640 people whether they are colleagues or um members of the public or or patients and
+00:36:36.240 service users are really heart of all at the heart of all our decision- making and uh last week I had the absolute
+00:36:43.599 pleasure of of working with and and seeing their venue uh of Healthwatch
+00:36:49.119 West Yorkshire. We've heard a little bit about health watch earlier today and uh
+00:36:54.160 I was invited to the steering group of West Yorkshire voices. I was really really impressed to see the diversity of
+00:37:01.760 voices around the table and their keenness to work with the ICB and ch to
+00:37:07.119 help us challenge some of the health inequalities that we face in in in our re sub region here. Um we have in the
+00:37:16.560 past and currently um asked Health Watch to um
+00:37:22.240 convene and find voices of people who are experiencing
+00:37:27.440 um issues, health issues um but
+00:37:32.480 experiencing our services and to give us that feedback and they've been doing that very effectively and we know that
+00:37:39.359 Health Watch may well be um uh being disestablished um next spring or later
+00:37:46.800 than that but are here to work with us. Um they have the steer the voice steering voice has uh agreed that will
+00:37:53.920 they will work with us to transfer that part of the service into uh the ICB and
+00:37:59.920 have committed to working with us. So really really pleased to hear that so that we can collectively be bigger and
+00:38:05.680 better and hear more more of those voices.
+00:38:12.480 Um my personal passion is around the intersection between health and education. I don't think one um we can
+00:38:21.200 achieve one without the other. Um and therefore my continuing work with born
+00:38:26.880 in Bradford and trying attempts to bring it to the ICB uh have made sure that uh
+00:38:33.040 I'm involved a lot more with some of their sub projects. One of which is uh
+00:38:38.079 uh becoming a trustee for the education alliance for life chances which is
+00:38:43.760 really trying to make sure that no child slips through the net who is who is
+00:38:50.800 currently in school but has health issues. Um and what we're trying to do
+00:38:56.800 on this particular uh board is to bring together agencies from health into
+00:39:03.839 schools and it seems very similar to um some of our aspirations around uh the
+00:39:11.200 neighborhood health services and what we want to do there. So we are arranging a visit for members uh of of the board and
+00:39:19.599 others who'd like to come and see some of these already established hubs in schools in in West Yorkshire.
+00:39:27.280 Um and I think it's a classic example of how health and education can work
+00:39:33.280 together to tackle and address in inequalities here. Um
+00:39:39.920 part of this work means I'm also working with um um a number of agencies
+00:39:45.839 including um child of the north born in Bradford um and coral which is a leads
+00:39:52.880 university hospitals partnership around improving um child health through
+00:39:58.240 through good good research um and I attended a national children families
+00:40:03.440 opportunity summit with the which was attended by uh the children's commissioner for for England and I
+00:40:10.400 really think as an ICB in West Yorkshire having one of the fastest growing um
+00:40:16.640 youth populations in the country we have to pay very special attention to the
+00:40:21.839 health of of our children maybe even pre-birth uh we may hear a little bit
+00:40:27.520 about this late later on so this is an area of work that shall I shall continually bring to the ICB in in a
+00:40:33.839 number of different ways so So far, um, those are things I've I've been involved
+00:40:39.760 with. Um, any questions? Any comments?
+00:40:44.880 Anything you'd like to see more of, less of?
+00:40:53.440 Thanks, Nadir. Again, very useful update and and sharing your sort of thoughts and reflections on the ongoing uh
+00:40:59.200 challenges and opportunities. You mentioned uh citizen voice there a couple of times and I was reflecting on
+00:41:05.359 the last 12 months uh uh in terms of the last iteration of the vote where we had
+00:41:11.119 focus on sessions around health inequalities for example given that we are seeing this change coming through on
+00:41:17.760 representing citizen voice would it be it's an open sort of suggestion to the executive colleagues as well uh thinking
+00:41:24.560 about the next three board meetings what could be focused on session look like led by citizen voice and how would we
+00:41:30.800 model that uh in with the knowledge that healthwatch might not uh be in in its
+00:41:37.599 current shape. So it will be useful for us to explore that. Um one of those sessions could be around the
+00:41:43.359 neighborhood health pilots around and then how we're progressing at at some point in the year. The other sessions are up to the board colleagues to think
+00:41:50.319 about it useful to do that. By citizens voice you mean the West Yorkshire voices that we have already
+00:41:55.760 established. Yes. I'll I'll call um Hannah in in a minute, but there's a lot
+00:42:00.800 of potential for for work to be done there and also something we'll bring to the development board. But Hannah, if
+00:42:06.480 you'd like to comment. Yeah, I suppose just to say um as I mentioned earlier, we're not going anywhere for a while. So, um I sounded
+00:42:14.400 threatening, didn't it? And I mean it as a threat. So we're totally committed to to make ensuring
+00:42:21.200 that people's voices are part of the West Yorkshire um structures and particularly at local place as well. Um
+00:42:27.440 West Yorkshire Voice was slightly separate. It was a it was a sort of a commission piece of work around uh
+00:42:33.040 ensuring that there was a a direct feed from people across West Yorkshire to a West Yorkshire level. But again, we're
+00:42:38.720 very committed to working with uh our colleagues in the ICB team to make sure that that continues to thrive and
+00:42:44.720 develop. and uh and and Nadra mentioned the West Yorkshire voice steering group. You know, it'd be great to see them as
+00:42:50.560 the reference group for this board and increase that accountability of people uh particularly from an inequalities p
+00:42:56.560 perspective back to the board. So there's lot So we still got lots of ideas, don't worry AC, and we've still got lots of commitment to to making sure
+00:43:02.560 that citizen voice is there and I think we'd already had conversations with Laura and colleagues and and Nadra
+00:43:09.520 around the agenda, things like digital, the things that are really important to the people of of West York and we'd love
+00:43:14.640 to have those as sort of focus on sessions going forward. Um, but we have got a meeting with uh ICB uh insight
+00:43:22.000 colleagues at the end of the month to think about what that what that next chapter might look like.
+00:43:27.680 Yes, co-production is very much the the approach we're taking. So, thank you,
+00:43:33.040 Hannah.
+00:43:38.480 Thanks. Thanks, chair. Um, so it's really good to hear that your involvement with Brad born in Bradford in terms of um actively engaging
+00:43:46.160 engaging with that. I just wanted to highlight to the board and to yourself in terms of we've now got kind of the
+00:43:52.079 model and working across the whole of West Yorkshire in terms of the born in. So we got born in Wakefield, born in uh
+00:43:58.319 Cordell. So it's um so it's not just in Bradford but actually there's a lot of learning that that's happened there that
+00:44:03.599 we're utilizing and and embedding across uh other places through our trusts uh
+00:44:09.440 there and as you say kind of links in with the integrated neighborhood teams and as we develop develop that. So I just wanted to highlight that and thank
+00:44:15.440 you for being involved with that. Thank you. and Rob and I were in the same meeting with John Wright who's the
+00:44:22.560 lead investigator for uh uh born in Bradford and I think we we have thought
+00:44:28.240 of some active connections and partnerships and working co-working that
+00:44:33.599 we could have watch this space Fatima
+00:44:39.520 it was just to build on uh Hannah's comments about the involvement framework for West Yorkshire and the opportunities
+00:44:45.359 that it brings I think the aspiration behind and the 10-year plan is recognizing that many individuals want
+00:44:51.440 to take control and and advocate for themselves as well. So, while we recognize that there's such an important role for Healthw Watch that we do need
+00:44:57.839 to support, there is something about how we consider potentially in that session, how we develop capability for people to
+00:45:03.440 advocate for themselves too and really harness the momentum behind personalization which is alive and well
+00:45:09.119 in the ICB. Thank you, Fatma. Okay, I'll close that item and move over
+00:45:15.280 to the chair's report. Rob, chief execs report. Chief, nice swapped.
+00:45:24.880 Just live news, everybody. Um, thank you. Uh, thank you, chair, and thank you
+00:45:29.920 everyone uh around the table. Uh, today you've got the board report in front of you, and there's been a couple of
+00:45:34.960 developments since. So, I'll I'll pick some highlights from the board and give you the updates. You'll note that
+00:45:40.240 there's two papers in this section. one on the chief execs report an update and one on organizational change. So if we
+00:45:47.359 can maintain the discipline of doing the org change stuff second, I think that would be helpful uh because there's a
+00:45:54.319 lot of other things going on and um contrary to what it might feel like
+00:45:59.839 sometimes in the organization, we're not just here to do organizational change. We do things that make a material impact
+00:46:06.480 upon the lives of people right across uh West Yorkshire. Um I think we're in a
+00:46:12.160 we're in a we're in a period of opportunity and uh some uh stress and
+00:46:18.000 pressure at the moment and that's reflected in the report and you can see that um on quality we we expect a new
+00:46:27.200 quality strategy imminently which will uh rightly focus on how do we improve
+00:46:33.920 the effectiveness of services, how do we improve outcomes, how do we improve the
+00:46:39.440 experience erience of people and how do we ensure the safety of services and uh
+00:46:45.599 we often always actually say safety is a red line. We always we've got to assure
+00:46:50.800 ensure safety um and we also need to make sure that that isn't to the detriment of us not considering the
+00:46:57.280 other factors. Uh and I think the quality strategy will start to talk about those things in the round and we
+00:47:02.480 expect that to be with us shortly. uh and Bev and uh James and the quality
+00:47:08.960 committee will consider that uh and the impact upon us in the quality sphere
+00:47:14.000 though it's it's it's clear that um we also need to
+00:47:19.680 uh recognize that there's been significant national concerns over maternity services
+00:47:26.160 uh being raised and that's something that we here through our local maternity and neonatal system have a strong uh
+00:47:33.440 connection into and something which has been a feature of the board, the quality committee and elsewhere.
+00:47:40.560 What's new is that a as trailed by the secretary of state in the summer,
+00:47:45.920 there'll be now a national review of maternity services in initially it was expected to
+00:47:52.560 be 10 organizations was announced and they've settled on 14
+00:47:57.599 and um two of those are in West Yorkshire. Now I don't know Bev if you want to say anything at this point and
+00:48:04.800 happy also for Brendan as chief exec of one of those organizations to give a comment if that's helpful.
+00:48:11.280 Thanks Rob. So yeah um so I think it was at the last board that it was the day before that it was announced by the
+00:48:17.280 secretary of state. to the national inquiry um sorry the national maternity and neonatal investigation
+00:48:24.640 um the is the the independent chair has been appointed that is Baronos Baroness
+00:48:30.160 Amos um and the invest the investigation includes two trusts in West Yorkshire
+00:48:35.680 they are Bradford Royal Infirmary and Lege Teaching Hospitals Trust the terms
+00:48:40.880 of reference for the um review was published um on the 15th of September
+00:48:46.960 and it's very much focused upon the families and their lived experience um
+00:48:52.079 which um I know that the families welcome. Um there will be a call for evidence from families um from the
+00:48:58.640 public um and also um the there will be um opportunities for people to to to
+00:49:05.440 talk about their experience um in depth as part of that investigation. The initial work has already started. Um
+00:49:12.559 we're expecting some initial findings to be published in December of 2025.
+00:49:18.000 So not many weeks away, but then a full full publication with recommendations um in spring 2026.
+00:49:25.599 Um it we are hopeful that that's the Wii in terms of the um
+00:49:31.200 the whole um fraternity NHS fraternity I think is that they will review all of
+00:49:36.800 the previous investigations back to 2015. This is explicit in the terms of
+00:49:42.079 reference and we will have one set of criteria for maternity services which I
+00:49:48.000 I know that um the the people that deliver those services will welcome. Um
+00:49:53.520 clearly the board will be uh kept up to date on all of that. Thanks Rob.
+00:49:59.200 Brendan I don't know if you want to say anything at all. I'd not prepared you to say anything. No I I think um I think Bev has
+00:50:05.680 described the process. All I would say at this point is that I think we should acknowledge that the families involved
+00:50:10.880 have expressed concern about the scope and the duration of the investigation.
+00:50:15.920 Um I think it's right that we acknowledge that. But I will say on behalf of Lees that we will fully engage
+00:50:21.440 with the investigation and clearly if people have concerns around their
+00:50:27.200 experience either in Bradford or at least then to contact those two organizations that we can speak to you about those concerns.
+00:50:34.640 Thank you. And um I'm always um reminded uh that or myself particularly that
+00:50:41.680 we're talking about people here and uh we often um look at numbers in the round
+00:50:48.160 and we might look at trends or we might consider whether uh things are within expectations or not. Uh but every one of
+00:50:55.440 the families who've lost somebody or had a terrible experience that will affect them uh for the rest of their lives and
+00:51:02.240 it's their experience. So really grateful for people coming forward and I know that uh colleagues around the table
+00:51:09.280 always want to hear from people want to hear authentic experience so that we can
+00:51:15.440 address any issues that we can address and move forward. So, um, I certainly
+00:51:22.240 and know that Bev and others do through the LMS fully support the work and we'll
+00:51:28.400 do everything we can to make maternity services safer and a better experience for all women in West Yorkshire. One of
+00:51:35.040 our 10 big ambitions is to you know reduce the number of still births to improve the different uh outcomes that
+00:51:43.680 are experienced by people from different ethnic backgrounds uh and to ensure that services are better. So if it's well
+00:51:50.800 it's it's in with our strategic ambit and it's an operational priority too.
+00:51:57.839 So I thought we we we we should we should note that uh in the chief execs report and the further development since
+00:52:03.440 I wrote it. Um also on safety I wouldn't want us to and quality. I wouldn't want
+00:52:09.599 us to skirt past the fact the uh learning from deaths uh for people with learn disability report was published
+00:52:15.920 last month and I've attached the summary uh to the papers. We've got a very
+00:52:20.960 active that's the national summary. We have very active work in West Yorkshire around learning from deaths. Uh we'll
+00:52:28.480 continue uh to take that work and report it through the quality committee. It needs to go through the next cycle uh to
+00:52:35.839 get an update. But uh I I don't doubt the seriousness that everybody around this table uh has when it comes to that
+00:52:42.800 agenda and we have some fantastic work on uh support for people with learning disability and still much more to do. uh
+00:52:50.240 and it's highlights the leader report continues to highlight why improving uh
+00:52:56.240 the life chances of people learning disability continues to be again one of our 10 uh big ambitions in West
+00:53:02.880 Yorkshire. So alongside that we should also note
+00:53:08.000 that there have been some improvements in quality uh through some of the national surveys. So the national
+00:53:13.359 impatient survey has shown some improvements in the experience of people in our hospitals. It's still not where
+00:53:19.440 it should be, but it's getting better. And um I think we continue to see
+00:53:24.960 improvements in some of the access and response times that we see. um that
+00:53:31.280 national context of focusing on quality in all aspects is incredibly welcome because nationally we're also in a
+00:53:37.839 context where there's a significant and substantial focus on money and money we
+00:53:43.280 always think I think is the servant of quality and shouldn't be the master of
+00:53:48.480 quality because we end up in a slightly difficult place if that's what we do um
+00:53:54.400 and we've seen throughout history uh the consequences of those sorts of developments
+00:54:00.160 Um I'm hopeful or hoping that the industrial action between the government
+00:54:07.280 and the BMA it continues to um be discussed between the two parties and
+00:54:14.079 that we can they can come to a conclusion so that we can continue to make the progress that we need to around
+00:54:20.800 the recovery of services alongside these developments. One of the
+00:54:27.119 things you might have seen in the 10-year plan is rightly I think a duty to be open and transparent and we would
+00:54:34.720 fully support that as an organization. Uh the first visible symbol of that is
+00:54:39.920 the performance league tables that were published um this month end of last
+00:54:45.599 month against the new new um oversight framework from NHS England. And there's
+00:54:51.920 a quite technical description of how those uh league tables are constructed
+00:54:57.040 and um they're meant to be a way in which the public can look at comparative performance. They're fairly crude in
+00:55:04.880 some respects at the moment, but you can compare organizations by indicators uh
+00:55:09.920 and across the whole piece. There are some fundamental issues with with the
+00:55:15.040 approach. Uh so Terz I think would point out that only part of her services including her rating. Um so she although
+00:55:23.040 she provides community and mental health services I think the mental health services are the ones that drive her
+00:55:28.160 rating which doesn't feel a fully rounded view and the same for Brendan's organiz sorry called Huddersfield
+00:55:34.240 foundation trust for example which is a combined trust. uh but this sort of development is one which we will
+00:55:42.160 continue to see and again it provides a useful way of comparing organizations
+00:55:47.839 with some limitations and shouldn't be the only thing that we look at
+00:55:54.799 because if we fall into a position of what gets measured gets managed then we'll be in difficulty because
+00:56:00.799 there are other things that aren't in those league tables which we have just been discussing Um the other thing uh I
+00:56:08.880 would say about this is it's going to be very dynamic. So this is a quarterly assessment which will change. It's about
+00:56:14.240 relative performance and it's absolute. There is no um no subjective
+00:56:21.839 views taken into account uh when it comes to the final indicator.
+00:56:26.880 So giving you an example there. One of our trusts £90,000 away from plan can only be in the third uh sector of
+00:56:35.440 performance. It's already better than that again now because we've got more up to-ate data would be in segment one the
+00:56:41.839 best performing um and it might be next time. So a tiny variance in the finances
+00:56:47.520 can put people in a different box and we should note that. I think other things to draw out, we we the the the planning
+00:56:54.319 framework which has been published is very welcome. Uh 10-year plan talks about medium-term planning. It's
+00:56:59.760 something we all asked for with a medium-term allocation. It's something we all asked for. Uh and uh very
+00:57:06.400 grateful that that's happened. We haven't got the planning guidance yet. And I note that Dr. Pontis's question
+00:57:12.640 earlier about do we have the resources to deliver the 10-year plan. I don't know yet because we've not been given
+00:57:18.720 the the planning expectations for the next three years with the resources we've got. So once we get that, I think
+00:57:25.119 we can give a better assessment of how do we afford what we asked to do and what are the tradeoffs. Um that is
+00:57:32.000 imminent is the promise uh from the center and it has to be because if you
+00:57:37.359 look at the deadlines for the development of our plans we need to develop draft submission in November and
+00:57:45.359 final plan submitted in December. That isn't very long and the way that we
+00:57:51.920 will approach that Deborah and Lou and colleagues across all of our PL part
+00:57:57.280 partners in organizations and players has been working to ensure that we have
+00:58:02.880 an approach which makes real the ambition of NHS England which is that
+00:58:08.799 organizations plan themselves but in the context of the system in which they operate
+00:58:15.280 and we're fortunate to work with a really good region of NHS England which wants to coordinate all of that work uh
+00:58:22.000 with us. Alongside the planning guide framework that was published and the expectation
+00:58:27.599 of the planning guidance, we have received in the last week a letter from the interim chief exec of NHS England
+00:58:34.079 setting out priorities for the rest of the year and that reinforces the things we might anticipate
+00:58:40.640 uh such as carrying on with elective recovery, making sure that A&E targets
+00:58:46.319 are met, planning for the winter, uh making sure that we keep on top of the money, looking after our people, and
+00:58:54.160 getting the planning right for the future. So these are all things I think we talk about. You know, three time
+00:58:59.440 horizons, is it safe today? Are we planning for next year? What's the medium-term look like? So some of those
+00:59:06.160 things are new since we uh last met. What's also new is that you've seen Brendan's here in his West Yorkshire
+00:59:12.799 Association of Acute Trusts hat. Uh but last Monday
+00:59:18.319 um Brendan uh was appointed the interim chief executive of leadeds teaching hospitals trust uh for a period of up to
+00:59:26.319 a year and uh that's I think a mature uh response to uh ensuring that in
+00:59:34.799 transition whilst leads is appointing a new chief exec and has some turnover in its executive team there's some
+00:59:41.359 stability. So having a West Yorkshire Association of Acute Trusts and a mature system that enables that to happen is a
+00:59:48.079 really positive thing I would say and thank you to Brendan. Thank you to Phil Wood for the three decades of service
+00:59:55.359 and uh the huge amount of improvement that we've seen within leads uh during
+01:00:00.960 uh his tenure um and uh you know really grateful for everything that he's done
+01:00:06.079 throughout his career. Uh Rob Herson will be picking up uh the interim chief exec role. Uh Rob's Rob's Gray is the
+01:00:13.040 deputy at the moment uh in CHFT and uh he's uh taken up the role from uh last
+01:00:20.079 Monday or two. Um having really good hospitals that
+01:00:26.079 work together in collaboration whether that's in mental health or physical health services is critical. Having good
+01:00:31.440 neighborhood health services, turning the curve on demand, giving pe people better joined up services within the
+01:00:37.200 community so they have better lives, better outcomes is a fundamental part of
+01:00:42.720 our plans. It was really fantastic as you can see in the papers that we were successful in getting three all three of
+01:00:51.200 our submissions to be part of the uh national uh neighborhood health
+01:00:56.720 improvement program uh approved. So colleagues in Bradford, Weightfield and
+01:01:02.480 Leeds will be part of that program. It's a large scale improvement program which
+01:01:08.480 will look at the how, not just the what. And uh colleagues around the table will
+01:01:13.839 be reminded that we um we made sure that we had money to support organizational
+01:01:21.760 development in integrated neighborhood services because that's what people on the ground asked for because that's the
+01:01:27.280 hardest bit, you know, alongside the incentives and other things. So, it's really great to see that work and the
+01:01:34.240 energy and enthusiasm. And it's great as well that since I wrote the report, we've had um we we've had formal
+01:01:42.400 confirmation that the uh combined authority will receive a second year of
+01:01:48.640 funding uh for the healthy working life board. And we talked yesterday about how
+01:01:54.319 that's prioritized uh collectively to help make the biggest difference possible to people out of work. Um final
+01:02:02.319 thing I'll say is um you know AC asked Shat about you know what we're
+01:02:08.880 doing around digital in the absence of a strategy and we're getting on with a substantial number of strategic levers
+01:02:14.799 that are going to help. Uh one of them is making sure that we have digital literacy and ambition in West Yorkshire
+01:02:21.359 and we've set off a series of uh distinguished speakers lectures. because the first was yesterday with Vince surf
+01:02:28.160 the uh creator of the internet uh which was a privilege to be part of and shows
+01:02:34.480 that alongside the work on cyber alongside the work on the AI academy
+01:02:39.839 alongside on working with providers on uh the infrastructure to deliver the future uh you know we're really driving
+01:02:46.960 our ambitions on this because we have to because it's part of the three shifts um we can talk about uh organizational
+01:02:54.240 change in a minute but I hope that sort of gives some some flavor to the paper and some updates too. Thank you very much Rob. Any questions
+01:03:01.200 or observations for Rob Bma?
+01:03:06.319 There was so much in there Rob. We haven't got time for me to ask all the questions I wanted to ask. Um but one
+01:03:11.760 thing I I wanted to reflect on was the aspiration behind the quality strategy that we believe is forthcoming. I mean I
+01:03:18.079 really hope that they take into consideration previous learning about the impact of you know cultures within
+01:03:24.799 the workplace discrimination from both staff and and service users and also the aspiration that actually equity can be a
+01:03:31.280 massive tool when it comes to improving quality outcomes. So that's the aspiration and I hope that when it does
+01:03:36.880 come out that the quality committee will work and and take some of the learning from the equity and fairness strategy in
+01:03:41.920 that space. Um the other thing I wanted to say was just to remind board members about the learning from the Donakina
+01:03:47.760 evaluation at the back end of last year where there was specific reference to um the review taken into consideration some
+01:03:54.880 of the learning from testimonials about maternity services and an aspiration for the VCSE voices and the team behind that
+01:04:02.000 work to support this maternity work. Um and just an offer really to continue to do so as it as it goes forward. I think
+01:04:08.880 one of the things we can't lose sight of as you've alluded to Rob Anchair is the the trauma that the families are
+01:04:15.039 experiencing. It says great courage to speak truth to power. Um but I think Brendan summarized it beautifully when
+01:04:20.880 he mentioned the fact that there is a real concern about time and how long it will take to get a resolution because
+01:04:26.559 this family want closure. Um and also an aspiration for us if we can to support
+01:04:31.839 all communities to come forward and to trust the process because there is a real mistrust of processes at the
+01:04:36.880 moment. Um, I think the the final sort of two points I wanted to make was the the report that you mentioned about the
+01:04:42.799 learning from deaths. Rob, I mean the infographic was very informative but had some really worrying statistics and it'd
+01:04:49.119 be helpful to sort of get a bit assurance about how we're making a difference here and what more we could
+01:04:54.160 do in that space. Um, and then the final comment I wanted to make was the reference you made to the letter from
+01:04:59.200 NHS England about looking after our people. Um, and I know you're going to talk about the organizational change
+01:05:04.559 shortly, but I think it's really important to acknowledge that this hiatus and uncertainty is having a
+01:05:10.400 massive impact on people's lives in a very real way. We had testimonials from staff on our all staff briefings about
+01:05:17.200 operations being potentially postponed, life-changing financial decisions that are on hold. This is really impacting
+01:05:23.359 people on a day-to-day basis. And I hope in the conversations we have, we remember that each number is a person
+01:05:28.400 with a family and responsibilities. and you know we need to do all we can to support them navigate this complexity
+01:05:34.079 and uncertainty. Thank you partner. Thank you
+01:05:40.960 Hannah. So Hannah and then Martin um yeah just a couple of points. Um really welcome the quality strategy
+01:05:47.440 focusing on experience. I think we've I think the maternity experience is a is a good example of why it's so important to
+01:05:54.000 listen and act on people's experiences. There's a couple of a couple of examples just within the office at healthw watch
+01:06:00.400 leads this week of people one example was within A&E which was not a positive experience for a colleague and the
+01:06:07.359 consequence of that is that they don't want to go back to any and they've got kidney stones and they absolutely you know so so the consequences of of not
+01:06:14.079 listening to experience and not acting on experience will have con consequences for us as the public in how we use health and care services. Um the second
+01:06:21.280 bit was just about um encouraging people to share their experiences um uh and and
+01:06:27.839 it's you know uh I think Rob you mentioned to talk to providers as well. I suppose that's one of the things that Healthwatch offers. It's that
+01:06:33.680 independent trusted place and we know that often people for various reasons don't want to share
+01:06:39.119 their experiences with providers. Fear of retribution uh fear of it impacting on their care as they're going through
+01:06:45.039 health and care services. uh and including with the maternity the the um maternity voice partnership as well
+01:06:51.599 which is sort of independent so you know the importance of that um and then um
+01:06:57.119 finally just I suppose just to say about neighborhood health um uh we've just done a piece of work in needs around
+01:07:03.680 what does good look like from a citizen perspective particularly focusing uh there it's a massive piece of work
+01:07:09.200 actually but particularly focusing on the experience of unpaid carers young people culturally diverse communities
+01:07:14.799 many of you what uh communities that we've talked about today. So, uh, and it's really positive
+01:07:20.079 to see that, um, West Georgia has committed funding to make sure that people's voices are embedded into that
+01:07:25.599 that process, uh, as we go forward with that.
+01:07:32.319 Thank you, Majid. Yeah, thank you. Um, mine was on the
+01:07:37.359 leader report and that variation what Fatima mentioned. I'm just thinking
+01:07:42.880 about the accessible information standard around communication and information
+01:07:49.760 particularly with people with a learning disability and whether I sort of a future report
+01:07:56.400 that future meeting we could have a report on how we progressing that across the system to really make sure that
+01:08:03.440 disabled people are supported and are involved and are given all the sort of
+01:08:08.640 information in an accessible format. Thank you
+01:08:14.079 babe to come in on that babe. Would you like to respond? Yeah, it's in response to that comment. Um Majid, um the our local leader report
+01:08:22.880 has been published. Um we will be bringing the detail to the next quality committee and we'll report to this to
+01:08:29.279 the following board. Thanks. Thank you babe, Jane and then Hannah.
+01:08:35.759 Uh yeah, thanks. A couple of questions from the report. Um bit back on the maternity investigation, a service
+01:08:43.279 investigation. So I guess um I'm assuming that with the coverage of that there will be families um who are
+01:08:50.799 potentially going to be using services um across West Yorkshire who who may be concerned by what they have read and
+01:08:58.238 whether we are sort of how we are sort of keeping an eye on whether that is changing people's behaviors managing um
+01:09:05.839 um you know where where where um you know parents go um through this period
+01:09:11.359 and how we engage them. be interested to hear a little bit about that. Um, and the other one on the performance uh
+01:09:17.359 tables, I guess it's probably very it's early days, isn't it? We've only had one set of data out, but it'd be interesting
+01:09:22.719 to understand, you know, there's always skepticism about performance league tables and rankings, etc. And they're
+01:09:28.238 never perfect. Um but how are we planning on or or how are we talking
+01:09:34.000 about it in the providers to think about how we utilize it and take try and
+01:09:39.520 create some advantage from it or use it positively rather than simply
+01:09:44.640 have it there take whatever the consequences are but how are we trying to encourage people to engage with it I
+01:09:50.399 guess is in a in a positive way would be good to hear. Should I take that? I I think if I take
+01:09:56.719 them in reverse, Jane, I I think I haven't got a problem with league tables. Um I I think it does or it could
+01:10:03.840 create the potential for competition, but actually the public should see what's happening in their
+01:10:10.480 local organization. I think as Rob mentioned there are financial overrides which means in a score between one and
+01:10:17.520 five many organizations will be scoring three but beneath that is a beneath that is a set of data that speaks to what the
+01:10:25.199 what the organization is truly performing on several measures. I think
+01:10:30.719 that's what we need to pay attention to. It does feel very different because it's a quarterly regime. Um so therefore
+01:10:38.800 my personal view is we should have a view in advance of that quarterly report
+01:10:44.560 because we should know our own performance and understand our own data. So I think it's a helpful measure. Um
+01:10:50.719 but actually to your first point what I wouldn't want it to do is create further anxiety or concern for those communities
+01:10:57.199 that we're serving when they see a cold set of data behind those numbers are patients and their families. to your
+01:11:04.159 point, I think this is what I was um referencing earlier. Um, I do have concerns about families having to talk
+01:11:12.960 about their experience again and relive their trauma through this report. And I have concerns about families who will
+01:11:19.840 need to access maternity and pediatric services. And we need to work through
+01:11:25.280 how we assure them and about the services that they will receive, but
+01:11:30.400 also how we can truly respond to the experience that they've had. Um, we could be better at that. So, I can't
+01:11:36.320 give you a definitive answer for my own organization. I want to give them named access to a person to speak to rather
+01:11:43.199 than a generic email or contact number. But I am on day seven, so haven't quite nailed that yet.
+01:11:49.280 Um, but I I do I share your concern and I can't speak for the communities we
+01:11:55.040 serve and don't want to make an assumption about their level of anxiety, but it's something we need to pay
+01:12:00.159 attention to. Thank Thank you, Brendan. Yeah, if I may add um to what Brendan said and the
+01:12:08.000 staff. So, we've got some fabulous staff in the NHS across the whole of the NHS.
+01:12:13.840 We've got amazing clinicians in maternity services across West Yorkshire
+01:12:19.440 and the impact on staff as well is really significant. I want to offer I'm
+01:12:25.120 I want to offer some assurance to the board in terms of some of the work that's been undertaken in the two organizations that will be included in
+01:12:31.760 the national um review of services. So leadeds teaching hospitals is in um
+01:12:38.080 quality improvement group. We are meeting tomorrow in Leeds. Um I have
+01:12:43.600 attended a number of quality improvement groups in my career. I have never known one with um such a wide membership. So
+01:12:51.440 national the the the national um chief midwiffrey officer comes to that group.
+01:12:56.480 There is there is national scrutiny on that and they are um there is an improvement plan. Um we will be seeing
+01:13:02.480 that tomorrow. Um I know you're day seven Brendan we'll be asking some questions on probably day eight. So so
+01:13:08.960 there is that this is over this is chaired by the region and in addition in leads teaching hospitals um they're
+01:13:16.320 being supported by the national maternity safety support program. So the support is going into improved services.
+01:13:23.120 Um I would hope there there is a there is a part on the agenda tomorrow about patient voices. There is also an always
+01:13:30.080 an MVP voice on that um um on that meeting and is incredibly powerful. Um
+01:13:36.880 so that is some of the work that is ongoing um in leads and I think that that will possibly change direction. We
+01:13:43.199 I think I told the board last week um we've been um invited with a large eye
+01:13:48.960 to um th this is import this is um in face-toface meeting um and and going
+01:13:54.960 forward that's what it will be like and I think that the the numbers will be more focused. I think we'll come down from 45 in the membership but there will
+01:14:01.920 still be national scrutiny on that. Um in re in respect of Bradford, this board
+01:14:07.679 knows because we've had lots of detailed reports um here about the work that's been undertaken at Bradford into the
+01:14:14.719 historic issues that um that that happened there. They have been inspected
+01:14:20.000 on a number of occasions. We have received um you know reports and ratings
+01:14:25.040 that I just want to remind the board that they got outstanding for neonatal care which is it books the trend. Um and
+01:14:32.719 last week maternity was reinspected. So whilst it got RARI when they were inspected the last time um there's a
+01:14:40.239 significant increase in regulatory activity across Northeast and Yorkshire and Bradford um maternity services were
+01:14:46.560 inspected again last year. So in in I I want to offer the board and the public some assurance that actually the
+01:14:52.480 scrutiny is not just at organizational level and regional, it's also national. Thank you.
+01:14:58.239 Thank you Ben and thank you Brendan. Um, I think it's important as a board for us
+01:15:03.280 to recognize that there is a lot of assurance in in in what what you're saying to us, Bev, but the the work to
+01:15:09.679 be done is still absolutely massive and we have to undertake that with uh
+01:15:14.800 thought and compassion for our maternity users and our staff. So, the
+01:15:22.560 work goes on. So, I have next, who have we got next? Jane. Jane again. Sorry. I just wanted I just wanted to
+01:15:28.800 ask a little bit push a bit further in terms of the sort of communication. Do we use the GP networks to you know in
+01:15:35.760 terms of reassuring those families who are going to be coming through the services in the trusts that are
+01:15:42.239 currently in that list? How are we trying to sort of navigate and reassure people and presumably GPS are sort of
+01:15:48.880 key voice in that. Is there an active sort of effort in in that space to try
+01:15:54.239 and I don't think so I don't think I can answer that in detail here. What I wouldn't want to do Jan is presume that
+01:16:00.480 we know how families want us to communicate with them. I think some of it will be through primary care avenues
+01:16:05.600 but equally we need to talk to the people who are using our services so that they're aware of how they can
+01:16:10.640 access information and how they can seek support. Well, I I don't think one size will fit all of the six acute providers.
+01:16:17.199 Um I think it's down to the individual organizations to take that forward but it is something certainly for the two
+01:16:22.480 organizations that are taking part in this review that we are considering
+01:16:31.520 Robin. Yeah just to one comment uh just congratulate Brendan on his opportunity
+01:16:38.400 to take the new role. I think just a reflection of the local system. I think how seamlessly that was conducted and
+01:16:45.440 the confidence that we have in Rob uh and the work will continue a pace on the reconfiguration of CR and on provider
+01:16:52.640 partnerships. So that's important to say and that's wellreceived. Um my other comment just about challenges I suppose
+01:16:59.440 is about as we enter into the winter period around vaccinations and
+01:17:04.560 evidence-based medicine and I think not to underestimate the um impact of whether it's international statements as
+01:17:12.080 much as national statements about that and just the importance of that period of time for us and the importance of
+01:17:18.640 early intervention. We had a good discussion about health inequalities at our partnership board and recognizing
+01:17:24.480 the variability of access to vaccinations and good medication and good evidence-based medicine feels quite
+01:17:31.600 important and perhaps to restate things that we maybe didn't anticipate we would have to state but feel that important to
+01:17:38.800 state right now. Thanks. Okay, thank you very much. I'll final
+01:17:44.159 word James. just to I suppose echo what Robin said in terms of the the
+01:17:49.520 immediency of that both in terms of of our campaigns but also in terms of all age vaccinations going forward there. So
+01:17:56.880 I think um through our health protection function in which Victoria who sit next
+01:18:03.040 to myself co-chair our health protection board across the system there be some an
+01:18:09.679 area that we are continually looking at revising what in ter and learning from
+01:18:14.719 previous experience of how we kind of work within our communities and been some great examples of working with our
+01:18:20.080 communities across all our places not just in terms of um responses to
+01:18:25.520 outbreaks but also in terms of further promoting kind of vaccinations and we'll be looking at that but I absolutely
+01:18:31.120 agree with you Robin. Thank you. Okay, we have an item of win on winter planning in on the agenda later on. So
+01:18:37.920 Rob, thank you very much indeed. Uh we look forward to the next update. It's uh
+01:18:43.120 quite real time, isn't it? So next point is organizational change and that's for
+01:18:48.239 you as well. Okay. Um we've put it off for as long as we can. We're now at the organizational
+01:18:53.520 change part of the agenda. Um the first thing to say is that uh the changes in the system affect everybody
+01:19:00.239 and uh for the last six months I guess a lot of the focus has been on ICBS but if
+01:19:05.600 you were paying attention to what was going on in the other bits of the system you'll have noticed that they the
+01:19:12.080 changes actually impact upon everybody in the system and um I think to the
+01:19:17.840 point about how are we looking after our staff just to reassure the board and many of you have been to the briefings that we have a continuous conversation
+01:19:24.800 with staff. There's a formal weekly update. There's a fortnightly face toface briefing. Uh that includes um you
+01:19:32.960 know we get sever 800 people at that face to face online obviously uh and at
+01:19:38.560 least half of the time the 90 minutes is open to questions from staff. It gives us an ability to share everything that
+01:19:44.719 we know, everything that's going on and to sense check um you know what they
+01:19:51.360 need and what the latest questions are that staff are putting forward to us. Um
+01:19:57.679 when we think about the uh looking after our staff, one of the things we
+01:20:03.360 continually perpetuate is the notion of compassionate leadership.
+01:20:08.800 and you get your support from your team. And what we want to do is to try and get people to be um confident and in control
+01:20:17.440 of what's going on as much as they can be uh and to be informed about what's going on and not fall into having to go
+01:20:24.159 to well-being services uh which are available or to uh go into
+01:20:30.400 any of the other interventions that may be targeted at them because we've got a a context and a leadership that's and a
+01:20:37.440 culture that's compassionate and I I think I hope that we succeed in that as
+01:20:42.880 much as we can. Certainly, we receive unprompted feedback from many people in
+01:20:48.320 the organization thanking us for the cander and the continuity of the conversation even if the message is
+01:20:54.159 difficult. So, I just want to give the board that that assurance. In terms of
+01:20:59.440 the four levels of changes, you you'll have seen nationally that some of the appointments to the national department
+01:21:05.440 of health and NHS England roles have been made uh in the region. You'll see
+01:21:10.640 in the report that the model region has now been published and it's really helpful to see that um
+01:21:18.080 Kate spoke earlier about a helpful meeting with the region about what does
+01:21:23.679 the interface then look like between the region and ourselves. Um it's it makes a material difference.
+01:21:31.600 We've said we can't progress properly until we understand what the model region's doing because the ICB blueprint
+01:21:38.880 said that the region will be looking at strategic workforce, strategic digital
+01:21:44.239 uh and performance oversight, but there wasn't a model region to point
+01:21:49.520 to which elements and that providers would be looking at operational workforce items for example some of the
+01:21:57.199 operational digital issues etc. Um, so the model region is a really helpful
+01:22:03.840 document in that it talks about some of those areas. It doesn't have a capacity measure on
+01:22:11.760 it. there's no equivalent to our 19 pound per head and there are no structures and there are a couple of
+01:22:17.440 bits where just as there was with the model ICB NHS England are saying we'll have to come back to that one
+01:22:24.560 and that's particularly for us around um workforce training and education
+01:22:31.120 which is substantial part of the future for everybody uh going forward
+01:22:36.800 what the region have offered is to work with us over the coming months to make sure that we've got that work right and
+01:22:44.400 we're we're fortunate as I've said already to have a really good history of co-working with the regional teams and
+01:22:50.960 uh just to and OS is gone but has got particular interest in this Shiacat and
+01:22:56.159 his uh colleagues in the other ICBS in northeast Yorkshire Humber and the regional team have been looking at on
+01:23:03.120 the digital agenda where are the issues and gaps that we think in the emerging model that we're going to have to cover
+01:23:08.239 during transition. So the model regions out it does put I think uh some more delay into getting to
+01:23:16.239 an end point because of the need for us to work up what this means in practice because some functions
+01:23:23.760 will transfer I think to the to NHS England which will then mean questions
+01:23:28.960 of two PRIS at our level. Um alongside the model
+01:23:34.000 region there were a number of clarification documents and guidance published around
+01:23:39.760 SEND uh safeguarding uh continuing health care
+01:23:45.600 etc. which made it clear actually contrary to the original expectation some things will
+01:23:51.600 stay with us and some things will take longer to transfer out which then impacts upon our
+01:23:59.440 ability and then at place level uh we've been you know all of our providers
+01:24:05.600 sitting around the table have been asked to reduce their management costs NHS providers uh to take out 50% of the
+01:24:12.719 growth that they've seen uh so again they've been doing that and um again
+01:24:19.520 without any redundancy support or any other uh fun uh funding to ease that
+01:24:25.679 transition and in line with our strategic direction for years and our
+01:24:31.120 request in March looking at what's the organizational form of provision in each
+01:24:37.360 of the places to allow integration to happen and how does that dock into partners in places like local government
+01:24:43.840 the third sector health watch etc. So there's a lot going on uh and uh
+01:24:51.120 there's no clarity on the money that's required if we are to pay for the
+01:24:58.239 redundancy bill within the ICB and we've talked here and elsewhere
+01:25:04.560 about that potentially being 30 to40 million pounds. You'll see in the financial papers later presented by
+01:25:12.239 Jonathan that we don't have 30 or 40 million pounds of headroom or stretch. We have distress on our current plans
+01:25:19.360 and we cannot cover 30 to40 million pounds. Um therefore we need to look at
+01:25:25.679 alternatives which would either be we bust our financial targets which is not something
+01:25:33.360 which NHS England will allow. um we
+01:25:38.639 try and reduce the service offer to the public and that's not possible uh or we
+01:25:44.000 delay and it's looking increasingly likely that there'll be delay to the
+01:25:49.520 approach that we're taking now that I think that that allows us an opportunity
+01:25:57.520 um to do a couple of things that we haven't been able to do so far. uh one is to work with our staff more openly
+01:26:06.480 about the construction of the uh the operating model for the ICB
+01:26:14.080 and the other is to work with our partners on how it all works and to
+01:26:19.679 sequence that in a way which actually works because previously all of the changes were out of sequence and I think
+01:26:25.120 they're getting back into sequence now so um that's what we've been thinking
+01:26:30.239 about in executive And Anthony as the uh as the orch change director has been
+01:26:35.840 working with the executive to think about well what would we prioritize then now if we're going to see some delay to
+01:26:41.840 the changes uh to the staffing numbers but will allow us to step into the
+01:26:47.280 future to some extent. I don't know Anthony if you just want to mention the priority areas that we've been been
+01:26:53.040 considering. Thanks Rob and I think we've got one slide if uh we can just put that up on the on the screen. Um, and members of
+01:27:00.560 the board have already seen this in a private discussion earlier, but I think for the benefit of members of the public and colleagues watching the board
+01:27:06.159 meeting, we thought it'd be useful just to briefly summarize the work we are doing while we're waiting for that
+01:27:12.159 clarity on on the on the the funding of of the changes uh and what what uh what
+01:27:18.719 that will mean for the time table we're working to. Uh we've while we're waiting for that we've been doing some work to
+01:27:24.800 think about what what we should prioritize over the coming months and uh that that work we've summarized under
+01:27:30.719 these kind of three broad headings. One is around work to develop the future
+01:27:36.080 operating model for the ICB and and the wider health and care partnership. So
+01:27:41.520 there'll be numbers a number of pieces of work we'll be we'll be doing around that operational model and that will
+01:27:46.719 involve for example uh doing some work to make sure we've got the right business intelligence and data
+01:27:53.199 analytical arrangements in place um to support things like the new the new approach to contracting
+01:28:00.320 and uh how we develop new and more sophisticated approaches to to contracting in the context of working in
+01:28:06.800 in provider partnerships and also commissioning services at scale across
+01:28:11.920 West Yorkshire as well. So, so we'll be doing some detailed work in in in areas like like that. We'll be doing some work
+01:28:17.920 to assess the the readiness of our place provider partnerships to take on further
+01:28:23.600 uh further responsibility and accountability for the for the the funding that's available to them and the
+01:28:29.600 services that they'll be they'll be looking to develop and improve. We'll also have the opportunity to do
+01:28:35.840 some more work on the governance framework for for for for the ICB as an organization and how that relates to the
+01:28:41.520 wider system and in particular how that will link to the future arrangements uh
+01:28:47.840 for partners to work together in each of our places. Um
+01:28:54.320 the second area of of work we're going to be prioritizing is actually completing the future organization
+01:28:59.520 design for the for the ICB. And a lot of that will be in the context of looking
+01:29:04.639 at the implications of the the model region blueprint that Rob's just uh referred to. But it also does give us
+01:29:10.639 the opportunity to do some more targeted work with with our staff and with partners uh to make sure we've got the
+01:29:16.400 future designs uh right and uh and everyone has a as a a clear
+01:29:22.560 understanding of what the future expectations will be in terms of how we'll all work together in the in the
+01:29:28.639 new system. And the third area of priority work we'll we'll be focusing on is actually how we manage the
+01:29:34.639 transitional period over the the coming months. And that will include making sure we've got the capacity in place to
+01:29:40.560 to continue to maintain all of our key responsibilities and statutory duties.
+01:29:46.560 Um, we'll also take the opportunity to to uh consult with staff on future
+01:29:53.440 arrangements for uh how we respond to emergencies through having uh staff on
+01:29:59.440 call to to to respond to incidents and emergencies. And we'll also be looking
+01:30:04.560 at discussing the future estates requirements of the organization with uh with staff. And then finally, we'll
+01:30:12.239 we'll we'll continue to refine the timetable and the process for uh consultation and selection uh into the
+01:30:19.199 future organizational uh structures and designs. So just a flavor there of of what we'll be focusing on in the next
+01:30:25.679 we're saying six to nine months. This is obviously fluid in terms of uh waiting for for clarity on on on national
+01:30:31.840 timetables um time scales for for for change but I think that gives us a clear
+01:30:37.280 focus of work to do to to keep the momentum going through this change process. Thank you.
+01:30:46.080 Okay. So I think um I think what the board should uh be aware of is the fact
+01:30:51.440 that like you know there there are some delays to uh the HR processes and the
+01:30:58.080 staffing reductions that we're likely to see in the coming months. We set off on
+01:31:03.280 a journey that would get us there by October. Um we submitted our plans at
+01:31:08.400 the end of May to deliver that October reduction. uh it's not possible to
+01:31:13.840 proceed further at the pace that we were originally asked to proceed and um we'll
+01:31:20.080 be taking a bit longer to do the work. That doesn't mean the work stops. It
+01:31:25.920 means that hopefully the work gets better in terms of the way that we're doing it, the way we're engaging with
+01:31:30.960 people and the quality of the final outcome not just for us but for
+01:31:36.080 providers locally for the region and uh how that doves dove tales into the
+01:31:41.520 national system. So thought we it was important that the board was aware of that today. Uh, we've got staff
+01:31:48.400 briefings, uh, and I'll be sending something out to staff today to talk through what we've been talking about at
+01:31:54.639 board and we're following that up in our teams over the next week or two.
+01:32:01.760 Thank you very much, Anthony. Oh, sorry. Question.
+01:32:07.760 Yeah, I thought it was important that we that we um heard from not just the
+01:32:13.440 statutory bodies and how this impacts on teams in the voluntary sector and beyond. Um it really has an impact
+01:32:20.320 because we can see colleagues that we work with in partnership under an awful lot of pressure and a lot of change and
+01:32:26.400 we're working really hard to support that. In addition, it's important to understand that we all have to balance
+01:32:31.840 our books. So we are continually um in a process of redesigning our pathways and
+01:32:37.199 our um processes to make sure we can live within the financial envelope that
+01:32:42.800 the public sector contracts with us for and that means entering consultation
+01:32:48.480 making significant changes and all that pressure is throughout the whole system. So, I'm not I'm not trying to say this
+01:32:54.320 is not huge that we're trying to deal with and and we want to work really hard with our partners, but I think it's
+01:33:00.000 important to understand it it's beyond the the public sector too and it impacts
+01:33:05.280 in a way that you we all have to respond to. I'm talking on behalf of Kim here, but and and we are really trying to
+01:33:11.679 respond to be great partners and support well and not keep coming back with we need we need more, we need more. We're
+01:33:18.000 trying to redesign as we go. That brings impacts for colleagues. Thank you.
+01:33:25.679 That's a really good point, Karen, and also demonstrates the effectiveness to date of our partnership and how if we
+01:33:32.960 want to continue what we're doing in West Yorkshire, we've got to make sure that we understand the impact on
+01:33:39.520 everybody, all our partners as well as our own staff and and and patients, etc.
+01:33:44.719 So, I have Jane and then Hannah. Yeah, thank you. Um I was just one
+01:33:50.320 question in terms of clarification whilst obviously there are the delays and we don't have a clarity in terms of
+01:33:56.080 funding for the organizational change piece. Is there is there a clear time
+01:34:01.440 scale by which the ICB should be adopting the new role of the ICB or
+01:34:08.800 elements of it? And I guess it's kind of thinking if that is coming sooner than we have clarity to deliver the change
+01:34:16.480 would we have to consider adapting you or moving some elements of the organization into the new roles and um
+01:34:23.280 yeah managing it feels slightly fluid but I think Ian can say more it it feels slightly fluid. Um well so I
+01:34:30.080 think I think some some things were starting to get um you know signals from NHS England that things are changing
+01:34:35.360 now. So if you look at the um the planning framework that came out, there's a much stronger emphasis around strategic commissioning, commissioning
+01:34:41.040 intention. So um so some of that feels like it's progressing now. Other things will require statutory legislation to
+01:34:47.760 change. So um you know, some of the statute functions that we have will only change when that happens, which is probably looking like it's 18 months
+01:34:54.080 away. So it is fluid. The other thing is that some of the information that we've
+01:34:59.440 previously received, for example, through the ICB blueprint is now maybe less certain than it was at the time. So
+01:35:04.800 we're trying to adapt to that as well. So I think that's why Anthony described the kind of the approach that we're taking through transition which is
+01:35:10.639 deliberately agile and and and I think some things do feel like they're changing now but others will be subject
+01:35:16.159 to longer process through strategy change.
+01:35:21.360 Okay Hannah. Uh yeah, I suppose just to um uh I'm sure we're all speaking with
+01:35:27.360 ICB colleagues all the time and and um Rob's reassurance around the you know excellent feedback mechanisms and
+01:35:33.760 ability to staff have to you know hear the updates. But I think as it's just sort of recognizing the it's very
+01:35:41.199 difficult for the West Yorkshire ICB here because of the the poor national planning and the poor processes that
+01:35:46.239 national have uh that that are delivering to local ICBS. So um you know
+01:35:52.880 we we raised this with Healthw Watch England a while ago. Um but but I suppose just put on record that that's
+01:35:58.560 having you know there's little that the West Yorkshire ICB can do with that about that because the national national planning and I suppose linked to that is
+01:36:06.080 is that and I maybe I should have mentioned it in the in the risk element at the beginning but it's just making sure around that impact on care and
+01:36:12.880 quality you know ICB colleagues do key roles around quality assurance around
+01:36:18.080 insightfree quality impact assessments around CHC around safeguarding
+01:36:23.760 this hopefully this this transitional period will give uh more chance to make sure that there aren't gaps in that that
+01:36:29.280 you know make sure that we have a keen focus on that. Um and then I suppose the third bit is just um and it was it was
+01:36:35.040 referenced in the in the pre-me as as ICB responsibilities go to
+01:36:40.320 regional and local places in provider partnerships making sure that we don't lose those principles of of of what
+01:36:45.600 we're about in West Yorkshire around public voice citizen voice around focus
+01:36:50.719 on inequalities around working in part partnerships and and every partner having equality of of of of voice and
+01:36:57.520 there's probably other principles but not to lose that. No, absolutely right. Thank you for that. Hannah, um I have
+01:37:03.920 Majid and then Mel. Mel, please. Thank you, chair. I just wanted to recognize that for our 1,200 workforce
+01:37:11.280 and staff across West Yorkshire ICB, there's been incredible amount of delivery, focus um and improvement
+01:37:18.800 programs um developed and um delivered really over the last 6 months. This hasn't been an easy time for our staff
+01:37:25.440 as as you've just heard from Hannah and from Fatima earlier on um in this meeting. But what I would say is that
+01:37:31.679 you know I've been absolutely inspired by the work that colleagues have continued to deliver. So I just want to
+01:37:37.040 say a big thank you on behalf of every one of us for all of our workforce across West Yorkshire ICB.
+01:37:45.199 Thank thank you mill thank you. No thanks man. It's very important we do recognize and thank other colleagues for
+01:37:52.320 their contribution. So just a few things from me. So in terms of uh staff it's
+01:37:59.119 not reform is it? I mean the the staff have been under sort of constant change
+01:38:04.320 from CCG to ICB then a cut then another cut and now we're in another prolonged
+01:38:11.360 sort of period of uncertainty. So welcome the delay in the sense that
+01:38:16.480 people can contribute more but it still doesn't take away the fact that a huge
+01:38:22.320 amount of of our colleagues will be without a job at the end of all of this. So I think that we really sort of need
+01:38:28.880 to u pay attention to that and morally on on a moral compass is it right to
+01:38:34.960 keep people under uncertainty for such extended periods. So linked to that
+01:38:41.199 there's there's another risk we've got isn't there around workforce composition. So with having this level
+01:38:48.080 of cuts it's inevitably going to impact on workforce representation. I think we
+01:38:53.840 got going to make sure that through this process we pay attention to that and a
+01:39:00.480 lot of reform is going to um require different ways of working. So from an
+01:39:06.000 organizational and system development perspective, we need to sort of have
+01:39:11.679 eyes on what does that actually look like? People aren't suddenly going to start working differently in a different
+01:39:18.080 places and just merge into new teams without a lot of effort and focus. So um
+01:39:25.199 that also needs some attention and I think from an aspiration perspective the
+01:39:30.480 ICB blueprint does speak about building capacity and capability around those
+01:39:36.800 sort of key areas of um tackling inequalities and reducing variation
+01:39:42.560 but it's not really coming across in practice either in the sort of regional
+01:39:48.560 blueprint. So I think what and I appreciate we're at a very high level at the moment but people notice these
+01:39:55.760 things. Communities notice it. Colleagues notice it and appreciate the jigsaw pieces are coming together. But
+01:40:02.800 maybe a set of principles that as we navigate this journey we're absolutely
+01:40:07.920 going to make sure that patient community voice remains central that
+01:40:13.600 involved in co- production identifying needs gaps etc. and also in terms of um
+01:40:20.480 tackling inequalities, how are we actually going to do that in in in practice? Thank you.
+01:40:27.760 Thank you, Majid. I I think the strong messages then and you've said this a few times today. Um we need to have a set of
+01:40:34.560 IC West Yorkshire ICB principles uh embedded within our change process. Um
+01:40:42.239 and these have to include inequalities across the board. So that's a a strong
+01:40:47.520 message. Um now have finally Kim.
+01:40:54.719 I just wanted to uh pick up on Karen's comment to to give a bit of assurance around the VCSE involvement. Um I've
+01:41:02.800 been on the board for three years now and um about I've worked with the ICB in Bradford for a really long time. Um the
+01:41:09.040 reason why I joined West York Shortshire was because of its um real drive and commitment around involving the VCSE in
+01:41:15.040 the partnership. Um I the 10-year plan is light on the VCSSE um which you know
+01:41:22.719 which gives me and my colleagues concern. However, what I would say is um we are not light on the VCSE in terms of
+01:41:29.360 our involvement and being picking up where the risks potentially could sit in some of the organizational change and
+01:41:35.119 transition. So having very active conversations with colleagues both in places um and in the West Yorkshire team
+01:41:41.600 about how we think that through in terms of scenarios, what that could mean for the sector um and um we've got various
+01:41:48.320 things coming up on that you know that because there could be some significant risks um that add to the major
+01:41:54.480 challenges of sustainability for the sector but um you know uh I I co-chair
+01:41:59.920 the integrated neighborhood health board with my colleague Mel Brown. I think actually the fact that they've got a VCSSE person doing that is a a really
+01:42:06.800 important mark in the sand for us as West Yorkshire. So, um to give my colleagues and um VCSE colleagues who
+01:42:13.920 might be watching some reassurance. It is a challenging period. Um I believe strongly that we will do what we can
+01:42:20.400 within our gift at West Yorkshire. Some of that stuff won't be within our gift. Um but I think we've got the right colleagues to try and um make that as
+01:42:27.679 positive as it can be.
+01:42:36.239 Thank you. I just want to briefly comment from a local authority perspective on this. I agree this is an incredibly challenging time across a
+01:42:42.239 number of sectors and it's right that we're talking about that today and from lead city council point of view. We're
+01:42:47.440 grateful for the collaborative approach from the ICB leadership. Um and I hope that will continue through coming
+01:42:52.719 months. I think that extra time that Rob mentioned to really think about how we're working at place is going to be
+01:42:58.400 really a really valuable opportunity. Um, as we acknowledge those challenges, I do want us to also see as a board how
+01:43:05.119 it comes together in terms of opportunities as well. So tomorrow in Leeds, we'll be talking about the lead's ambitions. One of which is uh closing
+01:43:12.000 that life expectancy gap that we see in our city 11 years between two of our wards. We talk about the inequalities
+01:43:18.080 challenge here as well. We want to bring the city together around closing that that gap and improving the health and well-being across the city, working
+01:43:24.480 closely with the health and well-being board, but also with a range of organizations including the voluntary sector um in Leeds. And when you look
+01:43:31.520 across what we want to do as a city, the neighborhood health ambitions in Leeds, we have the community health mission as
+01:43:37.360 well, which will bring in a particular perspective on on working with children uh across those different statutory
+01:43:42.800 agencies. And then you also look at the provider partnership work. Um I do think there's an opportunity over the next
+01:43:48.560 year for us as a group of providers around the table from a range of sectors to take an important step both in the
+01:43:54.719 governance and the delivery of health. So that is health care providers but nested within a very big system of
+01:44:01.119 people who are dedicated to supporting people to improve their health and live as best they can long and full lives.
+01:44:07.520 Um, and I do want us as a board just to keep that in our sights as well because I do think there's a set of things that
+01:44:13.360 if we see as opportunities, we could do some really exciting work in West Yorkshire from our perspective in leads
+01:44:18.719 as well over the coming year. Okay. Yeah. Thank you very much, Ed. Uh, some
+01:44:25.360 clear messages from this discussion and some very clear risks and opportunities.
+01:44:30.800 I'm going to have to ask Ian as for his final sort of closing comments. Yeah,
+01:44:37.360 thank thanks Nadra. I mean really helpful conversations have a really good set of um comments. I I guess it is
+01:44:44.159 important that we're highlighting risks. I think um and I think the risks during transition have probably increased as a
+01:44:49.600 result of the delays we're talking about. You know, we've got a longer period of uncertainty and working with staff and sporting staff during that
+01:44:55.360 period of uncertainty. I think it's really important. I do think we've got an opportunity to get the end state
+01:45:00.400 better and the end state right. And actually that's the it's it's it's it's managing the transition risk against the
+01:45:05.440 opportunity around trying to get to a better place in terms of the end state I think is is the position that we're in now. Um we're working really hard on
+01:45:12.080 that transition and and working with staff to prioritize ensuring that we've got the right arrangements around
+01:45:17.360 performance, quality, safety. So so so retaining those sort of core elements of governance that will keep us safe during
+01:45:23.360 that transition I think is going to be really important. Um I think we've all spoken about what makes kind of West York unique and different and the
+01:45:29.600 relationships that we've got and the partnerships that we've got super important to retain that you know during
+01:45:34.719 the next period and into end state. Um and maybe finally just to echo Mel's point I mean the teams are getting on
+01:45:40.800 with the job. They continue to do brilliant work. We've seen that through the integrated neighborhood health pilots and pioneers and you know I think
+01:45:47.040 our job is to support them as much as we can and and be clear in terms of the priorities that we've got for the next period so that um you know they can get
+01:45:53.440 on with the job that they want to do. Thank you. Okay. Thank you. Thank you Ian and u
+01:45:58.639 Anthony and and Rob for that. Uh you'll be pleased to hear. We'll break for a cup of tea now uh and come back at half
+01:46:05.760 past or Yep. Okay.

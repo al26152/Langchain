@@ -100,11 +100,7 @@ def load_document_dates() -> Dict[str, Dict]:
 
     try:
         with open(DATES_CONFIG_FILE, "r") as f:
-            content = f.read()
-            # Remove comments (/* ... */) from JSON
-            import re
-            content = re.sub(r'/\*.*?\*/', '', content, flags=re.DOTALL)
-            dates_config = json.loads(content)
+            dates_config = json.load(f)
         print(f"[OK] Loaded dates for {len(dates_config)} document(s) from document_dates.json\n")
         return dates_config
     except Exception as e:

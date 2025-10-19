@@ -1,0 +1,1413 @@
+# tactiq.io free youtube transcript
+# No title found
+# https://www.youtube.com/watch/qYfb69-9wXY
+
+00:00:03.120 Good morning everybody and welcome to the NHS England board. Uh we are live
+00:00:09.120 streaming this and to everyone uh who's joined us, members of the public sitting at the back of the room and people who
+00:00:15.280 are watching this online, you are very welcome. Um and we look forward to a
+00:00:20.400 good and constructive discussion this morning. Um before we get going, I will
+00:00:26.400 do a quick run around the table and have everybody introduce themselves. Not least because we have a number of uh new
+00:00:33.040 people. We're moving towards we've got a a number of new non-executive directors, but also we are moving towards uh a
+00:00:41.280 number of interim posts in the new combined structure. Uh that's across NHSN London's Department of Health and
+00:00:48.000 Social Care, which was announced last week. And so I think important for everyone who's both here and watching
+00:00:53.600 online that you know who everybody is. So Ravi, we'll start with you. Hi, I'm Ravi Gury. Just joined uh in my
+00:01:01.359 day job. I'm the chief executive of Nester. Good. Good morning everyone. My name is
+00:01:07.360 Tom K. I'm the national director for learn disability and autism here at NHS. Good morning everyone. Chris G, chief
+00:01:13.920 sustainability officer at NHS. Good morning everyone. Habib Naki, chief exec of the NHS race and health
+00:01:19.600 observatory. Good morning. Diana Day, director of healthcare inequalities improvement.
+00:01:26.479 Tom Cassie, executive director of strategy. Glenn Burley, financial reset and accountability director. Uh Mark
+00:01:32.799 Bailey, I'm the executive chair of the digital data and technology committee. Claire Fen, national medical director
+00:01:39.119 and I'm the national priority program director for neighborhoods. Morning everybody. I'm Luis Ansari, one
+00:01:45.200 of the new non-executive directors and also the chief executive of Healthw Watch England. Good morning everyone. I'm David
+00:01:50.880 Probert, deputy chief executive. Morning everyone. I'm Rob Check, strategic adviser. I'm in charge of uh
+00:01:56.960 comms and engagement in NHS England. Good morning. Paul Kan, new non-exec
+00:02:02.960 director. Duncan Burnon, chief nursing officer and interim national priority director for maternity, women's health and children
+00:02:09.280 and young people. Andrew Morris, deputy chair. Penny Dash, chairman.
+00:02:14.560 Jim Maki, chief exec. Morning. Elizabeth Omani, CFO. Jeremy Town. I chair the audit uh risk
+00:02:22.160 assurance committee. Morning everyone. I'm Ming Tang. I'm the interim chief digital and d and
+00:02:28.160 information officer. Morning. David Bennett, new non-executive.
+00:02:33.519 Morning everybody. I'm Sarah J. Marsh, national director of urgent and emergency care and operations. Sam
+00:02:39.360 Everington, uh, a Ned and a GP in the east end of London.
+00:02:44.480 Good morning. Megan Aandit, national medical director. Robert Leckeler, I'm an old NED, uh, and
+00:02:50.720 I chair the quality committee of NHS England. Uh, Mark Cubbin, I will be the national
+00:02:56.239 priority program director for planare. Morning, Suresh Vishman, associate NE
+00:03:02.480 and also on the digital data and tech committee. Hello, I'm Joe Lenahan, um, intram chief workforce officer.
+00:03:09.680 Morning everyone. I'm Carolyn May. I'm director of leadership, talent and management development. Good morning everybody. Lindseay Hughes,
+00:03:16.400 director of research, NHS England. Uh, good morning everybody. U Alex Churchill, deputy director for policies
+00:03:22.080 for clinical trials from Department of Health and Social Care. Okay, thank you everybody. Um, and I
+00:03:28.720 will obviously have to be on my toes with so many people around the table to keep us to time. Uh just before we start
+00:03:35.840 uh we've got apologies from Amanda Doyle who leads for primary care and Ben
+00:03:40.879 Dicker who leads on transformation. Um and I would like to say this Sesh who
+00:03:46.959 is our associate Ned this is his last uh board meeting and I'd like to say big thank you for all that you have
+00:03:53.040 contributed to this. uh we do have a declarations of interest uh and the
+00:03:58.640 register is published on the website and I would ask whether anybody has anything
+00:04:03.760 which isn't on the website that they would like to declare today.
+00:04:09.439 Okay, thank you very much. So I'll get us into the agenda. First substantive item is the minutes from the last board
+00:04:16.238 meeting. Does anybody have any comments on those?
+00:04:23.280 No. Okay. So we'll take those as an accurate recording of the last meeting.
+00:04:28.400 Um we'll come on to some updates from board committees. Uh we haven't had as
+00:04:33.600 many of those. Just to be uh very clear, we are because we've got a number of new NEDs. We are moving into the new
+00:04:40.560 committee structure and uh hopefully at our next board meeting, we'll have more updates from the various committees. Uh
+00:04:47.919 but we do have an update on audit and risk from Jeremy. Thank you, Penny. Uh just quickly we met
+00:04:54.240 last week. Uh we are making good progress on our uh risk register and
+00:05:00.400 mitigations and increasingly working with the department to bring the risk register together and the same with the
+00:05:06.560 internal audit plan. Uh we've got an update from uh the internal auditors uh
+00:05:11.919 but also on how they're working together with the DH internal audit team to bring the plans together. Uh we took uh an
+00:05:18.800 update from Gus Williamson on the primary care support. um uh services systems uh identified a number of risks
+00:05:26.479 and a paper on that topic is going to come to the executive uh to give it a bit more profile and make sure we've got
+00:05:32.720 a plan for uh transition over the next 2 to three years. Um really good progress
+00:05:38.000 from the executive on open audit items. It's a bit of a canary in the coal mine in terms of the overall culture. uh more
+00:05:45.440 to do there and again an issue for the executive to look at I think as to how the particularly the priority ones can
+00:05:51.600 be resolved. Um good progress from the team on getting the accounts out. It's
+00:05:57.280 quite a challenging situation and the audit requirements have changed but good progress on the NHS England accounts and
+00:06:03.039 they should be coming before the board in early October and the provider accounts hopefully shortly thereafter.
+00:06:09.280 And then finally uh we are about to move on to a new accounting system. is going to affect the whole system. ISF2
+00:06:17.280 we're all holding hands together and hoping it all goes well. But I think the team have done a really good risk
+00:06:22.319 assessment, contingency planning, communication into system and well done to everybody being involved in that.
+00:06:28.160 It's a mammoth effort. I think most of the team are up in leads now trying to make sure it goes okay. So, so well done
+00:06:33.360 to Elizabeth, Vicki, and the team for that. Okay. Thank you. Any questions? Paul,
+00:06:39.280 I I was at the committee and uh when you when we get the risk register, I just
+00:06:45.919 really like to draw everyone's attention to what was one of the main risks uh and the mitigation for that risk. And one of
+00:06:52.000 the main risks is we're too slow in bringing about the change. Um and uh and
+00:06:57.840 so I think one of the things we need to keep in mind is whether we are making
+00:07:03.280 that slower or quicker. uh because if we're making it slower, we make the risk greater. Um so the mitigation that we'll
+00:07:10.960 be looking at through all of our activities is are we up for the pace of
+00:07:16.080 change? So can I suggest that we come back to
+00:07:22.479 that when we discuss the 10-year plan update because I think that's the moment
+00:07:28.880 at which we should really be scrutinizing. Are we doing enough? Are we going quickly enough? But is your
+00:07:34.960 question Paul also to Jeremy and Elizabeth about are we capturing the risk of that accurately?
+00:07:42.080 I think we I think we were in the committee in the in the risk committee.
+00:07:48.080 It's just that uh when you come out of that um I think the conversation we had
+00:07:54.240 is that most people's experience of risk is change and when we say the biggest
+00:08:00.080 risk is not changing for a lot of people is counterintuitive
+00:08:05.360 because and it's true actually it's true at the moment the risk for the national health service is not changing fast
+00:08:11.199 enough most people experience risk as changing too fast you make Paul in meeting was the risk K is that in the
+00:08:19.280 system in hospitals and GPS the risk that we're planning to take will be seen as being risky and so we just need to be
+00:08:25.919 careful as to how we communicate how we get the message across and how we deal with that potential barrier to change as
+00:08:31.840 we're trying to deliver what we're trying to deliver. Absolutely. So key point and let's as say keep hold of that for when we come
+00:08:38.399 on to talking about it. Elizabeth. Yeah. Penny, just to to echo something
+00:08:43.519 that has just been said really and this ISFB2 um system. So, it's a new cloud-based
+00:08:49.920 system for finance and accounting and it's just a thank you actually to all of the financial control uh teams out in
+00:08:56.560 the wider NHS because it's 42 ICBS, it's HS, it's all the CSUs and it's NHS
+00:09:02.240 England. It's been a couple of years in the making and yesterday we made the decision that we were ready to proceed
+00:09:08.160 um with a go live date effectively of the 1st of October. So it's a huge amount of work and a lot of people
+00:09:13.760 working long long hours and over weekends. So again to those financial control teams that are finishing
+00:09:19.680 accounts and then moving quickly into this work. Uh just a massive thank you because some of them are part of a
+00:09:25.600 change process as well. Okay. Thank you and yes we would echo that. Okay. So that's quite a nice then
+00:09:32.560 link into uh update from uh the digital and data committee digital data and
+00:09:38.959 technology committee and Mark uh perhaps you might like to also reflect on the
+00:09:44.240 point that Paul's raised because this is one of the areas where sometimes we look at the risks associated with adopting
+00:09:50.640 new technology but we don't look at the risks associated with not adopting it.
+00:09:56.800 Um, of course, Benny. Um, so the DATP met yesterday. Um,
+00:10:02.720 some some really good progress in some areas. So, progress on cyber security across NHS England and res the
+00:10:09.760 resilience plan that the board's been pushing on for 18 months is good.
+00:10:14.880 There's clearly quite a lot more work to be done in the system and in particular in the supply chain which I think will
+00:10:21.839 continue from here. Um I think the team working on the single patient record
+00:10:28.560 um should be congratulated. Three options are now in proof of concept
+00:10:33.760 build. So no longer in PowerPoint but actually in practicing code. Um I think
+00:10:40.240 that brings home we need to start doing a lot more work on the engagement plan that goes with it because
+00:10:46.079 to your point about things that need to be adopted and will be changing for the whole system. The single patient record
+00:10:51.120 is a massive vehicle for change and um needs to be delivered. Um the NHS
+00:10:58.720 outlook continues to go from strength to strength. If you look at the adoption, unique users, monthly loginins, it's
+00:11:06.240 probably and I need to check this the most used app in the country. Um
+00:11:11.360 there is absolutely clear use cases for
+00:11:17.120 um managing access, managing treatment paths and also driving prevention. Um I
+00:11:25.839 think the key task at the moment is to select a small group of really high impact cases where we've got clear
+00:11:32.399 clinical sponsorship which is something I'll I'll come back to. Um which can deliver both improvements to patients
+00:11:40.240 and productivity and I think that list is there. I think we just need to get to the shorter list and start executing.
+00:11:46.800 um the operating model work for the combination of the department and then HSSE is going well and I think we'll
+00:11:52.880 have a substantive proposal by the next meeting. I think if there's one theme and it comes back to what Paul said
+00:12:01.839 consistently there seems to be a lack of sort of operational ownership and vision
+00:12:09.680 driving the technology team harder and what I think that's causing is us slowing down. And I think if you look at
+00:12:18.639 the need both to reduce waiting lists to improve performance in in UEC
+00:12:25.279 access to general practice improving prevention technology is the answer and we need to drive the adoption much
+00:12:30.800 faster and the risk of not adopting it is we continue in the position we're in today.
+00:12:36.720 Okay. Um before we take questions Ming, anything you'd like to add? No, we had quite a long debate yesterday on how how
+00:12:44.399 can we um align better and work better in a matrix form between the technology
+00:12:51.200 teams and you know the clinicians and also the ops teams which we are starting
+00:12:56.320 to do. We've had some really good engagement and workshops but it's a starting of the journey rather than the
+00:13:02.000 finish. Yeah. and on the single patient record.
+00:13:07.440 Um, so good to hear that progress. Mark, what's your sense? I mean, neither of you. When will we have it?
+00:13:16.800 Which day? I'm happy I'm happy to go with a quarter of a year.
+00:13:23.040 Um we we should have a prototype ready for review kind of end of the year, end
+00:13:29.519 of this calendar year for adoption and and further development to be honest cuz we will then have down
+00:13:36.320 selected to hopefully one pattern that we want to deliver. Um we're not really
+00:13:42.959 going through this as a we will buy this. What we're really looking at is what's the concept we're trying to
+00:13:48.240 achieve? What's the modularity? how how much of it have we already got, what do we actually add to and then how do we
+00:13:54.639 accelerate the change. So in all this work as as Mark said, you know, we want
+00:13:59.839 to find the really great use cases that we can drive through and make sure that
+00:14:05.120 it it does all those things because we're going to iterate this over time. It's not going to be one, you know, quick bang and it's done.
+00:14:11.279 Okay. All right. Thank you. So I've got Robert um I've got Louise. So we'll take
+00:14:18.160 and Sesh. I'll take all three questions first and then come back to Mark for me. So it's it's more of a comment than a
+00:14:24.000 question but I think as Mark said I think the progress is terrific the but
+00:14:29.040 the point of these technologies is to enable pathway redesign uh and
+00:14:34.079 productivity gain and I think the conclusion we came to is that
+00:14:39.839 a great opportunity to build these technologies for example single patient record into pathways is the modern
+00:14:45.199 service framework work. So that's where you begin to see how you can re-engineer
+00:14:50.480 a pathway, a whole pathway um using these technologies.
+00:14:56.240 Yeah. And we might come back to that and talk about partly modern service
+00:15:01.279 frameworks but also all clinical pathway redesign. Sash I just wanted to add that uh really
+00:15:07.519 productive session. My observation is that there is a lot of measurement technology that's built outside of the
+00:15:13.600 NHS, watches, wearables, rings. Pick your pick your favorite. I think our
+00:15:18.880 vision should be bolder and braver to encompass what's happening in the outside world and bring it back in
+00:15:24.720 especially as we're focusing on prevention. Kite Louise. Yeah, thank you. So, uh does absolutely
+00:15:31.519 seem like fantastic progress and we know that people really um on the whole welcome using the app. Um can you tell
+00:15:37.680 us more about how you've involved uh service users in the development of it?
+00:15:43.760 Okay so uh go on Sarah J. Just to totally because we've had a
+00:15:48.800 really productive meeting with Mark Ming and I about what we might do on UEC here. I do think we need to acknowledge
+00:15:54.880 that for many of us we don't really know the art of the possible. So if we're waiting for the I know we're not but if
+00:16:00.480 we were to wait for the vision to just come from current operational and clinical leaders I'm not sure it's
+00:16:05.839 there. It's got to be the meeting of the genesis of the art of the possible with
+00:16:10.880 the tech teams to really drive ourselves forward because I think a lot of us start to invent or or start to work on
+00:16:16.880 what was last year's technology not not the technology for 3 to 5 years. So we need pushing on. So we're all up for the
+00:16:22.320 challenge but I don't think it's as simple as we just have a clear vision and then off we go and try to implement
+00:16:28.800 it. It needs we need to be really pushed I think by the tech people in terms of what will be
+00:16:34.000 possible in a few years time. Okay. So I'll try and weave all these together. So there's essentially some ways similar
+00:16:40.959 question about how do we really get tech embedded into all services and do that both in a push and a pull. So we're not
+00:16:48.000 waiting as your point Sarah Jane for staff to say it's about how do we say these are good ideas let's start trying
+00:16:54.079 them. um how do we really Robert's point adopt that into all of our care pathways
+00:17:00.880 whether the modern service frameworks or or other care pathway designs how do we involve users as we're developing
+00:17:07.359 different products and then how do we uh open up the app which was part of the 10-year plan to be able to for people to
+00:17:14.559 put in their own data from wearables and other devices
+00:17:20.480 or you can ask a mark so I think we pick up let's let's deal with the user
+00:17:26.959 input because I think the app team are one of the prime example of so we actually have a a bank of about
+00:17:33.840 25,000 people that we test the functionality of the app with um and that's done on a regular basis just as
+00:17:40.320 routine every kind of feature that they change is actually tested with that bank of users so it's quite a lot of
+00:17:47.200 engagement and then then there's local engagement as well and then on the sponsorship
+00:17:54.720 I think in all periods of change you get these slight dislocations. I think Sarah Jane's point about the meeting with UEC
+00:18:01.760 what the technology can do what the vision for UEC is I think we need to mirror that. I think similar work's been
+00:18:07.679 done on outpatients and cancer. We need to do the same thing on primary care but pulling the business closer to
+00:18:14.240 technology and technology closer to the business and actually creating this after the possible and some pace I think
+00:18:20.559 is the key and it's I think collectively everyone on the committee this is no longer a technology
+00:18:27.360 challenge this is a business change challenge the tech can be done the progress made on single patient record
+00:18:34.160 in six months has basically proved we can do This is now a question of execution.
+00:18:43.280 Okay, I think we might need to come back to this because I think there is a bit about how do we up the ante on it or
+00:18:50.640 what's the best way of doing that. So maybe we take that offline and have a think about how to do that take some
+00:18:55.840 specific things and then uh wearables into the app. Um there is some experimentation already
+00:19:02.480 been done on wearables. I think again the the standards are there you know we
+00:19:07.600 just need to decide where we integrate it is it with a single patient record is it into the app and then how do we hold
+00:19:14.160 that data and how do we curate it so it's not the technolog is there it's the usage of that and how we want to use
+00:19:22.080 that to change pathways really okay all right good um your bit Louise we
+00:19:28.559 should um have a board meeting up in Leeds sometime soon to make that happen.
+00:19:34.880 And there's a whole team there of people who do some really cool stuff with tech. Um, and you can go and try it yourself.
+00:19:42.720 And, uh, really interesting, particularly about looking at people who find it harder to use tech. Um, so we
+00:19:50.240 could go on a board visit and actually test out some of the stuff that they're doing live. Be a good thing to do. All
+00:19:57.360 right. Good. Um, let's move on to performance. Um, so we have a very
+00:20:05.039 detailed performance report. Um, this remains working. Oh, sorry. Do I jump
+00:20:10.720 over Jim? That's fine. Skip past it.
+00:20:15.840 Sorry, Jim. Your update first. Thank you, David.
+00:20:20.960 Just very briefly then. So, um, September's always it feels very chaotic. It's always very busy in the in
+00:20:27.200 the national system. We've had a busy couple of weeks in terms of public accountability,
+00:20:32.320 um public accounts committee, health select committee, uh stock takes with the prime minister, various other things
+00:20:38.480 which were all sort of scheduled but at an important point of the year when
+00:20:43.520 we're starting to think about how we'll land this year, how do we complete this year as well as we should do, how do we navigate a tricky tricky winter, etc.
+00:20:50.559 They've crystallized a few things for us to really focus on which we're working on over a summer as well and we'll touch
+00:20:56.880 on in a second. Lots of progress in our operating model and over pointed chairs
+00:21:02.400 of cluster ICB's chief execs soon to be announced as well. We do have a tension
+00:21:08.159 in all of this about the voluntary redundancy scheme which has been well publicized and in a um pretty long
+00:21:16.000 awkward conversation with Treasury colleagues about it all just trying to unlock that and um at some point in the
+00:21:21.919 next couple of weeks if we've not managed to land that we'll have to work through a plan B option to allow uh our
+00:21:27.919 ICB colleagues to move on and similarly within NHS in NHS England but a lot of really good work there also the work uh
+00:21:35.600 led by Glenn and colleagues on the oversight framework I think is really taking shape. It's that and the the
+00:21:41.600 weekly tables that are sent out etc. common discussion points now in the in the service absolutely not fixed yet. So
+00:21:48.720 still a lot of refinement to do but fantastic uh progress also through some
+00:21:54.400 of which we'll touch on uh later on we've done a lot of work uh with colleagues in the service and across
+00:22:01.200 government on bringing the 10-year plan uh to life. So what we're really trying to do is we're set out in the letter at
+00:22:07.360 the end of last week is get the balance right between short-term delivery landing this year on our financial and
+00:22:13.520 operational imperatives but start building the future. Um going back to
+00:22:19.039 some of the points raised earlier on there's a really difficult balance we've got to strike in all of this between the
+00:22:25.039 being really ambitious but not not making it break. Um, so in the same
+00:22:30.480 sentence, we can talk to colleagues who want more change, more rapid change, but are saturated by the amount of change
+00:22:37.280 that's already going on. And that's just a live dynamic that we're all trying to manage well together. Um, it's it feels
+00:22:45.360 like a long time ago since we had our last board as well. And if you remember, the the main dominant issue in that
+00:22:50.559 board was industrial action. And uh I think you know I think it's fair to say the service uh led by colleagues here
+00:22:57.520 but right throughout the service did a fantastic job manage managing a diff difficult set of circumstances in really
+00:23:04.480 minimizing the amount of disrupted activity. That said, we are a little bit off track on some of our metrics as a
+00:23:11.200 consequence, but really significant progress over previous rounds in terms of maintenance of activity levels and a
+00:23:18.480 lot to learn from in that if we if we do have to go through it uh through it um again and then come back to Mark's point
+00:23:26.400 and challenge on the the tech in in those uh processes I've described the
+00:23:32.400 public accountability sessions etc. our work with a service great chief exec session last uh
+00:23:39.760 Tuesday. There are two standout things we have to unlock. Um and technology is
+00:23:45.760 a part of the solution. Outpatience is the thing we have to unlock. Uh we're
+00:23:51.760 just having another go now about how we get into that but it is the thing that we have to find a way forward on and
+00:23:58.960 also how we use uh how we change our service model to uncrowd our ads. So I
+00:24:05.520 started the day yesterday with a society of acute medicine in Manchester, ended the day with Penny with the president of
+00:24:11.679 the Royal College of Emergency Medicine. Wherever you talk, whoever you talk to, uh there's a lot of tension in that
+00:24:18.000 system and technology, new pathways is probably a big part of the way out. So I
+00:24:24.240 would say if we're looking for things where there's a really strong operational and business imperative to
+00:24:30.080 bring technology to life, they are probably the two things for us to focus on. And then just very finally just want
+00:24:36.400 to say we say this all the time and it's really true. Last Tuesday's session was really fantastic. We are trying to work
+00:24:42.640 with the service alongside the service, keep everybody with us, keep um keep
+00:24:47.679 everybody as motivated as they can be but realistic about what's possible. the the leadership response right through
+00:24:54.799 throughout the NHS so far this year has been absolutely fantastic and uh we as a
+00:25:00.320 as a board really need to try and nurture that develop that and and keep it going through this what will be a
+00:25:06.400 tricky period winter's always a tricky period for the NHS so I'll stop there Penny happy to take any questions if
+00:25:11.679 there are any right questions for Jim
+00:25:18.960 stand everyone [Laughter] Just before that just we got a couple of
+00:25:25.279 I think what we say a bit more Jim about you know that working with the chief exact community because there's a few
+00:25:31.760 things which really struck me one is that you are including GP leaders in
+00:25:37.679 that group which is really crucial um you know not something that's
+00:25:42.960 happened historically but it's obviously a really important part of the healthare system and the second bit is that you
+00:25:49.120 are asking amongst that group of the leadership group essentially of the NHS
+00:25:55.279 to work with uh colleagues here to develop proposals whether it's for
+00:26:02.000 neighborhood health care whether it's for outpatient redesign uh and so on. So just say a bit more about that. So I'll
+00:26:08.720 bring Glenn in a second as well who's who's led a lot of this uh the the work stream work over summer. But u we are
+00:26:15.760 absolutely trying to work together alongside each other rather than a in a
+00:26:20.960 hierarchical way is partly a recognition you can't run everything centrally this kind of size of uh size of organization
+00:26:27.840 or or system there is there is and and colleagues have really stepped up with that. So whether that's 10-year plan uh
+00:26:35.360 work streams and bringing IHOS to life, neighborhood care to life, you know, etc., etc. We are also getting a lot of
+00:26:42.000 people come forward all the time with ideas, suggestions about other operational issues. So wherever that
+00:26:47.440 happens, we're just trying to go where the energy is and keep people involved
+00:26:52.480 and you know there's some practicing chief execs in the room as well. Well, it minimizes the risk then of us
+00:26:58.880 thinking we're solving problem A and it's actually problem B. Or if they find a solution, when you see it on the other
+00:27:04.799 side, it actually doesn't fix the problem. Partly recognition of it's just very complicated. There's an awful lot
+00:27:10.960 of complexity out there. But that's really worked. I started the day with a conversation with a chief exec who told
+00:27:17.520 me quite clearly we're not going fast enough on IHOS, which is good, you know.
+00:27:22.640 So there's good healthy challenge uh out there and we've opened up an awful lot
+00:27:28.000 of ch channels for all of us to have those uh conversations. Okay. And just uh well just one thing uh
+00:27:35.039 particularly because we're uh holding this in the public IHOS's integrated healthcare organizations
+00:27:41.679 concept of saying that a single provider could provide a broader range of
+00:27:47.760 services across the acute spectrum including primary care, community care. Yes. And taking whole population risk
+00:27:54.320 for that population. I'm still practicing as a chief exec after tonight.
+00:28:00.960 You're getting better though. Yeah. Every day in every way. Um the um
+00:28:06.159 the engagement has been great actually. We we've so we've basically anyone who put their hands up at the previous chief
+00:28:11.679 ex session we've brought them in and it was great to have the GP leaders there too. Um and then also I don't think
+00:28:17.039 we're turning down any other option to engage. So mental health chief ex forum last week etc. So everyone's really
+00:28:24.559 enthusiastic. They also like the fact that we're going to them with um with a
+00:28:30.159 rough set of principles that they are enhancing and adding to. It's not us giving an answer and engaging. It's
+00:28:36.399 about them co-producing it and um and they really welcome that and that will continue. Great Rob.
+00:28:42.480 Thank you chair. I think the the leadership being shown by the chief executive community now replicated in
+00:28:47.679 the other professions. It's really starting to create a a coherence across the service. So, Elizabeth, I think you
+00:28:53.760 brought the FDS together for the first time in over six years. We've got the chief operating officers coming together
+00:29:00.799 in October. We're doing the same with the communications professionals. So, that that coherence that's been driven
+00:29:06.399 centrally by the chief exec community, the GP leadership is kind of echoing in each of the different professional uh
+00:29:12.720 areas. And that's and that's I think creating much more ambitious ambition out there in the service. Instead of
+00:29:18.880 waiting for a a policy or a strategy to tell us how we need to to to do something, you've got a lot of folks
+00:29:24.799 coming forward with really innovative ideas that perhaps we haven't thought of that then then start to lead the way in
+00:29:31.760 terms of what we're doing. So it's has a multiplier effect across the whole leadership community.
+00:29:36.960 Great. Good. Right. Let's go on to performance. So there's a lot in here.
+00:29:43.600 Um I think presume everyone has read it. Uh 36 pages I can take you through.
+00:29:50.080 No thank you. Uh and I know we've got quite a lot of questions and comments.
+00:29:55.600 So but do you want to do a quick intro? Yeah, thank you. Thank you very much uh chair and thank you colleagues who have helped uh develop this uh performance
+00:30:03.200 report uh colleagues around the table many of whom we've interacted with. So just a brief reminder and then I'll just
+00:30:08.480 perhaps touch on some of the areas of improved performance and some of the areas that perhaps a little bit more
+00:30:13.840 challenged. Uh noting as always that my colleagues around the table are the real experts in each of these areas and
+00:30:19.039 delivering uh some of these key metrics. So first and foremost we have adapted the structure to focus on six key areas.
+00:30:25.919 improving health, reducing inequalities, effectiveness and experience of care, patient safety, people and workforce,
+00:30:32.480 all of the access targets, and finally finance and productivity. And you'll see different to the last time we met as a
+00:30:39.039 board, we focus particularly with board advice on areas such as primary care, maternity, community, cardiovascular,
+00:30:45.440 diabetes, and prevention. So there are and we'll see in the next item but we
+00:30:50.559 can perhaps gather it in the same where there are areas we can look to improve on and develop these metrics and we are
+00:30:56.000 keen to but noting as I just said there rather flippantly we're at kind of 86 pages. So the key thing is how do you
+00:31:03.039 how do you adapt it? How do you make sure it feels real and live and we don't swamp people with paper. The other thing
+00:31:08.480 the team are doing and a big thank you to the performance team have worked really hard to pull this together is seeing how we could use statistical
+00:31:15.120 process control a bit better so we can really look at themes and trends in a way that perhaps this report doesn't
+00:31:20.240 necessarily pull out at this stage. Um so if I could just take you through a couple of areas particular of highlight
+00:31:26.320 in terms of improved performance noting that most of the data here completes the end of June and in some cases where we
+00:31:32.399 have complete lockdown data we have it in July as well. So breast uh cancer screening obviously an important part of
+00:31:38.640 our overall objective is returning uh back to uh much higher levels from the pandemic. The number of impatients who
+00:31:45.519 are autistic or having learning disability is reducing which is something we'll pick up I'm sure later
+00:31:50.640 on but has been a big area of focus. There are a number of key metrics around general practice with which the service
+00:31:56.480 should be very proud. Firstly uh access to first appointment which continues to improve. Secondly, uh the percentage of
+00:32:03.679 patients who are describing booking their appointments as easier or easy up
+00:32:09.440 to nearly 75% which is a a record in terms of the levels of performance we
+00:32:14.559 have in urgent and emergency care which I'm sure Sarah Jane will pick up later on. We've seen uh improvement continuing
+00:32:21.200 in CAT 2 response times which we know is really relevant particularly as we enter the darker and colder months. And
+00:32:28.159 finally in areas like children and young people particularly uh with focus on mental health services we are seeing a
+00:32:34.399 much increased improvement with regards to access community mental health more
+00:32:39.440 generally the access rate as well continues to improve which I think matches the commissioning intentions and
+00:32:44.559 the good work that many providers have put in place. So there's a lot more that we should be very proud of and we should
+00:32:50.320 congratulate our colleagues out on the service who are working really hard in all of these areas. There are however a
+00:32:55.519 number of areas where performance remains challenging and these remain our priorities of focus. Uh I'm sure Mark
+00:33:01.679 will pick up particular areas of elective and cancer should we raise but actually some really good areas of improvement uh in many of those those
+00:33:09.600 particular areas. Um but the percentage of patients waiting over a year for community services is something we have
+00:33:15.679 focused substantially on of late because that isn't going in the right direction at the moment. This is an area of
+00:33:22.080 priority and in the early data that we started to see most recently this is starting to change and improve again
+00:33:28.720 with the way we commission work but this is an area of significant concern. Uh the percentage of patients uh waiting uh
+00:33:35.919 with suspected autism over 13 week continues to be an area of concern and
+00:33:41.200 running the regional performance reviews this is an issue in almost every region uh and is a significant area of priority
+00:33:47.440 for us. Cervical screening again continues uh not significantly but is not perhaps making uh the steway way
+00:33:54.240 forward that one would hope. The percentage of mental health beds that are out of area continue to concern all
+00:34:00.080 of us particularly those of us uh looking after hospitals where we know we're not able to offer the type of care
+00:34:05.919 we would always want to to colleagues with mental health and that includes mental health trusts where length of stays over 60 days are continuing uh to
+00:34:13.918 not decrease at the rate that we would like to. Um so this is the latest set of
+00:34:19.599 operational data. Uh what we are aiming to do uh chair as I mentioned earlier is refine this so we can get better trend
+00:34:25.918 analysis. Um you'll see at the end of each of the pack there are further areas we can look to include and welcome uh
+00:34:33.040 colleagues uh views on that either at this meeting or happy to take comments outside of this meeting. We're also
+00:34:38.800 thinking about how we deep dive on each of the performance reports. So not at length and we may do this through subcommittee but for example we know
+00:34:45.760 that the work that Duncan is leading in maternity has a performance impact on every region and every every system is
+00:34:51.918 that an area we would like to deep dive on um sepsis is an area where we're continuing to focus energy and actually
+00:34:58.480 seeing some really impressive areas of performance is that an area to deep dive on so those would be perhaps the the
+00:35:04.560 questions I'd end with chair but happy to take questions as I know my colleagues would be as well
+00:35:09.680 okay great and thank you Dave And I know we'll have lots of questions. I I might just kick off with a couple, but if you
+00:35:16.000 keep keep a note, I'll keep a note and then we'll go around. I think you you didn't emphasize in the sort of areas
+00:35:24.000 for improvement uh overall health and page seven for me
+00:35:30.240 is actually probably uh really important page which is declining number of years
+00:35:37.040 lived in good health. really worrying to see that. We know it's happening, but it's just worrying to see it that
+00:35:43.280 starkly. And that feels to me like that's a metric that we should be I know that we're not going to see it change week on week, but we need to continue to
+00:35:50.720 look at that. And then, you know, as you pointed out, some of the other things in there, cvical cancer screening is not
+00:35:58.000 where we want it to be. Immunizations, MMR is not where it needs to be uh to
+00:36:03.599 support population health. And indeed across all of these metrics, we know that we have considerable variation. Um
+00:36:11.200 and we'll come on and talk about inequalities uh later. Uh exactly as you say, we we should have a big focus on
+00:36:18.640 maternity care. We've got a lot of really good data there and I think really helpful that we bring that a bit
+00:36:24.000 more in into the public domain to do so. So those are the ones from me, but I
+00:36:29.520 know colleagues have got others that they'd like to raise. So, I've got Ravi, I've got Louise, I've got Duncan, I've
+00:36:36.800 got Andrew. I'll take those four first. Uh, Ravi. So, a couple of points. Firstly, just picking up on your point about the
+00:36:42.880 average conceals variation. I think it'd be incredibly helpful for all of these to to show the dispersion
+00:36:48.079 about the mean. So, we can integrate the inequalities conversation with this performance conversation. And also just
+00:36:54.000 ask ourselves what can we systematically learn from the top desile performance and you know, are we on are we on the
+00:36:59.680 bottom desile and is it is it moving? Is it are they consistently saying the same? Um just on the um primary care um
+00:37:07.040 access figure that you mentioned, it's it's on page 73. It's a really
+00:37:12.160 interesting progress from like 60% in August 24 to 74% now and having
+00:37:18.800 plateaued for a while, it's now seemingly trending up. I just wanted to know what what had driven that um and
+00:37:26.160 how high can we go? You know, what are the top performers doing? Also is that showing any impact in terms of reduced
+00:37:33.359 pressure on hospital admissions etc. A&E or is there no correlation between this
+00:37:39.280 improvement and uh pressure on the the system elsewhere? Okay, let's keep going round but um
+00:37:45.520 client come back on some of that Louise. Yes. So um thank you David and I found
+00:37:51.440 the the slides and the data really easy to digest. So so thank you very much the team for that. Building on Penny's point
+00:37:57.200 about healthy life expectancy in the population health section um I was sort
+00:38:02.640 of looking for a sort of underlying population outcomes framework which we're asking ICBS to commission on the
+00:38:08.880 basis of do we have an understanding nationally of where we want health to be
+00:38:14.160 effectively so and then I had questions about nearly every slide but I'm sure happy to check your your um your point
+00:38:21.040 about deep dive is really good I mean things like cable cancer where are we on self testing you know almost every
+00:38:26.240 almost every slide, but where I thought there were emissions on experience. Um I thought the maternity slide and
+00:38:32.800 experience was really good actually. But then there are lots of areas of experience that that aren't here about
+00:38:38.240 um smoothness, efficient referrals, about uh experience with the complaint system, about you know uh being
+00:38:45.440 supported whilst waiting about accessible information. So I wonder if the quality committee could potentially
+00:38:51.040 start to think about other metrics of experience that could be included in that section. Thanks. We
+00:38:56.800 keep going around and collect questions. I think on that point Louise about want to go into a lot of it we what we need
+00:39:03.440 to do is think through which bits do we cover at which subcommittees and how do
+00:39:08.480 we quite systematically make sure that we bring some of those deep dives as it were areas of focus to the board
+00:39:14.800 meetings over a year because we we won't be able to cover everything
+00:39:20.000 yeah thanks Penny I guess just a couple of points one being about children and just recognizing about 24% of our
+00:39:26.000 population are how we look at this through the lens of um the needs of children across our
+00:39:32.320 different measures. So I guess an ask on that. Um on maternity I think absolutely right we're doing some work with trusts
+00:39:38.240 at the moment uh looking at what uh measures we're expecting boards to look at for maternity. So I think it's really
+00:39:44.480 important that we mirror that here so we could perhaps bring that back at a future deep dive. And then I guess with
+00:39:49.920 the shift from hospital to community just really thinking through have we got enough visibility on some of our quality
+00:39:56.079 measures within community services. So for example you know um uh leg ulcer
+00:40:01.280 healing rates uh you know under 12 weeks for example might be a good way of putting some visibility on that and
+00:40:07.040 links into some of the conversations we're going to be having today about greener and cost savings etc. um as
+00:40:12.720 well. And then I I know we've got a we've got um the team talking about inequalities, but there is something
+00:40:18.160 about kind of how do we structure and perhaps it's for the deep dives uh a rhythm of looking at inequalities
+00:40:23.680 through multiple different lenses, ethnicity, women's health, men's health for example
+00:40:28.800 and geographical. Yeah. Absolutely. And I'd add to your list mental health as well. We don't
+00:40:34.720 have enough data Andrew. So um just to echo the points around maternity I I
+00:40:40.320 think this board should see the maternity performance data by system at least once a quarter given you know all
+00:40:47.359 of the kind of media coverage uh and interest that board members have had in this service. Um my main point was
+00:40:54.160 around four hours. Can't so so so
+00:40:59.440 you know we're we're at um a kind of pivot point in in the sense that you
+00:41:04.720 know we'll be getting ready for preparation for winter and we're slightly behind the curve at the moment.
+00:41:11.040 So what is it what do you think the causes are in terms of the fact that we're not quite there in terms of
+00:41:16.880 meeting our trajectory and going into the next six months? what how can we help organizations deliver I mean it may
+00:41:24.560 be a separate topic area but I think it's really important that uh we keep a
+00:41:29.760 tab on this because you know every day there's a million people touch general practice but there's also you know a big
+00:41:36.240 big slice of our local national population that go into the emergency departments and normally at this time of
+00:41:43.280 year we we we do have that conversation around prep for the next six months
+00:41:48.400 okay so because I think we may have some more questions uh just just to make this bit manageable. I think all the question
+00:41:54.240 about where we know we need more data and better data and how we do deep d let's take that offline and we'll come
+00:42:00.160 back and manage that. I think two specifics if you could focus on or ask a friend primary care access why has it
+00:42:06.640 got better and how do we continue that has it really got better maybe as well and how do we continue that trajectory
+00:42:12.800 and then for our performance and then I'll take more questions. Thanks very much Penny. So I will ask a friend on the first one and that that
+00:42:20.079 friend is uh is clear. Thanks very much. So uh Ravi thank you for the question. The reason why GPXS
+00:42:25.599 has got has improved so much is we had a plan and we've delivered the plan would be the short answer. So three things. So
+00:42:31.839 one we invested in cloud-based telefanany. So we've moved all of well practically all of our GP surgeries over
+00:42:38.560 onto cloud-based telefony which means then we can if people phone they can we can then call them back. We know how
+00:42:44.400 many people are waiting. We've got better data to look at around call answering times. Number two, we've changed the operating model. So, people
+00:42:51.119 that have been struggling with access, they've been supported through the GP improvement plan in moving over to modern general practice, which is about
+00:42:57.280 how you deal with all the calls coming in and you triage to identify greater need on the day so you can see the
+00:43:03.599 people that need to be seen. And then thirdly, it's the use of technology. So, we've in we've uh increased the amount
+00:43:09.359 of online access, but also the use of the app. So the increase in the number of people that are accessing and
+00:43:15.200 ordering their repeat prescriptions via the app takes a lot of traffic out of calls coming to general practice. And
+00:43:21.200 then on your second point about has this made any difference. What we found from the PCN test site pilots is actually for
+00:43:28.400 those practices that have got their access under control, and by access under control, I mean that they're answering their call within one or
+00:43:34.079 within 2 minutes consistently across the day, including at 8:00 a.m., and that they can offer on the day appointments
+00:43:40.240 of those people that need it. When they've done that, they then have then got the head space and the capacity to start to properly deal with the
+00:43:46.400 proactive care and start to look after their complex patients and start to look after and increase the their management
+00:43:53.280 of long-term conditions. And where they've done that, you can start to see the impact. Our problem is, and we'll
+00:43:58.800 talk about this this afternoon, but our problem is that we've got that in small pockets and what we've got to do is
+00:44:04.160 scale it. Thank you. And uh the PCN workers,
+00:44:09.280 primary care networks. Sorry. Thank you, Penny. Where uh CLA and colleagues have been working with a number of those that uh
+00:44:16.000 to look at what are they doing that's working well and where could that be um learned from and taken more widely. Uh
+00:44:23.440 four hours. Yeah, thanks Andrew. So I think just to break it into the two parts, we've got
+00:44:29.040 the what what can we do to try and make a step change improvement in four hours and then we've got the link to what that
+00:44:34.720 tells us about winter preparation given that we're now in midepptember. So I think on 4 hours as you've just said
+00:44:41.680 essentially the word is stuck. So the performance is pretty consistent but consistently not where it needs to be.
+00:44:48.800 The NHS's own trajectories were showing an improvement over the summer period which essentially hasn't happened. So uh
+00:44:55.680 it does feel like we're in that place. In terms of things that we are doing about that now there's some real stuff
+00:45:02.560 just around consistency. So, we know that the departments that do well stream away from the front door into the UTC's.
+00:45:09.599 They use their UTC capacity consistently. Uh, and it's open, you
+00:45:15.119 know, long and extended hours. So, we've got a focused look at that. We've still got people with UTC's that are letting
+00:45:20.400 UTC type patients through into the emergency department. Uh, and then in
+00:45:25.440 terms of the pathways within, uh, although we've had a lot of focus on admitted, again, we're quite stuck.
+00:45:33.440 We've done a a big piece of work on what the first 72 hours of care should look like and the standards in terms of the
+00:45:40.960 clinical input into pathways. But the non-admitted group we know is also a big
+00:45:46.400 driver of the 4-hour performance and there we've got real lack of consistency
+00:45:52.560 in terms of the way that people have developed services inside. So people who've got the way people are using
+00:45:58.400 their SDex their CDUs uh the pathways and the way things what all those things are.
+00:46:05.760 So once you go through an emergency department door and someone said go you know this is it's not consistent at all.
+00:46:12.640 You wouldn't expect the consistent obviously to be laid out the same hospitals look different but I think as a member of the public you could
+00:46:18.880 reasonably expect that you know the services there would be quite similar that if you're in this kind of area a
+00:46:24.880 same day emergency care you get this type of treatment it's counted in that way or if you're in a clinical decision
+00:46:30.319 unit it's this part of treatment it gets counted that way. It is all it. So what
+00:46:35.520 we're trying to do is just bring back some of those data definitions, standards and methods that we know work.
+00:46:41.920 The more departments we go and look close up to, the more exactly the same care is being counted very very
+00:46:48.720 differently. Uh so we need to get back into all of these. I'm going to call them basics, but we know the basics
+00:46:54.720 things are often hard. And then just to complete the picture, some of it's technical, but some of it's hearts and
+00:47:00.480 minds. I think because there's so much complexity Jim said the departments are overcrowded big focus on corridor care I
+00:47:08.640 think there's a sense that it's become impossible and actually it isn't if we get back to some of those basic things
+00:47:14.640 that we know work so there's a bit of a technical and a bit of a hearts and minds bit in terms of prep for winter
+00:47:20.720 that's also continuing at a huge pace so since we last met at a board all the regions have come together and we've had
+00:47:27.119 these EPR style exercises planning against three scenario iOS people have taken their learning away in terms of
+00:47:33.599 what they need to do to tighten up plans. So I there's no doubt it's going to be a challenging period but I think
+00:47:40.400 the preparation that we've done this year has been more extensive not just in terms of what people are going to do but
+00:47:47.520 how they're going to respond under pressure what triggers they're looking for how they step up and coordinate
+00:47:52.880 across. So um yeah the two activities that are connected but uh
+00:47:59.760 I I think we as Jim said at the beginning really we just need to complement how the leadership have stepped up particularly on the winter
+00:48:05.280 preparation because we I think we've seen a quite a different level of planning and uh planned response so far.
+00:48:12.640 Uh okay so more questions. So I've got Jeremy I've got Megan. Let's take those two.
+00:48:17.839 Just a quick thought really David for the pack. I think it's great, but it does risk becoming infinite. And just a thought from the retail world as whether
+00:48:24.800 we could digitize it and make it um interactive and have various lenses on
+00:48:29.920 it so that rather than trying to print out everything, if you're wanting to drill into maternity or look at various
+00:48:35.280 performances, you just click on the link and work it through, put it on an app, it much more accessible. So, just a
+00:48:40.800 thought and a bit more red amber green. Yeah. Magna just wanted to add to what Sarah Jane
+00:48:47.040 was saying in terms of urgent emergency care, clinical leadership obviously is vital. So in addition to collaborating
+00:48:54.480 well with care before coming into accident emergency or emergency departments, it's the internal processes
+00:49:00.960 that matter as well. So there are tools like the I refer to for radiology to
+00:49:06.160 reduce unnecessary diagnostics. I think that is being used and and needs to be
+00:49:11.920 used even more. uh specialist opinion trying to get specialists and the first 72 hours of care within hospitals is
+00:49:19.599 again crucial so that people are seen and taken to their right destination for
+00:49:24.880 the right care in appropriate time and then lastly again coming back to tech so
+00:49:30.720 for discharge to stop the delays and the pharmacy take-home drugs etc all of
+00:49:35.760 those things have to be implemented consistently across all the organizations to um sort of make sure
+00:49:42.559 that the discharge process isn't held up and and a focus on all of this led
+00:49:47.599 clinically is is something that we are definitely doing. Okay. So I think let's come back to
+00:49:55.280 probably the next board meeting is otherwise it feels like but the same conversation every year. What does our
+00:50:02.559 mediumterm UEC strategy look like? I know you've been doing a lot of work on that. Uh Robert
+00:50:07.599 just a very quick one um in winter prep. Um just an update on the vaccination how
+00:50:12.720 how good the vaccine uptake has been for flu and co
+00:50:17.760 we can bring that I mean for most organizations including my own that starts on October 1st but we'll make sure we bring the the details
+00:50:25.040 the pediatric and the maternity campaigns have been launched but the general population campaign starts on
+00:50:31.280 the 1st of October so um but yeah I think it is it is well powered up and
+00:50:37.440 the actions that we committed to each of those have been uh ticked off, Robert. So, the ability to be able to book
+00:50:42.960 appointments and all those kind of things, we've really done taken the learning from last year on those. So, uh
+00:50:48.559 we'll we'll start to feed the figures through on a weekly basis from the beginning of October. Okay, last comment from Rob and then go
+00:50:54.400 on to finance. And just licked on to that vaccination. This there's been a huge response and energy from the service in terms of
+00:51:00.240 staff vaccinations at a couple of sessions with a 250 uh attendees on each
+00:51:06.079 from comms and the clinical uh community. So I think there's a real energy to try to do even better
+00:51:12.880 yeah exactly even better than what's set out in the UEC strategy in terms of our and if we can get it right for staff
+00:51:18.880 that's going to help us I think in terms of getting it right for patients as well. Thank you.
+00:51:24.160 Yeah thank you. So moving on to the money then a financial performance update. Um it's quite a quite a high
+00:51:32.000 level um but uh currently the paper covers both revenue and capital. uh it
+00:51:38.400 highlights the m main risks as we move forward and some of the forward actions and I think David and I will also cover
+00:51:44.640 what we intend to do uh during the midyear review. Uh but I on a uh first
+00:51:50.720 and foremost I'd just like to thank the service actually because the level of grip that we've seen uh that people have
+00:51:56.480 is actually continues to show up in the numbers. Um so the NHS at month four is broadly on plan. We are currently
+00:52:03.200 reporting a 57 million pound overspend in aggregate which is about 0.1% of the
+00:52:09.680 year-to-ate allocation which is a significant improvement on this time last year which was close to um 500
+00:52:17.599 million. Um key drivers the pressure points that I talked about last month they remain unchanged. So we're seeing
+00:52:24.400 missed efficiency targets and rising workforce and pay costs. Uh also in the
+00:52:29.599 month four numbers will be um some of the costs of the five days of industrial
+00:52:35.119 action that took place in July. We know this has had a measurable uh impact but
+00:52:41.040 many providers have reported back to us that they've covered these increased costs in their plans. Um and we have um
+00:52:48.800 ensured that um there are um two systems which haven't re received their deficit
+00:52:54.559 support funding uh as at month four but those are that deficit support funding is included in the aggregate numbers.
+00:53:01.440 You'll also see from the report there are six systems that account for half of the overall overspend and 16 systems and
+00:53:09.680 44% of providers are currently on plan and the full detail is within the pack. Uh we continue to forecast that at the
+00:53:16.960 end of this financial year we will deliver the plan that was signed off earlier in the year uh by all of the
+00:53:23.280 boards out there in the systems and we are making sure that the cash flows appropriately uh to keep the business
+00:53:29.839 running. We have tightened the cash rules uh but we are being very pragmatic and working through that very closely
+00:53:36.400 with individual CFOs and boards. Having said this and at the leadership event we
+00:53:41.920 talked about this um we do know the plans are backloaded um not to the degree that it has been in
+00:53:47.920 previous years but even so um and therefore we're asking people to be very very focused for the residual months of
+00:53:54.720 this year and into the second half of the year this midpoint is going to be absolutely crucial. So the conversations
+00:54:00.240 we're having are around boards needing to be clear and not take comfort from
+00:54:05.280 year-to- date variances to really look at run rate spend and what's driving their financial performance. Um and
+00:54:12.160 we've also signaled at the event um that we are going to do a midyear review process that we'll talk about shortly.
+00:54:19.200 Um and that that is very much focused on not looking back but making sure that boards have got credible plans to
+00:54:25.680 deliver not just on finance but across the board uh for the remainder of this
+00:54:30.880 year. Um we have talked quite extensively to the CFO communities that
+00:54:36.240 are signaling you know how challenges looking for the remainder of the year about risks and the opportunity to
+00:54:42.480 mitigate some of those through detailed recovery plans and some of those recovery plans are in motion and also at
+00:54:48.079 month six we have signaled that we're going to do something called a true-up exercise. Now this is mainly because um
+00:54:54.880 we have got a scenario where anecdotally we were hearing that um people were
+00:55:00.240 stopping some of their elective recovery because of finance. So we've gone back to have a look at the reality of that
+00:55:06.880 and what we're actually seeing is a very mixed picture. So we're seeing that some providers absolutely seem to be
+00:55:13.440 constraining activity as a consequence of finance and there we're going back to make sure ICBS have commissioned the
+00:55:20.480 appropriate level of activity to deliver the standards. Uh conversely we're also seeing that some providers have actually
+00:55:27.520 earned income in 12ths and they haven't delivered the activity. So this month six exercise is going to be really
+00:55:33.119 important because as we think about what the recovery is for the remainder of the year, we need to know the issue we're
+00:55:38.400 actually tackling. Um and we need a lot of transparency on this. So so that's going to be important. Um on capital. Um
+00:55:46.400 so we've spent about 13% of the full year budget on capital. That's not unusual. So it's 1.28 billion. Um and
+00:55:54.079 we're currently forecasting a 240 million pound underspend at the end of this year. Again, we're going to do a
+00:56:00.400 mid-year review. It's actually kicked off um where we're asking people to really look at their capital
+00:56:06.480 forecasting. Um the plans don't look as good as they should have been. And I think more focus was put on revenue. Um
+00:56:12.559 and as a consequence of this, if people come forward and say they're going to underspend on their capital and they do it early enough, we're going to look at
+00:56:19.200 how we actually broker broker this across the wider NHS so that people can carry forward any capital into next
+00:56:25.760 year. However, if this happens in the last quarter or towards the back end of the year in an unplanned way, then that
+00:56:33.200 is going to be a bit of a travesty to be honest because we're not it's going to be too late for for us to do anything and capital is a hugely scarce resource.
+00:56:40.640 So, no surprises we're asking for and um we I keep asking wherever I go, please
+00:56:47.680 just keep talking to myself and the team around capital. And then on to just quickly emerging
+00:56:53.440 risks. I suppose it's the unfunded redundancy costs across ICBS and
+00:56:58.720 obviously national bodies. It's cost pressures in especially specialized
+00:57:03.839 commissioning uh particularly high-cost devices and I think I mentioned this in a previous board meeting that we have
+00:57:10.480 got a scenario where there are cost effective um high-cost D devices that um
+00:57:17.599 providers and clinicians could use. um sorry could use a more cost-effective um
+00:57:23.200 device um but they are still choosing even though that there's not a clinical reason to choose the higher cost one. So
+00:57:28.400 we're looking at how we reimburse on that even partway through the year we may change our approach and then the
+00:57:34.240 other material risk will be the further risk of industrial action within the paper as well there is a uh update on
+00:57:42.079 VPAG uh an industrial engagement chair where VPAG is voluntary scheme for branded medicines pricing access and
+00:57:49.520 growth so it's a bit of a mouthful which is why we shorten it to VPAG um and really just to conclude I suppose you
+00:57:56.319 know we the NHS has engaged um with uh farmer companies uh to look at um and
+00:58:04.240 proactively engage about how we how we might look at um uh working with the the industry in a more uh responsive way. Uh
+00:58:12.720 all of the proposals have been put forward to date, the farmer companies have responded negatively to including
+00:58:18.799 withdrawal of new drugs from the UK market. uh and as a consequence uh we are where we are at the moment we are
+00:58:25.280 remain with our existing arrangements um and I'm sure we will wait to see what
+00:58:30.480 happens next okay thank you questions for Elizabeth
+00:58:37.920 uh Andrew can I just raise a point around the deficit support um the 2.2 two billion
+00:58:44.240 that's gone in. Um, is that tapered, Elizabeth, for over a number of years or
+00:58:50.319 is it a a cliff edge that providers drop or systems drop at at 31st of March?
+00:58:56.559 Yeah. So um it's it's annual um and in the tenure health plan we signaled that
+00:59:02.000 we would move away from the deficit support funding approach uh through the work that we've been doing with
+00:59:07.839 extensive engagement actually over 600 people to date uh around some of this
+00:59:13.119 around the allocation formula we are looking to actually put some of our deficit support funding into core allocations to move people closer to
+00:59:20.160 target um and the withdrawal of deficit support what's act how was actually
+00:59:25.200 described in the tenure health plan which we're working through is we will start to withdraw it from 2627
+00:59:31.200 and if you're over spent let's take an example blanks they've got 164 mil of
+00:59:37.680 support they're over by 20 so what happens at the year end if they've had
+00:59:42.799 that money and they're still over so does that does the over um commitment
+00:59:48.079 does that get locked off the following year or is it just written off the overcom sorry sorry
+00:59:54.160 if so if if the outturn is more than 164 deficit.
+00:59:59.599 Yeah. For for that particular system, what happens to that that lump of cash that they've exceeded?
+01:00:06.000 Yeah. So if if um if if in an example a system um actually does not deliver its
+01:00:13.839 plan, the deficit with the deficit support funding is is withheld at the end of the
+01:00:20.480 year that could be reallocated. We'll make sure that there's cash to pay staff and bills. However, if there is if a if
+01:00:27.200 a system goes off plan at the end of the year, that is carried forward effectively and it goes into the historic debt reprofiling um so you
+01:00:34.480 don't get it it written off. Um I think we need to be really clear that the deficit support funding um will
+01:00:41.440 flow this year um if people are on plan. Okay. Thank you.
+01:00:46.559 I'll just follow up on that one and then take some wider questions. Um first off
+01:00:52.000 is in that annex one could we have a 1A and a 1B? So 1 A shown as it is but 1B
+01:00:58.799 ordering by um deficit support so we can see the sort of true costs. The second
+01:01:06.160 is when we start getting systems coming back with their um medium-term plans,
+01:01:14.160 will we be able to see is this system over spent because they're spending
+01:01:20.240 money on either uh care which doesn't impact health.
+01:01:26.640 So I they're not allocating money in the most impactful way or because they are
+01:01:32.640 spending their unit cost i the provider costs are higher than they should be i.e. they they are paying for
+01:01:39.040 inefficient services in effect will we be able to see where they are on that i.e. are they is it allocative
+01:01:46.160 efficiency or is it technical efficiency that's their challenge. Yeah. Okay. Well, do you think we will
+01:01:51.760 be able to see that when I think I think we'll have I'm thinking of the timing of some exercises. So, so the the bit about the
+01:01:59.200 efficient delivery of care you would usually see through reference cost indices, but that happens at a different
+01:02:04.480 time frame. We've got lots of points of data. They wouldn't all coincide with a medium-term
+01:02:09.520 plan. So, I think we would look to triangulate that. What we will have though, Penny, is we'll have the very detailed
+01:02:16.480 productivity plaques that we can overlay against the medium-term plan to see what the scale of the opportunity is at the
+01:02:23.359 point at that point and whether or not they're factoring that into the plan to address it. Okay. Thank you. Uh so I've got Louise,
+01:02:31.599 I've got Robert, I've got David. Thanks, Elizabeth. So um
+01:02:37.040 how can we make sure that patient care isn't impacted uh if trade-offs are being made by systems in order to reach
+01:02:44.559 their efficiency targets? You touched on it a bit with the electives. Let me take all the questions and come
+01:02:50.720 back to that. Uh Robert, a comment on the question on the the drug pricing um challenge. Uh I think
+01:02:58.160 this is a very very menacing threat. It's had a lot of press coverage. So you refer to withdrawing drugs but uh
+01:03:04.559 Astroenica pulling back on its investment in Cambridge and Merc pulling out completely of its building in King's
+01:03:10.640 Cross. Um one of the government's top priorities is growth. So so I don't feel
+01:03:16.640 that the burden should appropriately fall entirely on the NHS. I mean this is this is a national issue but the NHS
+01:03:23.119 should lobby for its importance in terms of us being at the forefront of innovation. So, uh, my question, I
+01:03:29.359 suppose, is the the steps that you're taking, which look absolutely terrific, um, and appropriate.
+01:03:35.119 How reassuring can you be that this is registering and it's going to turn things round? I forgot to add that the
+01:03:40.559 problem is intensified, of course, by the Trump administration, which is bearing down on drug costs in the US, which have been bankrolling pharma until
+01:03:48.000 now. And so, it's not surprising that it's coming home to roost here. David,
+01:03:53.440 just a small technical point to reinforce uh your point about making the tables more useful. Can we put a column
+01:03:59.119 in with uh these numbers as a percentage of turnover because it's difficult to
+01:04:04.240 judge how significant these numbers are without that? Yeah. Okay. So, um quality versus cost uh and
+01:04:12.799 then uh the farm farmer industry. So, absolutely. So um Louise on the
+01:04:18.400 quality you know and cost uh dynamic. So all of the work that we're doing we're
+01:04:24.400 consistently uh asking those questions and asking for quality impact assessments. Um we don't in finance um
+01:04:32.240 definitely not in this team work in isolation of our clinical colleagues. Uh so that is front and foremost. Um and
+01:04:38.640 also as we're making the CIPs or productivity savings, we triangulate
+01:04:44.799 them with a number of quality indicators. So, you know, if we're looking at some of our policy changes,
+01:04:50.240 we're looking at readmissions rates, we're looking at harm, we're looking at some of those mechanisms. Um and in some
+01:04:56.079 of the uh efficiency savings, we'll also have a um it's called waste, which I know they're waste and harm. I think
+01:05:02.319 people don't like those terms in terms of the buckets, but we are constantly driving and making sure that um the
+01:05:07.440 conversations that we're having are both with the finance community but also um
+01:05:12.559 our our clinical colleagues. So I feel I feel there's a lot of work that goes on there. Um I can definitely bring it out
+01:05:18.640 in the report going forward. Uh touching on something that Jeremy described, we've got so much information. Maybe
+01:05:25.520 again it's about enabling a drill down because whichever way I present it there's we could always present it a
+01:05:32.000 different way um and people will be looking at different things. And then just touching on the report and that um
+01:05:38.400 that David's described we're trying to bring it make it more holistic so that you can look across a range of
+01:05:43.920 indicators to see that triangulation yourselves. Okay. One thing it would be great for us to get to and I recognize
+01:05:50.640 it's not easy but it's a bit linked to what I said before is we should be
+01:05:56.079 looking to say to what degree are we allocating money to maximize the health of the population which is our ultimate
+01:06:03.839 remmit is to do that. So we ought to be able to say if we were really
+01:06:10.400 uh spending money in order to improve health outcomes where do we think we
+01:06:15.440 would be spending the money? what would be the sorts of services we'd be spending the money on and how close are
+01:06:20.960 we to that in each ICB as a sort of you know we don't have that yet but we ought to be able to do that and then the
+01:06:27.839 second bit which I know you are working on is to say how do we define from the
+01:06:33.200 national service frameworks the modern service frameworks the care pathway design what does really highquality care
+01:06:39.039 look like and crucially what should that cost because we think that it probably
+01:06:44.720 should cost less than what we're spending now because we have big productivity opportunities in there. But
+01:06:50.079 if we could define that, I think more clearly and demonstrate that that should
+01:06:55.119 give assurance that driving on improved productivity and getting the money to
+01:07:01.039 work better is actually focusing on improving quality not distracting from it. Yeah. Yeah. Absolutely.
+01:07:06.880 Uh so do you want to talk about the farmer industry piece? So I think in the report we highlight the way that NHS
+01:07:13.039 England's actually continuing to engage with the industry and trying to be incredibly proactive but as you've
+01:07:20.000 described I think the scale of the risk uh it's bigger than just for the NHS. Um
+01:07:25.520 I think we I get a sense we are absolutely being heed uh in terms of our conversations both through uh with with
+01:07:33.119 colleagues at the Department of Health and through to Treasury. Um uh I'm not
+01:07:39.039 sure there's much more I can say at this stage if I'm honest, but those those
+01:07:44.480 conversations are alive and I guess uh what we should do as NHS England at the
+01:07:49.920 moment is continue to build those relationships, invest in the things that only we can do. Um and I think that some
+01:07:57.359 of the uh the wider decisions around uh macro investment have to happen else
+01:08:04.319 those decisions have have to help happen elsewhere. Okay. Thank you. Right. So uh we've gone
+01:08:12.000 through performance. We're now saying what are we going to do about it? Um Jim 10year plan
+01:08:18.158 I think to pick up Paul's point from earlier the risks of us not reforming and adapting.
+01:08:23.600 Absolutely. So as we discussed earlier on the um the 10-year plan was published landed very well lots of enthusiasm in
+01:08:31.040 the service we have tried very hard to resist issuing a big docu big delivery
+01:08:37.279 plan with lots of instructions in uh worked with colleagues in the service around a bunch of work streams that are
+01:08:43.279 all about bringing the plan to plan to life. We're now in a process of refining
+01:08:48.560 those mainly around impact to make sure we we know that these things have a
+01:08:54.000 purpose in the end and there's a quantifiable purpose. I would expect that to be complete in the next uh week
+01:08:59.520 or so. And then we're trying to dovetail this into the medium-term plan process
+01:09:06.560 uh which we're still aiming to to to get out into the service end of September, early October. Uh there's an awful lot
+01:09:13.759 to be done to be able to to do that. Um the key part of all that, as you said,
+01:09:19.040 Penny, is to try to get the balance right between short-term imperatives and
+01:09:24.080 long-term, but also the extent to which these long-term changes actually address our short-term problems. And uh we're
+01:09:32.640 trying very hard with colleagues to just keep that balance right and get the uh the prioritization appropriate and the
+01:09:39.759 sequencing appropriate in terms of what happens next year and in subsequent years. So I think we're in very good
+01:09:45.600 shape. I think there is a if we're honest there is a tension with this thing about not giving lots of
+01:09:50.640 instruction where I think that's generally welcomed but every now and again you can have a conversation that
+01:09:56.880 says I really don't want lots of instruction but can you tell us what to do? and we uh that's we just have to live
+01:10:03.440 with that. We're in a transition phase. It's it's a difficult uh process that we're in, but I think really fantastic
+01:10:09.520 progress so far. Okay, good. And look forward to seeing more of those subsequent pieces um
+01:10:16.320 evolving. Okay, great. So, let's move on to a conversation about healthcare
+01:10:21.760 inequalities or rather the healthcare inequalities improvement program. Um Diane Habib, over to you. uh assume the
+01:10:29.840 paper has been read, but if you want to just say a couple of um uh points in
+01:10:36.159 summary, it' be good and then we'll open it up for questions. Thank you very much. Um I took over from
+01:10:43.600 Professor Bula Oabi a month ago and uh have been working with the program to
+01:10:50.960 move it forward for the future for the work set for the future. I as Penny has
+01:10:57.360 said I take the paper as being read and I thought I would just highlight two
+01:11:02.560 specific examples of impact that we've delivered over the last year. So if you
+01:11:08.960 take the elective reform and it's been very helpful hearing about the progress
+01:11:14.400 with the performance as David outlined he talked about electives in terms of
+01:11:21.440 the granular data that has been published and I think in the discussion we talked about the average hiding the
+01:11:29.760 detail between what is really going on who is doing well and who is not doing well and one thing we've pushed with the
+01:11:37.040 elective reform program. We've worked very collaboratively with them and we
+01:11:42.480 outlined a healthc care inequalities improvement ask and you would see that
+01:11:47.840 in July the data was published granular data was published disagregated by age
+01:11:55.600 by sex by um deprivation and by ethnicity. And that highlighted where
+01:12:03.280 the challenges were, which groups had challenges and what differences it could
+01:12:08.320 be made by addressing those challenges. So we see for example that people in
+01:12:13.600 deprived populations are waiting much longer. We see for example women are
+01:12:19.440 waiting much longer. We see for example that people in working ages are waiting
+01:12:24.640 much longer. this had previously not happened and it's you know with the work
+01:12:30.400 that we've done that that has been highlighted and we're now working with systems to say we've highlighted the
+01:12:36.480 problem what are you doing about it these are some of the things you can do about it the second point I wanted to
+01:12:43.360 highlight as a success has been that with executive support we actually
+01:12:49.120 started um supporting systems deliver a quality improvement program with cickle
+01:12:55.760 We had significant challenges with UECUs. The main reason a patient with
+01:13:01.120 cickle cell will go to the emergency room is for an uncomplicated crisis.
+01:13:06.400 They utilize the emergency room high inensity users. What we've done is we
+01:13:11.920 have over the year delivered seven emergency department bypass units. I
+01:13:18.480 visited Louiswisham last week. They have for the very first time since NICE
+01:13:24.719 published its guidance in 2012 about achieving a 30 minutes target when
+01:13:31.440 patients come to emergency have for the very first time delivered pain relief
+01:13:37.600 97% of the time hasn't previously happened spoke to patients engaged with
+01:13:44.719 patients significant has made a significant improvement in their experience
+01:13:51.280 Spending less time in hospital has decreased admission time has improved
+01:13:57.360 patient experience. Patients are going home much earlier improved productivity.
+01:14:03.600 They were not utilizing clinicians. They have proposed a different model where
+01:14:08.719 they've used advanced clinical practitioners. So it hasn't been so much of a challenge to get people in. Moving
+01:14:16.560 forward, we have proposed in our report, you would see to pivot our work program
+01:14:22.800 to enable delivery of the 10-year plan. We are also rephrasing our narrative so
+01:14:31.040 that it takes on board the challenges the system currently faces and the
+01:14:36.480 priorities that are going to be delivered by the system. We will be focusing on working with various teams,
+01:14:44.159 the finance team to address resource allocation so that it is balanced. And
+01:14:50.000 as Penny said, it addresses the issue of how will we allocate finances if we want
+01:14:56.640 to improve outcomes and care and reduce healthcare inequalities. We'll be doing that work with a finance team and we've
+01:15:03.440 prioritized that. will be working with the system development team to hardwire
+01:15:09.600 addressing inequalities through all the work we are doing. If we are not going to be asking the system explicitly every
+01:15:16.800 year in planning guidance that this is what you should be delivering then it's got to be in the system so that they
+01:15:24.000 know that this is what we should be doing and this is what good looks like if we are addressing what health
+01:15:31.040 inequalities are. So we'll be working with the system development team to ensure that happens whether it's about
+01:15:38.480 strategic commissioning whether it's about developing integrated health organizations or whether it's a
+01:15:44.719 foundation trust contract. So we'll be doing that. We'll also be working with
+01:15:50.320 and David doesn't know this yet but we'll be working with you to I'm I'm a bit concerned we want to have
+01:15:56.320 time for questions. Sorry. You've set out here your six priorities. So I think we've got that we
+01:16:02.080 understand and we'll come on and ask some questions about that. Underlying all this will have to be data
+01:16:07.440 and so I'll be working with Ming on that to ensure the granularity of the data fits through all this. I'll pass on to
+01:16:16.080 I'll be very quick. Um the observatory continues to be a delivery partner for NHS England and for the department of
+01:16:22.560 health and social care. Our role is not just to highlight the scale of the challenge but to provide solutions. And
+01:16:28.320 on that basis, I'll highlight three quick examples. Firstly, bringing together evidence and insight. Our
+01:16:33.840 partnership with the National Institute for Health and Care Research to build in equity uh and inclusion within the
+01:16:40.640 criteria for uh commissioning research um is ongoing um and progressing.
+01:16:47.040 uh we are bringing together um secondly in terms of driving policy change we are
+01:16:52.320 bringing together all of the healthcare regulatory bodies uh to uh work from the
+01:16:57.920 same page when it comes to equity and inclusion in terms of uh accountability which is a a key lever in terms of
+01:17:04.320 shifting the dial on inequality. uh we have a groundbreaking partnership with NICE, the National Institute for
+01:17:10.800 Health and Care Excellence to debias current clinical guidelines across a range of areas and also working with
+01:17:17.520 them to build processes within NICE so that the development of any new guidelines do not have those biases
+01:17:23.040 built in from the outset. Uh and thirdly, in terms of implementation support, we're working with eight ICS's
+01:17:30.159 to look at closing down the maternity mortality gap uh by ethnicity and
+01:17:35.679 looking at neonatal testing as well. And uh with or in collaboration with Duncan
+01:17:41.199 and the team uh we rolled out uh mannequins and birthing stimulators in different skin tones for the first time
+01:17:47.679 in the history of the NHS across every maternity unit uh in the country. uh and
+01:17:53.120 working on um mental health, Gypsy Roma Traveler mental health as well. Looking
+01:17:58.960 ahead very quickly, uh we're engaging with the 10-year plan team and the neighborhood health services team to
+01:18:05.840 look at uh building levels of trust and confidence uh in uh in health care
+01:18:11.040 services uh more generally. And of course finally uh if we're in the
+01:18:16.400 business of tackling health inequalities which we are then we need a workforce that's fully supported and engaged at
+01:18:21.520 all levels. Uh so we're focusing on uh looking at uh uh the independent uh
+01:18:29.040 ethnicity pay and progression gap across the NHS workforce. And secondly, looking at closing down the gap in terms of
+01:18:35.679 bullying and harassment uh by ethnicity, but also decreasing the overall levels of bullying and harassment across the
+01:18:41.440 whole of the workforce uh as well. Great. Thank you. Okay, so uh questions
+01:18:48.640 I've got, uh Duncan, Louise, and Sam. Yeah, thanks. Um I guess just a couple
+01:18:54.159 of points. One, the first being about are we doing enough to integrate into the broader strategies that we've got
+01:18:59.840 under development at the moment. And I was we reflected the other day, Diane, you know, obviously there's a piece of work we're looking at the LGBT health
+01:19:05.760 evidence at the moment and how do we make sure that permeates through all the other strategies so it doesn't sit in
+01:19:11.120 isolation. So just any reflections on are we doing enough in that space? Um and then um the race and health
+01:19:17.440 observatory's got a really respected brand associated with it. is doing a
+01:19:23.120 phenomenal amount of work and I'm just wondering whether we are doing enough to leverage the impact across the NHS with
+01:19:29.840 all of the the parts of that. Um and I just welcome some reflections on that. Okay, I'm going to take all the
+01:19:35.679 questions first. Louise. Yeah. So yeah, thank you um Hhabib and Dan for your fantastic work uh and that your
+01:19:42.080 reports were great. So two questions. Um the first is in your view how should funding flows change to reduce um
+01:19:49.840 inequalities in health and the second is about racism of which we've seen some uh
+01:19:55.040 manifestation in public recently. What do you think your the NHS's role is in
+01:20:01.120 helping to reduce racism because we know it has a significant impact on health?
+01:20:07.520 Okay. Um Sam um yeah Penny rightly pointed out in the
+01:20:12.719 performance report page seven which is really worrying and a drop in healthy life expectancy
+01:20:19.520 um and in my community it's even worse in some ethnic groups women are living shorter lives and more unhealthy lives
+01:20:27.360 than men which is why we've got free swimming given by our may all women over the age of 16. My question though is
+01:20:34.800 actually have you got the data uh that breaks this down into ethnicity
+01:20:41.520 uh in terms of healthy life expectancy that we see on page seven. Uh and secondly in terms of socioeconomic
+01:20:48.640 groups so that we know the expectation by 2040 is that healthy life expectancy
+01:20:54.239 will be 20 years difference between rich and poor. So if you live in a poor area,
+01:20:59.280 you will expect to hit chronic disease by the age of 50. So have we got this
+01:21:04.800 sort of uh breakdown of data? And finally, I think all of this data is
+01:21:10.080 beginning to show us very clearly the moral cost of not dealing with
+01:21:15.199 inequalities, but we do we know what the cost is to the NHS of not dealing with these
+01:21:22.080 various inequalities. Okay. Um were you going to ask a question, sir? I don't know. Okay. So,
+01:21:28.640 just make sure we try and tackle these. I think we've got key thing from Duncan on how do we make sure we weave an
+01:21:34.800 inequalities lens into all of our ongoing work. Maybe focus on that. I
+01:21:41.600 think the question on um funding strategies, Louise's question, I see
+01:21:48.159 that as um baked into priority four. Uh but there's a question on all of
+01:21:54.159 these six priorities about what are the metrics? How are we going to know whether we're making a difference and
+01:21:59.199 what are we going to look at which then links into Sam's question about have we
+01:22:04.239 got more data that allows us to scrutinize in terms of actually probably all the performance data we looked at
+01:22:10.000 how does it vary by geography by sex by um racial groups and so on a whole lo
+01:22:17.120 more of that. So there's quite a bit on that all related to data and how do we make this more comprehensive? And then
+01:22:23.199 we had quite specific questions on um Louise's question about how we're
+01:22:28.480 thinking about racism. Was that in services or in society or both?
+01:22:34.159 Well, what's the role of the NHS to to support health when racism exists in
+01:22:39.440 society? Because racism impacts on uh health of people of color.
+01:22:45.440 Okay. in a way that hasn't been picked up by what's already been shared in terms of
+01:22:52.320 what we're doing. If people want to say more about it, I'd be grateful. Okay. Does that cover? I think let's try
+01:22:58.880 and tackle those. Uh otherwise, we run out of time. So in terms of integrating health
+01:23:04.719 inequalities in all that we do, I am meeting with all the directors and
+01:23:11.679 working with them to ensure that we are cited on the work that they are doing that we can input into what good looks
+01:23:19.360 like for reducing inequalities. So that's an ongoing piece of work and I've
+01:23:24.560 met with actually several of the directors who are owning some of the programs. I've met with them already and
+01:23:31.280 we've started ensuring that will happen going forward. For those who've missed us out in terms of the issue to do with
+01:23:41.040 what um the funding flow looks like I think it would be exceptionally
+01:23:46.159 important to include deprivation explicitly include deprivation. When you
+01:23:53.280 look at the data on what is driving inequalities, deprivation is a significant factor and
+01:24:00.480 that needs to be included in a way that it h that hasn't previously happened and
+01:24:06.000 that needs to be datadriven. The last point I was making was about data. If we
+01:24:11.440 cannot measure it, if it is not being highlighted, then it is not surfaced for
+01:24:17.679 leaders to take action on. If we want to build a coalition of people who are
+01:24:23.840 determined to drive down inequalities, they need to have granular data and that
+01:24:30.159 is going to be the focus of our discussion. Ming and I spoke to your team um with David Ashley yesterday. If
+01:24:37.520 we don't have the data broken down, granular bringing together community,
+01:24:43.600 primary care, um, secondary care and looking at the whole care pathway, we
+01:24:49.760 cannot drive improvements. We cannot drive improvements when we are
+01:24:55.040 looking at performance. We need the data. It's not negotiable. Okay.
+01:25:01.920 Racism. Pick up lazy. Yeah. Yeah. Sure. So the NHS is a microcosm of
+01:25:07.679 wider society. 1.3 million people work in the NHS. What happens in the wider world is bound to be reflected within
+01:25:13.920 our workplaces. The NHS has a role to play, but it cannot be the only enabler
+01:25:19.199 for equity and we know that. Um but the role that is playing um includes uh
+01:25:24.960 setting up the NHS race and health observatory, if I may say that. um and the work that we're doing in terms of uh
+01:25:31.920 looking at um maternal health looking at how we can apply an anti-racism approach to QI methodology which is used a method
+01:25:39.199 that's used a lot across the whole of the NHS um and then going back to the
+01:25:44.560 point around the cost of racism I think which was also raised um I think that's an important point because we know we
+01:25:51.760 need to know the impact that racism has both in terms of the human cost but also
+01:25:57.280 the productivity and financial cost as well. And that's a piece of work that we are commissioning later this month uh to
+01:26:04.400 really kind of focus on and to provide even more evidence uh to to help uh kind
+01:26:09.760 of focus on the solutions to the to the long-standing challenges that we have not just in the NHS but of course across
+01:26:15.760 the whole of society. Thank you. Okay, really good conversation. Thank you Diane for taking
+01:26:22.000 up this work and thank you Habib for for joining us and we'll make sure we come back to it. Um I think we have a risk
+01:26:28.320 that coming out of this morning Mink has even more work to do. But we'll uh we'll keep going. Right.
+01:26:34.560 Learning uh disability and autism program.
+01:26:40.080 Uh who's presenting on this? Tom. Tom. Hi. Good morning. Good morning everyone. Uh Tom Kahal, National Director for
+01:26:46.080 Learn Disability and Autism. Uh former chief exec not practicing anymore. Uh just want to bring you up to speed on on
+01:26:52.639 on learn disability. you'll have the have the paper. So I I won't go through the paper in detail,
+01:26:58.560 but we've just finished talking about inequalities. If you learn a disability, the chances
+01:27:04.080 are you won't make 50. If you learn disability with a profound learning disability and you're from an ethnic
+01:27:09.920 background, you won't make 34, 35, 36. So have a look around the room and how
+01:27:15.920 many people would make that life. So just just I want to bring that home that this is about people and we can we can
+01:27:21.199 do something. um learn disability program came out of a failure winterburn
+01:27:26.639 goes back I'm sharing this as a board because I know a lot of you might be new to this um and back in 2015 really
+01:27:33.440 really difficult circumstances people treated very poorly over 2017 2019
+01:27:39.120 became part of the long-term plan government strategy around building right support for one getting people out
+01:27:45.120 of hospital but two helping people live longer healthier lives um and that was
+01:27:50.560 the BTRS Yes. Despite the narrative of failure, I've been doing this for four years. If you go around the country,
+01:27:56.639 there's some fantastic care and support. Whether it's true key workers, what the people at acute hospitals are doing, um
+01:28:03.600 seeing people at home before they come in for an operation. There's really good stuff and we need to build that far more
+01:28:10.080 good stuff than there is of failures, but we do hear the failures and when we do, they they are allowed. um program is
+01:28:17.440 established in 2019 particularly I talked about and there's two distinct groups just to share with you. So we've
+01:28:23.040 got people who learn disability and some of them are autistic about 30%. Um and then you've got a group of people who
+01:28:29.120 are autistic only and I'll just deal with those very very briefly. Um in terms of learning disability, we had two
+01:28:35.360 real uh targets or work to do. So getting people out of hospital um
+01:28:41.520 particularly those who shouldn't be in hospital. Not everybody and we've done some work about two and a half years ago and about 40% we knew that should not be
+01:28:47.840 in hospital. Um we're not convinced the 60% that should be there were getting the right care either but we we need to
+01:28:53.679 work in that. Um and we have broadly achieved that for learned disability not
+01:28:58.880 for autistic people. I'll come to that in a second. The second part we're focusing on health outcomes around
+01:29:04.080 annual health checks uh 80% uh target and achieved but there's 1.3 million
+01:29:10.400 people there's only about 330 on on GP registers so you can see that there's
+01:29:16.320 still a big gap um and that 1.3 million there there's more we can do um if you
+01:29:22.719 see on the leader report the median age of death is improved about a year over a
+01:29:30.400 sevenyear period 8 year period so really positive um and the avoidable deaths are
+01:29:36.880 reduced from 47% to 38%. And these are really important because these are things we can do and
+01:29:43.440 if you think about where we want to go next we we can target that. Um you've
+01:29:48.560 then got autistic people and autistic people only. Uh they have a propensity
+01:29:53.920 to experience mental health more than the normal population. suicidal ideiation, a significant risk. And what
+01:30:01.280 we are seeing is autistic people, young and old, coming into hospital, coming
+01:30:06.639 into mental health beds particularly, not into older disability beds as we might have formerly known them. Uh, and
+01:30:11.920 that's a significant increase. So, we've been working over the last year uh to try and reduce that, make sure with the
+01:30:17.360 pathways are in place, working with mental health teams particularly to making sure that they're autism
+01:30:22.560 friendly. Um and you can see there on paragraph 12 tells you the sort of work
+01:30:28.480 um this autism team has been doing with across the system also a lot of research
+01:30:34.000 a lot of areas of good practice whether it's in Manchester and Stockport with Johnson and Greening's work whether it's
+01:30:39.120 Nelft in London Northland what they're doing around the neurodiversity pathways some significant work there and we've
+01:30:45.360 seen pro and we've seen progress but equally autistic people have the same life uh impacts as well about health
+01:30:51.520 outcomes so so we we've got continue to do that. Um so aligning ourselves with
+01:30:57.199 the 10ear plan real opportunity for us uh and for this group neighborhoods you
+01:31:03.040 really get basic get into the local population and to start making a difference and start putting putting
+01:31:08.480 things in place and because of leader we've been doing it for eight years we know what we need to do and I'll say a
+01:31:15.520 little bit about that in a second. digital transformation huge opportunity. I'll hear colleagues shouting at me
+01:31:21.840 don't forget to tell them about the risk because not everyone can accessible but that is something we we can work with
+01:31:27.520 and and Ming we have people who got 11 colleagues on our team who are who could be testing for you uh who've got lived
+01:31:33.600 experience so happy to do that um and clearly prevention programs and
+01:31:39.199 workforce planning and workforce planning and training and when we talk about training you might be talking about the Oliver McGallan training uh
+01:31:45.040 and making sure because we know that changes people's perspectives uh it changes people's perspectives about
+01:31:50.880 people who are the seen in A&E or wherever. Um so finally from me chair I
+01:31:56.080 just it this is doable this is this is this is not beyond the NHS particularly
+01:32:02.719 on the NHS term we know there's education we know the social care you know if we do the training for staff if
+01:32:08.719 we do the reasonable adjustments that people need to get the right care at the right time we have a digital flag which
+01:32:14.880 is for disability but is a gamecher and if we can use that make sure that we use
+01:32:20.080 it properly uh on both ends it's it's it's complete released and people then when people turn up for clinics,
+01:32:27.120 hospital appointments, people understand what what the reasonable adjustments are. Vaccinations particularly flu uh we
+01:32:35.600 cover is less of a concern now flu and and respiratory is a big issue for us. clinical pathways, respiratory, cancer,
+01:32:44.080 CVD, um, diabetes, obesity, the things that
+01:32:49.280 we know and if systems and ICBS together put these in place, we can we can make
+01:32:55.120 that difference and clearly annual health checks for everybody. That's we really need to and we're talking about
+01:33:01.440 uh mental health people smi, we're talking about learn disability, and we're talking about autism combined
+01:33:07.360 health checks and and we're quite excited about that. So it's a quick contrary chair of of of the paper. Um
+01:33:14.800 but the challenge I think we can make a difference here. Thank you Tom. Very good good example of
+01:33:20.800 what gets measured gets done. Okay. Any questions for Tom? Uh Andrew.
+01:33:27.840 Yeah. Tom, can I can I just ask a point around the voluntary sector? So um where where
+01:33:34.239 where do you see the voluntary sector impacting on some of the the measures that you you've outlined
+01:33:42.159 where where we see we work very closely with the voluntary sector at the moment and they uh we call them our our
+01:33:47.920 stakeholders they do a lot of support that's probably not on the health side but getting people to GPS
+01:33:55.199 promoting annual health checks but working alongside is much more on the social side of
+01:34:01.840 Um that that's where I see that. Okay. Thank you. So um thank you. So look forward to seeing a
+01:34:08.560 kind of um or the board discussing a fuller uh neurodedevelopmental pathway
+01:34:13.760 um piece incorporating the really good work of the ADHD task force. I've got a question about the table C and the
+01:34:20.560 waiting times. Um and it says, you know, referrals open at least 13 weeks has
+01:34:27.600 seen a significant increase year on year. What's the range? So at least 13
+01:34:33.920 weeks, what's the kind of higher level of the range and how are people being supported whilst they wait
+01:34:41.679 chair? Honestly, I'm not able to give you the range here. um our support. We're certainly doing a lot of with uh
+01:34:47.199 teams on supporting people in maintaining well while in the pathways doing a lot of work with ADHD task force
+01:34:54.639 about how can we reduce those on on on the on the pathways um but supporting
+01:35:00.000 families supporting people reaching out um there are some significant weights
+01:35:05.040 you know the and it is something we got to do deal with I don't think if we're honest we can deal with it without
+01:35:10.639 additional funding but actually we can't just stand still either and that's part of the the um apoint plan that we're
+01:35:17.760 working with Minister Kinnick and and colleagues. Yeah. Key bit we need to come back to. So
+01:35:23.679 I I I would have I would have thought I would have thought so. There is a good there is a good news story in there from
+01:35:28.960 and I and I'm sorry I didn't share it. The ICBS have been really really working well and you can see for two for two
+01:35:36.000 months we've leveled off in terms of the num the increase and the closures. Uh
+01:35:41.600 we've they've narrowed that gap. So, and that's without additional resources from the center. So, it's really good stuff.
+01:35:47.520 Um, we need to support that and build on it. Yeah, there's a lot more we need to do. Uh, Claire and then I'm going to move us
+01:35:53.360 on. Thank you. So, um, thank you Tom. Really good, very clear paper. Um, it was just a little bit more about the
+01:35:59.280 reasonable adjustments because I think people sort of go into a little bit of a blind panic when they sort of think about reasonable adjustments. But
+01:36:05.199 actually, I mean, and so I have a have an autistic child, so I'm very familiar with the needs. Um and actually what we
+01:36:11.840 should think about is rather than designing environments that work for autistic people actually just in designing environments if you think
+01:36:18.080 about the things that the reasonable adjustments that most people would need is don't suddenly change my appointment at the last minute don't suddenly send
+01:36:23.920 me to a different appointment different room give me information in a way that I can understand it let me bring somebody with me the and make sure the
+01:36:29.920 environment is calm as possible so I don't think actually we should focus on reasonable adjustments we should talk about actually how we design services in
+01:36:37.280 a way that works for people we we have done quite quite a bit and and particularly the autism team about
+01:36:42.719 what's what new services should look like and how they're designed. So impatient areas, flooring, noise, uh all
+01:36:49.840 of the sensory issues, lighting, all of those things are are are really helpful. I think Claire, you probably it's where
+01:36:56.239 we've got existing facilities. How do we work for those? But it it isn't just as you said, it's not just environment.
+01:37:02.239 It's about how do we treat people? Okay, great. Right, we're going to move us on. So, uh, management and leadership
+01:37:08.239 development, Joe Carolyn, uh, I assume it's been read. Yes, I will. That'll be really quick.
+01:37:14.400 Thank you. Uh, just just two things. So, thank you. We're seeking the board's, uh, review and approval of the
+01:37:19.600 management leadership framework today. Um, which basically for the first time means that there'll be a clear set of
+01:37:26.000 consistent standards and expectations of managing leaders at all levels from entry level right to board level, which
+01:37:33.199 you know, incredibly we've never had before. So we are at the start of very long overdue journey. The reason why
+01:37:39.440 we've got where we are is not thanks to me, thanks to people like Caroline May and the team who've done work with thousands of people across the system
+01:37:46.560 working with the chartered management institute and and lots of people that Caroline can tell you about to get to
+01:37:52.080 where we've got today. So as say is the beginning of a journey. It's not perfect. I will say that I think there's
+01:37:58.080 what were many sort of refineses in the language as the tenure plan evolves. I
+01:38:03.520 think our notion of what management and leadership is required will change and we need to keep that under constant
+01:38:08.880 review. It's a foundation that we can start to build on and and develop from
+01:38:13.920 there. And then secondly, if the board approves that then in the light of that, we need to align the standards with the
+01:38:19.360 board um competency framework. And so we're recommending in 26 and 27 we we
+01:38:24.639 use this new leadership framework for board level um managers and leaders. So
+01:38:31.040 take questions. Okay, let's take questions. So, uh, David,
+01:38:37.119 uh, Paul and Robert and Ming. Okay, take all
+01:38:42.639 those. We'll take all the questions together. So, David, um, I I welcome this approach. Uh, uh, I
+01:38:49.199 would make uh, three points. One, um, hopefully it it has both developmental and assessment um, aspects to it.
+01:38:57.040 Performance assessment. on assessment I would observe that to do this sort of thing well it's very resource inensive
+01:39:05.840 so uh for example if if you are evaluating the performance of someone
+01:39:11.520 ideally that is not just done by their line manager where all sorts of issues arise the moment you have a group of
+01:39:18.320 people assessing individuals then it starts to get very resource intensive
+01:39:23.520 um uh secondly on assessment uh uh Sorry. Uh um and then finally on
+01:39:30.719 development. Um we know that the best way to learn is on
+01:39:36.159 the job from by observing other people who do things well. Um and so coaching I
+01:39:42.880 think is needs a lot of emphasis in terms of the performance indicators for
+01:39:48.000 uh line managers all the way up the chain. Okay, let's keep going around because we
+01:39:53.679 might find got some common themes. Paul. Um, and linking to David's point about
+01:40:00.000 how to make how to make this improvement happen. Um, 85% of people had appraisal
+01:40:07.040 and 26% said it improved their job. Mhm. Um, so
+01:40:13.679 appraisal doesn't appraise very well at the moment. Um and therefore given that
+01:40:19.520 by April next year we're going to be wanting managers to manage a great deal of change the nature of appraisal from
+01:40:27.199 then will have to be quite a lot better. Uh and so therefore the developmental
+01:40:33.760 program to develop appraisal by next April get going quite quickly.
+01:40:41.360 um uh uh otherwise and and in a sense comes back to my very first point in this board about change
+01:40:48.560 and lose a year. Um uh so given we're going to need
+01:40:55.040 managers to be managing difficult things the appraisal of those managers needs to
+01:41:00.480 get going. uh and as David said it is resource intensive but the loss of
+01:41:06.639 resource of having only 26% of people improving their performance is gigantic
+01:41:13.840 Robert I mean this is just so mission critical uh it's crucial and um I think you're
+01:41:21.119 doing a great job um my question really is around the college um that's being established whether appropriate use is
+01:41:29.360 being made of skills from outside the NHS from other sectors and uh also
+01:41:35.440 whether business schools in universities some of which are very motivated to engage with this I know the one at Kings
+01:41:41.440 is for example um whether that is being drawn in to help
+01:41:47.920 okay um and then Ming um thanks Penny um Joe I just wanted to
+01:41:54.880 link the last two conversations so around learning disabilities because I I kind of chaired the neurodiversity
+01:42:03.360 um network and quite often a lot of the conditions that we create at work are
+01:42:09.199 not great and line managers haven't been given that support. So I just wanted to make sure in any new program that we did
+01:42:16.480 that we do consider those kind of um environment and environmental things as
+01:42:22.080 well. Okay. And Andrew was whispering in my ear where this applies to NHS England as
+01:42:27.679 well as providers. So I think every employer should guarantee an appraisal. We should be saying every year you you
+01:42:35.360 should have a conversation with your boss. We have failed to do that in NHS England comprehensively unfortunately.
+01:42:42.000 So if we if we're implementing this we we should have applied it to our own
+01:42:47.040 organization going for the moment Andrew every minute of every day. Okay. Uh I'm gonna have Mark and Glenn
+01:42:54.239 and then I'll add a few things then we come back to you Joe and Carolyn including what do we do next which I
+01:42:59.840 recognize this is great thinking um
+01:43:07.119 having just been through a five-year journey of something like this embedding is always the impo almost
+01:43:15.040 impossible task and the reflection I have if I look past is
+01:43:21.040 We started off with something this long, literally this long, and we ended up
+01:43:26.320 with eight words. And this is impossible to implement. So the thinking is amazing. I think the
+01:43:33.119 next task is how you synthesize it down into something that's repeatably consumable by people at every single
+01:43:40.400 level. And it's the sort of Winston Churchill quote, if I had more time, I'd write you a shorter letter.
+01:43:46.800 I think you probably need a shorter letter. Glenn. Yeah, I agree with Mark's comment on
+01:43:53.040 that, but I think it is a great framework. I think it concentrates on how we develop people that we have. I
+01:44:00.960 wonder whether we need to look more at values-based recruitment um to ensure that we have people that we can more
+01:44:07.360 easily develop. Yeah, good point. Okay. Uh well, can I I
+01:44:13.119 I've got a few just to add as well, um which I think very much build on what other people have said. So I have to say
+01:44:19.679 um I was very much where David and Paul was. It felts felt to me like this needs
+01:44:25.760 an evaluation framework. So I think it's great the starting point the stage one, stage two, stage three, stage four, but
+01:44:32.880 that almost says this is what we think you need. It doesn't say this is what
+01:44:38.320 subacceptable performance would look like. This is what good performance, this is what very good and this is what
+01:44:44.159 exceptional performance would look like. And I think we need that for all of these bits. That would make it longer,
+01:44:49.440 but that would almost be the implementation piece to support colleagues across the system. So if
+01:44:55.760 we're going to do it, it would need something that embeds that that then if we did that well, ought to take the 20%
+01:45:03.840 up because actually it ought to then give people even looking at an evaluation framework tells you this is
+01:45:09.840 what really good looks like. And so it gives you a bit of something to aspire to or or a learning curve. It feels like
+01:45:15.600 we need a lot more on that. Uh I think there is this crucial bit about the developmental bit that David raised and
+01:45:21.920 then Robert raised. So how are we bringing much more external expertise into this? You know we know that we have
+01:45:29.840 some great management expertise in the NHS. We know that some skill sets that we are missing and lacking and I think
+01:45:36.960 we don't quite bring enough of that into it. And then I say I had a bit of a
+01:45:42.880 personal problem with some of the language in here. So you know there one on um self effectiveness. Keep safe.
+01:45:53.040 What does that mean? Does that mean I walk slowly down the corridor or
+01:45:59.040 And we keep using that word. I don't I wouldn't know what that meant. Uh and
+01:46:04.400 we've got things in here like patient centered care. I don't know what that means. We've got
+01:46:09.760 a whole lot of really good patient experience metrics we which we could be aspiring to. So we've got a bit too much
+01:46:14.960 fuzzy language in here and I think we need to be much more clear much clearer on the sorts of things we've been
+01:46:20.880 talking about today like do we have a group of managers who can really think about resource allocation. We do refer
+01:46:26.639 to that but I'm not sure it's quite tight enough. Are we really thinking about great user experience? What's that
+01:46:32.239 mean? Are we really thinking about this point Paul made at the beginning about the risks of not changing sometimes
+01:46:38.320 greater than the risks of change. So I think if you it'd be good to hear your
+01:46:44.159 thoughts on how do we make this much more eval how do we embed evaluation throughout this. How are we thinking
+01:46:50.880 about development that goes alongside this including in external expertise?
+01:46:56.400 How can we tighten up some of the language? And then um what do you want
+01:47:02.480 to do with this? So, do you want to roll it out as it is recognizing some of the
+01:47:09.600 questions, concerns, or do you want to do a bit more work on it and then roll it out?
+01:47:16.400 There's quite a lot there, Penny. Um, so just I I'll come in on some of those and then I'll ask you to come back in some of the specifics, then I'll wrap up in
+01:47:22.080 terms of the next steps. But, um, I completely agree with you, Glenn, about values-based recruitment. If we want to
+01:47:28.080 change the culture within our workforce, then actually it's the people that we recruit and the people who join the NHS
+01:47:33.920 tend to be much more values based anyway and the younger generation even more so. So I think we need to reflect that in
+01:47:39.280 the in the tenure workforce plan that we're developing and absolutely Mark and Penny we need to it's fantastic work but
+01:47:45.920 I think it's been very much facing the people who've been developing it and we need to flip it and make it as you say
+01:47:52.000 succinct and meaningful to those who are going to use it and and talk about it drawing on all of that great work. I
+01:47:59.040 think it it is definitely meant to be developmental. Um and I'd like to ask cabin to explain sort of how we're doing
+01:48:04.880 that and how we're involving other sectors in that. Yeah, certainly. Thank you all very much for your questions. Uh so absolutely
+01:48:12.000 this is a developmental framework and the intention is to launch with a self assessment frame self- assessment
+01:48:17.520 toolkit excuse me and then a 360 degree feedback tool next year picking up on
+01:48:23.199 David's point around feedback from other people recognizing it's resource intensive behind this then sits a
+01:48:30.480 national development curriculum linking to the code and standards which will guide development uh in terms of the
+01:48:37.040 core competencies and expectations for leaders and managers at different levels. I think the key point is we've engaged
+01:48:43.840 hugely on this piece of work. So over a thousand people have fed in. So of course sometimes the language isn't
+01:48:50.639 exactly what everyone would want and it's been a balance to try to get um everyone kind of satisfied with the
+01:48:56.880 feedback that's being given. Just on the point about um external um guidance and
+01:49:02.480 development and learning from other sectors as part of that national development curriculum, lots of that is
+01:49:08.239 featured there and case studies and learning and how people can apply that learning in the NHS.
+01:49:15.119 Excuse me. The other thing I just wanted to pick up Penny with your point about what does good and not so good look
+01:49:20.560 like. That's exactly what we we've actually developed for the code of practice in terms of what's really good
+01:49:25.920 behavior and values. What does that look like? what's unacceptable and the plan is to publish that alongside the
+01:49:32.320 framework so people know what line managers know what good and not so good looks like. Just on the appraisal um
+01:49:38.960 yeah really important the very next step for us is working with a steering group to de develop that appraisal core
+01:49:45.679 framework but we also think training for line managers is going to be absolutely critical there because this is a kind of
+01:49:51.840 cultural change about how to do appraisal really well in a motivational way. Apologies if Kevin's just getting a
+01:49:59.040 tons lighter. Sorry really good coming. But um I think your point about timing pen is really key. We were planning to
+01:50:04.960 launch this in autumn. So I think it's it's how quickly we can sort of take it offline and just address and finesse
+01:50:12.000 particularly the language and the succinctness without losing the pace. Um I'd like to think we could still sort of
+01:50:17.840 crack on. Would I think it'd be a problem if it went beyond autumn, wouldn't it? In terms of what we were trying to do. Well, it it delays because
+01:50:24.239 the intention is to ask people to self assess against the framework as a part of the next appraisal round. So
+01:50:29.679 obviously we need a kind of final version of the framework and final version of the appraisal framework for them to do that.
+01:50:34.800 Okay. And Andrew is reminding me which I was involved in that when we had the chairs uh and the Ned's framework it
+01:50:42.320 went down like a lead balloon. So I I think the trick is to um take up Mark's
+01:50:48.159 point around making this succinct and giving some latitude
+01:50:53.440 to for boards around you know just just doing it your way because everyone will
+01:50:59.199 will want to put their own kind of spin on this. Um, so you know, we're we're
+01:51:04.239 offering a way of doing this that's proven to work, but you may have
+01:51:10.320 situations where a board particularly wants it done in, you know, XY Z way.
+01:51:15.920 And I think we should give people that latitude. Um, and last time round this
+01:51:21.440 this didn't go down well with with some people. Um, but I think if if we try and
+01:51:26.560 make it as succinct as possible, um, we hopefully will be a lot a lot more
+01:51:31.600 successful because there's some really good stuff in here. Okay. So, can I make a suggestion?
+01:51:37.760 Here I go. Um, so the it will still be autumn in November.
+01:51:45.119 Uh, so we got the northeast.
+01:51:52.320 Uh so we've got a couple of months. I think there's a lot of expertise around this table. So can I suggest we take
+01:52:00.800 views from around the because we don't have time to do that now. We take views from around this table. You've heard
+01:52:06.480 some of them. We can come back and uh try and get people to do that. So I think we would ask everyone here to come
+01:52:12.880 back with their thoughts and comments quickly like I might say by the end of September. Um, and then you, the two of
+01:52:22.400 you have a chance to reflect on that. Uh, perhaps bring it back for another shorter conversation with Jim uh, and
+01:52:30.239 exec colleagues, take on board the things that have been said, and then we make a decision about what to do with it
+01:52:36.400 during October, which would allow us to meet. Is that That sounds good. I was just uh just
+01:52:42.239 thinking um you look at slide 8 as an example if this went out as it is um chief
+01:52:50.880 people officers and organizations generally will realign all of their appraisal documentation and the
+01:52:56.480 frameworks and there's quite a lot of work involved in that some of them have just done it some of them being an
+01:53:01.599 established partner being happy with it um etc. So on your point, Andrew, it's I
+01:53:06.880 don't know if you've done it, but just it's worth talking to some uh colleagues out there about what would take to
+01:53:13.679 actually bring this to life without everybody tearing everything up. Yeah. Starting again from scratch and that
+01:53:19.040 actually then taking longer. Yeah. Just just to come back on that, Jim. So we're engaging with over 130
+01:53:24.800 organizations in terms of early adoption and um we're already doing that engagement piece about how do we
+01:53:30.239 implement this well and work with them with community to practice. So thank you. Okay. So, are you okay with what
+01:53:37.040 suggested in terms of next steps that Jim? Yeah. Okay. All right. Good. Right. Uh, now on to
+01:53:45.840 covering an awful lot today. Uh, greener NHS.
+01:53:50.960 Thanks, David. So, thanks, chair. So, um, I I'll hand over to Chris in a moment, but just say a couple of very very quick things.
+01:53:56.800 Firstly, delighted um that we've got this report in public board. uh this is part of the delivering the net zero
+01:54:03.119 strategy and I suppose as you'll see in the report it it presents good examples in two things one the moral obligation
+01:54:10.320 to get involved with this work which the NHS has and and you'll see and you'll hear from Chris has done incredibly well
+01:54:16.880 secondly and highlighted throughout the report genuine cost savings and efficiency as a result of being involved
+01:54:21.920 in this and then finally and I I can say this uh as a hospital chief executive
+01:54:27.040 this stuff really matters to our staff so there is a third benefit from the
+01:54:32.080 good work that Chris and his colleagues have left. But Chris, hand over to you.
+01:54:37.199 Thank you, David. Thank you, chair. Um, I'm delighted to present to the board today um both an improved understanding
+01:54:44.320 of our carbon footprint in the NHS, but also a report setting out progress over the last 5 years. Um, the headline
+01:54:51.599 figures are a 16% reduction in our carbon footprints. So, those are emissions we can directly control. Um,
+01:54:58.560 and for those emissions that we can influence, having seen them go up during the pandemic, we've actually seen them return to to broadly pre- pandemic uh
+01:55:06.400 levels. Um, and that's despite an increase in activity. Um, those
+01:55:11.840 improvements across our carbon footprints are across our estate, they're across our fleet, they're across the medicines we use. Um, and they're
+01:55:18.159 delivered in partnership. So, really crucially through our our colleagues in Royal Colleges, through uh other
+01:55:24.000 government departments, um, and through our suppliers as well. Uh and if I just take a couple of notable um uh actions
+01:55:32.320 out of the the progress report, um we've uh virtually eliminated the use of um uh
+01:55:38.880 certain anesthetic gases with high global warming potential such as deserane. Um we've seen huge innovation
+01:55:45.599 in our fleet. We've delivered the world's first double crude electric ambulance. Uh and more recently we've um
+01:55:51.280 partnered with Great British Energy um to to um uh invest over 100 million uh
+01:55:58.159 to deliver a triple um increase in the amount of solar generation uh across our
+01:56:03.199 estate. That's going to pay back three times over and that will add um to the 5 million pounds that we already see in
+01:56:09.360 savings each year through existing solar. So that's just a couple two or three examples. Um there are many more
+01:56:16.320 really really good examples throughout the the progress report that we seek to publish today. Um and much of that
+01:56:22.719 delivery against our ambitions is really through the the um incredible efforts and dedication of our of staff right
+01:56:28.880 across the NHS. So I just like to take this opportunity to say a big thank you to to them um for their continued uh
+01:56:35.199 effort and support to deliver a greener NHS. Thank you. Okay. Questions, comments? Uh Sam
+01:56:44.239 uh Duncan uh Rabbi Sam um yes if you um look at some systems
+01:56:51.920 some areas advice and guidance can reduce travel to outpatients by up to
+01:56:57.520 60%. And in some systems guess what you don't need to go to outpatients before or after have your blood test you can
+01:57:03.679 get them done in primary care. Uh my question underlying this is to what extent uh are you looking at all our
+01:57:11.840 policy documents in this instance particularly on transformation of outpatients to look at some of these
+01:57:17.520 potential green gains. And the second uh question is if you sit
+01:57:24.880 uh in a general practice you will have a popup. So, we're doing great things on
+01:57:30.159 inhalers, but you'll see a popup saying you have to have a new plastic
+01:57:35.280 uh spacer every year. And actually, when there was a parliamentary question about
+01:57:40.960 this, it was very unclear as to who's driven this process, but it costs millions.
+01:57:48.400 But hidden within that question is also um what you have talked about David,
+01:57:54.560 which is about engaging people out there. This is in very engaging for a lot of clinicians and staff at the NHS.
+01:58:02.000 But to what extent do we engage them on a day-to-day basis and do they see their ability to reach the top of the
+01:58:08.960 organization and see action taken on things like the spaces?
+01:58:15.599 Uh Duncan. Yeah. So I I would just to build on the the point about uh engagement from
+01:58:21.119 staff. This is one of the things particularly that really heavily motivates um nurses and midwives um
+01:58:27.440 particularly if you see that generational shift where we've got a much more climate aware generation in our workforce now and it's certainly
+01:58:33.840 will be one of the strands that we're working on through the development of the nursing mipery strategy for England. Um I guess there's something about the
+01:58:40.159 pace of adoption and are we doing enough to drive some of the pace of really good examples that are going on across trust
+01:58:46.639 and make sure that they are adopted and are we do we need to do more on a kind of zero tolerance on stopping certain
+01:58:52.320 products for example where we know we have an impact and will have an impact on cost um and then I guess the risks
+01:58:58.239 around um some of the other developments. So my understanding is that AI and some of those changes
+01:59:04.400 requires a big heavy input of power and so I guess the risks for the next 5
+01:59:10.080 years and the work that we need to do in terms of transformation are we going to replace one improvement with another
+01:59:17.599 kind of increase in carbon. Ravi on similar lines are struck by the
+01:59:24.000 fact that um secondary care energy bills have doubled since 2019 to over 1.4 4
+01:59:29.440 billion. Um, just made me wonder about whether we are maxing out on all the
+01:59:34.960 energy efficiency and solar generation projects that could potentially reduce bills. It sounded like you're doing some
+01:59:41.119 through the public sector decarbonization fund that I think is stopping plus GB energy. But um, are we
+01:59:46.960 doing all of them or are we constrained by the kind of finance available? Because if we are if there is other MPV
+01:59:52.560 positive stuff that is there is there we should be able to look at other ways of financing this and particularly thinking
+01:59:57.920 about the the distribution network operators actually as a as a potential way of doing that. Ma
+02:00:03.040 thank you. Um so I not answering your question just making a comment about
+02:00:08.159 more sort of clinical engagement throughout the NHS actually because we're pushing on an open door and with
+02:00:14.639 my CEO hat on I can tell you about um the difficulties experienced so the
+02:00:20.560 first was measurement people couldn't get to the through the detail to
+02:00:26.960 understand the conversion in from sort of pounds to carbon so that was the
+02:00:32.080 first thing so we actually did a pilot project with Harvard University's uh
+02:00:37.280 professor Kaplan and Ramina and we focused on the hip replacement pathway
+02:00:42.400 to look at scope 1 2 and three in terms of how much carbon is accounted for for
+02:00:49.599 the day of admission to the day of discharge for the most commonly done operation and that's now being rolled
+02:00:56.320 out and as a result of that understanding and working with the manufacturer who produces the hip
+02:01:02.960 implant. So looking at supply chain as well, it was very easy to then focus on well how do we improve this? What steps
+02:01:10.080 do we need to do? U you know cycling to work or whether it's switching off the
+02:01:15.119 theaters overnight or stopping the manufacturer sending the implant to Germany for a coat just to come back to
+02:01:22.080 England. So all those things are are you know currently in practice and and and
+02:01:27.520 people are really focused on delivering this right Glenn in answer to your question about access
+02:01:34.480 to capital and whether this is constraining our progress um it well it is um Seix is a good example of that and
+02:01:43.360 as far as I'm aware when the Seix funding becomes available it switches on and then within a few hours everyone has
+02:01:51.440 uh all the money's gone. uh and uh you can't bid anymore. So there's a load of Seix related projects
+02:01:57.520 out there that have not been funded to date. So what's the future of Seix moving forward?
+02:02:03.440 Okay. So uh I think great bit is you've got lots of enthusiasm here. Uh which is
+02:02:09.520 really good. I think quite a few of these are in some ways more prompts for for more work and more focus rather than
+02:02:16.320 necessarily questions to answer. I I would I'll just add a couple of bits as
+02:02:21.679 well and then you can come back on how we take this forward really. So I think Sam's point on outpatients I thought the
+02:02:29.199 report about five six years ago Royal College of Physicians did 5% of all cars on the road are going to an outpatient
+02:02:36.800 staggering figure worse to Sam's point you know is is that a good use of those car journeys
+02:02:44.560 um I would add to Sam's bit on inhalers uh wider EpiPens have to be replaced in
+02:02:51.840 schools every single year uh Does everyone need to wear plastic gloves? Does everyone need to wear a plastic
+02:02:58.000 apron? I've never seen what a plastic apron does. Can't doesn't seem to me to anyway. But, you know, the list goes on
+02:03:04.080 and on and on and on. Uh, should we have a proper review of those? Should we ask
+02:03:09.760 NICE to look at the evidence base behind some of these things and whether or not we really do need to keep replacing
+02:03:15.040 everything because it costs a lot of money and it's the environment. Um
+02:03:20.400 for me the most staggering figure which we know but anyway 27 million of square meters of buildings. So yes energy
+02:03:27.280 efficient use of them but we don't need probably uh whatever a quarter a third
+02:03:33.520 half of that space. So how we actually going to exit buildings in order and you know using that as a argument for going
+02:03:40.719 greener would be good. And then I think really important is which bit Megan has
+02:03:46.560 bit about doing deep dives but even at the high level figures one and two you don't need to answer that now but I
+02:03:52.719 couldn't align the data across the two of them. Uh so don't get into that now but there's a bit about sort of being
+02:03:58.560 very clear on where are there opportunities to improve and therefore what can we do. So you've got lots of
+02:04:04.159 enthusiasm um tell us what we can do next. Sure. Thank you for enthusiasm. Um, I'll try
+02:04:11.760 and bundle a few of those together. So, look, uh, staff engagement, clinical engagement is massive. We, last time we
+02:04:17.679 surveyed, we knew nine and 10 of our staff wanted a greener NHS. So, we we know that's there. Um, in terms of
+02:04:24.480 focusing on clinical pathways and and opportunities, especially around reuse, we've partnered with um, uh, GIF getting
+02:04:31.599 it right first time program. Um, we've done our first greener deep dive there on bladder cancer pathway. We've seen
+02:04:37.840 that actually whilst we saved 2 and a half thousand tons through that that revised pathway, we're also reducing the
+02:04:43.520 number of um appointments, outpatient appointments, faster diagnosis, um
+02:04:49.040 patients spending less time in hospitals. So there's mutually uh beneficial um uh points for both our
+02:04:56.159 program and the wider NHS in in bringing clinicians into this program. Um in terms of some of the other points around
+02:05:03.199 patient travel inhalers, um we published a uh revised green plan guidance earlier this year. It's for the first time sets
+02:05:09.199 out a lot of best practice about where organizations such as um Jims and
+02:05:14.320 David's um uh they're referenced I think in there in terms of taking action uh and actually trying to replicate that.
+02:05:20.480 We know that there are some high performing trusts. We know that there are some who uh probably need to catch up and it's trying to to to bring bridge
+02:05:26.800 that gap. Um just on the point of capital delivery, it's it is um there's a lot we can do in our program to reduce
+02:05:33.280 emissions without spending money. Um but capital delivery particularly and I think the paper talks about um heat
+02:05:39.520 going forward. So he talked about salix and uh public sector decarbonization scheme they are the same thing. they're
+02:05:45.440 they're in high demand and actually uh perhaps our biggest challenge in terms of staying on track uh over to our
+02:05:51.920 interim targets and longer is actually finding a way to find um uh financial models and vehicles to be able to
+02:05:58.159 deliver some of that that decarbonization. So there's there's a few challenges there which would love to
+02:06:03.440 um uh take further beyond this board. All right, great. Really good
+02:06:09.360 conversation. Look forward to seeing 16% get to 30% next year.
+02:06:15.199 Uh, good. Okay, let's move on to the next one. Increasing research activity.
+02:06:20.639 So, Lindsay, I think you're going to do this. Y. Thanks very much, uh, chair. Thanks
+02:06:26.400 everybody. Um, so I'll take the paper as read. Um, I just want to make a couple of points before I hand over to Alex um,
+02:06:33.280 who's my colleague from DHSC. We work very closely with our colleagues, um, in NIHR and DHSC on this agenda. Um the
+02:06:40.400 paper frames this particular issue within the context of the life sciences sector plan but we really do want to
+02:06:46.079 focus the board's attention today on the setup of clinical trials. It's a real uh political focus at the moment. It's in
+02:06:53.599 both the life sciences sector plan and our 10-year health plan but it was um kind of stimulated by the prime minister
+02:06:59.280 making a commitment in April to move to setup of clinical trials in organizations in 150 days or under. Um
+02:07:07.040 unfortunately at the moment we are only managing that in about 30% of studies that are on the NIHR portfolio. So we
+02:07:13.520 have a long way to go. Um that said there's a significant amount of work that is um ongoing working through our
+02:07:20.159 colleagues in the sector through the UK um clinical research delivery program
+02:07:25.440 and the paper sets out the work that we're doing there to standardize streamline and remove duplication across
+02:07:30.960 organizations. It also sets out um some of the requirements that we've put out to the system uh following feedback
+02:07:37.679 Vindawac wrote to organizations in May asking uh to increase board visibility
+02:07:44.800 um and board accountability relating to this. And I think both Alex and I smiled to each other Penny when you said what
+02:07:50.560 get gets measured gets done. We would love to move this agenda to what gets measured gets done but we do really need
+02:07:56.159 this board support to make sure that we are measuring it and then we understand um what is happening. So really what we
+02:08:02.480 would like the board to think about and give us a steer on today is what more could we do? If you think there are areas that we aren't addressing um and
+02:08:09.599 if there are areas like using the planning guidance etc where we can actually pull some levers um are they
+02:08:15.840 appropriate I'll pass on to Alex who know wants to make a few comments from DHS. Thank thanks Lindsay and I just wanted
+02:08:22.079 to bring sort of perspective from the ministers uh and the government's perspective. I think just to focus on
+02:08:27.840 sort of vision and then why we want to do it and and the three asks that the government wants. I mean from the vision
+02:08:33.280 the vision really is that we want research embedded as part of everyday care and we want the NHS seem to be
+02:08:39.599 competitive for clinical research both non-commercial and academic but in
+02:08:45.360 particular commercial research and just to flag you know commercial clinical trials is the lifeblood of the life
+02:08:51.920 science industry and at the moment that isn't working. Why we want to do it? We want to do it because we want to bring
+02:08:58.400 new treatments to patients faster. We want your your support and the workforce
+02:09:03.440 so that they can be more productive and we can free them up to do tasks that in
+02:09:08.480 reality matter. I know the minister is very concerned about this. U in fact I
+02:09:13.920 spoke to minister yesterday and he he said Alex do you want me to come along to the board to to really uh to really
+02:09:20.159 emphasize this? So it is a very high political agenda item at the moment.
+02:09:25.920 Just to reiterate that I think the three key asks uh from from me and from the
+02:09:31.040 minister really are first of all can we really make sure that research is embedded as everyday care and it's not
+02:09:36.960 seen as an add-on or separate from healthcare. Secondly, I think reflecting what
+02:09:43.599 Lindsay's just said, you know, if we can get NHS trust boards to actually measure the 150day metric as well as the other
+02:09:50.719 key performance indicators of that will make sure that performance and commercial trials gets delivered. And
+02:09:57.679 then thirdly, we we have set out a number of policy guidances and recommendations essentially and if we
+02:10:04.480 can embed those more effectively, we we are really um keen and we we we I think
+02:10:10.880 that from our perspective that will really help deliver some of this. So those are the three asks. Thanks.
+02:10:16.400 Okay. Thank you. Um we've got Sam uh Mark
+02:10:21.760 uh and David. Okay, Sam. Yeah. So, one of my hats is an honorary professor of primary care at Queen Mary
+02:10:27.599 University. And when I see the change in research opportunities, in other words,
+02:10:33.199 the capture of the 2 million database in primary care, the discovery project that
+02:10:38.239 connects it to the acute sector, the opportunities are massive, but we still
+02:10:43.920 have a research base which very much focuses on hospital. We haven't managed to shift it towards the system. And it
+02:10:51.280 plays I think to Robert's point earlier on uh about the drug companies and the
+02:10:56.560 risk of them exiting uh because of costs. Have we done enough to sell the
+02:11:03.599 research opportunities particularly to the drug uh companies that are unique in this country?
+02:11:10.880 Um okay Mark and so I had a few points. First welcome the um paper and the conversation that
+02:11:17.440 we are having. Um really important area. There's a few things though. One I was unsure reading the paper about what the
+02:11:23.679 delivery vehicle is going to be for these priorities. It's a little bit mixed I think you know because regions
+02:11:29.280 of course will need to play a role at some point in the future but given the changes going on at regional level I
+02:11:34.560 think just putting our focus on strengthening the capability and capacity at regional level I think will
+02:11:40.480 um mean that we don't realize the pace of change that we're going to need to see um in this particular area. Final
+02:11:46.880 point was around um cost recovery um because it is important to obviously
+02:11:52.400 to make sure we're covering costs uh but that will not give us the growth that we're going to need to see for
+02:11:57.599 commercial research and I think that's something that we just need to think through not be silly about investments but really thinking ahead about where we
+02:12:04.400 know there's going to be likely growth in uh research activity and making sure we have a model that's going to support
+02:12:10.560 the increase at the pace they have an opportunity to do to go at. Thanks David. Yeah, I mean really welcome the
+02:12:17.520 paper. Um I suppose just to remind everybody and the figure keeps changing but every pound invested is an eight to8
+02:12:23.360 to10 return to Mark's point it doesn't to the UK PLC it doesn't necessarily
+02:12:28.639 fall in the place where you spend the money which is part of the challenge. Um just to Sam's point I I chair the North
+02:12:34.960 London Clinical Research Network which I've done for 10 years. The fastest growing researchers in primary care in
+02:12:40.079 terms of number. So there's opportunity there but you're absolutely right. we need to harness it differently and think differently about how we approach it
+02:12:46.239 going forward. And I suppose two final things. One, uh there are still organizations out there and I understand
+02:12:53.040 the challenge where they are not spending money on research allocation to save money overall even though the
+02:12:58.639 letter's gone out from colleagues even though we've tried to reinforce it. So we need to find a different route uh to
+02:13:04.000 make that message stronger. And very finally, I had a good conversation with Lucy last week, Lucy Chapel, and I'll
+02:13:10.480 support her with a shelfer trust to seeing whether we can benchmark some opportunities to speed up some of this
+02:13:15.760 150day target work. Okay. So, just because it falls within your remit, David, the question about
+02:13:21.520 should we be measuring this and measuring and looking at that variation across all providers, is that something
+02:13:27.679 we could add to that master? Yeah, I mean, it it will be relevant to a major a proportion of providers.
+02:13:34.960 Absolutely. And research active providers do measure it, but probably even not as frequently as they should
+02:13:40.560 do. Organizations like mine, like some of them represented down the table, should be looking at this as they are
+02:13:46.079 the four-hour access target, to be honest, if we're prioritizing this. So, yeah, we'll take that away and think
+02:13:51.280 about how best we can do that. Okay, great. Thank you. Okay, so I've got um uh Robert, I've got Elizabeth,
+02:13:57.920 I've got Megan, I've got Louise. Yeah. Well, there's lots of great stuff uh in this paper and it it's very
+02:14:04.159 welcome and and congratulations on what's going on. Um I think picking up
+02:14:09.760 on a couple of things. So, picking up on on Sam's point, um I think the health data research service plan is brilliant.
+02:14:15.920 I assume that'll include primary care data and this links on to open safely, which is on the on the menu, but we're
+02:14:22.400 not discussing it, which is a great way to uh ensure that that data is really fully accessed. This is focused on phase
+02:14:29.280 three trials and I understand that and it's very important but if you think about 7F and partnering with industry to
+02:14:35.599 drive growth and innovation early phase trials I would say are also extremely important and I don't think I saw a
+02:14:42.560 single mention of university uh in this paper and if we want to drive innovation
+02:14:48.079 and industry partnerships and everything else we need on the one hand to have patient data readily available that's
+02:14:54.560 what industry wants um but we need university research to be drawn in and then we need life sciences clusters that
+02:15:01.199 bring those three sectors together which is what is going to drive some of those earlyphase trials to drive novel
+02:15:07.520 therapies because as I'm sure you know 50% of the drugs in the pipeline are not small molecules they're advanced
+02:15:13.520 therapies biologic cells and genes and all that and that requires these NHS
+02:15:19.760 academia industry clusters to be really thriving
+02:15:24.960 in David said what what I was going to say just about the return on investment being compelling but not always the
+02:15:31.679 cashable savings arrive in the NHS so the engagement can be muddied but I had the um the pleasure of meeting with
+02:15:38.239 Lindsay and Vin about this topic and what I was also surprised by is the
+02:15:43.440 amount of um work that actually goes on um but the lack of cost recovery even
+02:15:49.679 though the providers have actually done the work they don't follow through to recover those costs from um commercial
+02:15:57.520 contract research. So there is an opportunity there for us in the sector and it's on our agenda for the 9th of
+02:16:03.520 October when we or the 8th of October sorry when we bring the CFOs together again and it's gone out in a kind of a these
+02:16:09.360 are the things we should be looking at and with Lindsay we're trying to identify which providers are not are doing the work but not recovering the
+02:16:16.400 income which is surprising which just makes me think it's not linked through to the board or execs or something is
+02:16:23.679 odd that's going on because uh for us to follow up on Magna thank Thank you. Uh thank you for the
+02:16:30.000 paper. So I completely agree that you know we have to make it clear that research is not an add-on. It is part
+02:16:36.160 and parcel because there's clear evidence that research active organizations have lower mortality
+02:16:41.200 rates. Uh and there's a lot of research in primary care actually. So I would support adding the metrics related to
+02:16:48.160 research to the board board frameworks. The point is it's not just about the
+02:16:53.519 time taken to set up trials. It should also be about access to research for diverse populations and how what
+02:17:00.400 percentage of diverse populations that come to clinic have that um research you
+02:17:06.879 know exposure. That's the second thing. And third thing is standardizing pathways is really good. It'll cut a lot
+02:17:14.240 of duplication and number of days taken to set up. However, if you get
+02:17:20.400 organizations to do a process map of that pathway, you will find specific
+02:17:27.281 delays at key points and one of them being pharmacy. Yeah. And that's not because they are not
+02:17:34.799 quick. It's because there are resource implications. So, I think working through those challenges will be key and
+02:17:41.519 they'll be different at different organizations. But I know that pharmacy is a key issue.
+02:17:48.320 So I think um I think we also need a kind of corresponding narrative for the public and for particular groups about
+02:17:55.281 the importance of taking part in research and and I don't think people associate research with primary care for
+02:18:00.400 example and you know it's kind of how do you change that expectation sorry Sam
+02:18:06.160 yeah that links into the app allowing you to participate and so on. Uh Tom,
+02:18:12.558 so I I come from a position of having tried and failed to uh set up a
+02:18:18.400 commercial clinical trial in the NHS, having some direct personal experience. I didn't see anything in the paper that
+02:18:25.519 um I I saw as fundamentally changing the paradigm that we're currently in. I don't think there's any question that if
+02:18:32.320 you ask any leader in the NHS, they'll tell you that they think research is important. So just telling people that
+02:18:37.760 it's important, I don't think it's going to particularly change anything. Um I I
+02:18:43.120 think we need to have a discussion on the table about two things. Firstly, um some clearer incentives. So this point
+02:18:49.760 about cost recovery at the moment. I think the mindset for most NHS
+02:18:54.879 organizations is that this is yet another thing to do and it will involve some cost as opposed to being an
+02:19:02.400 opportunity to generate some income. So I think shifting from a this is a cost
+02:19:07.440 center to this is an income opportunity is the most significant shift that we can make and we need to construct some
+02:19:14.558 incentives to actually make that shift occur. Um and that also means that the
+02:19:20.240 incentives have to be understood in the wider system. The second thing and I think we should explore this with our
+02:19:26.000 partners is that we currently approach UK assets like UK biioank um and
+02:19:33.200 presumably HDRS on the same basis um as kind of global public goods. So any
+02:19:40.558 researcher anywhere in the world can access UK biioank. um given the kind of pullback that we're
+02:19:46.638 seeing from the pharmaceutical industry, I wonder whether that it's time to explore whether there should be
+02:19:53.120 privileged access to those UK assets for those companies that are research active in the UK because at the moment we're
+02:20:00.240 making them available on a completely equal basis to any company anywhere regardless of whether they contribute to
+02:20:07.600 UK life sciences or they don't contribute to UK life sciences. I think we should explore that as a as a
+02:20:13.840 possibility. Paul, um I I just reflecting on uh this being
+02:20:21.280 a cost and not seen as an investment uh which can get a return. I think in
+02:20:26.960 probably the last 15 years many universities have made that shift where
+02:20:32.800 research was sort of a hobby that some people took and was a cost because it kept you away from teaching to the
+02:20:38.880 universities recognizing that they can get some return from this but that is a
+02:20:43.920 change in not just mindset but a change in organizational pattern um and so I
+02:20:48.960 think we could go to not just the universities that have done this well for 50 years but universities that have
+02:20:54.319 learned how to do that change uh and to transfer that learning into the national
+02:21:00.560 health service because it's quite recent in these institutions. Okay. So, this has turned into a bit
+02:21:07.040 more of a workshop which I think is great. Uh you've got lo I think I've written down quite a few of them. You
+02:21:13.359 will have done lots of really good ideas, thoughts, inputs. I think we have agreed that we need to measure this and
+02:21:20.640 I think that includes measuring what happens maybe some stuff around finances certainly how much is done in primary
+02:21:26.880 care wider settings um we don't have time for you to come respond to it now I
+02:21:32.720 think take all these things away come back with a almost a beefed up version of this including some choices like
+02:21:39.439 Tom's put a few slight provocative choices out there um there are a whole wider set of uh actions for NHS England
+02:21:48.000 in the life sciences sector plan. So what I propose that we do is we'll we'll bring it back with all of the actions
+02:21:55.280 and include this uh sort of I guess set of wider things that people have raised
+02:22:00.640 across the table. But thank you thank you for bringing that. Thanks for everybody. Very good discussion.
+02:22:05.680 Okay, I'm doing very badly on my timing. Um next item is for us to accept without
+02:22:11.120 discussion the um improved access data and analytics. I do actually have quite a few things I'd quite like to raise but
+02:22:17.439 I won't do that. Uh are people comfortable to accept that set of directions and we might pick up
+02:22:24.800 separately some of the questions that come from it. Okay. So we have some questions from the public which um Jim
+02:22:32.640 and Duncan and Glenn are going to respond to. Uh Duncan, do you want to go first with your two questions?
+02:22:38.560 Yeah. Yeah. So the first one is around a question around the Supreme Court ruling um uh on
+02:22:46.160 uh biological sex uh which um happened in April and the question is around uh
+02:22:52.640 what is NHS England doing about this. Um and I think just to say that we are reviewing our um relevant policies and
+02:22:59.920 procedures to make sure that that is aligned with the ruling but we do need to wait for the uh EHRC which is the
+02:23:05.600 Equality and Human Rights Commission to update its code of practice for services functions and associations which will
+02:23:12.479 set out the legal framework of how services are delivered in line with the Equality Act. Um and we need that
+02:23:19.040 available before we can make final decisions about uh national policy. So
+02:23:24.160 um the updated code of practice will be published shortly subject to parliamentary approval and we will
+02:23:29.520 therefore once that has been done update the guidance um and publish that. Um so
+02:23:35.359 uh we're kind of waiting on that timeline essentially. Um and then there was a question Penny about the graduate
+02:23:40.399 guarantee for nurses and midwives which was launched in August um this year
+02:23:45.840 recognizing that some uh uh student nurses and midwives that were qualifying this year were um struggling to find
+02:23:52.720 jobs. Um there was a the government announced the graduate guarantee which essentially uh uh we are working on and
+02:23:59.760 working uh the regional teams and across uh trusts have been really leaning into
+02:24:05.200 this to make sure that we support um student nurses and midwives to f find uh
+02:24:10.240 roles not just in the NHS but more broadly because there aren't just vacancies in the NHS there are vacancies
+02:24:15.600 across social care the independent sector and other places um and so uh we
+02:24:21.040 are uh trust supporting measures about recruiting ahead of turnover, which we know happens every year. Um, making sure
+02:24:28.319 that they're using vacant roles creatively. And we've also made £8 million worth of funding available for
+02:24:33.920 specifically for midwifery to convert temporarily some maternity support worker roles which are vacant into
+02:24:39.760 midwifery roles. Um, the guarantee is for this year. Clearly, there is work that's going on on the uh new 10-year uh
+02:24:46.240 workforce plan um and the nursing midwiffery strategy which we'll look at um future years.
+02:24:51.680 Okay. Thank you. Uh Jim Bond true redundancy for ICB staff. Yeah, we touched on this uh briefly
+02:24:58.000 earlier. So a few weeks ago we met with new cluster chairs and chief execs and talk through where we are where the
+02:25:04.160 potential um is for a plan B if we don't reach agreement with Treasury. We are
+02:25:10.240 actively in discussion as I've said earlier with Treasury and hopefully we will resolve that um soon. But if not
+02:25:17.200 we'll have to revert to plan B. Um that's probably 2 3 weeks time I think
+02:25:22.960 we'll have to draw a line and then at that point we'll engage again. Um every ICB has a plan that they can enact. It
+02:25:30.399 is limited by the resource that they've got. So it would be more of a stage process. The benefits would be um less
+02:25:37.040 and slow slower than anticipated but we will activate that as soon as we've uh
+02:25:43.040 reached a point of either concluding the discussions or needing to revert to plan B. Okay. Thank you. and Glenn uh questions
+02:25:50.399 about regional differences in terms of how vacancies are managed. Yes. So links to the question Duncan's
+02:25:57.040 already answered about the graduate guarantee um and who does what question in the new uh framework of the NHS. So
+02:26:04.560 we we set out in the uh model region blueprint um on the 8th of September and
+02:26:11.040 that's the first version of that we'll do an updated version um that's a highlevel mandate which sets out the
+02:26:17.439 functional um roles of regions but also is to ensure consistency across the regions um particularly on this issue
+02:26:25.280 they will take the role of strategic workforce planning at regional level um and as part of the oversight framework
+02:26:31.040 we will be monitoring the performance of individual provider organizations but also ICBS. We will do a further update
+02:26:38.399 of model region when we've completed the 10-year workforce plan which will reinforce some of those
+02:26:43.760 responsibilities. Okay. Thank you. Does anyone have any other business they'd like to raise?
+02:26:50.720 Okay. Well, thank you all very much. I think been extremely broad ranging conversation. Um and uh we will take
+02:26:58.399 forward the various actions highlighted and look forward to the next time. Thank you.
