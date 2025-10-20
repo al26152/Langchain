@@ -82,7 +82,7 @@ multi_source_prompt = PromptTemplate.from_template(MULTI_SOURCE_PROMPT)
 qa_chain = RetrievalQA.from_chain_type(
     llm=qa_llm,
     chain_type="stuff",
-    retriever=vectordb.as_retriever(search_kwargs={"k": 10}),  # Retrieve 10 chunks instead of 7-8
+    retriever=vectordb.as_retriever(search_kwargs={"k": 14}),  # Retrieve 10 chunks instead of 7-8
     return_source_documents=True,
     chain_type_kwargs={"prompt": multi_source_prompt}
 )

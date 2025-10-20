@@ -74,7 +74,7 @@ from unstructured.documents.elements import Title, NarrativeText, ListItem, Tabl
 
 DOCS_PATH = "docs"
 STORE_DIR = "chroma_db_test"
-FULL_REBUILD = False
+FULL_REBUILD = False  # Rebuild complete - reset to False for incremental ingestion
 MIN_ELEMENT_TEXT_LENGTH = 50
 DATES_CONFIG_FILE = "document_dates.json"
 
@@ -189,14 +189,19 @@ def clean_and_ingest(docs_path: str, vectordb: Chroma, existing_sources: Set[str
             print(f"[WARN] Error partitioning `{filename}`: {e}")
             continue
 
-        # Extract sample text for auto-tagging
+        # Extract sample text for auto-tagging (include title, narrative, and contextual headers)
         doc_content_for_tagging = ""
         for element in elements:
             if hasattr(element, "text") and isinstance(element.text, str) and element.text.strip():
+                # Include titles, narrative text, and text elements (which include added context)
                 if isinstance(element, (Title, NarrativeText, Text)):
                     doc_content_for_tagging += element.text + " "
                 if len(doc_content_for_tagging) >= 1000:
                     break
+
+        # If document title suggests table data, ensure it's included in tagging sample
+        if "staff survey" in filename.lower() or "benchmark" in filename.lower():
+            doc_content_for_tagging = f"Staff survey and wellbeing metrics report: {doc_content_for_tagging}"
 
         # Auto-tag document with theme and audience
         theme, audience = "unknown", "unknown"
@@ -224,6 +229,13 @@ def clean_and_ingest(docs_path: str, vectordb: Chroma, existing_sources: Set[str
             doc_date = get_document_date(filename, dates_config)
             doc_year_range = get_document_year_range(filename, dates_config)
 
+            # Detect if this chunk is table data or contextual header
+            is_table_chunk = False
+            chunk_type = "narrative"
+            if "**Table Data:**" in text_content or "|" in text_content:
+                is_table_chunk = True
+                chunk_type = "table_data" if "|" in text_content else "table_context"
+
             metadata = {
                 "id": chunk_id,
                 "source": filename,
@@ -232,12 +244,19 @@ def clean_and_ingest(docs_path: str, vectordb: Chroma, existing_sources: Set[str
                 "audience": audience,
                 "element_type": type(element).__name__,
                 "page_number": getattr(element.metadata, "page_number", "N/A"),
+                "chunk_type": chunk_type,  # NEW: narrative, table_data, or table_context
             }
 
-            # Add year_range for multi-year strategies
+            # Year_range for multi-year strategies
             if doc_year_range:
                 metadata["year_range_start"] = doc_year_range[0]
                 metadata["year_range_end"] = doc_year_range[1]
+
+            # Add table content flag for better filtering
+            if is_table_chunk and "staff survey" in filename.lower():
+                metadata["content_category"] = "staff_wellbeing_metrics"
+            elif is_table_chunk and "benchmark" in filename.lower():
+                metadata["content_category"] = "performance_benchmark"
 
             # Add optional metadata fields
             for key in [

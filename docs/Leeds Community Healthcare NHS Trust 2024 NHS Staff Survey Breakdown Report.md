@@ -30,6 +30,8 @@ The results in this report are compared to the **unweighted average for your org
 
 The unweighted organisation average score (`Your org`) is the point of comparison for all breakdowns in the subsequent tables.
 
+**Table Data:** Performance scores (0-10 scale) for staff engagement and wellbeing metrics. This table provides detailed metrics for analysis and benchmarking.
+
 | Category (Score 0-10) | We are compassionate and inclusive | We are recognised and rewarded | We each have a voice that counts | We are safe and healthy | We are always learning | We work flexibly | We are a team | Staff Engagement | Morale |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | **Your org** | 7.63 | 6.40 | 7.03 | 6.27 | 5.84 | 6.89 | 7.09 | 6.95 | 6.00 |
@@ -39,6 +41,8 @@ The unweighted organisation average score (`Your org`) is the point of compariso
 ## Breakdown Results by Business Unit (Breakdowns 1)
 
 All scores are on a scale of 0-10. The `Responses` column shows the highest number of responses recorded for that unit, with a slight variation for some categories within the same unit (minimum number is noted in parentheses, if applicable).
+
+**Table Data:** Staff survey results showing People Promise element and theme scores (0-10 scale) by business unit. Metrics include: Compassionate and inclusive, Recognised and rewarded, Voice that counts, Safe and healthy and others. This table provides detailed metrics for analysis and benchmarking.
 
 | Business Unit | Compassionate and inclusive | Recognised and rewarded | Voice that counts | Safe and healthy | Always learning | Work flexibly | We are a team | Staff Engagement | Morale | Responses |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
@@ -54,6 +58,8 @@ All scores are on a scale of 0-10. The `Responses` column shows the highest numb
 ## Breakdown Results by Staff Group (Breakdowns 2)
 
 All scores are on a scale of 0-10. The `Responses` column shows the highest number of responses recorded for that group, with a slight variation for some categories within the same group (minimum number is noted in parentheses, if applicable).
+
+**Table Data:** Staff survey results showing People Promise element and theme scores (0-10 scale) by staff group. Metrics include: Compassionate and inclusive, Recognised and rewarded, Voice that counts, Safe and healthy and others. This table provides detailed metrics for analysis and benchmarking.
 
 | Staff Group | Compassionate and inclusive | Recognised and rewarded | Voice that counts | Safe and healthy | Always learning | Work flexibly | We are a team | Staff Engagement | Morale | Responses |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |

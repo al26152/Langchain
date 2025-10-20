@@ -54,7 +54,6 @@ from datetime import datetime, timedelta
 
 from langchain_chroma import Chroma
 from langchain_openai import OpenAIEmbeddings, ChatOpenAI
-from langchain.chains import RetrievalQA
 from langchain_core.prompts import PromptTemplate
 
 from utils import auto_tag  # Just to ensure .env is loaded
@@ -114,19 +113,20 @@ MULTI_SOURCE_STRATEGIC_PROMPT = """You are an AI assistant specialized in strate
 Your task is to synthesize information from MULTIPLE sources to provide comprehensive insights.
 
 IMPORTANT INSTRUCTIONS:
-1. You have received context from multiple documents and document sections.
+1. You have received context from multiple documents and document sections below.
 2. For your answer, YOU MUST explicitly cite and synthesize information from AT LEAST 3 different sources.
-3. When mentioning a fact or insight, reference which document(s) it comes from using the format [Source: filename].
-4. Look for patterns, contradictions, and complementary perspectives across the sources.
-5. Clearly separate different viewpoints or priorities from different documents.
-6. If sources agree on a point, highlight this consensus. If they differ, explain the difference.
+3. When mentioning a fact or insight, cite the EXACT filename it comes from using the format [Source: exact_filename].
+4. AVAILABLE SOURCES: {available_sources}
+5. Look for patterns, contradictions, and complementary perspectives across the sources.
+6. Clearly separate different viewpoints or priorities from different documents.
+7. If sources agree on a point, highlight this consensus. If they differ, explain the difference.
 
 CONTEXT FROM MULTIPLE SOURCES:
 {context}
 
 QUESTION: {question}
 
-ANSWER (Must cite at least 3 different sources and synthesize across them):"""
+ANSWER (Must cite at least 3 different sources by their exact filenames and synthesize across them):"""
 
 
 def analyze_source_coverage(source_documents):
@@ -179,59 +179,87 @@ def main():
         print(f"[ERROR] Could not access ChromaDB: {e}")
         return
 
-    # Build QA chain
+    # Initialize QA LLM
     print("## Building Multi-Source Strategic QA Chain\n")
-    qa_llm = ChatOpenAI(model="gpt-4o", temperature=0.5)
-    multi_source_prompt = PromptTemplate.from_template(MULTI_SOURCE_STRATEGIC_PROMPT)
     print("Using MULTI-SOURCE aware prompt to force synthesis across documents.\n")
-
-    qa = RetrievalQA.from_chain_type(
-        llm=qa_llm,
-        chain_type="stuff",
-        retriever=vectordb.as_retriever(search_kwargs={"k": 10}),  # Retrieve 10 chunks
-        return_source_documents=True,
-        chain_type_kwargs={"prompt": multi_source_prompt}
-    )
+    print("Each query will list available sources and enforce explicit citation.\n")
 
     print("## Executing Sample Strategic Queries\n")
     sample_queries = [
-        "What are the overarching strategic priorities for the health sector outlined in these documents?",
+        "What are the overarching strategic priorities including those in the 10 year plan for the Leeds health sector outlined in these documents?",
         "Analyze the key challenges and obstacles identified in achieving these priorities.",
-        "Identify emerging trends or innovative approaches discussed for future development.",
-        "What are the primary workforce development strategies across documents?",
-        "Compare community health initiatives versus acute care services."
+        "What can you tell me about the health and wellbeing of Leeds Community NHS Staff based on these documents?",
+        "Extract ALL strategic intelligence from provided documents to establish foundation for 5-year integrated organizational planning framework covering"
     ]
 
     for i, query in enumerate(sample_queries):
         print(f"\n### Query {i+1}: {query}\n")
-        response = qa.invoke({"query": query})
-        print(f"**Answer:**\n{response['result']}\n")
 
-        if "source_documents" in response and response["source_documents"]:
-            # Analyze source diversity
-            sources_used = analyze_source_coverage(response["source_documents"])
-            unique_sources = len(sources_used)
-            print(f"**Source Summary:** {unique_sources} unique document(s) referenced\n")
+        # Retrieve documents manually to get source list (increased from k=13 to k=20 for better coverage)
+        retriever = vectordb.as_retriever(search_kwargs={"k": 20})
+        retrieved_docs = retriever.invoke(query)
 
-            # Show all retrieved chunks with date flags
-            print("**All Retrieved Chunks:**")
-            for j, doc in enumerate(response["source_documents"]):
-                src = doc.metadata.get("source", "N/A")
-                theme = doc.metadata.get("theme", "N/A")
-                elem = doc.metadata.get("element_type", "N/A")
-                doc_date = doc.metadata.get("date")
-                year_range_end = doc.metadata.get("year_range_end")
+        # Extract unique source filenames
+        unique_sources = []
+        seen = set()
+        for doc in retrieved_docs:
+            src = doc.metadata.get("source", "Unknown")
+            if src not in seen:
+                unique_sources.append(src)
+                seen.add(src)
 
-                # Get recency flag
-                flag = get_recency_flag(doc_date, year_range_end)
+        # Format source list for prompt
+        available_sources_str = ", ".join(unique_sources)
 
-                # Display source with date and flag
-                print(f"- {j+1}. `{src}` {flag}")
-                if doc_date:
-                    print(f"    Published: {doc_date} | Theme: {theme}")
-                else:
-                    print(f"    Theme: {theme}")
-                print(f"    Snippet: {doc.page_content[:200].replace(chr(10), ' ')}...\n")
+        # Create context from retrieved docs
+        context = "\n\n".join([doc.page_content for doc in retrieved_docs])
+
+        # Use the LLM directly with formatted prompt
+        prompt = PromptTemplate.from_template(MULTI_SOURCE_STRATEGIC_PROMPT)
+        formatted_prompt = prompt.format(
+            context=context,
+            question=query,
+            available_sources=available_sources_str
+        )
+
+        # Get answer from LLM
+        qa_llm = ChatOpenAI(model="gpt-4o", temperature=0.5)
+        answer = qa_llm.predict(formatted_prompt)
+
+        print(f"**Answer:**\n{answer}\n")
+
+        # Analyze source diversity
+        sources_used = analyze_source_coverage(retrieved_docs)
+        unique_sources_count = len(sources_used)
+        print(f"**Source Summary:** {unique_sources_count} unique document(s) referenced\n")
+
+        # Show all retrieved chunks with date flags and chunk type
+        print("**All Retrieved Chunks:**")
+        for j, doc in enumerate(retrieved_docs):
+            src = doc.metadata.get("source", "N/A")
+            theme = doc.metadata.get("theme", "N/A")
+            elem = doc.metadata.get("element_type", "N/A")
+            chunk_type = doc.metadata.get("chunk_type", "unknown")
+            content_category = doc.metadata.get("content_category", "")
+            doc_date = doc.metadata.get("date")
+            year_range_end = doc.metadata.get("year_range_end")
+
+            # Get recency flag
+            flag = get_recency_flag(doc_date, year_range_end)
+
+            # Display source with date and flag
+            print(f"- {j+1}. `{src}` {flag}")
+            if doc_date:
+                print(f"    Published: {doc_date} | Theme: {theme}")
+            else:
+                print(f"    Theme: {theme}")
+
+            # Show chunk type and content category
+            chunk_info = f"Chunk Type: {chunk_type}"
+            if content_category:
+                chunk_info += f" | Category: {content_category}"
+            print(f"    {chunk_info}")
+            print(f"    Snippet: {doc.page_content[:200].replace(chr(10), ' ')}...\n")
 
     print("---\n[COMPLETE] Multi-source strategic analysis complete.\n")
 
