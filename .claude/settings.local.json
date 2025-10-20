@@ -2,7 +2,8 @@
   "permissions": {
     "allow": [
       "Bash(dir \"C:\\Users\\al261\\OneDrive\\Documents\\Langchain\" /s /b)",
-      "Bash(dir:*)"
+      "Bash(dir:*)",
+      "Bash(git add:*)"
     ],
     "deny": [],
     "ask": []

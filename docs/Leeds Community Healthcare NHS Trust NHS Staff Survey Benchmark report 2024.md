@@ -8,6 +8,8 @@
 
 ## Organisation Details
 
+**Table Data:** Data table with columns: Value. This table provides detailed metrics for analysis and benchmarking.
+
 | Detail | Value |
 | :--- | :--- |
 | **Completed questionnaires** (2024) | [cite_start]2017 [cite: 447] |
@@ -21,6 +23,8 @@
 ## People Promise Elements, Themes, and Sub-score Mapping
 
 [cite_start]This table shows how the survey questions map to the People Promise elements and themes[cite: 287].
+
+**Table Data:** Data table with columns: Sub-scores, Questions. This table provides detailed metrics for analysis and benchmarking.
 
 | People Promise Elements | Sub-scores | Questions |
 | :--- | :--- | :--- |
@@ -42,6 +46,8 @@
 | **We are a team** | Team working | Q7a, Q7b, Q7c, Q7d, Q7e, Q7f, Q7g, Q8a |
 | | Line management | Q9a, Q9b, Q9c, Q9d |
 
+**Table Data:** Data table with columns: Sub-scores, Questions. This table provides detailed metrics for analysis and benchmarking.
+
 | Themes | Sub-scores | Questions |
 | :--- | :--- | :--- |
 | **Staff Engagement** | Motivation | Q2a, Q2b, Q2c |
@@ -56,6 +62,8 @@
 ## People Promise Elements and Themes: Overview (2024)
 
 [cite_start]Results are scored on a **0-10 scale**[cite: 483].
+
+**Table Data:** Performance scores (0-10 scale) for staff engagement and wellbeing metrics. This table provides detailed metrics for analysis and benchmarking.
 
 | Score (0-10) | We are compassionate and inclusive | We are recognised and rewarded | We each have a voice that counts | We are safe and healthy | We are always learning | We work flexibly | We are a team | Staff Engagement | Morale |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
@@ -73,6 +81,8 @@
 
 ### We are compassionate and inclusive
 
+**Table Data:** Data table with columns: Compassionate culture, Compassionate leadership, Diversity and equality, Inclusion. This table provides detailed metrics for analysis and benchmarking.
+
 | Sub-score (0-10) | Compassionate culture | Compassionate leadership | Diversity and equality | Inclusion |
 | :--- | :--- | :--- | :--- | :--- |
 | **Your org** | 7.27 | 7.47 | 8.52 | 7.26 |
@@ -82,6 +92,8 @@
 | **Responses** | 2013 | 2015 | 2012 | 2011 |
 
 ### We each have a voice that counts
+
+**Table Data:** Data table with columns: Autonomy and control, Raising concerns. This table provides detailed metrics for analysis and benchmarking.
 
 | Sub-score (0-10) | Autonomy and control | Raising concerns |
 | :--- | :--- | :--- |
@@ -93,6 +105,8 @@
 
 ### We are safe and healthy
 
+**Table Data:** Data table with columns: Health and safety climate, Burnout, Negative experiences. This table provides detailed metrics for analysis and benchmarking.
+
 | Sub-score (0-10) | Health and safety climate | Burnout | Negative experiences |
 | :--- | :--- | :--- | :--- |
 | **Your org** | 6.45 | 5.21 | 8.12 |
@@ -102,6 +116,8 @@
 | **Responses** | 2013 | 1948 | 2011 |
 
 ### We are always learning
+
+**Table Data:** Data table with columns: Development, Appraisals. This table provides detailed metrics for analysis and benchmarking.
 
 | Sub-score (0-10) | Development | Appraisals |
 | :--- | :--- | :--- |
@@ -113,6 +129,8 @@
 
 ### We work flexibly
 
+**Table Data:** Data table with columns: Support for work-life balance, Flexible working. This table provides detailed metrics for analysis and benchmarking.
+
 | Sub-score (0-10) | Support for work-life balance | Flexible working |
 | :--- | :--- | :--- |
 | **Your org** | 6.95 | 7.23 |
@@ -122,6 +140,8 @@
 | **Responses** | 2014 | 2015 |
 
 ### We are a team
+
+**Table Data:** Data table with columns: Team working, Line management. This table provides detailed metrics for analysis and benchmarking.
 
 | Sub-score (0-10) | Team working | Line management |
 | :--- | :--- | :--- |
@@ -133,6 +153,8 @@
 
 ### Staff Engagement Theme
 
+**Table Data:** Data table with columns: Motivation, Involvement, Advocacy. This table provides detailed metrics for analysis and benchmarking.
+
 | Sub-score (0-10) | Motivation | Involvement | Advocacy |
 | :--- | :--- | :--- | :--- |
 | **Your org** | 7.00 | 6.87 | 6.98 |
@@ -142,6 +164,8 @@
 | **Responses** | 2004 | 2016 | 2012 |
 
 ### Morale Theme
+
+**Table Data:** Data table with columns: Thinking about leaving, Work pressure, Stressors. This table provides detailed metrics for analysis and benchmarking.
 
 | Sub-score (0-10) | Thinking about leaving | Work pressure | Stressors |
 | :--- | :--- | :--- | :--- |
@@ -156,6 +180,8 @@
 ## Appendix B: Significance Testing (2023 vs 2024)
 
 [cite_start]This table shows the statistical significance of the change in scores between the 2023 and 2024 surveys[cite: 180].
+
+**Table Data:** Data table with columns: 2023 score, 2023 respondents, 2024 score, 2024 respondents, Statistically significant change?. This table provides detailed metrics for analysis and benchmarking.
 
 | People Promise elements / Themes | 2023 score | 2023 respondents | 2024 score | 2024 respondents | Statistically significant change? |
 | :--- | :--- | :--- | :--- | :--- | :--- |

@@ -1,4 +1,6 @@
 ## Markdown 🛫
+**Table Data:** Data table with columns: Joiner Rate, FTE, Leaver Rate, Leavers, Joiners. This table provides detailed metrics for analysis and benchmarking.
+
 | Staff Group | Joiner Rate | FTE | Leaver Rate | Leavers | Joiners |
 |-------------|-------------|-----|-------------|---------|---------|
 | **All staff groups** | **8%** | **2,836.92** | **12%** | **340.13** | **221.59** |
@@ -14,6 +16,8 @@
 
 
 | Leeds Community Healthcare NHS Trust |
+**Table Data:** Data table with columns: Headcount. This table provides detailed metrics for analysis and benchmarking.
+
 | Date | Headcount |
 | Nov-11 | 2,913 |
 | Dec-11 | 2,909 |

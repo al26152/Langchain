@@ -112,5 +112,17 @@
     "source": "manual",
     "year_range": null,
     "notes": "January 2025 guidance - extracted from filename and content. RECENT - current operational guidance"
+  },
+  "LTHT-Annual-Report-2024-25-FINAL.md": {
+    "date": "2025-06-30",
+    "source": "manual",
+    "year_range": ["2024", "2025"],
+    "notes": "LTHT Annual Report for fiscal year 2024-2025. Assuming June 30 year-end. RECENT"
+  },
+  "LYPFT Annual-Report-and-Accounts-2024-25.md": {
+    "date": "2025-06-30",
+    "source": "manual",
+    "year_range": ["2024", "2025"],
+    "notes": "LYPFT Annual Report for fiscal year 2024-2025. Assuming June 30 year-end. RECENT"
   }
 }
