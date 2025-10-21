@@ -20,10 +20,15 @@ This helps verify tagging quality before/after running the full pipeline.
 """
 
 import os
+import sys
+
+# Add parent directory to path so we can import utils
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+
 from unstructured.partition.auto import partition
 from unstructured.documents.elements import Title, NarrativeText, Text
 
-from utils import auto_tag
+from utils.utils import auto_tag
 
 
 def extract_sample_text(file_path: str, max_chars: int = 1500) -> str:

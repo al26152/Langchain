@@ -3,7 +3,13 @@
     "allow": [
       "Bash(dir \"C:\\Users\\al261\\OneDrive\\Documents\\Langchain\" /s /b)",
       "Bash(dir:*)",
-      "Bash(git add:*)"
+      "Bash(git add:*)",
+      "Bash(python clean_doc.py:*)",
+      "Bash(python run_full_pipeline.py:*)",
+      "Bash(mv:*)",
+      "Bash(python pipeline/ingest_pipeline.py:*)",
+      "Bash(python:*)",
+      "WebFetch(domain:www.cipd.org)"
     ],
     "deny": [],
     "ask": []

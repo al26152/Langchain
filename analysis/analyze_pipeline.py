@@ -46,17 +46,20 @@ COST:
   - OpenAI GPT-4o API calls (~$5 per 1M input tokens, $15 per 1M output tokens)
 """
 
-import os
 import sys
+import os
 from io import StringIO
 from collections import defaultdict
 from datetime import datetime, timedelta
+
+# Add parent directory to path so we can import utils
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 from langchain_chroma import Chroma
 from langchain_openai import OpenAIEmbeddings, ChatOpenAI
 from langchain_core.prompts import PromptTemplate
 
-from utils import auto_tag  # Just to ensure .env is loaded
+from utils.utils import auto_tag  # Just to ensure .env is loaded
 
 # --- CONFIGURATION ——————————————————————————————————————————————————
 
@@ -186,18 +189,21 @@ def main():
 
     print("## Executing Sample Strategic Queries\n")
     sample_queries = [
-        "What are the overarching strategic priorities including those in the 10 year plan for the Leeds health sector outlined in these documents?",
-        "Analyze the key challenges and obstacles identified in achieving these priorities.",
-        "What can you tell me about the health and wellbeing of Leeds Community NHS Staff based on these documents?",
-        "Extract ALL strategic intelligence from provided documents to establish foundation for 5-year integrated organizational planning framework covering"
+        "Q01 - Summarise the 10 year plan",
+        "Q02 - Pick out the key focus areas for Leeds Community Healthcare based on the 10 year plan, Leeds Health and Wellbeing Strategy 2023, and Neighbourhood health guides",
+        "Q03 - With the 10 year plan in mind, what are the top 10 documents needed to write a Leeds Community Healthcare workforce strategy for 5 years?",
+        "Q04 - The strategy may cover Leadership, People Services, Inclusion, Talent, Staff Experience and Organisational Design - are there any missing focus areas?",
+        "Q05 - What are the current staffing turnover rates, joiner/leaver patterns and headcount trends for Leeds Community Healthcare?"
     ]
 
     for i, query in enumerate(sample_queries):
-        print(f"\n### Query {i+1}: {query}\n")
+        query_num = query.split(" - ")[0]
+        query_text = query.split(" - ", 1)[1]
+        print(f"\n### {query_num}: {query_text}\n")
 
         # Retrieve documents manually to get source list (increased from k=13 to k=20 for better coverage)
         retriever = vectordb.as_retriever(search_kwargs={"k": 20})
-        retrieved_docs = retriever.invoke(query)
+        retrieved_docs = retriever.invoke(query_text)  # Use query_text without the Q01 prefix
 
         # Extract unique source filenames
         unique_sources = []

@@ -90,3 +90,11 @@ strategic_analysis_output*.md
 # OS files
 .DS_Store
 Thumbs.db
+
+# ============================================================================
+# WINDOWS DEVICE FILES
+# ============================================================================
+# Windows reserved device name - should never be tracked
+# This is created when subprocess output is misdirected to Windows null device
+nul
+NUL

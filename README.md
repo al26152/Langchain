@@ -61,57 +61,381 @@ pip install langchain langchain-openai langchain-chroma unstructured openai chro
 OPENAI_API_KEY=sk-...
 ```
 
-### 2. Evaluate Document Dates
+---
+
+## Command Reference
+
+### Choose Your Path Based on Your Needs
+
+#### 🚀 **RECOMMENDED: Full Automated Pipeline**
+
+Use this 95% of the time - it handles everything in one command:
 
 ```bash
-# Auto-extract dates and generate configuration
-python eval_dates.py
-
-# Or confirm/override dates interactively
-python eval_dates.py --interactive
+python run_full_pipeline.py
 ```
 
-Output: `document_dates.json` (stores publication/strategy dates for all documents)
+**What it does:**
+1. Cleans filenames
+2. Extracts document dates
+3. Ingests documents into ChromaDB
 
-### 3. Ingest Documents
+**Time:** ~10-15 minutes (on first run)
+**Cost:** ~$0.60-1.00 (first run); then incremental
+
+---
+
+#### ✓ **Pipeline with QA Validation**
+
+Use this if you want to verify tagging quality before ingestion:
 
 ```bash
-python ingest_pipeline.py
+python run_full_pipeline.py --validate
 ```
 
-This will:
-- Load all `.md` files from the `docs/` folder
-- Clean filenames (remove special characters)
-- Partition documents into chunks
-- Auto-tag each chunk with Theme and Audience
-- Load dates from `document_dates.json`
-- Generate OpenAI embeddings
-- Store enriched chunks in ChromaDB
+**What it does:**
+1. Cleans filenames
+2. Extracts document dates
+3. **Validates auto-tagging** on document samples (shows themes/audiences)
+4. Ingests documents into ChromaDB
 
-Output: Updated `chroma_db_test/` vector database with date metadata
+**When to use:** After updating tagging logic or for quality assurance
 
-### 4. Run Strategic Analysis
+---
+
+#### 📋 **Preview Mode (Dry-Run)**
+
+See what would run without executing:
 
 ```bash
-python analyze_pipeline.py
+python run_full_pipeline.py --dry-run
 ```
 
-This will:
-- Execute 5 pre-configured strategic queries
-- Retrieve relevant chunks with multi-source synthesis (3+ sources)
-- Flag document recency (RECENT, OLDER, ARCHIVAL, STRATEGY EXPIRES)
-- Generate markdown report: `strategic_analysis_output_multi_source.md`
+**What it shows:** The exact commands that would execute
 
-### 5. Ask Your Own Questions (Optional)
+**When to use:** Testing or understanding the flow
+
+---
+
+#### 🔧 **Run Individual Steps**
+
+Execute pipeline steps one at a time (advanced):
 
 ```bash
-python interactive_query_multi_source.py
+# Step 1: Clean filenames (removes special characters)
+python pipeline/clean_doc.py
+
+# Step 2: Extract and configure document dates
+python pipeline/eval_dates.py
+
+# Step 2.5 (Optional): Validate auto-tagging before full ingest
+python pipeline/eval_tagging.py
+
+# Step 3: Ingest documents into ChromaDB
+python pipeline/ingest_pipeline.py
 ```
 
-Interactively query the database. Answers will include:
-- Multiple sources with dates and themes
-- Recency flags for aging/expiring documents
-- Explicit synthesis across sources
+**When to use:** Debugging, testing individual components, or updating code
+
+---
+
+#### 🔄 **Reprocess Without Cleanup**
+
+Skip filename cleanup if files are already clean:
+
+```bash
+python run_full_pipeline.py --skip-clean
+```
+
+**Available skip flags:**
+- `--skip-clean` - Skip filename cleanup
+- `--skip-dates` - Skip date extraction (use existing document_dates.json)
+- `--skip-ingest` - Skip ingestion (just preview)
+
+---
+
+### After Ingestion Complete ✅
+
+Once `run_full_pipeline.py` finishes, your documents are indexed. Now you can:
+
+#### **Option 1: Ask Custom Questions (Interactive)**
+
+```bash
+python query/interactive_query_multi_source.py
+```
+
+**Features:**
+- Ask your own questions
+- Get multi-source answers with dates
+- Recency flags for aging documents
+- Real-time interaction
+
+**Example:**
+```
+Enter your question: What are the priority workforce challenges?
+[Searching...]
+Answer with 3+ sources cited...
+```
+
+---
+
+#### **Option 2: Run Strategic Analysis (Batch)**
+
+```bash
+python analysis/analyze_pipeline.py
+```
+
+**What it does:**
+- Runs 5 pre-configured strategic queries
+- Generates markdown report: `strategic_analysis_output_multi_source.md`
+- Forces multi-source synthesis (3+ sources)
+- Flags document recency
+
+**Cost:** ~$0.10 (GPT calls for synthesis)
+**Output:** Comprehensive analysis report
+
+---
+
+#### **Option 3: Run Workforce Strategy Analysis**
+
+```bash
+python analysis/run_strategy_analysis.py
+```
+
+**What it does:**
+- Quick theme comparison (FREE - no API calls)
+- Full RAG-based gap analysis (paid - ~$15-25)
+
+**Flags:**
+- `--quick-only` - Just fast analysis (no cost)
+- `--full` - Both quick + full analysis (default)
+
+---
+
+### Typical Workflows
+
+#### **Workflow 1: Just Ingest Documents (Most Common)**
+```bash
+python run_full_pipeline.py
+# Wait ~10-15 minutes
+# ✓ Done! Documents are indexed and searchable
+```
+
+#### **Workflow 2: Ingest + Analyze**
+```bash
+python run_full_pipeline.py
+python analysis/analyze_pipeline.py
+# Produces: strategic_analysis_output_multi_source.md
+```
+
+#### **Workflow 3: Ingest + Interactive**
+```bash
+python run_full_pipeline.py
+python query/interactive_query_multi_source.py
+# Ask questions in real-time
+```
+
+#### **Workflow 4: Quality Check Before Ingest**
+```bash
+python run_full_pipeline.py --validate
+# Reviews tagging quality before full ingest
+```
+
+#### **Workflow 5: Just Update Dates**
+```bash
+# New documents added? Update dates first
+python pipeline/eval_dates.py
+python pipeline/ingest_pipeline.py
+```
+
+---
+
+## Directory Structure
+
+After reorganization, scripts are now organized by function:
+
+```
+Langchain/
+├── run_full_pipeline.py              # ← Main entry point (use this!)
+├── requirements.txt
+├── README.md
+├── document_dates.json
+│
+├── pipeline/                         # Core ingestion pipeline
+│   ├── clean_doc.py
+│   ├── eval_dates.py
+│   ├── eval_tagging.py
+│   └── ingest_pipeline.py
+│
+├── analysis/                         # Analysis and strategy tools
+│   ├── analyze_pipeline.py
+│   ├── run_strategy_analysis.py
+│   ├── theme_comparison_analysis.py
+│   └── workforce_strategy_gap_analysis.py
+│
+├── query/                            # Interactive querying
+│   └── interactive_query_multi_source.py
+│
+├── utils/                            # Utilities
+│   └── utils.py
+│
+├── docs/                             # Source documents (19 files)
+├── chroma_db_test/                  # Vector database (auto-generated)
+├── prompts/                          # Prompt templates
+└── archive_py/                       # Archived/old scripts
+```
+
+---
+
+## Individual Component Reference
+
+### 2. Pipeline Scripts (in `pipeline/` folder)
+
+#### **pipeline/clean_doc.py** - Filename Cleanup
+- Removes special characters from filenames
+- Automatically called by `run_full_pipeline.py`
+- Usage: `python pipeline/clean_doc.py`
+
+#### **pipeline/eval_dates.py** - Date Extraction
+
+**Purpose**: Auto-extract publication/strategy dates from documents
+
+**Usage:**
+```bash
+# Auto-extract and generate config
+python pipeline/eval_dates.py
+
+# Interactive mode - confirm each date
+python pipeline/eval_dates.py --interactive
+```
+
+**Output**: `document_dates.json` (stores publication/strategy dates for all documents)
+
+#### **pipeline/eval_tagging.py** - Tagging Validation
+
+**Purpose**: Test and verify auto-tagging quality before ingestion
+
+**Usage:**
+```bash
+python pipeline/eval_tagging.py
+```
+
+**Output**: Theme and audience assignments for document samples
+
+#### **pipeline/ingest_pipeline.py** - Document Ingestion
+
+**Purpose**: Ingest documents into ChromaDB with metadata
+
+**What it does:**
+1. Loads all `.md` and `.txt` files from `docs/`
+2. Cleans filenames
+3. Partitions documents into chunks
+4. Auto-tags each chunk (Theme + Audience)
+5. Loads dates from `document_dates.json`
+6. Generates OpenAI embeddings
+7. Stores in ChromaDB with metadata
+
+**Usage:**
+```bash
+python pipeline/ingest_pipeline.py
+```
+
+**Ingestion Modes:**
+
+The script automatically chooses based on what files exist:
+
+| Scenario | What Happens | How to Trigger |
+|----------|-------------|---|
+| **Incremental** (Default) | Only processes NEW documents not yet in ChromaDB. Existing documents skipped. | Set `FULL_REBUILD = False` (line 77, default) |
+| **Full Rebuild** | Deletes entire existing ChromaDB and re-ingests ALL documents | Set `FULL_REBUILD = True` (line 77) |
+
+**When to Use Each:**
+
+**Incremental Mode (Recommended for Most Cases)**
+```python
+# In pipeline/ingest_pipeline.py, line 77:
+FULL_REBUILD = False  # Default
+```
+- ✓ You added 5 new documents to `docs/`
+- ✓ Quick and efficient (only processes new files)
+- ✓ Cheaper (no duplicate embedding costs)
+- ✓ Results merge with existing database
+
+**Full Rebuild Mode**
+```python
+# In pipeline/ingest_pipeline.py, line 77:
+FULL_REBUILD = True
+```
+- ✓ You modified dates in `document_dates.json` and want them to apply to ALL documents
+- ✓ You changed tagging logic in `utils.py` and want to re-tag everything
+- ✓ You updated chunking parameters and need to repartition documents
+- ✓ You want a completely fresh database from scratch
+
+**Example: Adding 5 New Documents**
+```bash
+# 1. Add files to docs/
+cp new_doc1.md new_doc2.md docs/
+
+# 2. Update dates (optional)
+python pipeline/eval_dates.py
+
+# 3. Ingest - will only process the 5 new files (FULL_REBUILD=False)
+python pipeline/ingest_pipeline.py
+# Output: "Detected **5** new file(s) to process."
+```
+
+**Example: Full Rebuild After Tagging Changes**
+```bash
+# 1. Update tagging logic in utils/utils.py
+
+# 2. Edit ingest_pipeline.py line 77:
+# FULL_REBUILD = True
+
+# 3. Run ingest
+python pipeline/ingest_pipeline.py
+# Output: "Detected FULL_REBUILD = True. Deleting existing ChromaDB..."
+# Output: "Processing all 19 documents..."
+
+# 4. After done, change back:
+# FULL_REBUILD = False
+```
+
+**Output**: Updated `chroma_db_test/` vector database (13,018+ chunks)
+
+---
+
+### 3. Analysis & Query Scripts
+
+#### **analysis/analyze_pipeline.py** - Strategic Analysis
+
+**Purpose**: Run pre-configured strategic queries with multi-source synthesis
+
+**Usage:**
+```bash
+python analysis/analyze_pipeline.py
+```
+
+**Output**: `strategic_analysis_output_multi_source.md` report with:
+- 5 strategic queries answered
+- Multi-source citations (3+ sources per answer)
+- Document recency flags
+- Source tracking with dates
+
+#### **query/interactive_query_multi_source.py** - Interactive Queries
+
+**Purpose**: Ask your own questions about the documents
+
+**Usage:**
+```bash
+python query/interactive_query_multi_source.py
+```
+
+**Example:**
+```
+Enter your question: What are key priorities?
+[Searching...]
+Answer: Based on [Source: doc1, doc2, doc3]...
+```
 
 ---
 
@@ -192,10 +516,10 @@ Interactively query the database. Answers will include:
 **Usage**:
 ```bash
 # Auto-extract and generate config
-python eval_dates.py
+python pipeline/eval_dates.py
 
 # Interactive mode - confirm/override each date
-python eval_dates.py --interactive
+python pipeline/eval_dates.py --interactive
 ```
 
 **Output Example**:
@@ -236,7 +560,7 @@ python eval_dates.py --interactive
 **When to Update**:
 1. After adding new documents to `docs/`:
    ```bash
-   python eval_dates.py
+   python pipeline/eval_dates.py
    ```
 2. If dates need correction, edit manually:
    - Open `document_dates.json`
@@ -285,7 +609,7 @@ python eval_dates.py --interactive
 
 **Usage**:
 ```bash
-python ingest_pipeline.py
+python pipeline/ingest_pipeline.py
 ```
 
 **Configuration**:
@@ -350,7 +674,7 @@ years_old = 2.17 years
 
 **Usage**:
 ```bash
-python analyze_pipeline.py
+python analysis/analyze_pipeline.py
 ```
 
 **Output Example** (from `strategic_analysis_output_multi_source.md`):
@@ -385,7 +709,7 @@ Retrieved 10 chunks from 7 different sources.
 
 **Usage**:
 ```bash
-python interactive_query_multi_source.py
+python query/interactive_query_multi_source.py
 ```
 
 **Example Session**:
@@ -433,34 +757,43 @@ NHS England Productivity], the key performance metrics include...
 cp my_new_strategy.md docs/
 ```
 
-### Step 2: Re-evaluate Dates
+### Step 2-4: Use the Automated Pipeline
 
 ```bash
-# Auto-detect the new files and extract their dates
-python eval_dates.py
-
-# Or confirm dates interactively
-python eval_dates.py --interactive
+# This runs all steps automatically
+python run_full_pipeline.py
 ```
 
-This will update `document_dates.json` with entries for new documents.
-
-### Step 3: Reingest Documents
+**Alternatively, run steps individually:**
 
 ```bash
-python ingest_pipeline.py
+# Step 2: Update dates for new documents
+python pipeline/eval_dates.py
+
+# Step 3: Reingest (automatically detects new files)
+python pipeline/ingest_pipeline.py
 ```
 
 The ingestion pipeline automatically:
-- Detects new files (files not already in ChromaDB)
+- Detects new files (files not already in ChromaDB) - **Incremental mode** (default)
 - Cleans filenames if needed
 - Processes only new documents (doesn't re-index existing ones)
 - Updates ChromaDB with new chunks
 
+**Note:** This is **incremental ingestion** (only new files). If you need to **full rebuild**:
+
+```python
+# Edit pipeline/ingest_pipeline.py line 77:
+FULL_REBUILD = True    # Set to True for full rebuild
+```
+
+See "Ingestion Modes" section above for when to use full rebuild.
+
 ### Step 4: Re-run Analysis
 
 ```bash
-python analyze_pipeline.py
+# Optional: Generate updated analysis report
+python analysis/analyze_pipeline.py
 ```
 
 New documents will appear in analysis output with proper date flags.
@@ -512,6 +845,45 @@ New documents will appear in analysis output with proper date flags.
 - ~13,018 chunks across 19 documents = ~$0.03 in embedding costs
 - Initial run takes 10-15 minutes; subsequent runs are faster (incremental only)
 - Cost is one-time for ingestion; queries are cheap
+
+### Problem: Updated dates in document_dates.json but they're not reflected
+
+**Cause**: Existing documents in ChromaDB weren't re-processed (incremental ingestion skips them)
+
+**Solution**: Do a full rebuild:
+1. Edit `pipeline/ingest_pipeline.py` line 77:
+   ```python
+   FULL_REBUILD = True
+   ```
+2. Run: `python pipeline/ingest_pipeline.py`
+3. After done, change back:
+   ```python
+   FULL_REBUILD = False
+   ```
+
+### Problem: Changed tagging logic but old tags still in database
+
+**Cause**: Existing documents retained old tags (incremental ingestion skips them)
+
+**Solution**: Do a full rebuild:
+1. Update `utils/utils.py` with new tagging logic
+2. Edit `pipeline/ingest_pipeline.py` line 77: `FULL_REBUILD = True`
+3. Run: `python pipeline/ingest_pipeline.py`
+4. After done, change back: `FULL_REBUILD = False`
+
+### Problem: Want completely fresh database
+
+**Solution**: Full rebuild mode
+```python
+# Edit pipeline/ingest_pipeline.py line 77:
+FULL_REBUILD = True
+
+# Run ingestion
+python pipeline/ingest_pipeline.py
+
+# Change back after
+FULL_REBUILD = False
+```
 
 ---
 
@@ -618,9 +990,30 @@ NHS England Productivity], the key areas are...
 
 ```
 Langchain/
+├── run_full_pipeline.py                # Main entry point - run this!
 ├── README.md                           # This file
+├── requirements.txt                    # Python dependencies
 ├── document_dates.json                 # Config: publication/strategy dates
 ├── document_dates_schema.md            # Schema documentation
+│
+├── pipeline/                           # Core ingestion pipeline
+│   ├── clean_doc.py                    # Filename cleanup utility
+│   ├── eval_dates.py                   # Date extraction evaluation tool
+│   ├── eval_tagging.py                 # Tagging validation tool
+│   └── ingest_pipeline.py              # Document ingestion pipeline
+│
+├── analysis/                           # Analysis and strategy tools
+│   ├── analyze_pipeline.py             # Strategic analysis with flagging
+│   ├── run_strategy_analysis.py        # Workforce strategy analysis orchestrator
+│   ├── theme_comparison_analysis.py    # Theme comparison analysis
+│   └── workforce_strategy_gap_analysis.py  # Gap analysis tool
+│
+├── query/                              # Interactive querying
+│   └── interactive_query_multi_source.py   # Interactive querying tool
+│
+├── utils/                              # Utilities
+│   └── utils.py                        # Auto-tagging function (GPT-3.5)
+│
 ├── docs/                               # Source documents (19 files: 13 MD + 6 TXT)
 │   ├── NHS England Productivity update.md
 │   ├── Workforce-Strategy-2021-25-V1.0.md
@@ -628,13 +1021,10 @@ Langchain/
 │   ├── Health Innovation North Turning Conversation into Collaboration.txt
 │   ├── NHS England Board Meeting – 23 September 2025.txt
 │   └── ... (14 more)
+│
 ├── chroma_db_test/                     # ChromaDB vector store (auto-generated)
-├── eval_dates.py                       # Date extraction evaluation tool
-├── ingest_pipeline.py                  # Document ingestion pipeline
-├── analyze_pipeline.py                 # Strategic analysis with flagging
-├── interactive_query_multi_source.py   # Interactive querying tool
-├── clean_doc.py                        # Filename cleanup utility
-├── utils.py                            # Auto-tagging function (GPT-3.5)
+├── prompts/                            # Prompt templates
+├── archive_py/                         # Archived/old scripts
 ├── strategic_analysis_output_multi_source.md  # Analysis results (auto-generated)
 └── .env                                # OpenAI API key (not in repo)
 ```
@@ -643,18 +1033,35 @@ Langchain/
 
 ## Next Steps
 
-1. **Run the pipeline** if you haven't already:
+### Quick Start Actions
+
+1. **Run the complete pipeline** (if you haven't already):
    ```bash
-   python eval_dates.py
-   python ingest_pipeline.py
-   python analyze_pipeline.py
+   python run_full_pipeline.py
+   ```
+   This handles everything: cleaning → dates → ingestion
+
+2. **Then choose what to do:**
+
+   **Option A - Ask Questions Interactively**
+   ```bash
+   python query/interactive_query_multi_source.py
    ```
 
-2. **Add your own documents** to `docs/` and re-run the pipeline
-
-3. **Ask custom questions** using the interactive tool:
+   **Option B - Generate Analysis Report**
    ```bash
-   python interactive_query_multi_source.py
+   python analysis/analyze_pipeline.py
+   ```
+
+   **Option C - Workforce Strategy Analysis**
+   ```bash
+   python analysis/run_strategy_analysis.py
+   ```
+
+3. **Add new documents** and re-run:
+   ```bash
+   cp my_new_document.md docs/
+   python run_full_pipeline.py
    ```
 
 4. **Monitor document recency** - Pay attention to:
@@ -669,12 +1076,59 @@ Langchain/
 
 ---
 
+## Command Quick Reference
+
+| What You Want | Command |
+|---|---|
+| **Ingest documents (new files only)** | `python run_full_pipeline.py` |
+| **Ingest with QA check** | `python run_full_pipeline.py --validate` |
+| **Full rebuild database** | Edit `pipeline/ingest_pipeline.py` line 77: `FULL_REBUILD = True` then run `python pipeline/ingest_pipeline.py` |
+| **Ask questions** | `python query/interactive_query_multi_source.py` |
+| **Generate analysis report** | `python analysis/analyze_pipeline.py` |
+| **Workforce strategy analysis** | `python analysis/run_strategy_analysis.py` |
+| **Just update dates** | `python pipeline/eval_dates.py` |
+| **Preview (dry-run)** | `python run_full_pipeline.py --dry-run` |
+
+---
+
 ## Support & Questions
 
 For questions about:
-- **Date extraction**: See `eval_dates.py` docstring
-- **Ingestion process**: See `ingest_pipeline.py` docstring
-- **Analysis pipeline**: See `analyze_pipeline.py` docstring
+- **Date extraction**: See `pipeline/eval_dates.py` docstring
+- **Tagging validation**: See `pipeline/eval_tagging.py` docstring
+- **Ingestion process**: See `pipeline/ingest_pipeline.py` docstring
+- **Analysis pipeline**: See `analysis/analyze_pipeline.py` docstring
+- **Interactive queries**: See `query/interactive_query_multi_source.py` docstring
 - **Multi-source synthesis**: See "Understanding the Multi-Source Enhancement" section above
 
 All scripts include comprehensive docstrings and inline comments explaining functionality.
+
+---
+
+## Key Takeaways
+
+✅ **For 95% of use cases, just run:**
+```bash
+python run_full_pipeline.py
+```
+
+✅ **After ingestion, choose your next action:**
+- Ask questions: `python query/interactive_query_multi_source.py`
+- Generate report: `python analysis/analyze_pipeline.py`
+- Workforce analysis: `python analysis/run_strategy_analysis.py`
+
+✅ **Adding documents?**
+```bash
+cp new_doc.md docs/
+python run_full_pipeline.py
+```
+
+✅ **Scripts are organized by function:**
+- `pipeline/` = ingestion (clean → dates → ingest)
+- `analysis/` = analysis tools
+- `query/` = interactive queries
+- `utils/` = helper functions
+
+✅ **Ingestion modes:**
+- **Incremental (default)**: Only processes new documents - fast & cheap
+- **Full Rebuild**: Deletes and re-ingests everything - set `FULL_REBUILD = True` in `pipeline/ingest_pipeline.py` line 77

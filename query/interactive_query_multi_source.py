@@ -6,12 +6,17 @@ multi-source synthesis in answers.
 """
 
 import os
+import sys
 from collections import defaultdict
+
+# Add parent directory to path so we can import utils
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+
 from langchain_chroma import Chroma
 from langchain_openai import OpenAIEmbeddings, ChatOpenAI
 from langchain.chains import RetrievalQA
 from langchain_core.prompts import PromptTemplate
-from utils import auto_tag  # Ensures .env is loaded
+from utils.utils import auto_tag  # Ensures .env is loaded
 
 # --- CONFIGURATION ---
 STORE_DIR = "chroma_db_test"

@@ -10,7 +10,7 @@ Starting analysis of ingested documents...
 
 [OK] ChromaDB loaded.
 
-Found **15834** chunks in ChromaDB.
+Found **16547** chunks in ChromaDB.
 
 ## Building Multi-Source Strategic QA Chain
 
@@ -21,256 +21,500 @@ Each query will list available sources and enforce explicit citation.
 ## Executing Sample Strategic Queries
 
 
-### Query 1: What are the overarching strategic priorities including those in the 10 year plan for the Leeds health sector outlined in these documents?
+### Q01: Summarise the 10 year plan
 
 **Answer:**
-The overarching strategic priorities for the Leeds health sector, as outlined in the documents, emphasize a coordinated approach towards improving health outcomes, addressing inequalities, and enhancing service delivery through collaboration and strategic planning.
+The 10-Year Health Plan is a strategic framework aimed at transforming the organization, delivery, and funding of health services in England to address the evolving needs of the population. This plan emphasizes the necessity for a new planning model to effectively meet these challenges and lays the groundwork for significant service transformation [Source: NHS England _ Planning framework for the NHS in England.md].
 
-1. **Addressing Health Inequalities**: A key focus is on addressing health inequalities, particularly for the 26% of the Leeds population living in the most deprived areas. The Leeds Health and Wellbeing Strategy, which guides these efforts, is actively supported by the Leeds and York Partnership NHS Foundation Trust [Source: LYPFT Annual-Report-and-Accounts-2024-25.md]. Similarly, the Leeds Healthcare Inequalities Oversight Group was established to strengthen partnerships and align efforts with citywide initiatives to tackle these disparities [Source: LCH-Trust-Board-Meeting-Public-Papers-4-09-2025-AMENDED _1_.md].
+One of the core elements of the plan is the focus on upstream interventions, which are critical for achieving the Five-Year Plan's goals. These interventions aim to ensure that individuals receive the best start in life and have the opportunity to maintain their health and age well [Source: NHS England Board Meeting – 23 September 2025.txt]. This approach underscores the importance of preventive measures and early interventions as foundational strategies for long-term health improvement.
 
-2. **Collaboration and Partnership**: The importance of system-wide partnership is highlighted across multiple documents. The Leeds Health and Care Partnership, including LYPFT, supports the delivery of the Healthy Leeds Plan, which emphasizes collaborative efforts to achieve health goals [Source: LTHT-Annual-Report-2024-25-FINAL.md]. Additionally, the West Yorkshire Health and Care Partnership focuses on collaborative areas to enhance service delivery [Source: THT-Annual-Report-2024-25-FINAL.md].
+The plan also outlines three strategic "shifts" that are central to its implementation, emphasizing a relentless focus on improvement and innovation. It highlights the importance of not pausing in efforts to improve current services while simultaneously building a better future [Source: priorities-and-operational-planning-guidance-january-2025.md]. These shifts are expected to drive the transformation needed to maximize value for both patients and taxpayers, aligning closely with the broader objectives of the 10-Year Health Plan [Source: NHS england Productivity.md].
 
-3. **Strategic Planning and Resource Management**: Strategic workforce planning is necessary to address the demographic changes and growing service demand in Leeds, driven by a diverse and aging population. This requires a focus on workforce, digital innovation, quality, estates, and clinical services, as highlighted in the strategic plans developed by the Leeds Community Healthcare [Source: Leeds Community Annual-report-2024-2025.md]. The Quality and Value Programme was also launched to improve value for money and optimize resource management [Source: Leeds Coommunity Annual Report 2324.md].
-
-4. **Alignment with National Priorities**: The documents consistently align local strategies with national priorities, as seen in the emphasis on the 10 Year Health Plan. This plan sets out strategic shifts and priorities that local leaders are tasked with implementing to meet both local and national health objectives [Source: NHS England _ Planning framework for the NHS in England.md].
-
-In summary, the strategic priorities for the Leeds health sector involve addressing health inequalities, fostering collaboration, enhancing strategic planning, and aligning with national health goals to improve health outcomes and service delivery across the region.
+In summary, the 10-Year Health Plan is a comprehensive strategy that seeks to realign the health system to better serve the population through innovative planning, upstream health interventions, and strategic improvements, ensuring a sustainable and effective healthcare system for the future.
 
 **Source Summary:** 9 unique document(s) referenced
 
 **All Retrieved Chunks:**
-- 1. `LYPFT Annual-Report-and-Accounts-2024-25.md` [STRATEGY EXPIRES 2025]
-    Published: 2025-06-30 | Theme: Healthcare and NHS Performance
+- 1. `Health Innovation North Turning Conversation into Collaboration.txt` [RECENT]
+    Published: 2025-01-01 | Theme: Health Innovation
     Chunk Type: narrative
-    Snippet: These goals are focussed on the 26% of the population in Leeds who are living in the 10% most deprived areas. 2023 also saw the publication of the Leeds Health and Wellbeing Strategy which we are acti...
+    Snippet: 00:37:55.760 start on the 10-year plan in that all of my last two months on the 10-year plan...
 
-- 2. `LTHT-Annual-Report-2024-25-FINAL.md` [STRATEGY EXPIRES 2025]
-    Published: 2025-06-30 | Theme: Healthcare transparency and accountability
-    Chunk Type: narrative
-    Snippet: Our mission, strategic prioritiesand values - The Leeds Way...
-
-- 3. `THT-Annual-Report-2024-25-FINAL.md` [NO DATE]
-    Theme: Healthcare governance and accountability
-    Chunk Type: narrative
-    Snippet: Our mission, strategic prioritiesand values - The Leeds Way...
-
-- 4. `LYPFT Annual-Report-and-Accounts-2024-25.md` [STRATEGY EXPIRES 2025]
-    Published: 2025-06-30 | Theme: Healthcare and NHS Performance
-    Chunk Type: narrative
-    Snippet: Improving the Health and Lives of the Communities we Serve: from 2025 to 2030 is the new five-year strategy of Leeds and York Partnership NHS Foundation Trust. It was developed during 2024, ratified b...
-
-- 5. `LYPFT Annual-Report-and-Accounts-2024-25.md` [STRATEGY EXPIRES 2025]
-    Published: 2025-06-30 | Theme: Healthcare and NHS Performance
-    Chunk Type: narrative
-    Snippet: In 2023 the Leeds Health and Care Partnership, which includes LYPFT, published the five-year Healthy Leeds Plan. Our work actively supports its two main goals of:...
-
-- 6. `leeds health wellbeing strategy 2023-2030.md` [NO DATE]
-    Theme: Health and Wellbeing
-    Chunk Type: narrative
-    Snippet: strategies, plans and programmes across the city. Each plays a specific role in achieving our health and Healthy Leeds Plan...
-
-- 7. `LYPFT Annual-Report-and-Accounts-2024-25.md` [STRATEGY EXPIRES 2025]
-    Published: 2025-06-30 | Theme: Healthcare and NHS Performance
-    Chunk Type: narrative
-    Snippet: The work of the West Yorkshire Health and Care Partnership focuses on four main areas:...
-
-- 8. `LCH-Trust-Board-Meeting-Public-Papers-4-09-2025-AMENDED _1_.md` [RECENT]
-    Published: 2025-09-04 | Theme: Healthcare management and planning
-    Chunk Type: narrative
-    Snippet: We are committed to bringing value and opportunity across current and future services through system-wide partnership and seek risks associated with collaborative and new ways of working. This include...
-
-- 9. `NHS England _ Planning framework for the NHS in England.md` [RECENT]
-    Published: 2025-09-08 | Theme: Healthcare transformation and integrated planning
-    Chunk Type: narrative
-    Snippet: This framework has been developed as a guide for local leaders across England responsible for the development of the strategic and operational plans that wil deliver on local priorities as wel as our ...
-
-- 10. `LYPFT Annual-Report-and-Accounts-2024-25.md` [STRATEGY EXPIRES 2025]
-    Published: 2025-06-30 | Theme: Healthcare and NHS Performance
-    Chunk Type: narrative
-    Snippet: To enable the delivery of our strategy we have developed a set of strategic plans. These are our delivery plans which provide detailed information about how we will achieve our ambitions and include o...
-
-- 11. `LCH-Trust-Board-Meeting-Public-Papers-4-09-2025-AMENDED _1_.md` [RECENT]
-    Published: 2025-09-04 | Theme: Healthcare management and planning
-    Chunk Type: narrative
-    Snippet: A priority that has consistently emerged from the Trust Board in relation to health equity is for LCH to increase partnership working and strengthen its alignment with citywide initiatives. In Februar...
-
-- 12. `Leeds Community Annual-report-2024-2025.md` [STRATEGY EXPIRES 2025]
+- 2. `Leeds Community Annual-report-2024-2025.md` [STRATEGY EXPIRES 2025]
     Published: 2024-06-30 | Theme: Organizational performance and accountability
     Chunk Type: narrative
-    Snippet: These strategic goals set the direction for how we provided care, managed our resources, and worked with our health and social care partners to meet the needs of patients, whilst looking after the hea...
+    Snippet: Strategic Goals .................................................................................................................................. 10...
 
-- 13. `leeds health wellbeing strategy 2023-2030.md` [NO DATE]
-    Theme: Health and Wellbeing
+- 3. `NHS England _ Planning framework for the NHS in England.md` [RECENT]
+    Published: 2025-09-08 | Theme: Healthcare system transformation
     Chunk Type: narrative
-    Snippet: While the work is led by the Leeds Health and Wellbeing Board, the people of Leeds, health and live document, shaped by what partners,...
+    Snippet: The 10 Year Health Plan sets out the need for a significant change to the way we organise, deliver and fund services. To support this, a new model of planning is required to meet the chal enges and ch...
 
-- 14. `LYPFT Annual-Report-and-Accounts-2024-25.md` [STRATEGY EXPIRES 2025]
-    Published: 2025-06-30 | Theme: Healthcare and NHS Performance
+- 4. `LCH-Trust-Board-Meeting-Public-Papers-4-09-2025-AMENDED _1_.md` [RECENT]
+    Published: 2025-09-04 | Theme: Healthcare Management and Planning
     Chunk Type: narrative
-    Snippet: https://www.leedsandyorkpft.nhs.uk/about-us/our-strategy/...
+    Snippet: Now the 10-year plan for health has been published this will be explicitly considered in the blueprint we want to create for the city and what the roadmap should look like to achieve this. We have als...
 
-- 15. `LYPFT Annual-Report-and-Accounts-2024-25.md` [STRATEGY EXPIRES 2025]
-    Published: 2025-06-30 | Theme: Healthcare and NHS Performance
+- 5. `NHS England _ Planning framework for the NHS in England.md` [RECENT]
+    Published: 2025-09-08 | Theme: Healthcare system transformation
     Chunk Type: narrative
-    Snippet: Our strategy is relevant and fully aligned with those key themes within national and local strategies that are relevant to people using our services, carers, our staff, and our organisation as a whole...
+    Snippet: maximise value for patients and taxpayers aligned to 10 Year Health Plan...
 
-- 16. `Leeds_Demographics_Health_Inequalities_Context_2024.md` [RECENT - 1 YEAR]
-    Published: 2024-01-01 | Theme: Health Inequalities and Demographic Changes
+- 6. `NHS England _ Neighbourhood health guidelines 2025_26.md` [RECENT]
+    Published: 2025-01-29 | Theme: Healthcare Transformation and Integration
     Chunk Type: narrative
-    Snippet: Leeds serves a diverse population of 812,000 with significant demographic changes driving health service demand. The area has substantial health inequalities, a growing elderly population, and complex...
+    Snippet: Diagram showing the aims for all neighbourhoods over the next 5 to 10 years...
 
-- 17. `Leeds Coommunity Annual Report 2324.md` [RECENT - 1 YEAR]
-    Published: 2024-06-30 | Theme: Organizational performance and strategic planning
+- 7. `NHS England Board Meeting – 23 September 2025.txt` [NO DATE]
+    Theme: Organizational restructuring and introduction of new members
     Chunk Type: narrative
-    Snippet: These strategic goals guided our approach to how we provided care, managed our resources, and worked with our health and social care partners to meet the needs of patients, at the same time as looking...
+    Snippet: 01:08:12.000 through performance. We're now saying what are we going to do about it? Um Jim 10year plan...
 
-- 18. `Leeds Coommunity Annual Report 2324.md` [RECENT - 1 YEAR]
-    Published: 2024-06-30 | Theme: Organizational performance and strategic planning
+- 8. `priorities-and-operational-planning-guidance-january-2025.md` [RECENT]
+    Published: 2025-01-01 | Theme: Healthcare transformation and challenges
     Chunk Type: narrative
-    Snippet: Relationships with Leeds ‘Place’ and with the West Yorkshire Integrated Care Board remained strong. However, we recognise that across all health and social care partnerships across the City and indeed...
+    Snippet: The 10 Year Health Plan gives us reason to hope for a better future, but it doesn’t give **us licence to pause for breath. ** We have a rare opportunity to set out a bold vision for the future and cha...
+
+- 9. `LCH-Trust-Board-Meeting-Public-Papers-4-09-2025-AMENDED _1_.md` [RECENT]
+    Published: 2025-09-04 | Theme: Healthcare Management and Planning
+    Chunk Type: narrative
+    Snippet: Further guidance on the implementation of the 10-year plan is being...
+
+- 10. `NHS England Board Meeting – 23 September 2025.txt` [NO DATE]
+    Theme: Organizational restructuring and introduction of new members
+    Chunk Type: narrative
+    Snippet: 00:07:22.479 that when we discuss the 10-year plan update because I think that's the moment...
+
+- 11. `NHS england Productivity.md` [RECENT]
+    Published: 2025-07-23 | Theme: Healthcare productivity
+    Chunk Type: narrative
+    Snippet: the three big shifts promised by the 10 Year Health Plan....
+
+- 12. `NHS england Productivity.md` [RECENT]
+    Published: 2025-07-23 | Theme: Healthcare productivity
+    Chunk Type: narrative
+    Snippet: 10 Gov.uk, Fit for the future: 10 Year Health Plan for England, 3 July 2025...
+
+- 13. `Health Innovation North Turning Conversation into Collaboration.txt` [RECENT]
+    Published: 2025-01-01 | Theme: Health Innovation
+    Chunk Type: narrative
+    Snippet: 01:37:15.840 Sheffield. So the 10-year plan describes the importance of upstream interventions...
+
+- 14. `Leeds Coommunity Annual Report 2324.md` [RECENT - 1 YEAR]
+    Published: 2024-06-30 | Theme: Organizational performance and accountability
+    Chunk Type: narrative
+    Snippet: to deliver the Five-Year Plan ambitions, ensuring that all people are given the best start in life, are able to remain healthy and age well....
+
+- 15. `Health Innovation North Turning Conversation into Collaboration.txt` [RECENT]
+    Published: 2025-01-01 | Theme: Health Innovation
+    Chunk Type: narrative
+    Snippet: 00:36:18.400 we've got to deal with and the 10-year workforce plan will have to uh start...
+
+- 16. `LCH-Trust-Board-Meeting-Public-Papers-4-09-2025-AMENDED _1_.md` [RECENT]
+    Published: 2025-09-04 | Theme: Healthcare Management and Planning
+    Chunk Type: narrative
+    Snippet: The Committee welcomed the Medium-Term plan and noted the national shift to a 3-year revenue and 4-year capital spend review. The Committee discussed the pace required over the next few months to firm...
+
+- 17. `NHS england Productivity.md` [RECENT]
+    Published: 2025-07-23 | Theme: Healthcare productivity
+    Chunk Type: narrative
+    Snippet: published on Thursday 3 July 2025. 10 At the heart of the plan are three strategic “shifts”:...
+
+- 18. `NHS england Productivity.md` [RECENT]
+    Published: 2025-07-23 | Theme: Healthcare productivity
+    Chunk Type: narrative
+    Snippet: doing so. The 10-year health plan published in July 2025 stated an intention to...
 
 - 19. `NHS England _ Planning framework for the NHS in England.md` [RECENT]
-    Published: 2025-09-08 | Theme: Healthcare transformation and integrated planning
+    Published: 2025-09-08 | Theme: Healthcare system transformation
     Chunk Type: narrative
-    Snippet: Set strategic direction and national priorities and standards for the NHS....
+    Snippet: Phase one wil run to the end of September. During this period, NHS England and DHSC wil work together to translate the 10 Year Health Plan and spending review outcome into specific multi-year prioriti...
 
-- 20. `LCH-Trust-Board-Meeting-Public-Papers-4-09-2025-AMENDED _1_.md` [RECENT]
-    Published: 2025-09-04 | Theme: Healthcare management and planning
+- 20. `Health Innovation North Turning Conversation into Collaboration.txt` [RECENT]
+    Published: 2025-01-01 | Theme: Health Innovation
     Chunk Type: narrative
-    Snippet: Leeds Community Healthcare Winter Plan 2025/2026 .......................................................... 1...
+    Snippet: 04:46:09.360 see innovation featuring so prominently in the 10-year plan and the life sector...
 
 
-### Query 2: Analyze the key challenges and obstacles identified in achieving these priorities.
+### Q02: Pick out the key focus areas for Leeds Community Healthcare based on the 10 year plan, Leeds Health and Wellbeing Strategy 2023, and Neighbourhood health guides
 
 **Answer:**
-In analyzing the key challenges and obstacles identified in achieving the strategic priorities across the provided documents, several consistent themes and unique perspectives emerge.
+The key focus areas for Leeds Community Healthcare, as outlined in the 10-year plan, the Leeds Health and Wellbeing Strategy 2023, and the Neighbourhood health guidelines, are centered around addressing health inequalities, enhancing community-based care, and fostering collaborative partnerships.
 
-1. **Financial Constraints and Risk Mitigation**: Financial constraints are a recurring challenge that could jeopardize the delivery of strategic goals. This concern is explicitly noted in the NHS England Productivity document, which highlights the need for effective mitigation strategies to address financial risks [Source: NHS england Productivity.md]. Similarly, the LYPFT Annual Report emphasizes financial constraints as a principal risk, suggesting that financial stability is crucial for achieving organizational objectives [Source: LYPFT Annual-Report-and-Accounts-2024-25.md]. The Leeds Community Annual Report also underscores the importance of financial management in delivering strategic goals, indicating a consensus across these documents on the critical nature of financial health in strategic planning [Source: Leeds Community Annual-report-2024-2025.md].
+1. **Addressing Health Inequalities**: A significant focus is on improving health outcomes for the 26% of the population living in the most deprived areas of Leeds. The Leeds Health and Wellbeing Strategy 2023 aims to enable people to live fulfilling lives in a healthy city with equitable services [Source: leeds health wellbeing strategy 2023-2030.md]. This aligns with the strategic goal of the Leeds and York Partnership NHS Foundation Trust to improve the health and lives of communities served from 2025 to 2030 [Source: LYPFT Annual-Report-and-Accounts-2024-25.md].
 
-2. **Strategic Risk Identification and Management**: The importance of identifying and managing strategic risks is another key theme. The NHS England Planning Framework document outlines that the starting point for identifying strategic risks should be the agreed strategic objectives, indicating a structured approach to risk management [Source: NHS England _ Planning framework for the NHS in England.md]. This approach is mirrored in the Leeds Health Wellbeing Strategy, which emphasizes the need for effective processes to identify, understand, and address risks that could hinder strategic goals [Source: leeds health wellbeing strategy 2023-2030.md].
+2. **Community-Based Care and Neighbourhood Model**: The Neighbourhood health guidelines emphasize the implementation of a community collaborative model, focusing on areas like Home First Phase 2, community mental health transformation, and early identification of cardiovascular disease. This model targets the complex needs of 2-4% of the population in Leeds and aims to support people with long-term health conditions in priority neighborhoods [Source: NHS England _ Neighbourhood health guidelines 2025_26.md]. The alignment of these priority areas with Primary Care Networks is crucial for effective service delivery [Source: LCH-Trust-Board-Meeting-Public-Papers-4-09-2025-AMENDED _1_.md].
 
-3. **Performance and Priority Evaluation**: Evaluating performance against set priorities is essential for strategic success. The LCH Trust Board Meeting Papers detail the progress made against previous quality priorities and outline new priorities for the coming year, highlighting the ongoing process of performance evaluation and adjustment [Source: LCH-Trust-Board-Meeting-Public-Papers-4-09-2025-AMENDED _1_.md]. This is complemented by the NHS West Yorkshire Integrated Care Board meeting notes, which stress the importance of setting and reinforcing priorities throughout the year to anticipate and address potential challenges [Source: NHS West Yorkshire Integrated Care Board meeting - 23 September 2025 (part 1).txt].
+3. **Collaborative Partnerships and Workforce Planning**: The Leeds Health and Care Partnership, including Leeds Community Healthcare NHS Trust, emphasizes system-wide partnerships to deliver the neighborhood health model and other strategic drivers outlined in the 10-year plan. This involves innovative service models and targeted workforce deployment to meet the needs of a diverse and changing population, including a growing elderly demographic [Source: Leeds_Demographics_Health_Inequalities_Context_2024.md]. The partnership approach is crucial for achieving the shared national ambitions of the NHS as set out in the 10-Year Health Plan [Source: NHS England _ Planning framework for the NHS in England.md].
 
-In summary, financial constraints, strategic risk management, and continuous performance evaluation emerge as significant challenges in achieving strategic priorities. These themes are consistently highlighted across multiple documents, demonstrating a shared understanding of the obstacles and the need for comprehensive strategies to address them.
+Overall, these focus areas demonstrate a commitment to addressing health disparities, enhancing community care, and leveraging partnerships for sustainable healthcare delivery in Leeds.
 
 **Source Summary:** 8 unique document(s) referenced
 
 **All Retrieved Chunks:**
-- 1. `NHS england Productivity.md` [RECENT]
-    Published: 2025-07-23 | Theme: Healthcare productivity
+- 1. `LYPFT Annual-Report-and-Accounts-2024-25.md` [STRATEGY EXPIRES 2025]
+    Published: 2025-06-30 | Theme: Healthcare transparency and accountability
     Chunk Type: narrative
-    Snippet: were able to demonstrate the key challenges and opportunities for systems...
+    Snippet: These goals are focussed on the 26% of the population in Leeds who are living in the 10% most deprived areas. 2023 also saw the publication of the Leeds Health and Wellbeing Strategy which we are acti...
 
-- 2. `NHS England _ Planning framework for the NHS in England.md` [RECENT]
-    Published: 2025-09-08 | Theme: Healthcare transformation and integrated planning
+- 2. `LCH-Trust-Board-Meeting-Public-Papers-4-09-2025-AMENDED _1_.md` [RECENT]
+    Published: 2025-09-04 | Theme: Healthcare Management and Planning
     Chunk Type: narrative
-    Snippet: financial constraints, and include mitigation strategies for key risks....
+    Snippet: The Committee discussed the update on the Neighbourhood model/Community Collaborative. The Committee were assured that the programme of work is progressing with four key focus areas for this fiscal: i...
 
-- 3. `LYPFT Annual-Report-and-Accounts-2024-25.md` [STRATEGY EXPIRES 2025]
-    Published: 2025-06-30 | Theme: Healthcare and NHS Performance
+- 3. `LCH-Trust-Board-Meeting-Public-Papers-4-09-2025-AMENDED _1_.md` [RECENT]
+    Published: 2025-09-04 | Theme: Healthcare Management and Planning
     Chunk Type: narrative
-    Snippet: Principal risks and opportunities for the organisation...
+    Snippet: Neighbourhood model/Community Collaborative - The Committee were assured that the programme is now starting to see avenues of funding such as the National Neighbourhood Health implementation programme...
 
-- 4. `LYPFT Annual-Report-and-Accounts-2024-25.md` [STRATEGY EXPIRES 2025]
-    Published: 2025-06-30 | Theme: Healthcare and NHS Performance
+- 4. `leeds health wellbeing strategy 2023-2030.md` [OLDER DOCUMENT - 2+ YEARS]
+    Published: 2023-01-01 | Theme: Health and Wellbeing
     Chunk Type: narrative
-    Snippet: Thus, the starting point for identifying the strategic risks should be the agreed strategic objectives....
+    Snippet: strategies, plans and programmes across the city. Each plays a specific role in achieving our health and Healthy Leeds Plan...
 
-- 5. `LCH-Trust-Board-Meeting-Public-Papers-4-09-2025-AMENDED _1_.md` [RECENT]
-    Published: 2025-09-04 | Theme: Healthcare management and planning
+- 5. `LYPFT Annual-Report-and-Accounts-2024-25.md` [STRATEGY EXPIRES 2025]
+    Published: 2025-06-30 | Theme: Healthcare transparency and accountability
     Chunk Type: narrative
-    Snippet: jeopardise delivery of our strategic goals and priorities....
+    Snippet: Improving the Health and Lives of the Communities we Serve: from 2025 to 2030 is the new five-year strategy of Leeds and York Partnership NHS Foundation Trust. It was developed during 2024, ratified b...
 
 - 6. `LCH-Trust-Board-Meeting-Public-Papers-4-09-2025-AMENDED _1_.md` [RECENT]
-    Published: 2025-09-04 | Theme: Healthcare management and planning
+    Published: 2025-09-04 | Theme: Healthcare Management and Planning
     Chunk Type: narrative
-    Snippet: jeopardise delivery of our strategic goals and priorities....
+    Snippet: Leeds Community Healthcare NHS Trust Winter Plan 2025-...
 
-- 7. `LYPFT Annual-Report-and-Accounts-2024-25.md` [STRATEGY EXPIRES 2025]
-    Published: 2025-06-30 | Theme: Healthcare and NHS Performance
+- 7. `Leeds Community Healthcare NHS Trust NHS Staff Survey Benchmark report 2024.md` [RECENT - 1 YEAR]
+    Published: 2024-01-01 | Theme: Healthcare staff wellbeing and satisfaction
     Chunk Type: narrative
-    Snippet: the Executive Performance Overview Group seeks to understand challenges within the service lines....
+    Snippet: Leeds Community Healthcare NHS Trust NHS Staff Survey Benchmark report 2024...
 
-- 8. `Leeds Community Annual-report-2024-2025.md` [STRATEGY EXPIRES 2025]
-    Published: 2024-06-30 | Theme: Organizational performance and accountability
+- 8. `LYPFT Annual-Report-and-Accounts-2024-25.md` [STRATEGY EXPIRES 2025]
+    Published: 2025-06-30 | Theme: Healthcare transparency and accountability
     Chunk Type: narrative
-    Snippet: Progress we have made against the quality priorities we set previously, and explains our new priorities for the next year....
+    Snippet: In 2023 the Leeds Health and Care Partnership, which includes LYPFT, published the five-year Healthy Leeds Plan. Our work actively supports its two main goals of:...
 
-- 9. `Leeds Coommunity Annual Report 2324.md` [RECENT - 1 YEAR]
-    Published: 2024-06-30 | Theme: Organizational performance and strategic planning
+- 9. `leeds health wellbeing strategy 2023-2030.md` [OLDER DOCUMENT - 2+ YEARS]
+    Published: 2023-01-01 | Theme: Health and Wellbeing
     Chunk Type: narrative
-    Snippet: In the following sections we outline how we delivered against our priorities for the year and our performance against key performance indicators (KPIs)....
+    Snippet: This Health and Wellbeing Strategy is a blueprint for enabling people to live fulfilling lives in a healthy city, supported by high quality equitable services. It is led by the Leeds Health and Wellbe...
 
-- 10. `LYPFT Annual-Report-and-Accounts-2024-25.md` [STRATEGY EXPIRES 2025]
-    Published: 2025-06-30 | Theme: Healthcare and NHS Performance
+- 10. `LCH-Trust-Board-Meeting-Public-Papers-4-09-2025-AMENDED _1_.md` [RECENT]
+    Published: 2025-09-04 | Theme: Healthcare Management and Planning
     Chunk Type: narrative
-    Snippet: In summary the key strategic risks are described as follows:...
+    Snippet: We are committed to bringing value and opportunity across current and future services through system-wide partnership and seek risks associated with collaborative and new ways of working. This include...
 
-- 11. `leeds health wellbeing strategy 2023-2030.md` [NO DATE]
-    Theme: Health and Wellbeing
+- 11. `Leeds Community Healthcare NHS Trust 2024 NHS Staff Survey Breakdown Report.md` [RECENT - 1 YEAR]
+    Published: 2024-01-01 | Theme: Employee Wellbeing and Satisfaction
     Chunk Type: narrative
-    Snippet: The strategies, plans and programmes on this page will be key in helping to deliver improved priority areas of focus in relation to delivery...
+    Snippet: This breakdown report for Leeds Community Healthcare NHS Trust contains results by breakdown area for the People Promise element and theme results from the 2024 NHS Staff Survey....
 
-- 12. `Leeds Community Annual-report-2024-2025.md` [STRATEGY EXPIRES 2025]
-    Published: 2024-06-30 | Theme: Organizational performance and accountability
+- 12. `LCH-Trust-Board-Meeting-Public-Papers-4-09-2025-AMENDED _1_.md` [RECENT]
+    Published: 2025-09-04 | Theme: Healthcare Management and Planning
     Chunk Type: narrative
-    Snippet: In the following sections we look at how we delivered against our priorities for the year and our performance against key performance indicators (KPIs)....
+    Snippet: Leeds Community Healthcare Winter Plan 2025/2026 .......................................................... 1...
 
-- 13. `LCH-Trust-Board-Meeting-Public-Papers-4-09-2025-AMENDED _1_.md` [RECENT]
-    Published: 2025-09-04 | Theme: Healthcare management and planning
+- 13. `Leeds_Demographics_Health_Inequalities_Context_2024.md` [RECENT - 1 YEAR]
+    Published: 2024-01-01 | Theme: Health Inequalities and Demographic Changes
     Chunk Type: narrative
-    Snippet: Note the contents of this report and the work undertaken to drive forward our strategic goals....
+    Snippet: Leeds presents both opportunities and challenges for community health workforce planning. The young population profile offers opportunities for prevention and early intervention, while the growing eld...
 
-- 14. `NHS West Yorkshire Integrated Care Board meeting - 23 September 2025 (part 1).txt` [RECENT]
-    Published: 2025-09-23 | Theme: Public Governance
+- 14. `Leeds Community Healthcare NHS Trust 2024 NHS Staff Survey Breakdown Report.md` [RECENT - 1 YEAR]
+    Published: 2024-01-01 | Theme: Employee Wellbeing and Satisfaction
     Chunk Type: narrative
-    Snippet: 00:58:34.079 setting out priorities for the rest of the year and that reinforces the things we might anticipate...
+    Snippet: Leeds Community Healthcare NHS Trust 2024 NHS Staff Survey Breakdown Report...
 
-- 15. `Leeds Community Annual-report-2024-2025.md` [STRATEGY EXPIRES 2025]
-    Published: 2024-06-30 | Theme: Organizational performance and accountability
+- 15. `leeds health wellbeing strategy 2023-2030.md` [OLDER DOCUMENT - 2+ YEARS]
+    Published: 2023-01-01 | Theme: Health and Wellbeing
     Chunk Type: narrative
-    Snippet: Other significant risk areas that have been reviewed and will continue to be key risk areas for the year ahead are detailed below....
+    Snippet: of people in Leeds and to integrate person-centred Yorkshire Health and Care Partnership,...
 
-- 16. `Leeds Coommunity Annual Report 2324.md` [RECENT - 1 YEAR]
-    Published: 2024-06-30 | Theme: Organizational performance and strategic planning
+- 16. `NHS England _ Planning framework for the NHS in England.md` [RECENT]
+    Published: 2025-09-08 | Theme: Healthcare system transformation
     Chunk Type: narrative
-    Snippet: Other significant risk areas that have been reviewed and will continue to be key risk areas for the year ahead are detailed below....
+    Snippet: This framework has been developed as a guide for local leaders across England responsible for the development of the strategic and operational plans that wil deliver on local priorities as wel as our ...
 
-- 17. `LCH-Trust-Board-Meeting-Public-Papers-4-09-2025-AMENDED _1_.md` [RECENT]
-    Published: 2025-09-04 | Theme: Healthcare management and planning
+- 17. `LYPFT Annual-Report-and-Accounts-2024-25.md` [STRATEGY EXPIRES 2025]
+    Published: 2025-06-30 | Theme: Healthcare transparency and accountability
     Chunk Type: narrative
-    Snippet: effective process in place to identify, understand, address,...
+    Snippet: The work of the West Yorkshire Health and Care Partnership focuses on four main areas:...
 
-- 18. `LCH-Trust-Board-Meeting-Public-Papers-4-09-2025-AMENDED _1_.md` [RECENT]
-    Published: 2025-09-04 | Theme: Healthcare management and planning
+- 18. `NHS England _ Neighbourhood health guidelines 2025_26.md` [RECENT]
+    Published: 2025-01-29 | Theme: Healthcare Transformation and Integration
     Chunk Type: narrative
-    Snippet: jeopardise delivery of all our strategic goals and priorities....
+    Snippet: This document provides further guidelines on neighbourhood health. These draw together key points from earlier guidance and build on existing local best practice. It should be read alongside the 2025/...
+
+- 19. `leeds health wellbeing strategy 2023-2030.md` [OLDER DOCUMENT - 2+ YEARS]
+    Published: 2023-01-01 | Theme: Health and Wellbeing
+    Chunk Type: narrative
+    Snippet: While the work is led by the Leeds Health and Wellbeing Board, the people of Leeds, health and live document, shaped by what partners,...
+
+- 20. `Leeds_Demographics_Health_Inequalities_Context_2024.md` [RECENT - 1 YEAR]
+    Published: 2024-01-01 | Theme: Health Inequalities and Demographic Changes
+    Chunk Type: narrative
+    Snippet: Leeds serves a diverse population of 812,000 with significant demographic changes driving health service demand. The area has substantial health inequalities, a growing elderly population, and complex...
+
+
+### Q03: With the 10 year plan in mind, what are the top 10 documents needed to write a Leeds Community Healthcare workforce strategy for 5 years?
+
+**Answer:**
+To develop a comprehensive Leeds Community Healthcare workforce strategy for the next five years, considering the 10-year health plan and the unique demographic and healthcare needs of the region, the following documents are essential:
+
+1. **Leeds Demographics Health Inequalities Context 2024**: This document provides crucial demographic data, highlighting the significant health inequalities in Leeds and the need for targeted workforce deployment to address these disparities [Source: Leeds_Demographics_Health_Inequalities_Context_2024.md].
+
+2. **Leeds Community Healthcare NHS Trust NHS Staff Survey Benchmark Report 2024**: This report offers insights into staff experiences and challenges, which are critical for understanding workforce morale and areas needing improvement to enhance staff retention and service delivery [Source: Leeds Community Healthcare NHS Trust NHS Staff Survey Benchmark report 2024.md].
+
+3. **NHS England Planning Framework for the NHS in England**: This framework outlines the national strategic and operational priorities for the NHS, providing a guideline for aligning local workforce strategies with broader national goals [Source: NHS England _ Planning framework for the NHS in England.md].
+
+4. **LYPFT Annual Report and Accounts 2024-25**: This annual report includes financial performance and strategic objectives, which are important for understanding resource allocation and financial planning for workforce development [Source: LYPFT Annual-Report-and-Accounts-2024-25.md].
+
+5. **Leeds Community Healthcare Winter Plan 2025/2026**: This plan highlights the need for a new model of planning to meet the challenges of changing healthcare needs, emphasizing the importance of coordinated action and transformation in service delivery [Source: LCH-Trust-Board-Meeting-Public-Papers-4-09-2025-AMENDED _1_.md].
+
+6. **Leeds Community Healthcare NHS Trust 2024 NHS Staff Survey Breakdown Report**: This detailed breakdown provides specific insights into staff demographics and feedback, essential for tailoring workforce strategies to meet the needs of diverse staff groups [Source: Leeds Community Healthcare NHS Trust 2024 NHS Staff Survey Breakdown Report.md].
+
+7. **Workforce Strategy 2021-25**: This document outlines the existing workforce strategy, providing a baseline for future planning and highlighting areas where strategic shifts are required to meet evolving healthcare demands [Source: Workforce-Strategy-2021-25-V1.0.md].
+
+8. **Leeds Health and Wellbeing Strategy**: This strategy sets out the vision and priorities for improving health and wellbeing in Leeds, which should be integrated into workforce planning to ensure alignment with local health goals [Source: Leeds Community Healthcare Winter Plan 2025/2026].
+
+9. **Healthy Leeds Plan**: Published by the Leeds Health and Care Partnership, this plan supports the delivery of key health goals, providing a framework for workforce strategies that aim to improve health outcomes across the region [Source: Leeds Community Healthcare Winter Plan 2025/2026].
+
+10. **Health Equity Development Programme Proposal**: This proposal outlines a development programme focusing on health equity, which is critical for workforce strategies aimed at reducing health disparities and improving care for underserved populations [Source: LCH-Trust-Board-Meeting-Public-Papers-4-09-2025-AMENDED _1_.md].
+
+By synthesizing insights from these documents, Leeds Community Healthcare can develop a workforce strategy that is responsive to demographic changes, aligns with national and local health priorities, and addresses the specific needs and challenges of the healthcare workforce.
+
+**Source Summary:** 7 unique document(s) referenced
+
+**All Retrieved Chunks:**
+- 1. `Leeds_Demographics_Health_Inequalities_Context_2024.md` [RECENT - 1 YEAR]
+    Published: 2024-01-01 | Theme: Health Inequalities and Demographic Changes
+    Chunk Type: narrative
+    Snippet: Leeds serves a diverse population of 812,000 with significant demographic changes driving health service demand. The area has substantial health inequalities, a growing elderly population, and complex...
+
+- 2. `Leeds Community Healthcare NHS Trust NHS Staff Survey Benchmark report 2024.md` [RECENT - 1 YEAR]
+    Published: 2024-01-01 | Theme: Healthcare staff wellbeing and satisfaction
+    Chunk Type: narrative
+    Snippet: Leeds Community Healthcare NHS Trust NHS Staff Survey Benchmark report 2024...
+
+- 3. `LYPFT Annual-Report-and-Accounts-2024-25.md` [STRATEGY EXPIRES 2025]
+    Published: 2025-06-30 | Theme: Healthcare transparency and accountability
+    Chunk Type: narrative
+    Snippet: https://www.leedsandyorkpft.nhs.uk/about-us/our-strategy/our-people-plan/...
+
+- 4. `Leeds_Demographics_Health_Inequalities_Context_2024.md` [RECENT - 1 YEAR]
+    Published: 2024-01-01 | Theme: Health Inequalities and Demographic Changes
+    Chunk Type: narrative
+    Snippet: Leeds presents both opportunities and challenges for community health workforce planning. The young population profile offers opportunities for prevention and early intervention, while the growing eld...
+
+- 5. `LYPFT Annual-Report-and-Accounts-2024-25.md` [STRATEGY EXPIRES 2025]
+    Published: 2025-06-30 | Theme: Healthcare transparency and accountability
+    Chunk Type: narrative
+    Snippet: Improving the Health and Lives of the Communities we Serve: from 2025 to 2030 is the new five-year strategy of Leeds and York Partnership NHS Foundation Trust. It was developed during 2024, ratified b...
+
+- 6. `LCH-Trust-Board-Meeting-Public-Papers-4-09-2025-AMENDED _1_.md` [RECENT]
+    Published: 2025-09-04 | Theme: Healthcare Management and Planning
+    Chunk Type: narrative
+    Snippet: Leeds Community Healthcare Winter Plan 2025/2026 .......................................................... 1...
+
+- 7. `LCH-Trust-Board-Meeting-Public-Papers-4-09-2025-AMENDED _1_.md` [RECENT]
+    Published: 2025-09-04 | Theme: Healthcare Management and Planning
+    Chunk Type: narrative
+    Snippet: Now the 10-year plan for health has been published this will be explicitly considered in the blueprint we want to create for the city and what the roadmap should look like to achieve this. We have als...
+
+- 8. `LCH-Trust-Board-Meeting-Public-Papers-4-09-2025-AMENDED _1_.md` [RECENT]
+    Published: 2025-09-04 | Theme: Healthcare Management and Planning
+    Chunk Type: narrative
+    Snippet: Leeds Community Healthcare NHS Trust Winter Plan 2025-...
+
+- 9. `NHS England _ Planning framework for the NHS in England.md` [RECENT]
+    Published: 2025-09-08 | Theme: Healthcare system transformation
+    Chunk Type: narrative
+    Snippet: The 10 Year Health Plan sets out the need for a significant change to the way we organise, deliver and fund services. To support this, a new model of planning is required to meet the chal enges and ch...
+
+- 10. `NHS England _ Planning framework for the NHS in England.md` [RECENT]
+    Published: 2025-09-08 | Theme: Healthcare system transformation
+    Chunk Type: narrative
+    Snippet: The 10 Year Health Plan makes clear that change needs to be delivered at scale, embedding new ways of working that transform the experience of staff and patients alike. This can only happen through co...
+
+- 11. `LYPFT Annual-Report-and-Accounts-2024-25.md` [STRATEGY EXPIRES 2025]
+    Published: 2025-06-30 | Theme: Healthcare transparency and accountability
+    Chunk Type: narrative
+    Snippet: These goals are focussed on the 26% of the population in Leeds who are living in the 10% most deprived areas. 2023 also saw the publication of the Leeds Health and Wellbeing Strategy which we are acti...
+
+- 12. `LYPFT Annual-Report-and-Accounts-2024-25.md` [STRATEGY EXPIRES 2025]
+    Published: 2025-06-30 | Theme: Healthcare transparency and accountability
+    Chunk Type: narrative
+    Snippet: In 2023 the Leeds Health and Care Partnership, which includes LYPFT, published the five-year Healthy Leeds Plan. Our work actively supports its two main goals of:...
+
+- 13. `LYPFT Annual-Report-and-Accounts-2024-25.md` [STRATEGY EXPIRES 2025]
+    Published: 2025-06-30 | Theme: Healthcare transparency and accountability
+    Chunk Type: narrative
+    Snippet: Our strategy is relevant and fully aligned with those key themes within national and local strategies that are relevant to people using our services, carers, our staff, and our organisation as a whole...
+
+- 14. `NHS England _ Planning framework for the NHS in England.md` [RECENT]
+    Published: 2025-09-08 | Theme: Healthcare system transformation
+    Chunk Type: narrative
+    Snippet: This framework has been developed as a guide for local leaders across England responsible for the development of the strategic and operational plans that wil deliver on local priorities as wel as our ...
+
+- 15. `LYPFT Annual-Report-and-Accounts-2024-25.md` [STRATEGY EXPIRES 2025]
+    Published: 2025-06-30 | Theme: Healthcare transparency and accountability
+    Chunk Type: narrative
+    Snippet: https://www.leedsandyorkpft.nhs.uk/about-us/our-strategy/...
+
+- 16. `Leeds Community Healthcare NHS Trust 2024 NHS Staff Survey Breakdown Report.md` [RECENT - 1 YEAR]
+    Published: 2024-01-01 | Theme: Employee Wellbeing and Satisfaction
+    Chunk Type: narrative
+    Snippet: Leeds Community Healthcare NHS Trust 2024 NHS Staff Survey Breakdown Report...
+
+- 17. `Leeds_Demographics_Health_Inequalities_Context_2024.md` [RECENT - 1 YEAR]
+    Published: 2024-01-01 | Theme: Health Inequalities and Demographic Changes
+    Chunk Type: narrative
+    Snippet: Document compiled from ONS Census 2021, Leeds Observatory, Yorkshire & Humber Health Profile, and regional demographic data. Date: September 2025 Purpose: Demographic context for workforce planning...
+
+- 18. `Workforce-Strategy-2021-25-V1.0.md` [STRATEGY EXPIRES 2025]
+    Published: 2021-01-01 | Theme: Workforce Development and Organizational Growth
+    Chunk Type: narrative
+    Snippet: During the lifespan of this Strategy, LCH will become increasingly sophisticated in our understanding and analysis of, and our responses to, the resourcing needs of LCH and the means of securing the w...
 
 - 19. `LCH-Trust-Board-Meeting-Public-Papers-4-09-2025-AMENDED _1_.md` [RECENT]
-    Published: 2025-09-04 | Theme: Healthcare management and planning
+    Published: 2025-09-04 | Theme: Healthcare Management and Planning
     Chunk Type: narrative
-    Snippet: produce a map of partnerships to prioritise involvement in...
+    Snippet: Leeds General Infirmary a small group of representatives from health and care in the city joined Penny for lunch to discuss the 10-year plan and the work underway in the city....
 
 - 20. `LYPFT Annual-Report-and-Accounts-2024-25.md` [STRATEGY EXPIRES 2025]
-    Published: 2025-06-30 | Theme: Healthcare and NHS Performance
+    Published: 2025-06-30 | Theme: Healthcare transparency and accountability
+    Chunk Type: narrative
+    Snippet: In 2024/25 we have been working with our partners across Leeds to secure funding to develop a Health Equity Development programme to be delivered across our workforce. The Leeds Health and Care Academ...
+
+
+### Q04: The strategy may cover Leadership, People Services, Inclusion, Talent, Staff Experience and Organisational Design - are there any missing focus areas?
+
+**Answer:**
+Based on the analysis of multiple documents, the strategy appears to cover several critical areas such as Leadership, People Services, Inclusion, Talent, Staff Experience, and Organisational Design. However, there are additional focus areas that could be considered to enhance the comprehensiveness of the strategy.
+
+1. **Digital & Technology Integration**: The importance of digital and technology as an enabler is emphasized across the strategy. This focus aims to leverage technology to improve workforce systems and intelligence, as well as enhance service delivery and accessibility [Source: Workforce-Strategy-2021-25-V1.0.md]. This suggests that a more explicit focus on digital transformation could be beneficial, ensuring that technological advancements are fully integrated into all aspects of workforce management and service delivery.
+
+2. **Employee Voice and Engagement**: While the strategy mentions Employee Voice as an enabler, it could be expanded into a standalone focus area. Engaging employees in decision-making processes and ensuring their voices are heard can significantly impact job satisfaction and productivity [Source: Public Sector CIPD Report.md]. This aligns with the need for impactful health and well-being interventions to engage and motivate staff, as noted in the context [Source: LCH-Trust-Board-Meeting-Public-Papers-4-09-2025-AMENDED _1_.md].
+
+3. **Health and Well-being**: Although health and well-being are mentioned, they could be more prominently featured as a distinct focus area. The interplay between employee engagement, leadership, and well-being is crucial for maintaining a productive workforce. The strategy could benefit from a more detailed approach to health and well-being initiatives, particularly in light of the challenges highlighted by the COVID-19 pandemic [Source: Leeds Coommunity Annual Report 2324.md].
+
+In conclusion, while the existing strategy covers essential areas, expanding on digital transformation, employee engagement, and health and well-being could further strengthen its effectiveness and ensure it addresses all critical aspects of workforce management.
+
+**Source Summary:** 6 unique document(s) referenced
+
+**All Retrieved Chunks:**
+- 1. `Workforce-Strategy-2021-25-V1.0.md` [STRATEGY EXPIRES 2025]
+    Published: 2021-01-01 | Theme: Workforce Development and Organizational Growth
+    Chunk Type: narrative
+    Snippet: There are seven Themes in this Strategy: Organisation Design; Resourcing; Inclusion; Wellbeing; Leadership; System Partner and Foundations. These are described in more detail, together with their acco...
+
+- 2. `Public Sector CIPD Report.md` [NO DATE]
+    Theme: Workforce analysis and improvement
+    Chunk Type: narrative
+    Snippet: The analysis in this report suggests there should be a complementary focus on improving the quality of leadership and people management....
+
+- 3. `LCH-Trust-Board-Meeting-Public-Papers-4-09-2025-AMENDED _1_.md` [RECENT]
+    Published: 2025-09-04 | Theme: Healthcare Management and Planning
+    Chunk Type: narrative
+    Snippet: The Board noted the updated focus the Directorate would consider against each of the seven pillars of the Trust’s current Workforce Strategy....
+
+- 4. `Workforce-Strategy-2021-25-V1.0.md` [STRATEGY EXPIRES 2025]
+    Published: 2021-01-01 | Theme: Workforce Development and Organizational Growth
+    Chunk Type: narrative
+    Snippet: This connectivity of the skills, competence and compassionate approach of leaders feeds directly into our Workforce Strategy aims and aspirations to work hard on the development and support to all of ...
+
+- 5. `Workforce-Strategy-2021-25-V1.0.md` [STRATEGY EXPIRES 2025]
+    Published: 2021-01-01 | Theme: Workforce Development and Organizational Growth
+    Chunk Type: narrative
+    Snippet: We provide excellent workforce and HR services to our customers, in support of the provision of outstanding care Underpinning everything the Workforce Strategy aims to deliver, are the core services t...
+
+- 6. `Workforce-Strategy-2021-25-V1.0.md` [STRATEGY EXPIRES 2025]
+    Published: 2021-01-01 | Theme: Workforce Development and Organizational Growth
+    Chunk Type: narrative
+    Snippet: The Strategy’s Themes are underpinned by three Enablers, which contribute to every Theme: Employee Voice; Data & Evidence; and Digital & Technology....
+
+- 7. `Workforce-Strategy-2021-25-V1.0.md` [STRATEGY EXPIRES 2025]
+    Published: 2021-01-01 | Theme: Workforce Development and Organizational Growth
+    Chunk Type: narrative
+    Snippet: There is a plethora of evidence for the premise that employees who have good quality jobs and are well led and managed will be both happier at work but also invariably more productive – the interplay ...
+
+- 8. `LYPFT Annual-Report-and-Accounts-2024-25.md` [STRATEGY EXPIRES 2025]
+    Published: 2025-06-30 | Theme: Healthcare transparency and accountability
+    Chunk Type: narrative
+    Snippet: The team prioritises People Resourcing and Retention and during the year focused on launching the values-based recruitment programme across the Trust, as well as apprenticeships and flexible working. ...
+
+- 9. `Workforce-Strategy-2021-25-V1.0.md` [STRATEGY EXPIRES 2025]
+    Published: 2021-01-01 | Theme: Workforce Development and Organizational Growth
+    Chunk Type: narrative
+    Snippet: 3. Areas of the organisation experiencing detriment associated with leadership behaviours or capability are identified and action plans agreed in partnership with affected services to improve leadersh...
+
+- 10. `Workforce-Strategy-2021-25-V1.0.md` [STRATEGY EXPIRES 2025]
+    Published: 2021-01-01 | Theme: Workforce Development and Organizational Growth
+    Chunk Type: narrative
+    Snippet: The Ambition for each of the Strategy’s seven Themes is shown in italics in the Workforce Strategy infographic below. Each Ambition describes what we want to have achieved by 31 March 2025. In determi...
+
+- 11. `LCH-Trust-Board-Meeting-Public-Papers-4-09-2025-AMENDED _1_.md` [RECENT]
+    Published: 2025-09-04 | Theme: Healthcare Management and Planning
+    Chunk Type: narrative
+    Snippet: If the Trust is unable to effectively engage and motivate all staff including leaders through impactful health and well-being interventions, a focus on inclusion, excellent leadership development and ...
+
+- 12. `Leeds Coommunity Annual Report 2324.md` [RECENT - 1 YEAR]
+    Published: 2024-06-30 | Theme: Organizational performance and accountability
+    Chunk Type: narrative
+    Snippet: Workforce and leadership – delivery of phase 1 of rollout of our Cultural Conversations programme, with eight services/departments across all three Business Units and corporate teams, including traini...
+
+- 13. `Workforce-Strategy-2021-25-V1.0.md` [STRATEGY EXPIRES 2025]
+    Published: 2021-01-01 | Theme: Workforce Development and Organizational Growth
+    Chunk Type: narrative
+    Snippet: A number of examples of how this approach is integrated throughout our Workforce Strategy are set out below:...
+
+- 14. `LCH-Trust-Board-Meeting-Public-Papers-4-09-2025-AMENDED _1_.md` [RECENT]
+    Published: 2025-09-04 | Theme: Healthcare Management and Planning
+    Chunk Type: narrative
+    Snippet: interventions, a focus on inclusion, excellent leadership...
+
+- 15. `Workforce-Strategy-2021-25-V1.0.md` [STRATEGY EXPIRES 2025]
+    Published: 2021-01-01 | Theme: Workforce Development and Organizational Growth
+    Chunk Type: narrative
+    Snippet: 5. Our work on talent management and succession planning will include a focus on underrepresented groups *...
+
+- 16. `Leeds Community Annual-report-2024-2025.md` [STRATEGY EXPIRES 2025]
+    Published: 2024-06-30 | Theme: Organizational performance and accountability
+    Chunk Type: narrative
+    Snippet: Survey has seen an improvement in the experience of global majority colleagues, however, there is more to be done to support colleagues who identify as having a disability or neuro divergent condition...
+
+- 17. `LYPFT Annual-Report-and-Accounts-2024-25.md` [STRATEGY EXPIRES 2025]
+    Published: 2025-06-30 | Theme: Healthcare transparency and accountability
+    Chunk Type: narrative
+    Snippet: Alongside this new strategic approach, in 2024/25 our services continued to identify their health inequality priorities, informed by data, intelligence and learning through Covid-19. Steered by the le...
+
+- 18. `LYPFT Annual-Report-and-Accounts-2024-25.md` [STRATEGY EXPIRES 2025]
+    Published: 2025-06-30 | Theme: Healthcare transparency and accountability
     Chunk Type: narrative
     Snippet: An analysis of our Staff Survey results provides us with a basis for determining the main areas to focus on when developing our key areas for action in 2025/26....
 
+- 19. `Leeds Coommunity Annual Report 2324.md` [RECENT - 1 YEAR]
+    Published: 2024-06-30 | Theme: Organizational performance and accountability
+    Chunk Type: narrative
+    Snippet: We deliver our strategy through nine areas of work. Highlights of this year include identifying and addressing inequity through:...
 
-### Query 3: What can you tell me about the health and wellbeing of Leeds Community NHS Staff based on these documents?
+- 20. `Leeds Coommunity Annual Report 2324.md` [RECENT - 1 YEAR]
+    Published: 2024-06-30 | Theme: Organizational performance and accountability
+    Chunk Type: narrative
+    Snippet: The Workforce Strategy’s key themes are outlined below, all of which contribute to safe, sustainable and effective staffing:...
+
+
+### Q05: What are the current staffing turnover rates, joiner/leaver patterns and headcount trends for Leeds Community Healthcare?
 
 **Answer:**
-The health and wellbeing of Leeds Community NHS Staff can be analyzed through various insights drawn from multiple documents, providing a comprehensive view of the current situation.
+The current staffing turnover rates, joiner/leaver patterns, and headcount trends for Leeds Community Healthcare NHS Trust can be synthesized from multiple sources to provide a comprehensive overview.
 
-Firstly, the Leeds Community Healthcare NHS Trust 2024 NHS Staff Survey Breakdown Report highlights concerns regarding staff morale, particularly among trainee doctors and dentists. It notes issues related to training and working hours, suggesting potential areas for improvement in staff support and development [Source: Leeds Community Healthcare NHS Trust 2024 NHS Staff Survey Breakdown Report.md].
+Firstly, according to the "Leeds Community Healthcare NHS Trust NHS Staff Survey Benchmark report 2024," the Trust has been analyzing its staff turnover rates in the context of similar organizations. The document highlights that the Trust faces a possible obligation arising from its employ and deploy model of staffing, which affects turnover and deployment strategies [Source: Leeds Community Healthcare NHS Trust NHS Staff Survey Benchmark report 2024.md].
 
-Secondly, the Leeds Community Healthcare NHS Trust NHS Staff Survey Benchmark Report 2024 provides a comparative analysis of the staff's experiences relative to similar organizations. It indicates that while some areas meet the average standards, there are areas where the Trust falls short, particularly in staff satisfaction and engagement. This report emphasizes the need for targeted interventions to enhance staff wellbeing, focusing on creating a supportive work environment [Source: Leeds Community Healthcare NHS Trust NHS Staff Survey Benchmark report 2024.md].
+Secondly, the "Leeds Community Healthcare NHS Trust 2024 NHS Staff Survey Breakdown Report" provides specific data on joiner and leaver rates across various staff groups. Notably, the overall joiner rate is 8%, while the leaver rate is 12%. This indicates a net decrease in staffing levels. For instance, nurses and health visitors have a joiner rate of 9% and a leaver rate of 11%, highlighting a slightly higher turnover in this critical group [Source: Leeds Community Healthcare NHS Trust 2024 NHS Staff Survey Breakdown Report.md].
 
-Thirdly, the Leeds Health Wellbeing Strategy 2023-2030 outlines broader strategic goals for improving health and wellbeing across Leeds, including NHS staff. It stresses the importance of a holistic approach, addressing mental health, work-life balance, and professional development as key components of staff wellbeing. This strategy aligns with the insights from the staff survey reports, reinforcing the need for comprehensive policies that address both organizational and individual health and wellbeing needs [Source: leeds health wellbeing strategy 2023-2030.md].
+Lastly, the "Leeds Community Annual-report-2024-2025" emphasizes the challenges posed by demographic changes in Leeds, such as a growing elderly population and significant health inequalities, which necessitate strategic workforce planning. This demographic context influences headcount trends and necessitates innovative service models to address the complex care needs of the population [Source: Leeds Community Annual-report-2024-2025.md].
 
-In summary, the synthesis of these documents reveals a consensus on the need for improving staff morale, enhancing training and support structures, and implementing strategic wellbeing initiatives to foster a healthier work environment for Leeds Community NHS Staff. While there are challenges, particularly concerning staff satisfaction and engagement, the outlined strategies provide a pathway for addressing these issues.
+In summary, Leeds Community Healthcare NHS Trust is experiencing a higher leaver rate compared to joiner rate, particularly among nurses and health visitors, indicating a need for strategic workforce interventions. The demographic shifts in Leeds further complicate staffing needs, requiring targeted workforce deployment to address the growing demand for complex community care services.
 
-**Source Summary:** 6 unique document(s) referenced
+**Source Summary:** 7 unique document(s) referenced
 
 **All Retrieved Chunks:**
 - 1. `Leeds Community Healthcare NHS Trust NHS Staff Survey Benchmark report 2024.md` [RECENT - 1 YEAR]
@@ -283,212 +527,95 @@ In summary, the synthesis of these documents reveals a consensus on the need for
     Chunk Type: narrative
     Snippet: Leeds Community Healthcare NHS Trust 2024 NHS Staff Survey Breakdown Report...
 
-- 3. `Leeds Community Healthcare NHS Trust NHS Staff Survey Benchmark report 2024.md` [RECENT - 1 YEAR]
+- 3. `org_stats.md` [RECENT]
+    Published: 2025-05-01 | Theme: Data Analysis and Benchmarking
+    Chunk Type: table_data
+    Snippet: | Leeds Community Healthcare NHS Trust | Table Data: Data table with columns: Headcount. This table provides detailed metrics for analysis and benchmarking....
+
+- 4. `Leeds Community Healthcare NHS Trust NHS Staff Survey Benchmark report 2024.md` [RECENT - 1 YEAR]
     Published: 2024-01-01 | Theme: Healthcare staff wellbeing and satisfaction
     Chunk Type: narrative
     Snippet: [cite_start]This benchmark report for Leeds Community Healthcare NHS Trust contains results for the 2024 NHS Staff Survey, and historical results back to 2020 where possible[cite: 260]. [cite_start]Th...
 
-- 4. `Leeds Community Healthcare NHS Trust 2024 NHS Staff Survey Breakdown Report.md` [RECENT - 1 YEAR]
-    Published: 2024-01-01 | Theme: Employee Wellbeing and Satisfaction
+- 5. `Leeds Coommunity Annual Report 2324.md` [RECENT - 1 YEAR]
+    Published: 2024-06-30 | Theme: Organizational performance and accountability
     Chunk Type: narrative
-    Snippet: This breakdown report for Leeds Community Healthcare NHS Trust contains results by breakdown area for the People Promise element and theme results from the 2024 NHS Staff Survey....
-
-- 5. `LCH-Trust-Board-Meeting-Public-Papers-4-09-2025-AMENDED _1_.md` [RECENT]
-    Published: 2025-09-04 | Theme: Healthcare management and planning
-    Chunk Type: narrative
-    Snippet: To report on any identified issues affecting trainee doctors and dentists in Leeds Community Healthcare NHS Trust, including morale, training and working hours....
+    Snippet: Leeds Community Healthcare NHS Trust has a possible obligation arising from its employ and deploy model of staffing....
 
 - 6. `Leeds Community Annual-report-2024-2025.md` [STRATEGY EXPIRES 2025]
     Published: 2024-06-30 | Theme: Organizational performance and accountability
     Chunk Type: narrative
-    Snippet: You can find our full results and benchmark reports by visiting the NHS Staff Survey website and searching Leeds Community Healthcare - Local Results...
+    Snippet: Leeds Community Healthcare NHS Trust has a possible obligation arising from its employ and deploy model of staffing....
 
-- 7. `Leeds Coommunity Annual Report 2324.md` [RECENT - 1 YEAR]
-    Published: 2024-06-30 | Theme: Organizational performance and strategic planning
+- 7. `Leeds Community Healthcare NHS Trust 2024 NHS Staff Survey Breakdown Report.md` [RECENT - 1 YEAR]
+    Published: 2024-01-01 | Theme: Employee Wellbeing and Satisfaction
+    Chunk Type: narrative
+    Snippet: This breakdown report for Leeds Community Healthcare NHS Trust contains results by breakdown area for the People Promise element and theme results from the 2024 NHS Staff Survey....
+
+- 8. `Leeds Coommunity Annual Report 2324.md` [RECENT - 1 YEAR]
+    Published: 2024-06-30 | Theme: Organizational performance and accountability
     Chunk Type: narrative
     Snippet: You can find our full results and benchmark reports by visiting the NHS Staff Survey website and searching ‘Leeds Community Healthcare’ Local results for every organisation:...
 
-- 8. `Leeds Community Annual-report-2024-2025.md` [STRATEGY EXPIRES 2025]
-    Published: 2024-06-30 | Theme: Organizational performance and accountability
+- 9. `Leeds_Demographics_Health_Inequalities_Context_2024.md` [RECENT - 1 YEAR]
+    Published: 2024-01-01 | Theme: Health Inequalities and Demographic Changes
     Chunk Type: narrative
-    Snippet: Leeds Community Healthcare NHS Trust has a possible obligation arising from its employ and deploy model of staffing....
-
-- 9. `Leeds Coommunity Annual Report 2324.md` [RECENT - 1 YEAR]
-    Published: 2024-06-30 | Theme: Organizational performance and strategic planning
-    Chunk Type: narrative
-    Snippet: Leeds Community Healthcare NHS Trust has a possible obligation arising from its employ and deploy model of staffing....
+    Snippet: Leeds serves a diverse population of 812,000 with significant demographic changes driving health service demand. The area has substantial health inequalities, a growing elderly population, and complex...
 
 - 10. `Leeds Community Annual-report-2024-2025.md` [STRATEGY EXPIRES 2025]
     Published: 2024-06-30 | Theme: Organizational performance and accountability
     Chunk Type: narrative
-    Snippet: This report is made solely to the Board of Directors of Leeds Community Healthcare NHS...
+    Snippet: The annual report is undoubtedly a time to reflect on the challenges and major successes of 2024/25. Without the hard-working and truly dedicated 3,400 employees of Leeds Community Healthcare Trust, s...
 
-- 11. `Leeds Coommunity Annual Report 2324.md` [RECENT - 1 YEAR]
-    Published: 2024-06-30 | Theme: Organizational performance and strategic planning
-    Chunk Type: narrative
-    Snippet: This report is made solely to the Board of Directors of Leeds Community Healthcare NHS...
-
-- 12. `Leeds Coommunity Annual Report 2324.md` [RECENT - 1 YEAR]
-    Published: 2024-06-30 | Theme: Organizational performance and strategic planning
-    Chunk Type: narrative
-    Snippet: For more detailed information about any of our services please visit our website: www.leedscommunityhealthcare.nhs.uk...
-
-- 13. `leeds health wellbeing strategy 2023-2030.md` [NO DATE]
-    Theme: Health and Wellbeing
-    Chunk Type: narrative
-    Snippet: While the work is led by the Leeds Health and Wellbeing Board, the people of Leeds, health and live document, shaped by what partners,...
-
-- 14. `Leeds Community Annual-report-2024-2025.md` [STRATEGY EXPIRES 2025]
+- 11. `Leeds Community Annual-report-2024-2025.md` [STRATEGY EXPIRES 2025]
     Published: 2024-06-30 | Theme: Organizational performance and accountability
     Chunk Type: narrative
-    Snippet: All the Performance Reports considered by the Trust Board are available as part of the Board papers on our website www.leedscommunityhealthcare.nhs.uk...
+    Snippet: You can find our full results and benchmark reports by visiting the NHS Staff Survey website and searching Leeds Community Healthcare - Local Results...
 
-- 15. `Leeds Community Annual-report-2024-2025.md` [STRATEGY EXPIRES 2025]
+- 12. `LCH-Trust-Board-Meeting-Public-Papers-4-09-2025-AMENDED _1_.md` [RECENT]
+    Published: 2025-09-04 | Theme: Healthcare Management and Planning
+    Chunk Type: narrative
+    Snippet: To report on any identified issues affecting trainee doctors and dentists in Leeds Community Healthcare NHS Trust, including morale, training and working hours....
+
+- 13. `Leeds Community Annual-report-2024-2025.md` [STRATEGY EXPIRES 2025]
     Published: 2024-06-30 | Theme: Organizational performance and accountability
     Chunk Type: narrative
-    Snippet: Leeds Community Healthcare NHS Trust’s (LCH) Quality Account looks at:...
+    Snippet: HR and Workforce leadership roles across NHS organisations including at Leeds Teaching Hospitals Trust and NHS Digital before commencing with Leeds Community Trust....
 
-- 16. `Leeds Coommunity Annual Report 2324.md` [RECENT - 1 YEAR]
-    Published: 2024-06-30 | Theme: Organizational performance and strategic planning
+- 14. `Leeds Coommunity Annual Report 2324.md` [RECENT - 1 YEAR]
+    Published: 2024-06-30 | Theme: Organizational performance and accountability
     Chunk Type: narrative
-    Snippet: More detailed information on the themes relating to our complaints can be found in the Trust’s Quality Account: www.leedscommunityhealthcare.nhs.uk...
+    Snippet: HR and Workforce leadership roles across NHS organisations including at Leeds Teaching Hospitals Trust and NHS Digital before commencing with Leeds Community Trust....
+
+- 15. `Leeds_Demographics_Health_Inequalities_Context_2024.md` [RECENT - 1 YEAR]
+    Published: 2024-01-01 | Theme: Health Inequalities and Demographic Changes
+    Chunk Type: narrative
+    Snippet: Leeds presents both opportunities and challenges for community health workforce planning. The young population profile offers opportunities for prevention and early intervention, while the growing eld...
+
+- 16. `Leeds Community Annual-report-2024-2025.md` [STRATEGY EXPIRES 2025]
+    Published: 2024-06-30 | Theme: Organizational performance and accountability
+    Chunk Type: narrative
+    Snippet: © Leeds Community Healthcare NHS Trust, July 2025 ref: 3084...
 
 - 17. `Leeds Community Annual-report-2024-2025.md` [STRATEGY EXPIRES 2025]
     Published: 2024-06-30 | Theme: Organizational performance and accountability
     Chunk Type: narrative
-    Snippet: More detailed information on the themes relating to our complaints can be found in the Trust’s Quality Account: www.leedscommunityhealthcare.nhs.uk...
+    Snippet: Leeds Community Healthcare NHS Trust’s (LCH) Quality Account looks at:...
 
-- 18. `Leeds Coommunity Annual Report 2324.md` [RECENT - 1 YEAR]
-    Published: 2024-06-30 | Theme: Organizational performance and strategic planning
+- 18. `org_stats.md` [RECENT]
+    Published: 2025-05-01 | Theme: Data Analysis and Benchmarking
     Chunk Type: narrative
-    Snippet: All the Performance Reports considered by the Trust Board are available as part of the Board papers on our website **www.leedscommunityhealthcare.nhs.uk **...
+    Snippet: Staff Group Joiner Rate FTE Leaver Rate Leavers Joiners All staff groups 8% 2,836.92 12% 340.13 221.59 Ambulance staff 65% 10.59 26% 2.23 5.68 Central functions 8% 224.35 11% 24.19 17.08 HCHS Doctors ...
 
-- 19. `Leeds Coommunity Annual Report 2324.md` [RECENT - 1 YEAR]
-    Published: 2024-06-30 | Theme: Organizational performance and strategic planning
-    Chunk Type: narrative
-    Snippet: All activity at Leeds Community Healthcare NHS Trust is healthcare related and the majority of the Trust's revenue is received from within UK government departments....
-
-- 20. `Leeds Community Annual-report-2024-2025.md` [STRATEGY EXPIRES 2025]
+- 19. `Leeds Community Annual-report-2024-2025.md` [STRATEGY EXPIRES 2025]
     Published: 2024-06-30 | Theme: Organizational performance and accountability
     Chunk Type: narrative
     Snippet: All activity at Leeds Community Healthcare NHS Trust is healthcare related and the majority of the Trust's revenue is received from within UK government departments....
 
-
-### Query 4: Extract ALL strategic intelligence from provided documents to establish foundation for 5-year integrated organizational planning framework covering
-
-**Answer:**
-To establish a robust foundation for a five-year integrated organizational planning framework, several strategic insights can be synthesized from the provided documents. These insights highlight the need for alignment, coordination, and sustainability across various levels of the NHS.
-
-1. **Alignment and Coordination**: The planning framework aims to ensure that plans are developed based on accurate and timely information, supporting aggregation, reporting, oversight, and accountability at local, regional, and national levels. This is crucial for achieving consistency and coherence across different spatial levels and organizational boundaries [Source: NHS England _ Planning framework for the NHS in England.md]. Additionally, the integration of strategic workforce planning at the regional level is emphasized as part of the oversight framework, which plays a critical role in aligning strategic and operational planning [Source: NHS England Board Meeting – 23 September 2025.txt].
-
-2. **Financial Sustainability**: A key priority is the development of integrated five-year plans that demonstrate financial sustainability over the medium term. This involves securing financial stability through strategic and operational coordination, optimizing synergies across the infrastructure [Source: priorities-and-operational-planning-guidance-january-2025.md]. The framework underscores the importance of financial planning as a cornerstone of the national planning architecture, ensuring that all organizational plans align with financial sustainability objectives [Source: NHS England _ Neighbourhood health guidelines 2025_26.md].
-
-3. **Integrated Local Planning Processes**: The strategy calls for the integration of five-year organizational plans with neighborhood health plans as core outputs of local planning processes. This integration is designed to foster collaboration and ensure that local health needs are addressed within the broader national strategy. The framework supports the development of these plans by providing specific guidance and requirements, which are essential for effective multi-year planning [Source: NHS England _ Planning framework for the NHS in England.md].
-
-In summary, the strategic foundation for a five-year integrated organizational planning framework is built on aligning plans across different levels, ensuring financial sustainability, and integrating local planning processes with national strategies. These elements are critical for achieving the overarching goals of coherence, accountability, and sustainability within the NHS planning framework.
-
-**Source Summary:** 7 unique document(s) referenced
-
-**All Retrieved Chunks:**
-- 1. `LCH-Trust-Board-Meeting-Public-Papers-4-09-2025-AMENDED _1_.md` [RECENT]
-    Published: 2025-09-04 | Theme: Healthcare management and planning
+- 20. `Leeds Coommunity Annual Report 2324.md` [RECENT - 1 YEAR]
+    Published: 2024-06-30 | Theme: Organizational performance and accountability
     Chunk Type: narrative
-    Snippet: the strategic plan by bringing together in a single place all the...
-
-- 2. `LYPFT Annual-Report-and-Accounts-2024-25.md` [STRATEGY EXPIRES 2025]
-    Published: 2025-06-30 | Theme: Healthcare and NHS Performance
-    Chunk Type: narrative
-    Snippet: The detail of what, how, when and by whom, is contained within our five underpinning strategic plans:...
-
-- 3. `NHS England _ Planning framework for the NHS in England.md` [RECENT]
-    Published: 2025-09-08 | Theme: Healthcare transformation and integrated planning
-    Chunk Type: narrative
-    Snippet: build and align across time horizons, joining up strategic and operational planning are co-ordinated and coherent across organisations and different spatial levels demonstrate robust triangulation bet...
-
-- 4. `LYPFT Annual-Report-and-Accounts-2024-25.md` [STRATEGY EXPIRES 2025]
-    Published: 2025-06-30 | Theme: Healthcare and NHS Performance
-    Chunk Type: narrative
-    Snippet: The strategy, and its underpinning five strategic plans, can be found on the Trust’s website at...
-
-- 5. `NHS England _ Neighbourhood health guidelines 2025_26.md` [RECENT]
-    Published: 2025-01-29 | Theme: Healthcare Transformation
-    Chunk Type: narrative
-    Snippet: read/building-an-ics-intel igence-function/) used to: inform strategic commissioning and resource al ocation...
-
-- 6. `NHS England _ Planning framework for the NHS in England.md` [RECENT]
-    Published: 2025-09-08 | Theme: Healthcare transformation and integrated planning
-    Chunk Type: narrative
-    Snippet: These plans are the cornerstone of a wider national planning architecture designed to ensure that: plans are developed based on appropriate, accurate and timely information plans are developed on a co...
-
-- 7. `LCH-Trust-Board-Meeting-Public-Papers-4-09-2025-AMENDED _1_.md` [RECENT]
-    Published: 2025-09-04 | Theme: Healthcare management and planning
-    Chunk Type: narrative
-    Snippet: leadership for the integration of the framework into operational...
-
-- 8. `LCH-Trust-Board-Meeting-Public-Papers-4-09-2025-AMENDED _1_.md` [RECENT]
-    Published: 2025-09-04 | Theme: Healthcare management and planning
-    Chunk Type: narrative
-    Snippet: paper cover sheets and plan, in discussion with the...
-
-- 9. `NHS England _ Planning framework for the NHS in England.md` [RECENT]
-    Published: 2025-09-08 | Theme: Healthcare transformation and integrated planning
-    Chunk Type: narrative
-    Snippet: Where not already in progress, ICBs and providers must now begin to lay the foundations for developing their five-year plans. This includes the critical work to secure financial sustainability over th...
-
-- 10. `NHS England Board Meeting – 23 September 2025.txt` [NO DATE]
-    Theme: Organizational restructuring and introductions
-    Chunk Type: narrative
-    Snippet: 02:26:25.280 they will take the role of strategic workforce planning at regional level um and as part of the oversight framework...
-
-- 11. `NHS England _ Planning framework for the NHS in England.md` [RECENT]
-    Published: 2025-09-08 | Theme: Healthcare transformation and integrated planning
-    Chunk Type: narrative
-    Snippet: – set out the evidence base and organisation’s strategic approach to:...
-
-- 12. `priorities-and-operational-planning-guidance-january-2025.md` [RECENT]
-    Published: 2025-01-01 | Theme: Healthcare Transformation and Resilience
-    Chunk Type: narrative
-    Snippet: 2025/26 priorities and operational planning guidance **Introduction **...
-
-- 13. `NHS England _ Planning framework for the NHS in England.md` [RECENT]
-    Published: 2025-09-08 | Theme: Healthcare transformation and integrated planning
-    Chunk Type: narrative
-    Snippet: Al organisations wil be asked to prepare credible, integrated five-year plans and demonstrate how financial sustainability wil be secured over the medium term. This means developing plans that:...
-
-- 14. `Health Innovation North Turning Conversation into Collaboration.txt` [RECENT]
-    Published: 2025-01-01 | Theme: Health Innovation
-    Chunk Type: narrative
-    Snippet: 06:17:54.718 provide strategic and operational coordination, optimizing synergies across the infrastructure, and...
-
-- 15. `priorities-and-operational-planning-guidance-january-2025.md` [RECENT]
-    Published: 2025-01-01 | Theme: Healthcare Transformation and Resilience
-    Chunk Type: narrative
-    Snippet: 2025/26 priorities and operational planning guidance...
-
-- 16. `priorities-and-operational-planning-guidance-january-2025.md` [RECENT]
-    Published: 2025-01-01 | Theme: Healthcare Transformation and Resilience
-    Chunk Type: narrative
-    Snippet: 2025/26 priorities and operational planning guidance...
-
-- 17. `priorities-and-operational-planning-guidance-january-2025.md` [RECENT]
-    Published: 2025-01-01 | Theme: Healthcare Transformation and Resilience
-    Chunk Type: narrative
-    Snippet: 2025/26 priorities and operational planning guidance...
-
-- 18. `NHS England _ Planning framework for the NHS in England.md` [RECENT]
-    Published: 2025-09-08 | Theme: Healthcare transformation and integrated planning
-    Chunk Type: narrative
-    Snippet: We are issuing this framework to help inform the development of plans for the five-year period from 2026/27 to 2030/31. We wil continue to work with you to develop specific requirements and ways of wo...
-
-- 19. `NHS England _ Planning framework for the NHS in England.md` [RECENT]
-    Published: 2025-09-08 | Theme: Healthcare transformation and integrated planning
-    Chunk Type: narrative
-    Snippet: chal enge, and ensure alignment with strategic objectives at...
-
-- 20. `NHS England _ Planning framework for the NHS in England.md` [RECENT]
-    Published: 2025-09-08 | Theme: Healthcare transformation and integrated planning
-    Chunk Type: narrative
-    Snippet: We wil engage with ICBs and providers on the specific requirements for the national plan returns. Five-year organisational plans wil be expected to ful y align with and support numerical returns. The ...
+    Snippet: All activity at Leeds Community Healthcare NHS Trust is healthcare related and the majority of the Trust's revenue is received from within UK government departments....
 
 ---
 [COMPLETE] Multi-source strategic analysis complete.

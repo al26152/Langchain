@@ -65,8 +65,19 @@ from langchain_chroma import Chroma
 from langchain_openai import OpenAIEmbeddings
 from langchain_core.documents import Document
 
-from utils import auto_tag
-from clean_doc import clean_docs
+import sys
+import os
+
+# Add parent directory to path so we can import utils
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+
+from utils.utils import auto_tag
+
+# Import clean_docs - handle both direct execution and package import
+try:
+    from .clean_doc import clean_docs
+except ImportError:
+    from pipeline.clean_doc import clean_docs
 from unstructured.partition.auto import partition
 from unstructured.documents.elements import Title, NarrativeText, ListItem, Table, Text
 
@@ -176,10 +187,10 @@ def clean_and_ingest(docs_path: str, vectordb: Chroma, existing_sources: Set[str
         file_path = os.path.join(docs_path, filename)
         print(f"### Processing File: `{filename}`")
 
-        # Remove old chunks if file already exists
+        # Skip if file already exists and not doing full rebuild
         if not full_rebuild and filename in existing_sources:
-            print(f"- Removing old chunks for `{filename}`...")
-            vectordb._collection.delete(where={"source": filename})
+            print(f"- Skipping `{filename}` (already in database).")
+            continue
 
         # Partition document into elements
         try:
