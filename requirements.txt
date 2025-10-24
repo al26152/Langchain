@@ -8,3 +8,5 @@ unstructured[md,html] # <--- And this line with extras
 lxml
 markdown
 tiktoken
+networkx
+pyvis

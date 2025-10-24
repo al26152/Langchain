@@ -519,6 +519,38 @@ Always consider these cross-cutting elements:
 
    *Counter-example:* No reference list or inconsistent numbering
 
+## Preserving References During Styling
+
+When applying this style guide to reformat an analysis document (gap analysis, evidence synthesis, research review, etc.):
+
+### Citation Preservation Rule [NON-NEGOTIABLE]
+
+All inline citations from the original analysis document MUST be preserved during reformatting. Do NOT remove, consolidate, or lose any citations.
+
+### Two Acceptable Approaches
+
+**Option A: Keep Inline Citations (Simplest)**
+- Preserve all [Source: filename] citations inline within the text as they appear
+- No conversion needed
+- Example: "This is supported by evidence [Source: NHS england Productivity.md]"
+
+**Option B: Convert to Numbered References (If document format requires it)**
+- Extract ALL citations from original BEFORE reformatting begins
+- Convert EVERY [Source: filename] to numbered brackets [1], [2], etc.
+- Create comprehensive reference list at document end matching every number
+- MUST be exhaustive - every citation number referenced must have corresponding entry
+- Example: "This is supported by evidence [1]" → Reference list includes [1]
+
+### Citation Validation - Before Publishing
+
+- [ ] Count total citations in original document
+- [ ] Count total citations in reformatted document
+- [ ] Citation counts match exactly
+- [ ] No orphaned citations (e.g., reference to [1] with no [1] in reference list)
+- [ ] If using numbered format, reference list is complete and sequential
+
+---
+
 ## Quality Assurance Checklist
 
 ### Content Alignment
@@ -555,6 +587,12 @@ Always consider these cross-cutting elements:
 - [ ] Numbered references in square brackets [1], [2], etc.
 - [ ] Complete reference list included at document end
 - [ ] Consistent citation formatting throughout document
+
+### Reference Preservation (Essential)
+- [ ] All [Source: ...] citations from original document preserved or converted
+- [ ] No citations lost during reformatting
+- [ ] No new citations added (analysis completeness is analyst's responsibility)
+- [ ] Citation count matches between original and reformatted document
 
 ---
 

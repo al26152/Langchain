@@ -9,7 +9,9 @@
       "Bash(mv:*)",
       "Bash(python pipeline/ingest_pipeline.py:*)",
       "Bash(python:*)",
-      "WebFetch(domain:www.cipd.org)"
+      "WebFetch(domain:www.cipd.org)",
+      "Bash(\".venv\\Scripts\\python\" build_knowledge_graph.py)",
+      "Bash(\".venv\\Scripts\\python\" demo_graph_queries.py)"
     ],
     "deny": [],
     "ask": []
