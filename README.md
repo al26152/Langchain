@@ -270,14 +270,18 @@ Langchain/
 │   ├── eval_tagging.py
 │   └── ingest_pipeline.py
 │
-├── analysis/                         # Analysis and strategy tools
-│   ├── analyze_pipeline.py
-│   ├── run_strategy_analysis.py
-│   ├── theme_comparison_analysis.py
-│   └── workforce_strategy_gap_analysis.py
-│
-├── query/                            # Interactive querying
-│   └── interactive_query_multi_source.py
+├── analysis/                         # Analysis systems (organized by type)
+│   ├── rag/                          # RAG (Retrieval-Augmented Generation)
+│   │   ├── analyze_pipeline.py       # Pre-configured strategic queries
+│   │   └── interactive_query_multi_source.py  # Interactive query interface
+│   │
+│   ├── knowledge_graph/              # Knowledge Graph extraction
+│   │   └── build_knowledge_graph_framework.py  # Entity & relationship extraction
+│   │
+│   └── theme_analysis/               # Theme-Based structured analysis
+│       ├── theme_comparison_analysis.py  # Old vs new strategy comparison
+│       ├── workforce_strategy_gap_analysis.py  # Gap analysis with evidence
+│       └── run_strategy_analysis.py   # Orchestrator for both analyses
 │
 ├── utils/                            # Utilities
 │   └── utils.py
@@ -287,6 +291,68 @@ Langchain/
 ├── prompts/                          # Prompt templates
 └── archive_py/                       # Archived/old scripts
 ```
+
+---
+
+## Your 3 Analysis Systems
+
+Your project includes **3 complementary analysis approaches**, each suited for different use cases:
+
+### 1. RAG (Retrieval-Augmented Generation) ✓
+**Location**: `analysis/rag/`
+
+- **Purpose**: Ask flexible questions and get multi-source answers
+- **How it works**: Retrieve relevant chunks from ChromaDB → Feed to LLM → Generate synthesized answer
+- **Use for**: Ad-hoc questions, exploratory analysis, flexible queries
+- **Commands**:
+  - `python analysis/rag/analyze_pipeline.py` - Run 5 pre-configured strategic queries
+  - `python analysis/rag/interactive_query_multi_source.py` - Ask your own questions
+
+**Example**: "What are the key workforce challenges?" → Gets answer synthesizing 3-7 documents
+
+---
+
+### 2. Knowledge Graph ✓
+**Location**: `analysis/knowledge_graph/`
+
+- **Purpose**: Extract and visualize relationships between entities
+- **How it works**: Parse documents → Extract services, organizations, care pathways → Build graph structure
+- **Use for**: Understanding relationships, exploring care pathways, system mapping
+- **Command**: `python analysis/knowledge_graph/build_knowledge_graph_framework.py`
+
+**Output**: JSON graph structure + HTML visualization
+
+**Example**: Find which services are provided to which populations in which settings
+
+---
+
+### 3. Theme-Based Structured Analysis ✓
+**Location**: `analysis/theme_analysis/`
+
+- **Purpose**: Compare strategies, identify gaps against predefined themes
+- **How it works**: Define themes → Compare across strategies → Identify what's missing/changed
+- **Use for**: Strategic planning, gap analysis, strategy evolution tracking
+- **Commands**:
+  - `python analysis/theme_analysis/run_strategy_analysis.py` - Run both quick & full analysis
+  - `python analysis/theme_analysis/theme_comparison_analysis.py` - Compare old vs new strategies
+  - `python analysis/theme_analysis/workforce_strategy_gap_analysis.py` - Full gap analysis with evidence
+
+**Phases**:
+1. Quick theme comparison (FREE - no API calls)
+2. Full RAG-based evidence synthesis (paid - ~$15-25)
+
+**Example**: Compare 2021-25 strategy themes with 2026-31 proposed themes, identify gaps
+
+---
+
+## Which System Should You Use?
+
+| Need | System | Why |
+|------|--------|-----|
+| **Answer specific questions** | RAG | Flexible, natural language queries |
+| **Explore relationships** | Knowledge Graph | Understand services, orgs, care pathways |
+| **Strategic planning** | Theme-Based | Identify gaps, track strategy evolution |
+| **Complete picture** | All 3 | Use each for different perspectives |
 
 ---
 
@@ -1048,14 +1114,18 @@ Langchain/
 │   ├── eval_tagging.py                 # Tagging validation tool
 │   └── ingest_pipeline.py              # Document ingestion pipeline
 │
-├── analysis/                           # Analysis and strategy tools
-│   ├── analyze_pipeline.py             # Strategic analysis with flagging
-│   ├── run_strategy_analysis.py        # Workforce strategy analysis orchestrator
-│   ├── theme_comparison_analysis.py    # Theme comparison analysis
-│   └── workforce_strategy_gap_analysis.py  # Gap analysis tool
-│
-├── query/                              # Interactive querying
-│   └── interactive_query_multi_source.py   # Interactive querying tool
+├── analysis/                           # Analysis systems (organized by type)
+│   ├── rag/                            # RAG (Retrieval-Augmented Generation)
+│   │   ├── analyze_pipeline.py         # Pre-configured strategic queries
+│   │   └── interactive_query_multi_source.py  # Interactive query interface
+│   │
+│   ├── knowledge_graph/                # Knowledge Graph extraction
+│   │   └── build_knowledge_graph_framework.py  # Entity & relationship extraction
+│   │
+│   └── theme_analysis/                 # Theme-Based structured analysis
+│       ├── theme_comparison_analysis.py  # Old vs new strategy comparison
+│       ├── workforce_strategy_gap_analysis.py  # Gap analysis with evidence
+│       └── run_strategy_analysis.py     # Orchestrator for both analyses
 │
 ├── utils/                              # Utilities
 │   └── utils.py                        # Auto-tagging function (GPT-3.5)
@@ -1137,9 +1207,10 @@ Langchain/
 | **Ingest with QA check** | `python run_full_pipeline.py --validate` |
 | **Full rebuild database** | Edit `pipeline/ingest_pipeline.py` line 77: `FULL_REBUILD = True` then run `python pipeline/ingest_pipeline.py` |
 | **Check metadata integrity** | `python check_chromadb_metadata.py` |
-| **Ask questions** | `python query/interactive_query_multi_source.py` |
-| **Generate analysis report** | `python analysis/analyze_pipeline.py` |
-| **Workforce strategy analysis** | `python analysis/run_strategy_analysis.py` |
+| **Ask questions** | `python analysis/rag/interactive_query_multi_source.py` |
+| **Generate analysis report** | `python analysis/rag/analyze_pipeline.py` |
+| **Workforce strategy analysis** | `python analysis/theme_analysis/run_strategy_analysis.py` |
+| **Build knowledge graph** | `python analysis/knowledge_graph/build_knowledge_graph_framework.py` |
 | **Just update dates** | `python pipeline/eval_dates.py` |
 | **Preview (dry-run)** | `python run_full_pipeline.py --dry-run` |
 

@@ -38,7 +38,7 @@ def run_quick_analysis():
     print("="*70 + "\n")
 
     try:
-        from analysis import theme_comparison_analysis
+        from . import theme_comparison_analysis
         theme_comparison_analysis.main()
         print("\n✓ Quick analysis complete!")
         return True
@@ -72,7 +72,7 @@ def run_full_analysis():
             return False
 
         print("Starting full analysis...\n")
-        subprocess.run([sys.executable, "analysis/workforce_strategy_gap_analysis.py"], check=True)
+        subprocess.run([sys.executable, "analysis/theme_analysis/workforce_strategy_gap_analysis.py"], check=True)
         print("\n✓ Full analysis complete!")
         return True
     except Exception as e:

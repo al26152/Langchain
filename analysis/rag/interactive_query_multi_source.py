@@ -10,7 +10,8 @@ import sys
 from collections import defaultdict
 
 # Add parent directory to path so we can import utils
-sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+# Go up 3 levels: analysis/rag/ -> analysis/ -> Langchain/
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))))
 
 from langchain_chroma import Chroma
 from langchain_openai import OpenAIEmbeddings, ChatOpenAI
