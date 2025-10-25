@@ -36,10 +36,10 @@ COLORS = {
     "CONDITIONS": "#98D8C8",          # Mint
 }
 
-# Add nodes - exclude ROLES for clarity
-print("[NODES] Adding entities (excluding ROLES)...")
+# Add nodes - include Organizations, Services, Pathways (exclude ROLES and CONDITIONS)
+print("[NODES] Adding entities (Organizations, Services, Pathways)...")
 for entity_type, entities in data.get("entities", {}).items():
-    if entity_type == "ROLES":  # Skip roles to reduce clutter
+    if entity_type in ["ROLES", "CONDITIONS"]:  # Skip to reduce clutter
         continue
     for entity in entities:
         color = COLORS.get(entity_type, "#CCCCCC")
@@ -66,31 +66,25 @@ KEY_ORGS = [
     "Integrated Care Board"
 ]
 
-# Filter implicit relationships - keep only those involving key organizations
-filtered_implicit = []
-for rel in implicit_rels:
-    source = rel.get('source', '')
-    target = rel.get('target', '')
+# Use ONLY explicit relationships (no implicit "mentioned together")
+print(f"  Implicit relationships (filtered to key organizations): 0 (showing explicit only)")
 
-    # Keep if either source or target is a key organization
-    if source in KEY_ORGS or target in KEY_ORGS:
-        filtered_implicit.append(rel)
-
-print(f"  Implicit relationships (filtered to key organizations): {len(filtered_implicit)}")
-
-# Combine relationships
-all_rels_to_show = explicit_rels + filtered_implicit
+# Combine relationships - ONLY explicit
+all_rels_to_show = explicit_rels
 
 print(f"  Total relationships to visualize: {len(all_rels_to_show)}")
 
-# Add edges to graph - skip any involving ROLES
+# Add edges to graph - skip any involving ROLES or CONDITIONS
 print("[EDGES] Adding relationships...")
 roles_to_skip = set(data.get("entities", {}).get("ROLES", []))
+conditions_to_skip = set(data.get("entities", {}).get("CONDITIONS", []))
+skip_entities = roles_to_skip | conditions_to_skip
+
 for rel in all_rels_to_show:
     source = rel.get("source", "")
     target = rel.get("target", "")
-    # Skip relationships involving ROLES
-    if source in roles_to_skip or target in roles_to_skip:
+    # Skip relationships involving ROLES or CONDITIONS
+    if source in skip_entities or target in skip_entities:
         continue
     if source and target and source in G.nodes() and target in G.nodes():
         G.add_edge(source, target,
@@ -153,35 +147,27 @@ implicit_count = 0
 
 for source, target, attrs in G.edges(data=True):
     rel_type = attrs.get("relationship", "connected")
-    is_implicit = attrs.get("is_implicit", False)
 
-    if is_implicit:
-        implicit_count += 1
-        # Implicit relationships: lighter, thinner, dashed
-        color = "#DDDDDD"  # Light gray
-        width = 0.3
-        dashes = True
-        label = "mentioned together"  # Simpler label than "co-occurrence"
-    else:
-        explicit_count += 1
-        # Explicit relationships: colored by type
-        rel_colors = {
-            "provides": "#64B5F6",        # Light Blue
-            "partners_with": "#81C784",   # Green
-            "commissions": "#FFB74D",     # Orange
-            "commissioned to carry out a review of": "#AB47BC",  # Purple
-            "improves": "#EF5350",        # Red
-            "overseen by": "#FFA726",     # Orange-red
-            "earns income from": "#29B6F6",  # Bright blue
-            "integrates_with": "#66BB6A",    # Green
-            "benchmarking_with": "#AB47BC",  # Purple
-            "expands": "#EC407A",         # Pink
-        }
+    # Only explicit relationships are shown
+    explicit_count += 1
 
-        color = rel_colors.get(rel_type, "#999999")
-        width = 2
-        dashes = False
-        label = rel_type
+    # Explicit relationships: colored by type
+    rel_colors = {
+        "provides": "#64B5F6",        # Light Blue
+        "partners_with": "#81C784",   # Green
+        "commissions": "#FFB74D",     # Orange
+        "commissioned to carry out a review of": "#AB47BC",  # Purple
+        "improves": "#EF5350",        # Red
+        "overseen by": "#FFA726",     # Orange-red
+        "earns income from": "#29B6F6",  # Bright blue
+        "integrates_with": "#66BB6A",    # Green
+        "benchmarking_with": "#AB47BC",  # Purple
+        "expands": "#EC407A",         # Pink
+    }
+
+    color = rel_colors.get(rel_type, "#999999")
+    width = 2
+    label = rel_type
 
     net.add_edge(
         source,
@@ -190,7 +176,6 @@ for source, target, attrs in G.edges(data=True):
         label=label,
         color=color,
         width=width,
-        dashes=dashes,
         font={"size": 10, "color": "black"},
     )
 
@@ -215,10 +200,10 @@ print("VISUALIZATION SUMMARY")
 print("="*80)
 
 print("\nVisualization Strategy:")
-print("  ✓ Shows ALL 21 explicit relationships")
-print(f"  ✓ Shows {implicit_count} implicit relationships (filtered to key organizations)")
-print(f"  ✓ Focuses on LCH, LYPFT, LTHT, NHS England, ICB connections")
-print(f"  ✓ Total edges: {len(G.edges())} (much more browser-friendly)")
+print("  ✓ Shows Organizations, Services, and Pathways")
+print("  ✓ Shows ONLY explicit relationships (provides, commissions, etc.)")
+print("  ✓ No 'mentioned together' implicit relationships")
+print(f"  ✓ Total edges: {len(G.edges())} explicit relationships")
 
 print("\nEntity Type Distribution:")
 for entity_type, entities in data.get("entities", {}).items():
@@ -245,11 +230,12 @@ print("\nVisualization Legend:")
 print("  ● Red     = Organizations")
 print("  ● Teal    = Services")
 print("  ● Salmon  = Pathways")
-print("  ● Blue    = Roles/Workforce")
-print("  ● Mint    = Health Conditions")
 print("")
-print("  — Solid colored lines = Explicit relationships (provides, commissions, etc.)")
-print("  — Dashed light gray lines = Implicit relationships (co-occurrence)")
+print("  Colored lines = Explicit relationships:")
+print("    — Light Blue = 'provides'")
+print("    — Green = 'partners_with'")
+print("    — Orange = 'commissions'")
+print("    — Purple = other types")
 print("")
 print("Node Size = Connectivity (larger = more connected)")
 

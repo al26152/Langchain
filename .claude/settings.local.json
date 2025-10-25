@@ -11,7 +11,9 @@
       "Bash(python:*)",
       "WebFetch(domain:www.cipd.org)",
       "Bash(\".venv\\Scripts\\python\" build_knowledge_graph.py)",
-      "Bash(\".venv\\Scripts\\python\" demo_graph_queries.py)"
+      "Bash(\".venv\\Scripts\\python\" demo_graph_queries.py)",
+      "Bash(\".venv\\Scripts\\python\" build_knowledge_graph_v3.py)",
+      "WebSearch"
     ],
     "deny": [],
     "ask": []
