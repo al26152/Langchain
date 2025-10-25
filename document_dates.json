@@ -1,22 +1,200 @@
 {
+  "10-year-health-plan-for-england-executive-summary.md": {
+    "date": "2025-07-01",
+    "source": "manual",
+    "year_range": null,
+    "notes": "Published July 2025 - extracted from title/content. RECENT - highly relevant"
+  },
+  "Health Innovation North Turning Conversation into Collaboration.txt": {
+    "date": "2025-01-01",
+    "source": "unknown",
+    "year_range": null,
+    "notes": "New document - date needs manual entry or extraction from content"
+  },
+  "LCH-Trust-Board-Meeting-Public-Papers-4-09-2025-AMENDED _1_.md": {
+    "date": "2025-09-04",
+    "source": "manual",
+    "year_range": null,
+    "notes": "Board meeting date from filename (4 September 2025). RECENT - current strategy discussion"
+  },
+  "Leeds City Council - Adults, Health & Active Lifestyles Scrutiny Board -14-10-2025.txt": {
+    "date": "2025-10-14",
+    "source": "auto",
+    "year_range": null,
+    "notes": "Scrutiny Board meeting date from filename (14 October 2025). RECENT"
+  },
+  "Leeds Community Annual-report-2024-2025.md": {
+    "date": "2024-06-30",
+    "source": "manual",
+    "year_range": [
+      "2024",
+      "2025"
+    ],
+    "notes": "Annual Report for fiscal year 2024-2025. Assuming June 30 year-end. RECENT"
+  },
+  "Leeds Community Healthcare NHS Trust 2024 NHS Staff Survey Breakdown Report.md": {
+    "date": "2024-01-01",
+    "source": "unknown",
+    "year_range": null,
+    "notes": "2024 Staff Survey - date needs verification"
+  },
+  "Leeds Community Healthcare NHS Trust NHS Staff Survey Benchmark report 2024.md": {
+    "date": "2024-01-01",
+    "source": "unknown",
+    "year_range": null,
+    "notes": "2024 Benchmark report - date needs verification"
+  },
+  "Leeds_Demographics_Health_Inequalities_Context_2024.md": {
+    "date": "2024-01-01",
+    "source": "auto",
+    "year_range": null,
+    "notes": "Demographics and health inequalities context document from 2024"
+  },
   "NHS England Productivity update.md": {
     "date": "2024-12-03",
     "source": "auto",
-    "year_range": null
+    "year_range": null,
+    "notes": "Auto-extracted from 'Date published: 3 December, 2024'. RECENT"
   },
   "NHS England _ NHS Oversight Framework 2025_26 _ methodology manual.md": {
     "date": "2025-06-26",
     "source": "auto",
-    "year_range": null
+    "year_range": null,
+    "notes": "Auto-extracted from 'Date published: 26 June, 2025'. RECENT - current methodology"
   },
   "NHS England _ Neighbourhood health guidelines 2025_26.md": {
     "date": "2025-01-29",
     "source": "auto",
-    "year_range": null
+    "year_range": null,
+    "notes": "Auto-extracted from 'Date published: 29 January, 2025'. RECENT - guidance for current year"
   },
   "NHS England _ Planning framework for the NHS in England.md": {
     "date": "2025-09-08",
     "source": "auto",
-    "year_range": null
+    "year_range": null,
+    "notes": "Auto-extracted from 'Date published: 8 September, 2025'. RECENT - planning framework"
+  },
+  "NHS West Yorkshire Integrated Care Board meeting - 23 September 2025 (part 1).txt": {
+    "date": "2025-09-23",
+    "source": "auto",
+    "year_range": null,
+    "notes": "ICB meeting date from filename (23 September 2025). RECENT"
+  },
+  "NHS england Productivity.md": {
+    "date": "2025-07-23",
+    "source": "manual",
+    "year_range": null,
+    "notes": "Research Briefing published 23 July 2025 - extracted from content. RECENT"
+  },
+  "Workforce-Strategy-2021-25-V1.0.md": {
+    "date": "2021-01-01",
+    "source": "manual",
+    "year_range": [
+      "2021",
+      "2025"
+    ],
+    "notes": "Multi-year strategy 2021-2025. EXPIRING SOON (2025). Use with caution - will need replacement/update. Strategy document is reaching end of lifecycle."
+  },
+  "org_stats.md": {
+    "date": "2025-05-01",
+    "source": "unknown",
+    "year_range": null,
+    "notes": "Added date manually"
+  },
+  "priorities-and-operational-planning-guidance-january-2025.md": {
+    "date": "2025-01-01",
+    "source": "manual",
+    "year_range": null,
+    "notes": "January 2025 guidance - extracted from filename and content. RECENT - current operational guidance"
+  },
+  "LTHT-Annual-Report-2024-25-FINAL.md": {
+    "date": "2025-06-30",
+    "source": "manual",
+    "year_range": [
+      "2024",
+      "2025"
+    ],
+    "notes": "LTHT Annual Report for fiscal year 2024-2025. Assuming June 30 year-end. RECENT"
+  },
+  "LYPFT Annual-Report-and-Accounts-2024-25.md": {
+    "date": "2025-06-30",
+    "source": "manual",
+    "year_range": [
+      "2024",
+      "2025"
+    ],
+    "notes": "LYPFT Annual Report for fiscal year 2024-2025. Assuming June 30 year-end. RECENT"
+  },
+  "Assessment of priority skills to 2030 GOV UK.md": {
+    "date": "2025-10-21",
+    "source": "file_mtime",
+    "year_range": null,
+    "notes": "Auto-added from docs folder"
+  },
+  "CIPD Health and Wellbeing Report 2025.md": {
+    "date": "2025-10-21",
+    "source": "file_mtime",
+    "year_range": null,
+    "notes": "Auto-added from docs folder"
+  },
+  "Healthy-Leeds-Plan-Executive-Summary_plain_text_DRAFT-v4.1.md": {
+    "date": "2025-10-22",
+    "source": "file_mtime",
+    "year_range": null,
+    "notes": "Auto-added from docs folder"
+  },
+  "LTHT People Priorities.md": {
+    "date": "2025-10-21",
+    "source": "file_mtime",
+    "year_range": null,
+    "notes": "Auto-added from docs folder"
+  },
+  "Labour Market Outlook CIPD 2025.md": {
+    "date": "2025-10-21",
+    "source": "file_mtime",
+    "year_range": null,
+    "notes": "Auto-added from docs folder"
+  },
+  "Leeds City Council Care Delivery Services Plan 2024 2025.txt": {
+    "date": "2025-10-22",
+    "source": "file_mtime",
+    "year_range": null,
+    "notes": "Auto-added from docs folder"
+  },
+  "Leeds Community Annual Report 2324.md": {
+    "date": "2025-10-15",
+    "source": "file_mtime",
+    "year_range": null,
+    "notes": "Auto-added from docs folder"
+  },
+  "NHS England Board Meeting 23 September 2025.txt": {
+    "date": "2025-10-19",
+    "source": "file_mtime",
+    "year_range": null,
+    "notes": "Auto-added from docs folder"
+  },
+  "Public Sector CIPD Report.md": {
+    "date": "2025-10-21",
+    "source": "file_mtime",
+    "year_range": null,
+    "notes": "Auto-added from docs folder"
+  },
+  "SharedRIStrategy_Contents_Final.pdf": {
+    "date": "2025-10-25",
+    "source": "file_mtime",
+    "year_range": null,
+    "notes": "Auto-added from docs folder"
+  },
+  "leeds health wellbeing strategy 2023-2030.md": {
+    "date": "2025-10-20",
+    "source": "file_mtime",
+    "year_range": null,
+    "notes": "Auto-added from docs folder"
+  },
+  "medium-term-planning-framework-delivering-change-together-2026-27-to-2028-29.md": {
+    "date": "2025-10-24",
+    "source": "file_mtime",
+    "year_range": null,
+    "notes": "Auto-added from docs folder"
   }
 }
