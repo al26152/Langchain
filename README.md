@@ -18,34 +18,37 @@ This is a **Retrieval-Augmented Generation (RAG)** pipeline designed to analyze 
 - **Recency awareness** - Healthcare strategies change rapidly; the system flags documents 2+ years old and strategies expiring within 1 year
 - **Multi-source thinking** - Forces synthesis across multiple documents rather than single-source answers
 - **Metadata tracking** - Each retrieved chunk includes publication date, theme, audience, and relevance flags
-- **Quick context** - Find relevant strategic information across 19 documents with 13,018+ indexed chunks
+- **Complete temporal data** - All 30 documents indexed with full publication/strategy date metadata (100% coverage)
+- **Quick context** - Find relevant strategic information across 30 documents with 16,983+ indexed chunks
 
 ---
 
 ## Current System Status ✓
 
-**Pipeline is fully operational and tested.**
+**Pipeline is fully operational and tested. Metadata fully synchronized.**
 
 | Metric | Value |
 |--------|-------|
-| **Documents** | 19 (13 MD + 6 TXT) |
-| **Total Chunks** | 13,018 |
-| **Documents with Dates** | 18/19 (95%) |
+| **Documents** | 30 (27 MD + 3 TXT) |
+| **Total Chunks** | 16,983 |
+| **Documents with Dates** | 30/30 (100%) ✓ |
+| **Chunks with Dates** | 16,983/16,983 (100%) ✓ |
 | **Multi-Source Synthesis** | 4-7 sources per query ✓ |
 | **Recency Flags** | Working perfectly ✓ |
-| **Latest Analysis** | ✓ Re-run with complete data |
+| **Latest Rebuild** | Full rebuild completed with corrected document_dates.json |
 
 **Documents Indexed:**
-- ✓ 10 original NHS England documents
-- ✓ 9 new documents (Leeds Community, Board meetings, Strategy documents)
+- ✓ 30 NHS & Leeds Healthcare strategic documents
+- ✓ All documents have publication/strategy dates
+- ✓ All 16,983 chunks enriched with date metadata
 
 **Recency Flag Distribution:**
-- `[RECENT]` - 14 documents (2025 dates)
-- `[RECENT - 1 YEAR]` - 3 documents (2024 dates)
+- `[RECENT]` - 24+ documents (2025 dates)
+- `[RECENT - 1 YEAR]` - 5+ documents (2024 dates)
 - `[STRATEGY EXPIRES 2025]` - Workforce strategy flagged ⚠️
-- `[NO DATE]` - 1 document (em-dash encoding issue - minimal impact)
+- `[NO DATE]` - 0 documents (all dates populated) ✓
 
-**Last Updated:** Strategic analysis re-run with full rebuild - all 13,018 chunks with proper date metadata
+**Last Updated:** Oct 25, 2025 - Full database rebuild completed after document_dates.json sync. All 16,983 chunks now have complete metadata (dates, themes, audiences).
 
 ---
 
@@ -279,11 +282,52 @@ Langchain/
 ├── utils/                            # Utilities
 │   └── utils.py
 │
-├── docs/                             # Source documents (19 files)
+├── docs/                             # Source documents (30 files)
 ├── chroma_db_test/                  # Vector database (auto-generated)
 ├── prompts/                          # Prompt templates
 └── archive_py/                       # Archived/old scripts
 ```
+
+---
+
+## Maintenance & Diagnostics
+
+### Checking ChromaDB Metadata Integrity
+
+After ingestion or metadata updates, verify that all chunks have proper date coverage:
+
+```bash
+python check_chromadb_metadata.py
+```
+
+**What it does:**
+- Counts total chunks stored in ChromaDB
+- Checks which documents have complete metadata (dates, themes, audiences)
+- Identifies any chunks missing date information
+- Compares ChromaDB contents with `document_dates.json`
+- Lists documents in database vs. configuration file
+- Provides recommendations for fixes
+
+**Example output:**
+```
+====================================================================================================
+CHROMADB METADATA CHECK
+====================================================================================================
+
+Total chunks in ChromaDB: 16983
+
+Expected documents (from document_dates.json): 31
+
+[OK] All chunks have dates
+```
+
+**Use this tool when:**
+- After running a full rebuild to verify dates populated correctly
+- Before running analysis to ensure metadata quality
+- After updating `document_dates.json` to check sync
+- Troubleshooting retrieval issues
+
+**Note:** This script requires NO API key - it directly reads the ChromaDB database file.
 
 ---
 
@@ -394,13 +438,13 @@ python pipeline/ingest_pipeline.py
 # 3. Run ingest
 python pipeline/ingest_pipeline.py
 # Output: "Detected FULL_REBUILD = True. Deleting existing ChromaDB..."
-# Output: "Processing all 19 documents..."
+# Output: "Processing all 30 documents..."
 
 # 4. After done, change back:
 # FULL_REBUILD = False
 ```
 
-**Output**: Updated `chroma_db_test/` vector database (13,018+ chunks)
+**Output**: Updated `chroma_db_test/` vector database (16,983 chunks with complete metadata)
 
 ---
 
@@ -483,7 +527,7 @@ Answer: Based on [Source: doc1, doc2, doc3]...
         │   ChromaDB with    │    │   Analysis   │
         │  Date Metadata     │    │   Output     │
         │                    │    │   (.md file) │
-        │ 13,018 chunks      │    │              │
+        │ 16,983 chunks      │    │              │
         │ with dates, tags   │    │ Sources +    │
         └────────────────────┘    │ Dates +      │
                                   │ Flags       │
@@ -524,10 +568,10 @@ python pipeline/eval_dates.py --interactive
 
 **Output Example**:
 ```
-[OK] Loaded 19 documents from docs/
-[OK] Auto-extracted: 4 documents
-[MANUAL ENTRY] 15 documents (user confirmed)
-[OK] Generated document_dates.json
+[OK] Loaded 30 documents from docs/
+[OK] Auto-extracted: 8 documents
+[MANUAL ENTRY / FILE MTIME] 22 documents (user confirmed or auto-detected)
+[OK] Generated document_dates.json with 30 entries
 ```
 
 ---
@@ -630,19 +674,20 @@ python pipeline/ingest_pipeline.py
 - [OK] Added 38 chunks.
 
 ## Ingestion Summary
-- Processed Files: **17**
-- Total Chunks Ready: **13018**
+- Processed Files: **30**
+- Total Chunks Ready: **16983**
 
 ### Updating ChromaDB...
   - Batch 1: Added 5000 chunks (Total: 5000)
   - Batch 2: Added 5000 chunks (Total: 10000)
-  - Batch 3: Added 3018 chunks (Total: 13018)
-[OK] ChromaDB updated successfully (13018 total chunks added).
+  - Batch 3: Added 5000 chunks (Total: 15000)
+  - Batch 4: Added 1983 chunks (Total: 16983)
+[OK] ChromaDB updated successfully (16983 total chunks added).
 
 [COMPLETE] Ingestion pipeline complete.
 ```
 
-**Cost**: ~$0.50-1.00 per full run (tagging + embeddings)
+**Cost**: ~$0.70-1.20 per full run (tagging + embeddings); incremental updates cost significantly less
 
 ---
 
@@ -842,7 +887,7 @@ New documents will appear in analysis output with proper date flags.
 
 **Solution**:
 - Embeddings are generated per chunk (not per document)
-- ~13,018 chunks across 19 documents = ~$0.03 in embedding costs
+- ~16,983 chunks across 30 documents = ~$0.04 in embedding costs
 - Initial run takes 10-15 minutes; subsequent runs are faster (incremental only)
 - Cost is one-time for ingestion; queries are cheap
 
@@ -955,7 +1000,7 @@ NHS England Productivity], the key areas are...
 
 - **Date Tracking**: Understand document recency and strategy timelines
 - **Multi-Source Synthesis**: Answers now synthesize 3-7 sources with explicit citations
-- **Batch Processing**: Handles 13,018+ chunks without memory issues
+- **Batch Processing**: Handles 16,983+ chunks without memory issues
 - **Auto-Tagging**: Chunks categorized by Theme and Audience for better filtering
 - **Interactive Queries**: Ask custom questions with date awareness
 
@@ -966,9 +1011,9 @@ NHS England Productivity], the key areas are...
 ### One-Time Costs (Initial Setup)
 
 - **eval_dates.py**: $0 (Python regex, no API calls)
-- **ingest_pipeline.py**: ~$0.60-1.20
-  - Auto-tagging: ~$0.60 (GPT-3.5 for 13,018 tags)
-  - Embeddings: ~$0.03 (OpenAI embedding API for all chunks)
+- **ingest_pipeline.py**: ~$0.70-1.30
+  - Auto-tagging: ~$0.70 (GPT-3.5 for 16,983 tags)
+  - Embeddings: ~$0.04 (OpenAI embedding API for all chunks)
 
 ### Per-Query Costs (Ongoing)
 
@@ -993,8 +1038,9 @@ Langchain/
 ├── run_full_pipeline.py                # Main entry point - run this!
 ├── README.md                           # This file
 ├── requirements.txt                    # Python dependencies
-├── document_dates.json                 # Config: publication/strategy dates
+├── document_dates.json                 # Config: publication/strategy dates (30 documents)
 ├── document_dates_schema.md            # Schema documentation
+├── check_chromadb_metadata.py          # Metadata integrity checker (diagnostics)
 │
 ├── pipeline/                           # Core ingestion pipeline
 │   ├── clean_doc.py                    # Filename cleanup utility
@@ -1014,15 +1060,22 @@ Langchain/
 ├── utils/                              # Utilities
 │   └── utils.py                        # Auto-tagging function (GPT-3.5)
 │
-├── docs/                               # Source documents (19 files: 13 MD + 6 TXT)
-│   ├── NHS England Productivity update.md
-│   ├── Workforce-Strategy-2021-25-V1.0.md
-│   ├── Leeds Community Annual Report 2425.md
+├── docs/                               # Source documents (30 files: 27 MD + 3 TXT)
+│   ├── 10-year-health-plan-for-england-executive-summary.md
+│   ├── Assessment of priority skills to 2030 GOV UK.md
+│   ├── CIPD Health and Wellbeing Report 2025.md
 │   ├── Health Innovation North Turning Conversation into Collaboration.txt
-│   ├── NHS England Board Meeting – 23 September 2025.txt
-│   └── ... (14 more)
+│   ├── Healthy-Leeds-Plan-Executive-Summary_plain_text_DRAFT-v4.1.md
+│   ├── LTHT-Annual-Report-2024-25-FINAL.md
+│   ├── LYPFT Annual-Report-and-Accounts-2024-25.md
+│   ├── Leeds Community Annual-report-2024-2025.md
+│   ├── NHS England Board Meeting 23 September 2025.txt
+│   ├── NHS England _ NHS Oversight Framework 2025_26 _ methodology manual.md
+│   ├── Workforce-Strategy-2021-25-V1.0.md
+│   ├── leeds health wellbeing strategy 2023-2030.md
+│   └── ... (18 more strategic documents)
 │
-├── chroma_db_test/                     # ChromaDB vector store (auto-generated)
+├── chroma_db_test/                     # ChromaDB vector store (auto-generated, 16,983 chunks)
 ├── prompts/                            # Prompt templates
 ├── archive_py/                         # Archived/old scripts
 ├── strategic_analysis_output_multi_source.md  # Analysis results (auto-generated)
@@ -1083,6 +1136,7 @@ Langchain/
 | **Ingest documents (new files only)** | `python run_full_pipeline.py` |
 | **Ingest with QA check** | `python run_full_pipeline.py --validate` |
 | **Full rebuild database** | Edit `pipeline/ingest_pipeline.py` line 77: `FULL_REBUILD = True` then run `python pipeline/ingest_pipeline.py` |
+| **Check metadata integrity** | `python check_chromadb_metadata.py` |
 | **Ask questions** | `python query/interactive_query_multi_source.py` |
 | **Generate analysis report** | `python analysis/analyze_pipeline.py` |
 | **Workforce strategy analysis** | `python analysis/run_strategy_analysis.py` |
