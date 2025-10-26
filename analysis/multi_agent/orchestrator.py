@@ -1,0 +1,219 @@
+"""
+orchestrator.py
+
+ORCHESTRATOR FOR MULTI-AGENT ITERATIVE RAG SYSTEM
+
+PURPOSE:
+  Controls the multi-agent workflow, manages iterations, tracks progress,
+  and coordinates between Evidence, Critique, and Synthesis agents.
+
+FEATURES:
+  - Iteration loop management
+  - Agent coordination (Evidence + Critique + Synthesis)
+  - Progress tracking and logging
+  - Stopping criteria enforcement
+  - Result aggregation
+
+USAGE:
+  from orchestrator import Orchestrator
+
+  orchestrator = Orchestrator(vectordb)
+  result = orchestrator.run_analysis(query)
+"""
+
+import sys
+import os
+from typing import Dict, List, Optional
+from datetime import datetime
+
+# Add project root to path
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))))
+
+from langchain_chroma import Chroma
+from langchain_openai import ChatOpenAI
+
+# Import agents - handle both package and direct execution
+try:
+    from .evidence_agent import EvidenceAgent
+    from .critique_agent import CritiqueAgent
+    from .synthesis_agent import SynthesisAgent
+except ImportError:
+    from evidence_agent import EvidenceAgent
+    from critique_agent import CritiqueAgent
+    from synthesis_agent import SynthesisAgent
+
+
+class Orchestrator:
+    """
+    Main orchestrator for multi-agent iterative RAG system.
+
+    Coordinates Evidence Agent, Critique Agent, and Synthesis Agent
+    through multiple iterations until convergence or stopping criteria met.
+    """
+
+    def __init__(
+        self,
+        vectordb: Chroma,
+        llm: Optional[ChatOpenAI] = None,
+        max_iterations: int = 5,
+        verbose: bool = True,
+    ):
+        """
+        Initialize Orchestrator.
+
+        Args:
+            vectordb: ChromaDB vector store
+            llm: Language model (optional, defaults to gpt-4o)
+            max_iterations: Maximum iterations allowed
+            verbose: Enable detailed logging
+        """
+        self.vectordb = vectordb
+        self.llm = llm or ChatOpenAI(model="gpt-4o", temperature=0.5)
+        self.max_iterations = max_iterations
+        self.verbose = verbose
+
+        # Initialize agents
+        self.evidence_agent = EvidenceAgent(vectordb, self.llm)
+        self.critique_agent = CritiqueAgent(max_iterations=max_iterations)
+        self.synthesis_agent = SynthesisAgent(self.llm)
+
+    def run_analysis(self, query: str) -> Dict:
+        """
+        Run complete multi-agent analysis.
+
+        Args:
+            query: Strategic question to analyze
+
+        Returns:
+            Dict containing:
+            - final_report: Complete markdown report
+            - confidence_score: Overall confidence (0-100)
+            - iterations: Number of iterations run
+            - all_results: Raw results from all iterations
+        """
+        print("="*80)
+        print("MULTI-AGENT ITERATIVE RAG ANALYSIS")
+        print("="*80)
+        print(f"\nQuestion: {query}")
+        print(f"Max iterations: {self.max_iterations}")
+        print(f"Start time: {datetime.now().strftime('%H:%M:%S')}\n")
+
+        iteration_results = []
+        critique_results = []
+        iteration_num = 1
+
+        # Iteration loop
+        while iteration_num <= self.max_iterations:
+            print(f"\n{'='*80}")
+            print(f"ITERATION {iteration_num}")
+            print(f"{'='*80}")
+
+            # Get previous gaps
+            previous_gaps = critique_results[-1]["gaps"] if critique_results else []
+
+            # STEP 1: Evidence Agent - Retrieve evidence
+            evidence_result = self.evidence_agent.search(
+                query=query,
+                iteration_num=iteration_num,
+                previous_gaps=previous_gaps,
+                k=20,
+            )
+
+            iteration_results.append(evidence_result)
+
+            # STEP 2: Critique Agent - Analyze quality and identify gaps
+            critique_result = self.critique_agent.analyze(
+                evidence_result=evidence_result,
+                iteration_history=iteration_results[:-1],  # Exclude current
+                query=query,
+            )
+
+            critique_results.append(critique_result)
+
+            # STEP 3: Check stopping criteria
+            if not critique_result["continue_iteration"]:
+                print(f"\n{'='*80}")
+                print("STOPPING CRITERIA MET")
+                print(f"{'='*80}")
+                print(f"Reason: {self._get_stop_reason(critique_result, iteration_num)}")
+                break
+
+            iteration_num += 1
+
+        # STEP 4: Synthesis Agent - Generate final report
+        print(f"\n{'='*80}")
+        print("SYNTHESIS PHASE")
+        print(f"{'='*80}")
+
+        final_critique = critique_results[-1]
+
+        synthesis_result = self.synthesis_agent.synthesize(
+            query=query,
+            iteration_results=iteration_results,
+            final_critique=final_critique,
+        )
+
+        # Summary
+        print(f"\n{'='*80}")
+        print("ANALYSIS COMPLETE")
+        print(f"{'='*80}")
+        print(f"\nIterations: {len(iteration_results)}")
+        print(f"Sources consulted: {synthesis_result['unique_sources']}")
+        print(f"Evidence chunks: {synthesis_result['total_evidence_chunks']}")
+        print(f"Confidence: {synthesis_result['confidence_score']:.0f}%")
+        print(f"Quality: {final_critique['overall_quality']}")
+        print(f"\nEnd time: {datetime.now().strftime('%H:%M:%S')}")
+
+        return {
+            "query": query,
+            "final_report": synthesis_result["report_markdown"],
+            "answer": synthesis_result["answer"],
+            "confidence_score": synthesis_result["confidence_score"],
+            "quality_rating": final_critique["overall_quality"],
+            "iterations": len(iteration_results),
+            "unique_sources": synthesis_result["unique_sources"],
+            "total_chunks": synthesis_result["total_evidence_chunks"],
+            "epistemic_summary": synthesis_result["epistemic_summary"],
+            "all_iteration_results": iteration_results,
+            "all_critique_results": critique_results,
+            "synthesis_result": synthesis_result,
+        }
+
+    def _get_stop_reason(self, critique: Dict, iteration_num: int) -> str:
+        """Get human-readable stopping reason."""
+        if iteration_num >= self.max_iterations:
+            return f"Maximum iterations ({self.max_iterations}) reached"
+
+        if critique["overall_quality"] == "EXCELLENT":
+            return "Excellent quality achieved"
+
+        if critique["overall_quality"] == "GOOD" and critique["convergence_detected"]:
+            return "Good quality + convergence detected"
+
+        if critique["overall_quality"] == "ADEQUATE" and critique["convergence_detected"]:
+            high_gaps = [g for g in critique["gaps"] if g.get("severity") == "HIGH"]
+            if not high_gaps:
+                return "Adequate quality + convergence + no high-priority gaps"
+
+        return "Stopping criteria met"
+
+    def save_report(self, result: Dict, output_path: str = None) -> str:
+        """
+        Save report to file.
+
+        Args:
+            result: Result from run_analysis()
+            output_path: Output file path (optional)
+
+        Returns:
+            Path to saved report
+        """
+        if not output_path:
+            timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+            output_path = f"multi_agent_report_{timestamp}.md"
+
+        with open(output_path, "w", encoding="utf-8") as f:
+            f.write(result["final_report"])
+
+        print(f"\n[OK] Report saved: {output_path}")
+        return output_path
