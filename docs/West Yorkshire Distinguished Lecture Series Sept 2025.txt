@@ -1,0 +1,567 @@
+# tactiq.io free youtube transcript
+# No title found
+# https://www.youtube.com/watch/wpYR9ntFxFo
+
+00:00:02.320 uh distinguished lecture series. My name is Shokati Khan and I'm the chief digital and information officer uh for
+00:00:08.559 West Yorkshire uh ICB and thank you for joining us for today's session which is
+00:00:13.679 being recorded as colleagues who could not attend live can catch up later. Um
+00:00:19.359 this is the second fire chat uh fireside chat in our distinguished lecture series. our first one as many of you may
+00:00:26.080 have joined that was on 22nd of September with the inventor of internet and a couple of other distinguished uh
+00:00:33.200 panelists. So looking ahead we'll be bringing together national leaders to explore how the 10-year plan health plan
+00:00:40.160 translates into real tangible change uh across West Yorkshire Yorkshire's places
+00:00:46.160 and neighborhoods. We'll be asking what's working, what could be improved, and how can partnerships, co-production,
+00:00:53.680 and data empower neighborhood teams to improve outcomes. I'm I'm really
+00:00:59.039 delighted to be joined today by a fantastic panel, Tom Yordan, Richard
+00:01:05.119 Sturves, and then Rashel Power. Um, I would start by requesting my
+00:01:11.040 distinguished panelists to have a quick introduction of yourself. Tom Rachel, can you can you please start your
+00:01:17.280 introduction? Thanks. Um, Sha. Yeah. Um, Tom Ridden. I'm the um second permanent secretary at
+00:01:24.159 the Department of Health and Social Care. Just um had my um year
+00:01:29.360 anniversary, my birthday of being in the civil service again. I started off in the civil service um working on
+00:01:36.000 international environment policy in the 90s doing um postreo climate change
+00:01:41.200 biodiversity negotiations. then set up and ran um one of the regional development agencies called Yorkshire
+00:01:47.520 Forward. Then spent 14 years at Lead City Council working with um in with and
+00:01:53.360 in the West Yorkshire Health and Care System. So great to be here. Thank you.
+00:01:59.360 And I'll thank Cat. So Richard Stubs um chief executive at Health Innovation Yorkshire
+00:02:05.840 and Humber. Um I will tell talk more about what health innovation uh the networks are in due course but um just
+00:02:12.800 think about anniversaries I think of I mean my 10y year anniversary now of of being chief exec of the innovation
+00:02:18.640 function for for Yorkshire humb in all its various names
+00:02:23.680 very nice Richard fantastic okay well hello everybody um
+00:02:30.160 I'm Rachel I'm the chief executive of the patient association and I'm delighted to be joining Tom and Richard
+00:02:35.840 here today to talk about the role of um the tenure plan. Um so let me start with
+00:02:42.640 a little bit about who we are as an organization. So the patient association works directly with patients through
+00:02:49.599 through our free phone helpline uh project surveys and lots of webinars
+00:02:55.120 like this. And our aim is to to give power to the patient voice um but also
+00:03:01.760 to give patients power in in themselves in navigating the health care system and
+00:03:07.680 then taking everything that we hear and and speaking to government the NHS and stakeholders about what patients are are
+00:03:14.720 telling us. And I think the thing about the patient association is our mission is very very clear. It's that everyone
+00:03:21.760 should be able to access the health and care that they need to live well. But to do that, we have to have patients
+00:03:28.319 working in partnership. And we have to start with patients in the design and delivery of services when it comes to
+00:03:34.799 the overall service. But when it comes to the individual that we have um that
+00:03:40.400 we have really good shared decision making where we really understand what matters to that patient and how we can
+00:03:46.879 work together to achieve the best. Um, I'm not going to talk about anniversaries because it just makes me
+00:03:52.400 feel old. So, I've only been at the patient association for seven years. Um,
+00:03:58.159 and um, and I'm enjoying it so much I'm not counting. So, I shall just leave it
+00:04:04.480 there. Thank you. Thank you. Thank you so much. And then we will come back with with a lot of uh
+00:04:10.080 questions and we are all really looking forward to to learning a lot from from each one of you. So together we'll
+00:04:16.000 explore national priorities, practical examples of policy in action and ideas to strengthen collaboration and the
+00:04:22.240 neighborhood level. So before we begin just a few uh housekeeping points as I mentioned earlier this session is being
+00:04:28.880 recorded and will be shared across our communication platforms afterwards. Please keep your uh microphone muted
+00:04:35.520 unless you are speaking uh to to make sure that we have a we have a smooth session. Feel free to turn on your
+00:04:42.240 camera uh if if you are comfortable and if you have any questions during the session, please pop them into the Q&A
+00:04:49.440 function. We'll come to those during the panel discussion. Today's session is all
+00:04:54.639 about turning strategy into action and and we are bringing together national leaders to unpack how the 10-year plan
+00:05:02.560 becomes real change in West Yorkshire's communities. We'll explore what's
+00:05:07.680 working, what's need to evolve and how can uh we use partnerships,
+00:05:13.360 co-production and data to support neighborhood teams. Before we we move into our uh speaker sessions, I'd like
+00:05:20.800 to uh briefly introduce the distinguished lecture series and the wider program it sits within. Uh this
+00:05:27.280 series is a collaboration uh between the West Yorkshire uh innovation hub and the West Yorkshire uh ICB digital data and
+00:05:35.199 technology directorate. Over the next 12 months we will be joined by national and international leaders and subject matter
+00:05:42.080 experts. The aim is to share insights, best practices and practical understanding of how digital data
+00:05:49.440 technology and innovation can support the delivery of the 10-year plan and the life science sector plan across our
+00:05:56.400 health and care systems in West Yorkshire. And I think this is also an opportunity for bridging each other uh
+00:06:03.199 with with our national leaders within NHS leaders and international leaders with with our our our region. So u we
+00:06:10.240 are we are now I would request Tom to to give us your perspect perspective on
+00:06:15.919 with regards to national perspective and followed by our other distinguished panelists.
+00:06:23.600 Yeah thanks very much um Shuka and I uh I'm really pleased to be here. Thanks
+00:06:29.199 for everybody who's listening in and on the call for what you're doing in the uh health and care system. Um it's really
+00:06:36.880 really appreciated from where's the secretary of state down through um the
+00:06:42.160 department and NHS England and the central organizations um trying to enable um you know the uh
+00:06:51.600 the delivery and change that we all want to happen for the people of West Yorkshire. So thank you is the first
+00:06:57.759 thing I want to say and thanks for the opportunity to speak today. I'll maybe put the context into the um the 10-year
+00:07:05.120 plan um and you know the the policy direction that's been set and stick to
+00:07:11.039 the um the uh you know now I think well understood
+00:07:17.039 um three shifts that um are the the main structure of the the policy thinking um
+00:07:23.599 that West Streeting and his team have brought into um to try and take um you
+00:07:30.479 know take the NHS and and care systems forward. Um, and starting off at first
+00:07:36.560 with the um the the the one that probably is is foremost in people's um
+00:07:45.680 people's minds in terms of the here and now which is um hospital to community. Um we we know
+00:07:53.680 that um the demands on the system have been growing. Um we know that the demographics of the country um are
+00:08:01.680 leading to more and more people who need um support and we have recognized in the
+00:08:09.520 10-year plan that we need a way of trying to shift that um demand from um
+00:08:18.000 you know overstretched hospitals in at times of the year to um a more
+00:08:23.440 community-based neighborhood-based um way of thinking about services, the idea of neighborhood health. Um the the
+00:08:31.199 reaction and the response of the re literally tens of thousands of people who engaged on the 10-year plan was that
+00:08:38.399 they really liked the the concept and the idea that you try and shift services
+00:08:45.040 to suit to a more person- centered approach where you try and reflect the
+00:08:51.279 way people live their lives and the way they they work or um spend their time.
+00:08:57.200 and the idea that you could have access to services that were were better placed
+00:09:03.440 in neighborhoods and and in the community when they don't need to be um in in hospitals and indeed in care homes
+00:09:11.040 in social care terms. You know, most people want to spend their time living
+00:09:16.320 independently healthy lives for as long as possible in their own home. Um not
+00:09:22.560 end up in hospital or end up in a in a care home. Um, and if they do, we've got
+00:09:28.560 to make sure they're treated really, really well, that we um, we get the best possible treatment for them and then get
+00:09:34.080 them back on their feet if we can and and out um, back home. Um, or make sure
+00:09:39.680 if they are in a care institution that that is providing the really person- centered care that everybody would want.
+00:09:46.800 Um, the um, the neighborhood health improvement program is probably the one thing I talk about. I obviously can get
+00:09:54.000 into more detail when we answer questions later, but um that has been an
+00:09:59.279 an indicator if you like of just the enthusiasm and energy around this idea because we had 141 places who bid into
+00:10:07.200 that. Um it isn't a large it isn't like bidding for loads of money. Um it's
+00:10:12.959 actually been in being been in a a cohort of um of like-minded places who
+00:10:19.120 are going to work together to try and solve some of these problems. and make that shift happen in practice. Um, and
+00:10:25.519 what those 141 um, submissions showed was that that brilliant things are
+00:10:31.040 happening across the country already. I know they are in West Yorkshire from my own experience, but what we haven't
+00:10:36.800 managed to do is to scale them up to a point where they really do bite on the
+00:10:41.920 the the demand pressures and the financial pressures that I I'd mentioned before. Um, so we've chosen cohort of 43
+00:10:49.360 to work with at first who we're going to be uh working with. I'm really pleased that I think there are three places in
+00:10:55.600 West Yorkshire who've been accepted onto that which is um more than many other
+00:11:00.880 parts of the country. So well done in that respect. Not surprised having worked in the in in uh the system
+00:11:07.680 myself. And for those who aren't in it, don't worry as well because we are wanting to really share the the fruits
+00:11:13.120 of that. But that is really about how do you how do you get to the point where you really get the people at the front
+00:11:21.200 line and and citizens having much more joined up and as I say person centered
+00:11:30.000 um service provision happening for them directly. And if I move on to digital um
+00:11:35.519 the analog to digital shift, I I think there's there's a there's some really
+00:11:40.640 exciting stuff in the 10-year plan around how we can move to utilize the um
+00:11:47.040 the almost unique and you know worldleading data set that we have in the NHS that
+00:11:55.440 reflects the diversity of of of a lot of the global population actually. Um it
+00:12:02.000 it's we have a very diverse um population cohort in the UK and we that
+00:12:09.519 means that we if we can get working really well with clinical leaders um
+00:12:15.600 really make sure that people have confidence this that the anonymized data set and the um you know that the
+00:12:23.360 protections and safeguards in that for people's privacy are absolutely watertight which they are. um in the way
+00:12:31.440 that we've been we're developing it. Um then the ability to utilize that for
+00:12:37.040 research and link it to the amazing changes that and and and strides forward
+00:12:42.880 that have been made in genomics around personalized health around being able to
+00:12:48.000 predict particularly um very rare diseases from young children. You know
+00:12:54.000 these are the things that could make a massive difference to people moving forward. So doing that is going to
+00:13:00.240 really it's going to be vital in that in that to really involve patients and
+00:13:05.519 citizens and make sure that they have agency and they understand you know how
+00:13:11.760 their data might be used but also that they can benefit from it. Just one
+00:13:16.800 example from my experience when I was in leads we always found it really hard to
+00:13:22.000 deal with the delayed discharge headache. So, you know, how do you make sure that people don't have to wait in
+00:13:28.399 hospital when they're well to go out back home because you're trying to get coordination between home care services,
+00:13:35.519 social care, um the the the uh GP, the the the specialist services that might
+00:13:42.560 be needed on an ongoing basis. And what we did was manage to um work with um all
+00:13:49.279 partners and get to a point where real in real time case workers were able to
+00:13:55.760 see um what was happening to an individual citizen and an individual patient. And it it it dramatically
+00:14:03.360 changed our ability to get the right meds in line, get the right transport arranged, make sure that people weren't
+00:14:10.399 having to send an email and then wait or ring someone and not be able to get through um to to get connected. And I
+00:14:18.240 think that just that simple idea of freeing up the front line to be able to
+00:14:23.360 see real time casework data about people they're trying to support and in time I
+00:14:28.880 think families family members as well. Obviously all with the um agreement of
+00:14:34.160 citizens is going to be I think one of the quiet revolutions that could take
+00:14:39.680 place that could make a massive difference. But as I say, it really requires patient citizens to be
+00:14:46.800 absolutely confident and at the forefront of making sure that they feel that they're happy with what with what's
+00:14:53.360 happening. And then the third one, and I'll finish, um, is is obviously around prevention. you know, going from a
+00:15:00.399 position where we treat people too late um for diseases and conditions that if
+00:15:07.120 we if we'd managed to get a bit upstream and we'd seen things earlier then then we would be able to prevent that
+00:15:13.040 happening. I I saw the u been doing quite a lot of work recently looking at women's health and men's health and the
+00:15:20.160 the sort of the the areas where you need the same approaches and other things where you need need different
+00:15:26.560 approaches. And I was really struck by two things. One is the um the opportunity that better joined up
+00:15:34.639 neighborhood type provision for women can provide. Um so many um women who are
+00:15:41.120 on the gynecology waiting list, you know, don't eventually need um actual,
+00:15:47.120 you know, um elective um intervention, but they but so so there's a so if we
+00:15:53.839 can work with women earlier, if they can get access to better services earlier in
+00:15:59.120 a very joined up way through their GP in the neighborhood, you know, that's the
+00:16:04.480 sort of area that could make a massive difference um to so many people um and
+00:16:09.759 and men's years of healthy life average is 61.5
+00:16:15.759 um and as someone who's coming in the second half of their 50s I know you won't believe that um I uh that that
+00:16:22.399 really struck me as something that's it's a sort of here and now and I think
+00:16:28.720 you know there's so much we can do on that preventative agenda there's so much that we're doing already with the you
+00:16:34.560 know things like the toothbrushing um that we're doing in schools with the Colgate partnership, the work that
+00:16:42.320 public health do so brilliantly well. Um, but how we get that into the center of what we do and our thinking is really
+00:16:48.639 critical, I think, to to give people more agency over their own health and make them realize that actually
+00:16:55.440 sometimes small changes in lifestyle and in diet and other things can make a huge
+00:17:01.120 difference. We aren't asking people to completely turn upside the way they live their lives. And I think that's the
+00:17:07.520 thing that could make the biggest difference on inequalities, which is something that I know we all care about a lot in West Yorkshire. So, I'll finish
+00:17:15.280 there. Um, Sha, there's there's lots of good stuff happening already. Waiting
+00:17:20.559 lists are going in the right direction, although there's been a bit of seasonal um stuff in the last couple of months.
+00:17:26.799 You know, there's they they've never been going down the this in this way in this trend over over a few months um for
+00:17:34.799 a long time. GP access is is improving, GP satisfaction is improving. You know
+00:17:40.799 that there are the the money is stable that there are lots of good things. But I just finished by saying we absolutely
+00:17:48.160 realize how hard everyone's working on the front line, how difficult it is at times to deal with the demand pressures,
+00:17:54.240 you know, the fact that everybody is doing their best. We re I'd go back to where I started, you know, just thanking
+00:17:59.280 people for that. Thank you. Thank Thank you very much, Tom. I think
+00:18:04.400 very very interesting perspective and uh I think there are a lot of uh questions we will we'll come back uh once we we
+00:18:10.960 are there but but I think it's it's very interesting to hear straight from you who's on top of what what's happening at
+00:18:17.120 the center and then giving the perspective. So now now I think I would I would request Richard to give us based
+00:18:22.559 on what what we heard from from Tom how system level innovation can help in in
+00:18:27.600 doing a lot of these things. Thanks Sha and and hi again everyone. Um as I said at the start you know Richard
+00:18:33.520 Stubs chief exec of health innovation Yorkshire and Humber um just to give colleagues just a little bit on that. So
+00:18:39.600 the health innovation network uh we are the innovation arm of the NHS. We've been here now in the system for about 13
+00:18:46.559 14 years although we are the artists previously known as the academic health science networks or the HSN's um so you
+00:18:52.480 may have come across in our former guys but effectively we're um I think
+00:18:58.000 incredibly well placed to think about how we support neighborhood health because the joy of being in a health
+00:19:04.320 innovation network um is that you're both local and national at the same time. So although we have our 15 locally
+00:19:12.080 um embedded you know your local friendly neighborhood health innovation networks across the country and we are uh you
+00:19:19.120 know we do wrap ourselves as tightly as we can around our local systems. We also come together as 15 to make sure that we
+00:19:26.320 are spreading that best practice on a national level. We are very poorest borders to make sure that good practice
+00:19:32.160 that's happening in one part of the country is rapidly um taken and implemented elsewhere. So it's it's a
+00:19:38.559 both and way of working which I think is quite interesting in terms of allowing us therefore to unearth somewhere in
+00:19:45.760 England where there are fantastic work happening around neighborhood health but then rapidly use our networks to be able
+00:19:51.039 to spread that best practice everywhere. Um and local and national is really important to us. I think the other thing
+00:19:56.880 I'd say about us is that um we obviously have a phenomenal research development
+00:20:02.000 innovation ecosystem across England. we try and maintain um a very kind of
+00:20:08.240 disciplined space within that um within that army of support in terms of being
+00:20:14.240 dedicated to the spread and adoption challenge. So the NHS like many sectors
+00:20:19.679 is absolutely amazing at invention but actually the the challenge that we face I think as a system isn't really an
+00:20:25.840 invention challenge right now it is an adoption challenge. There is there is fantastic work happening everywhere and
+00:20:32.960 you could you could throw a dart in a map of England and and hit something amazing that's happening somewhere in
+00:20:38.080 practice. Our cultural problem is we really really struggle to actually lift
+00:20:43.200 that best practice and spread and adopt it elsewhere. And there's there's another lecture series about why that
+00:20:48.799 why that is a problem is not this one. But I think just to just to kind of point that out because I think when it comes to neighborhood health and when it
+00:20:55.200 comes to the phenomenal energy, activity and intent that colleagues are going to
+00:21:00.480 put into making neighborhood health work, I guess my plea from the outset is that we look out as much as possible and
+00:21:07.840 we really try and steal with pride about where things are working and bring those things back into our into our local
+00:21:14.080 patches rather than reinventing the wheel 400 times a week. It it's too costly. it means that we we struggle
+00:21:20.880 with pilotitis and actually we just don't get the impact that patients deserve as quickly as they possibly
+00:21:26.480 could. So I guess that's my that's my soap box over with. Um and as I said it's not an invention challenge. You
+00:21:32.080 know we've already got 3,000 um evaluated evidence-based inuse somewhere
+00:21:38.240 innovative products pathways devices. Um so there's a whole database of what
+00:21:43.520 works well and we've got to we've got to do better at spreading that uh to people. Um,
+00:21:49.520 and we're really good at it, I would say. So, I love the fact that this is about turning strategy into impact. Our
+00:21:54.640 last impact report says, you know, we're helping over a million patients with our innovations, but crucially, I think this is really important to neighborhood
+00:22:00.320 health. We're also really interested in jobs and economic growth. So, last year we created source state guarded 900
+00:22:06.240 jobs. We helped our innovators to leverage over 500 million pounds worth of investment to help to grow their
+00:22:12.320 companies. Those companies then create jobs in our local patches. And you know, as Tom knows, you know, I'm very fond of
+00:22:17.919 saying it. It's not an original thought, but you know, good work equals good health. So, when we think about neighborhood health, it's not just about
+00:22:24.480 how we're going to help our neighborhoods to um to hopefully alleviate symptoms and and and diseases
+00:22:31.120 that they already have. It's also how do we get really into prevention through good work, good housing, good education,
+00:22:38.080 um good relationships, etc. I think that's also part of where we need to be putting our attention. So, just quickly
+00:22:43.919 on the on the 10-year plan, um Tom's already mentioned this obviously, but I just wanted to say I mean I really
+00:22:49.840 believe that the three shifts are a fantastic articulation of the the the buckets of problems and the buckets of
+00:22:55.840 challenges that we have. And I would say this because I'm incredibly biased, but I I just don't see how we deliver any of
+00:23:02.880 the three shifts without health innovation. you know, we're not going to grow um an extra 300 400 uh members of
+00:23:10.720 our workforce overnight. Um I think we know already about, you know, the financial issues if within the public
+00:23:16.960 sector. So, we've got to do things differently. So, I think health innovation doesn't just live within that
+00:23:22.320 analog to digital shift, which I think is where people would normally expect it to be. I think when we think about um
+00:23:28.480 hospital to community and into patients homes as well, it's going to be
+00:23:34.159 technologydriven. It's going to be about how do we have safe monitoring? How do we have sensor technology? How do we use
+00:23:40.159 data to be able to go and find people where they're at? Um how do we connect them with the system from their home so
+00:23:45.520 that they don't have to travel? um sickness to prevention is going to be similar but you know how do we actually
+00:23:50.960 give people empowered data to make them help make better choices in life and and also give um our employers our schools
+00:23:57.919 and others the kind of data to help people to to be more preventative in in their daily well-being. So I I do see
+00:24:03.840 innovate I mean I see innovation everywhere obviously but within the three shifts I absolutely see innovation at the core of them um and we were
+00:24:10.159 really fortunate you know to be um involved you know quite heavily involved in various parts of the 10ear plan so particularly the innovation research
+00:24:16.400 life science chapter as you'd expect but I just want to just pay um reference to the life science sector plan as well
+00:24:22.159 because every time I talk about the 10ear plan I always want to make NHS leaders in particular just become aware
+00:24:28.080 in their peripheral vision about the life science sector plan there's incredible read across between what we 10 year plan and what we say in the life
+00:24:34.320 science sector plan and when I talk about jobs particularly jobs in West Yorkshire across Yorkshire across the
+00:24:40.720 north a buoyant life science sector is going to be one of our big bets about how we're going to get in with
+00:24:45.919 investment how we're going to bring jobs into our into our northern economies and I really want our NHS leaders to think
+00:24:53.039 deeply about their roles even though it may not feel like they are um impactful
+00:24:59.120 from an operational NHS leadership perspective but actually the decisions we make at the front line really help us
+00:25:04.960 to be an attractive destination for for global R&D or not and so I think we all
+00:25:10.960 have to think how do we play our small part in delivering the life science sector plan as as well as the 10-year plan um so just a bit about systems then
+00:25:19.200 so obviously we work in systems as as health networks I very very grandly refer to myself as nit chief um and it's
+00:25:26.799 because it feels like the system needs to be joined up with more of itself So,
+00:25:32.000 you know, we all await the 10-year delivery plan. Um, I don't expect it to be an NHS delivery plan, but a but a
+00:25:38.720 system delivery plan, a community delivery plan, a neighborhood delivery plan, cuz for us working at that system
+00:25:44.799 level, you know, the best conversations that we have are when you bring sectors
+00:25:50.320 together. So yes, obviously, you know, we didn't deliver neighborhood health and other initiatives through great
+00:25:55.840 engagement with our hospital and our provider collaboratives, you know, increasingly, but also our ICBS. Um, and
+00:26:02.960 we're really, really proud in West Yorkshire of our innovation hub model where we embed fantastic leaders like
+00:26:09.200 Amy directly into the ICB to be the innovation arm of the ICB, but also still working with at least one foot
+00:26:15.840 clearly in the health innovation network space. But these days increasingly, and I think this is where the NHS is really
+00:26:21.600 starting to look out better, our MEL combined authorities, our meal strategic authorities are incredibly important to
+00:26:27.840 this neighborhood health mission. And so drawing them into this debate about how
+00:26:33.679 we set neighborhood health to be a success I think is incredibly important. Particularly think about the wider social determinance of health, the
+00:26:39.520 voluntary community um and and social sector, universities and research. I was thinking about the fact that, you know,
+00:26:45.440 we there's the phrase, isn't it about it takes a village? Um, I honestly think it takes a neighborhood to deliver
+00:26:50.799 neighborhood health. You know, neighborhood health isn't going to be something that the NHS is going to deliver by itself. Um, and just to kind
+00:26:57.440 of some concluding thoughts on that. This month actually, we'll see some really interesting work from a gentleman
+00:27:03.120 called Charlie Mayfield. So, Charlie Mayfield on the role of employers when it comes to employee health. I think we
+00:27:08.640 need to fold a lot of what Charlie's going to say into our neighborhood health plans because actually we need to
+00:27:14.799 be able to go where where our people are. Um, you know, neighborhoods and neighborhoods, workplaces, workplaces.
+00:27:20.799 We need to make sure that we design this not around our existing traditional NHS footprints. And I think about that very
+00:27:26.960 deeply in terms of the NHS isn't my only customer. actually when I think about how employers are going to keep their
+00:27:32.799 their workforce healthy, I need to be make sure that I'm turning to them with the opportunities that our innovation
+00:27:38.720 partline brings just as much as I'm turning into the NHS as well. So, I think our our vision our vision is
+00:27:44.320 widening in terms of where do we need to place this innovation so that it's actually delivering real health for our
+00:27:50.320 citizens. So, we need to go where the need is. We need to go where our neighborhoods um live and work. Um I
+00:27:56.799 think I'm sure this will come from the questions but it inevitably brings you into this this this fear of the digital
+00:28:02.080 divide. You know if we really scale health innovation and particularly you
+00:28:07.120 know tech and apps and digital are we going to leave people behind. I think it's a question that we can never forget
+00:28:13.279 because it is a genuine challenge to how we're going to be able to do this. Um I
+00:28:19.520 think there are you know some very thoughtful people um you know considering that but I suppose my one comment I'd make on that is I think it
+00:28:25.760 starts with trust. So if we're really going to empower our citizens and our patients to be accepting of the kinds of
+00:28:32.799 pathway changes that we're going to deliver to them in terms of delivering neighborhood health, we can't expect them to be able to receive those things
+00:28:40.159 with open arms unless we've already taken the time to really strongly and
+00:28:45.919 humbly create a sense of trust between our neighborhoods, our communities, and
+00:28:50.960 our public and even private maybe services. So trust is really important and we don't go and ask for trust at the
+00:28:58.559 point of giving someone an app. You know, we need to have spent the time to deeply embed that trust first and I
+00:29:04.399 think that's a huge role for for the ICBS and other leaders in place to to really think through. So I think trust
+00:29:10.000 is really really important to that and very finally showc um before I hand over to Rachel um people always like to know
+00:29:17.039 so what's in your bag you know what's in your bag Richard what's in your toolkit of great innovations that might make this thing real um just to come and pick
+00:29:24.000 out um some of my favorites but Hero of Health um which for me as a um dare I
+00:29:29.200 say something from South Yorkshire sorry apologies West Yorkshire I love West Yorkshire uh but it's a a homegrown South Yorkshire um innovation by
+00:29:36.080 fabulous GP but it's it's an AI integrated um GP neighborhood um through an app.
+00:29:42.000 What that does is allows patients to access the resources, the local resources that GP surgeries, other
+00:29:48.880 primary care um um sources um have and then promotes healthy lifestyle habits.
+00:29:54.960 So it's about the benefits of engagement not just patients into the NHS but patients between patients. So creating
+00:30:02.240 neighborhood groups, you know, the organizational walking groups, health coaching, cooking courses, diabetes
+00:30:07.840 courses, but linking patients and citizens with each other as well as linking them to our services. Um, and
+00:30:13.600 Sheff University did some really interesting evaluation of that. Um, 94%
+00:30:18.799 of patients were empowered to self-care, improving their confidence to maintain a healthy lifestyle. There's a 78%
+00:30:25.120 improvement on anxiety and depression, a 30% reduction in falls risker, 44%
+00:30:31.039 reduction in GP presentations, and and this is for the um finance um guys out there, but you know, £600,000 in savings
+00:30:38.559 for every400 for 400 users. That's Hero of Health. And then very briefly, Sweatcoin. Um
+00:30:44.880 similarly, an appbased solution promoting active lifestyles. This is about almost the the the data track
+00:30:52.080 gamification of of how we promote better choices for people. It's about tracking steps throughout the day, offering
+00:30:58.000 rewards in the forms of discounts, vouchers for a number of retailers or even donating to char charity donations
+00:31:04.640 to charities of your choice. But it's about finding the motivation for people to take healthier behavior and to find
+00:31:11.279 the rewards that matter to them in order to make sure that they're, you know, it encourages them um day after day to take
+00:31:17.600 healthy behavior. So, just two examples of innovations. As I said, we have well over 3,000 of these, but I think for me,
+00:31:24.799 this is the cornerstone of how we're really going to deliver and empower patients to to get neighborhood health
+00:31:30.880 off the ground. Yeah. Thank you. Thank you, Richard. I think I think very very powerful um to
+00:31:36.640 to get all the details on on what's happening with regards to innovation and especially the examples you you shared.
+00:31:42.880 So we we have heard the national perspective on on the overall picture on where we are and and also the uh system
+00:31:50.080 level innovation on on what's happening uh there are so many exciting things which are happening but whatever we are
+00:31:56.320 doing is for our patients our communities right and and it's very important to see what they are thinking
+00:32:01.840 and then how how we are coming to their expectations. So before um inviting Rachel to talk about um passion and
+00:32:09.440 community voice, I would remind everyone that after after Rachel we will be asking um we will be open for questions.
+00:32:15.919 So please either uh you can you can write your question in the Q&A section or uh just raise your hand and I I will
+00:32:22.640 I will give you a floor to ask your question. Rashid, fantastic. Thank you. I um I'm going to
+00:32:30.480 try my best to come after both of those two two talks, but I suppose in a way I get the easiest part of it cuz I get the
+00:32:37.279 bit that I Well, sorry, that's not actually right cuz you were both just as passionate, but I get the bit that I'm
+00:32:43.919 really passionate about and it's about the patient and community voice. So, I think the 10 year the 10-year health
+00:32:50.720 plan, you know, we finally got it. we got what we wanted to hear that patients needed
+00:32:57.120 to have power and that it was going to be guided by patient power. So that was
+00:33:02.159 really transformational. Um and but to get there there's there's quite a few
+00:33:08.399 steps that we have have to get to. So I think as a patient association we
+00:33:13.440 absolutely welcomed the patient power. Um, but how do how do we listen to patients and how do we work genuinely in
+00:33:20.880 partnership with those patients and make sure that they have the knowledge, skills and experience to be that active
+00:33:27.360 partner in care which they tell us they want to be. And to do that as an organization, we spent some time a few
+00:33:34.880 years ago developing our patient partnership principles. And we worked with patients and health care
+00:33:40.080 professionals and said actually what's it like when we work in partnership? What's it like when our voice is
+00:33:45.519 absolutely heard in the system? And and the principles started to be around
+00:33:51.039 treating patients as equal partners in their own in their own care and in the
+00:33:56.480 design of health care services. Um and that
+00:34:03.120 shared decision- making was that matter of course when it came to our individual care. So there's some stuff that I think
+00:34:09.119 in the 10-year plan that absolutely gives partnership to patients and gives
+00:34:14.320 them that control that we want to see. So obviously we welcomed it. But I want to pick up on Richard's point first of
+00:34:20.239 all because I think if we don't really acknowledge the trust and confidence um we're going to get off to a false
+00:34:27.359 start on really doing that genuine genuine people call it co-production. You can call it anything you want as
+00:34:33.679 long as it means we're working in partnership with patients. And I think the trust thing is is absolutely where
+00:34:39.918 we have to start that trust and confidence. And who do people hold trust and confidence in? They hold it in their
+00:34:46.320 local communities and in their local neighborhoods. So we really need to talk to those local communities to understand
+00:34:52.560 that. And and one of the things that we really welcome in the plan is around data.
+00:34:58.240 So absolutely three shifts are great. We spoke to patients. We put lots of information into the the working groups.
+00:35:04.960 We did lots of surveys with patients. Our helpline takes three and a half thousand calls. We asked those as well.
+00:35:10.640 We we did um a national survey to find out actually what what are the
+00:35:16.480 priorities that people wanted to see and and patients saw a lot in there. But if we think about trust um one of the
+00:35:23.280 things we did before the public deliberation on data which happened about a year two years ago now is we did
+00:35:30.800 um we worked with the department to develop a data pact and to look at what patients wanted in that data pact um so
+00:35:38.640 that promise between patients and the system what was going to happen to our data and actually the department really
+00:35:44.640 brave because I said to them well why don't you give me a blank sheet of paper and I'll go and talk to patients and
+00:35:50.240 they were saying shouldn't we draft a a data agreement and then test that in
+00:35:56.320 them and I was like no no no let's start with a blank sheet paper and actually
+00:36:01.520 the department were delighted after they had that brave moment of going okay we'll start with a blank sheet paper and
+00:36:07.839 in that blank sheet paper it talked about the willingness to share data but the key thing that I thought was
+00:36:14.079 really important in there was them saying you know when we do share our data we know that there's chance it'll
+00:36:20.800 be hacked. We know that in the world that we're in right now, something might happen to our data. And
+00:36:28.320 so, we're not telling you to make sure it doesn't happen to our data, but we're telling you to make sure that when it does happen, you tell us and you tell us
+00:36:35.680 what you're doing to keep it safe and you tell us what you do when something goes wrong. So, I felt like that was a
+00:36:41.280 real moment where people were saying, "Okay, you know, we know life's not perfect, but we want to work with you on
+00:36:47.520 this." this and that was the patient saying we absolutely want to work with you on this. So one of the things that
+00:36:53.119 we really and I think from a neighborhood health point of view will really really help is the role of single the single health record
+00:37:01.520 um something that patients have been asking for forever and a day. So imagine
+00:37:06.640 you're a patient um and you have complex health care conditions and you have to
+00:37:12.160 go in and you have to tell your story time and time again to different health care professionals because that's what's
+00:37:18.560 happening to patients at the moment. Um and I'm sure some of you on the call have experienced that.
+00:37:25.599 Um some people talk to us about having a suitcase um that they pull along one of those
+00:37:32.640 trolleys. They have so much health record. So that's one side of it. But imagine if you had a you know traumatic
+00:37:38.480 experience then you have to repeat your story time and time again to different people. So the single health record I
+00:37:45.280 think is going to be one of the fundamental shifts in giving patients power in the system.
+00:37:52.320 Um the other part of it from a digital perspective that we did two reports on the NHS app both of which patients were
+00:38:00.720 really impressed and wanted to keep the NHS working for them. Um but we need to
+00:38:06.640 think about how we give patients power because one of the things patients said to us and this is about a year ago they
+00:38:12.079 were like I didn't know you could get the NHS app on a computer. I thought you had to have smartphone to get the NHS
+00:38:18.160 app. So if we explain so then they were like oh you mean I can get the NHS app in the library and I was like yeah and
+00:38:25.440 now we have that piece of work happening with the ambassadors and everything else around um the NHS app but they're the
+00:38:32.240 things that we can do that genuinely will give um partnership to the
+00:38:38.160 patients. So then I'm just going to come quickly to um the neighborhood health
+00:38:44.800 and obviously we're very very welcoming on neighborhood health. So we've done work where you know we've heard from
+00:38:52.000 people trying to get to hospitals where they say I can get my bus to hospital but I can't get a bus back for two more
+00:38:57.119 days cuz the bus doesn't run. And that probably is quite a lot of the rural areas in Yorkshire that you work in that
+00:39:04.000 just you know the cost of getting buses. So to have have health systems and
+00:39:09.520 diagnosis, you know, one of our reports around being able to get diagnosed locally where you're not involving those
+00:39:16.480 huge travel costs that can happen to people. We had one patient telling us it
+00:39:21.680 was £187 return for her to get to her specialist cancer treatment. we really have to try
+00:39:29.359 and shift that into local communities and then building what Richard said this is holistic and if we think of
+00:39:35.599 inequalities in health what we hear from patients and what we know what you all
+00:39:40.640 know and Tom spoke about it too and so did Richard is this is more than the NHS this is about the health and well-being
+00:39:47.040 of a nation and we've got to make sure that systems are designed in in areas
+00:39:53.920 that work and uh work for for that community And earlier this morning I was
+00:39:59.359 talk doing a presentation around emergency care and you know we're trying to understand more why some communities
+00:40:05.680 end up in emergency care. It's because we do not have the neighborhood health service in the right area for them. And
+00:40:12.320 I think that's going to be um fundamental through the development of the neighborhood health services. And
+00:40:19.119 then of course, we've just got an announcement yesterday about the or the day before about the first digital
+00:40:24.320 hospital within the NHS as part of the long-term plan and and that's going to keep people in their local communities
+00:40:30.720 as well and keep them well in their local communities and which has had really good commitment from NHS England
+00:40:37.119 and and the department that that you know the design of that is going to be in partnership with patients and that's
+00:40:43.200 what patients want because patients are the ones using the services and they want to work with frontline staff
+00:40:49.839 because they totally understand the frontline staff are the ones delivering the services to look at how do we get to
+00:40:55.760 a point that we have promised in this 10-year health plan that everything is
+00:41:01.200 designed and delivered with patients and real people but also making sure that
+00:41:07.359 those real people are the real people that we're not just talking to the same patients all the time that we're always
+00:41:14.480 out there we're always like I say to my team in the patient association for all our focus groups. Are you looking out
+00:41:20.720 the window? Are you looking at those communities that we haven't worked with yet? How do we get in there? How do we
+00:41:26.960 get that voice of people who are not receiving services properly? Because for me, that's absolutely crucial to the
+00:41:33.440 success of the 10-year plan. Now, I've noticed I've probably gone on, so I am
+00:41:39.599 going to stop there. But I think the most important thing is that my role as
+00:41:44.720 the patient association is really ensuring that patients are genuine partners in shaping the delivery plan. I
+00:41:52.720 don't want to see a delivery plan that hasn't been shaped in partnership with those people who are going to be using
+00:41:58.480 it and that patients are no longer just the recipients of care. that their voice
+00:42:04.160 and agency becomes part of the whole system and leads with staff the
+00:42:10.319 development of the system as we move forward. Thank you.
+00:42:16.319 Thank thank you Raja very very insightful and um I I I I fully agree
+00:42:22.400 that um this is this is a big topic and is directly related to the uh the health
+00:42:28.640 and well-being of of all our our citizens. So I I will I'll straight jump
+00:42:33.839 on couple of questions and then and then we can we can continue the discussion. So the first question is to to uh to
+00:42:41.359 deliver the 10-year plan and put patient at the center of uh care requires a
+00:42:46.480 cross se sector collaboration. So how do you see the role of cross- sector
+00:42:52.160 partnership evolving over the next 10 years?
+00:42:58.319 Um yeah no it's Thank you. Yeah. No, it's great to hear um great to hear
+00:43:03.440 Richard and and Rachel. Um I um I think
+00:43:08.640 the main thing I would say in answer to that question is that we have spent an
+00:43:14.720 awful lot of time in in the systems in previous years that I've been involved
+00:43:20.240 in really trying hard to make integration happen between institutions
+00:43:26.319 and making sure that um you know at those levels of meetings that take place
+00:43:33.920 whether it's um board level or subgroups or work on population health and um you
+00:43:41.599 know the the um the various winter planning and things that happen in the
+00:43:46.960 system. We've tried really hard to make sure that when we talked about integration that it was happening um
+00:43:54.560 between the the key players sometimes I think maybe more focused on things like
+00:44:01.040 discharge and um you know a particular part of the system and where it
+00:44:06.640 interacts but but broadly speaking about about institution to institution I think
+00:44:11.760 the big change that the 10-year plan tries to signal is a well it signals and
+00:44:20.000 it wants to make sure is followed through which does you know go with the
+00:44:25.280 grain of what what I think both both Richard and especially Rachel was saying
+00:44:30.400 is that that has got to happen at the for the citizen for the person people have got to feel that they've got to
+00:44:37.440 have that trust that that Richard mentioned they've got to have that sense of ownership and engagement that Rachel
+00:44:45.599 mentioned And and let's let's be clear that isn't easy um to hardwire right across really
+00:44:54.800 complex systems with people who are really busy doing their jobs and um and
+00:45:00.640 and I've been involved in lots and lots of consultations with citizens over the last couple of decades and I think you
+00:45:10.400 know we've got to get I I think we we um we need to get into the slipstream of
+00:45:17.440 some of the changes we're trying to make on neighbors health and on um on on
+00:45:22.560 access to services and to um the way that we're developing any new approaches
+00:45:30.000 to make sure that that you know that citizen engagement is happening and that
+00:45:35.599 we've we've always got in mind first and foremost the integration that's happening between the people who are on
+00:45:43.520 the interface with the the person and that digital interface as well
+00:45:50.079 as well as the the institutional stuff that I think we do a bit better but we
+00:45:55.920 we don't focus enough we haven't focused enough in the past which is what you
+00:46:01.680 know whereas my secretary of state says and which he's really really intent on changing on that interaction and with
+00:46:09.359 with the citizen and the individual and just to shout out to to support what Rachel was saying about other you know
+00:46:16.880 not always thinking that people will use the traditional routes or the roots we think they will to access services that
+00:46:24.480 the library we had something in leads called um leadeds libraries 100% digital
+00:46:30.319 it was called and and the aim was to get every single person in the city working
+00:46:35.920 um being able to access services and and we basically did it through libraries um
+00:46:41.440 and it it's a fantastic service and really really helps people who otherwise
+00:46:48.319 you know just wouldn't know where to go and didn't have that sort of technology
+00:46:53.359 either access to technology or that capability to be able to do it. So I I do think it's about the wider set of
+00:47:00.960 public services as well as just the NHS.
+00:47:06.640 Thank thank you uh Tom and and I I really hope that um with regards to all all the discussions and and the
+00:47:14.560 expectations in digital data and technology and fulfilling the 10-year plan uh we will have a right um
+00:47:21.839 resources and and focus for for strengthening this area as well so that we can get the right outcome. So we are
+00:47:27.839 really really looking forward. Uh so the next question is uh with to Richard. Uh
+00:47:33.599 Richard uh as a distinguished leader locally and nationally in innovation,
+00:47:38.880 how do you see the innovation landscape evolving to keep up with the rapidly uh developing AI landscape? I think I think
+00:47:46.400 uh some of the things you've already mentioned, but if you want to add more. Yeah, I think um so we've got to the
+00:47:52.400 word AI. Um it's it's not possible, is it, I think, to to talk about innovation without getting to AI sooner rather than
+00:47:58.560 later. I think and I think the word AI is is particularly critical to um to this conversation actually comes all the
+00:48:04.720 way back to trust again. Um there's I think going to be um a distinction made
+00:48:11.839 um between what we might consider to be technologies that we might be more
+00:48:17.200 comfortable with. Um so I think you know the majority of people now would be
+00:48:22.240 comfortable with the idea of an app. um you know something on a phone or as as Ra said something to be accessed through
+00:48:27.520 a computer but this this this this thinking now about AI and machine learning is is another uh development
+00:48:36.079 that we've got to really consider and actually um one of the uh more recent um
+00:48:43.119 announcements um has been from our colleagues our regulator colleagues at the MH who are going to um well have
+00:48:50.319 formed now a new commission on the regulation of of AI in healthcare which I think is a really really important
+00:48:57.440 intervention here because we're going to have to I think very quickly win the confidence of our of our population of
+00:49:03.920 our public when it comes to the what AI means within the NHS. Um and I don't
+00:49:09.200 think we have the answers yet. So I think AI is almost a standalone case in terms of um potentially a huge
+00:49:14.480 opportunity for us but also something that we can't uh I think uh sleepwalk
+00:49:20.240 into thinking that the public already accepting of the benefits that it brings and I think we're going to have to have some really public conversations
+00:49:27.760 about you know both the benefits and the fears about what AI can bring. Um but I think in terms of you know the
+00:49:34.160 innovation landscape and how it's evolving. I suppose another one of my um question marks in my head I guess is we
+00:49:40.960 can't leave our staff behind you know so we talk a lot about our our public and you know what technology improvement may
+00:49:46.079 bring to them but actually we've got you know 1.2 1.3 million staff here. We have to take them on the journey of of tech
+00:49:51.760 and innovation as well. You know these are the the new tools new scalpels that they'll be asked to be using. you know,
+00:49:57.599 if you're a community nurse out there, you know, we're going to hopefully make your work more rewarding, give you more
+00:50:03.920 time for patients, but that's also going to need you to be to go on a on a on a level of training in terms of what that
+00:50:09.440 means and how you utilize that. So, we need to think very deeply about how we how we do that for staff, you know, and
+00:50:15.599 let's face it, a very, you know, um, operationally busy, stretched staff base
+00:50:20.960 at the moment and somehow we're going to have to take them on that training journey. So, that's another point for us. But in terms of I suppose more
+00:50:26.960 that's maybe two negatives but in terms of the benefits I think what we're seeing now um and actually I've cheekily
+00:50:33.200 just been looking at the questions but um there's something about the uh the
+00:50:39.680 quiet benefits that innovation brings to neighborhood health and I was thinking about some of our um tools for um remote
+00:50:48.400 diagnostics which aren't just taking away pain
+00:50:53.440 points for citizen in terms of somebody who would normally have had to, you
+00:50:59.040 know, catch two buses, maybe ask a a son or daughter to take them to hospital to deliver some basic tests, you know,
+00:51:06.079 urine dip test, etc., etc. And we're asking them to come into hospital to do some very simple things using
+00:51:11.200 technology. Now, we're posting kits to patients homes. They're using really simple apps, using their own smartphones
+00:51:17.119 to be able to do tests by themselves. Those tests are then being digitally sent off to labs and the patient can go
+00:51:23.359 about their day. Um that's massively beneficial for those people who have had
+00:51:28.720 a journey eliminated. But actually it's also showing us that from the equality
+00:51:33.760 point of view there are many people who basically just aren't being captured by
+00:51:39.359 our existing screening routes for whom this is providing um an entry point for
+00:51:45.200 them um which is far more um comfortable, culturally insignificant, however you want to describe it. And
+00:51:52.079 therefore it's a it's a balancing of the equity challenge in terms of things like
+00:51:57.440 screening. So I think that's another interesting point is it's not just about digitizing or or translating things for
+00:52:03.599 existing patients. It's about how can some of this transformation actually bring more people to us because we're
+00:52:09.920 actually giving them options that haven't been um previously made available.
+00:52:15.040 Very interesting. Uh thank thank you Richard. I I think I will straight jump to the next question to to Rajel. Um in
+00:52:23.040 the emergence of a digital first generation who don't just want a digitized version of traditional core
+00:52:28.480 models, how do we develop an inclusion strategy bridging across the generational gap, the status quo and the
+00:52:35.440 10-year plan? We start with people.
+00:52:40.880 It's as basic as that. Um we start with people to understand what they need. And
+00:52:46.079 I always argue around kind of the issue that I hear in an awful lot of calls
+00:52:51.440 that you know older people don't want to do digital. Um we need to understand
+00:52:57.359 where the barriers are and what those barriers are for people to move forward in digital and I think Richard in a way
+00:53:04.400 hit the head because it's the step before it's a step before AI and Richard
+00:53:09.920 was right in but it's it's all about communication. So we did a piece of work um recently
+00:53:17.520 and we've developed a communication model called core and we went into areas via deprivation and and and and showed
+00:53:24.480 some health information and people were saying but I don't see myself in this this isn't talking to me whatsoever. So
+00:53:30.960 if we want to understand digital and we want to understand the barriers then we have to start with people and understand
+00:53:36.559 what those barriers might be because there's a lot of different issues. you know, cost could be a massive barrier if
+00:53:42.400 you don't have Wi-Fi at home. You can't afford to have Wi-Fi at home. Um, uh,
+00:53:50.880 in rural areas and connectivity can be a big issue. Um, so the start with people.
+00:53:57.760 I think we that's all I really say with this one is start to people and understand those barriers and um you
+00:54:03.920 know make sure that we build and digital won't work for everyone to begin with.
+00:54:10.240 Um and but what digital does do is it gives access to those people who really want to work it and then that frees up
+00:54:17.680 access for those people who can't do digital or don't want to do digital at this moment in time for a lot of
+00:54:23.599 different reasons. But we have to build trust. So it's speaking with patients
+00:54:29.920 and building trust about what we're going to do with that data and speaking in in language in in plain English
+00:54:37.599 because we talk about cyber security and we talk about all these things. This is not plain English. We've got to start
+00:54:43.520 talking about plain English and the benefits of digital for people who may have a fear and not just be you've got
+00:54:50.960 to do it. Yeah. Well uh I think I think absolutely
+00:54:56.800 and and I think uh as as you rightly mentioned that we should start with people because everything we are doing
+00:55:02.480 is for our people and for our communities. So so I think if we can just start with our people then then it
+00:55:08.240 would be the most relevant for for for our approach. So I will uh uh there are so many questions but unfortunately I
+00:55:14.800 will just ask one more question to Tom and then we will conclude. So uh Tom uh
+00:55:21.520 what mechanisms are in place to support a translation of national strategy into local reality and how is the department
+00:55:28.319 balancing central priorities with local autonomy and innovation?
+00:55:34.720 Hi. Yeah. Um the I mean I think the you'll have heard from our secretary of
+00:55:40.880 state that last year we tried to have the number of targets that were in the
+00:55:45.920 the national planning guidance that was put out and similarly on um social care
+00:55:52.160 we tried to do the same where we were much clearer about the and and trying to
+00:55:57.440 move more towards outcomes rather than um than inputs and processes. Um I think
+00:56:04.160 that direction of travel will you know be the be still there um in the uh
+00:56:10.640 what's going to come out in the autumn and we'll be really trying to um make
+00:56:16.319 sure that the the guidance the um if you like the instructions that are given
+00:56:21.359 from the center try to enable um much um
+00:56:27.920 more clearly the setting of the priorities that have come from the 10
+00:56:33.280 plan and from the Secretary of State particularly around um you know and actually the plan for change from the
+00:56:39.280 prime minister around electives you know getting waiting list down um urgent and
+00:56:44.880 emergency care which people care a lot about in terms of their own experience and um and obviously GP access as well.
+00:56:52.799 So I think a fir an embedding if you like and a and a further attempt to
+00:57:00.079 really be clear about the what um and try to be less um
+00:57:07.359 reduce complexity around the how people are going to have to do it um in local systems. Um obviously the um the the
+00:57:16.319 neighborhood health plans I think are a big opportunity here at place level to
+00:57:23.359 um help bind people together and get that wider view of the social
+00:57:29.440 determinance of health and inequalities into a a plan that the NHS will
+00:57:35.520 recognize as one where they'll try and create those conditions for neighborhood based service um provision and that
+00:57:42.400 shift to community um that we've talked about and um yeah I'm very conscious of
+00:57:49.119 time so I'll probably leave it there but I think that that that will be the the
+00:57:54.400 continued desire and attempt from us at the center to become more of an enabling
+00:57:59.680 center rather than a you know the the the centralist model that everybody has talked about in the past and that the
+00:58:05.440 10-year plan tries to move away from. Easier said than done but I think we're we're moving in the right direction.
+00:58:12.480 Thank you. Thank you so much. Um, thank you uh Tom, Richard and and Rashel. I think and then couple of common themes
+00:58:18.559 whether we we talk about the national uh perspective or systemwide innovation or
+00:58:24.400 um or voice of patient and communities there are couple of important areas like how to gain more trust how to do the
+00:58:31.119 engagement how we can put the people people first and then how this can all the innovations can translate into the
+00:58:37.280 real real issues on on ground. So thank you so much and I'm sure uh all the participants they have learned a lot
+00:58:42.960 from this session. So I I on behalf of Health Innovation Network and West Yorkshire ICB I just want to thank you
+00:58:49.760 for your time and all the participants who have who have joined us today. I'm I'm really happy to also announce that
+00:58:56.319 our next uh distinguished lecture series is on 20th November uh with the system
+00:59:02.559 transformation at scale learning from industry. So, so, uh, stay tuned and
+00:59:07.680 then I I really look forward to, uh, seeing you all there as well. Thank you so much for your time and have a very
+00:59:12.880 nice afternoon. Thank you. Bye-bye. Thank you. Thank you.

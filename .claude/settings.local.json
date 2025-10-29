@@ -18,7 +18,8 @@
       "Bash(\".\\.venv\\Scripts\\python\" analysis/multi_agent/run_multi_agent.py --question \"What are the key workforce priorities from the NHS 10-year plan?\" --max-iterations 2)",
       "Bash(\".\\.venv\\Scripts\\python\" analysis/multi_agent/run_multi_agent.py --question \"What are key NHS 10-year plan workforce priorities?\" --max-iterations 2 --output improved_report.md)",
       "Bash(\"..\\..\\..\\.venv\\Scripts\\python\" knowledge_graph_agent.py)",
-      "Bash(\".\\.venv\\Scripts\\python\" analysis/multi_agent/run_multi_agent.py --question \"What can we understand about elective care and hospital discharges in Leeds, particularly the relationship between LTHT acute services and LCH community services? What are the challenges, bottlenecks, and what could happen if discharge processes aren''t well coordinated?\" --max-iterations 5 --output elective_care_discharge_WITH_KG.md)"
+      "Bash(\".\\.venv\\Scripts\\python\" analysis/multi_agent/run_multi_agent.py --question \"What can we understand about elective care and hospital discharges in Leeds, particularly the relationship between LTHT acute services and LCH community services? What are the challenges, bottlenecks, and what could happen if discharge processes aren''t well coordinated?\" --max-iterations 5 --output elective_care_discharge_WITH_KG.md)",
+      "Bash(pip install:*)"
     ],
     "deny": [],
     "ask": []
