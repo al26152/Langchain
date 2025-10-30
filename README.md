@@ -67,17 +67,57 @@ This is a **Retrieval-Augmented Generation (RAG)** pipeline designed to analyze 
 
 ```bash
 # Install dependencies (if not already done)
-pip install langchain langchain-openai langchain-chroma unstructured openai chromadb
+pip install langchain langchain-openai langchain-chroma unstructured openai chromadb streamlit plotly pandas
 
 # Set up your OpenAI API key in .env file
 OPENAI_API_KEY=sk-...
 ```
+
+### 2. Launch Web Interface (Recommended Starting Point)
+
+```bash
+python -m streamlit run web_interface/app.py
+```
+
+**This opens an interactive dashboard at `http://localhost:8501`** with:
+- Visual query interface
+- Real-time analysis results
+- Multi-agent system with knowledge graph integration
+- Query history and parameter controls
+
+**Features:**
+- 🎯 Ask strategic questions in natural language
+- 🔄 Automatic iterative refinement with quality checking
+- 📊 Confidence scoring and evidence tracking
+- 🏷️ Epistemic tags (FACT/ASSUMPTION/INFERENCE) on all claims
+- ⏱️ Document recency flags and date awareness
+
+See [Web Interface Guide](web_interface/README_WEB.md) for detailed setup instructions.
 
 ---
 
 ## Command Reference
 
 ### Choose Your Path Based on Your Needs
+
+#### 🌐 **RECOMMENDED: Interactive Web Interface**
+
+Use this for the best user experience with visual interface:
+
+```bash
+python -m streamlit run web_interface/app.py
+```
+
+**Access at**: `http://localhost:8501`
+
+**Advantages**:
+- Beautiful visual interface with no command-line knowledge needed
+- Real-time feedback as analysis runs
+- Parameter sliders for iterations, temperature, and k-value
+- View confidence scores and epistemic tags
+- Query history and results persistence
+
+---
 
 #### 🚀 **RECOMMENDED: Full Automated Pipeline**
 

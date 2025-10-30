@@ -170,6 +170,10 @@ Entity resolution is **automatically enabled** in:
 - `SynthesisAgent` (answer normalization)
 - `KnowledgeGraphAgent` (enhanced entity extraction)
 
+**Works Together With:**
+- **Document Classification Metadata**: Organizations are automatically tagged during ingestion (NATIONAL/SYSTEM/ORGANIZATION/LOCAL levels), enabling organization-aware filtering
+- **Knowledge Graph**: Entity relationships from the KG expand searches to related organizations and services
+
 To disable (not recommended):
 ```python
 # Disable in EvidenceAgent

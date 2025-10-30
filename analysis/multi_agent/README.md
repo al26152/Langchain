@@ -16,13 +16,15 @@ An advanced evidence-gathering system that uses multiple AI agents working toget
 
 ## The 4 Agents (+ Knowledge Graph Integration)
 
-### 1. Evidence Agent ✨ **[Enhanced with KG]**
+### 1. Evidence Agent ✨ **[Enhanced with KG + Metadata-Based Classification]**
 - Retrieves relevant chunks from ChromaDB
 - **Uses Knowledge Graph to expand queries with related entities**
+- **Uses document metadata (type, strategic level, organization) for smart prioritization**
 - **Identifies missing relationships between entities**
 - Calculates coverage metrics (source count, date distribution)
 - Identifies evidence gaps
 - Classifies epistemic types (FACT/ASSUMPTION/INFERENCE)
+- **Automatically boosts strategic documents (10-year plans, operational guidance) for strategy queries**
 
 ### 2. Critique Agent
 - Analyzes evidence quality
@@ -364,5 +366,5 @@ Built on top of:
 
 ---
 
-**Version**: 2.0.0 (Knowledge Graph Integration)
-**Last Updated**: October 26, 2025
+**Version**: 2.1.0 (Knowledge Graph Integration + Metadata-Based Classification)
+**Last Updated**: October 30, 2025

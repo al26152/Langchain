@@ -8,28 +8,73 @@ A Streamlit web interface for the NHS Strategic Analysis RAG Pipeline. Provides 
 - Python 3.8+
 - OpenAI API key (set in `.env` file in root directory)
 - ChromaDB already populated (run `python run_full_pipeline.py` first)
+- Streamlit and dependencies installed
 
-### Installation
+### Installation (One-Time Setup)
 
-1. **Install dependencies:**
+1. **Install dependencies from root directory:**
    ```bash
-   cd web_interface
-   pip install -r requirements_web.txt
+   pip install streamlit plotly pandas langchain langchain-openai langchain-chroma
    ```
 
-2. **Verify .env file exists** in the parent directory with your OpenAI API key:
+   Or use the requirements file:
+   ```bash
+   pip install -r web_interface/requirements_web.txt
+   ```
+
+2. **Verify .env file exists** in the root directory with your OpenAI API key:
    ```bash
    # In root directory (C:\Users\al261\OneDrive\Documents\Langchain\)
-   cat .env
+   # Check if .env exists and has OPENAI_API_KEY
+   type .env
    # Should show: OPENAI_API_KEY=sk-...
    ```
 
-3. **Start the Streamlit app:**
+   If .env doesn't exist, create it:
    ```bash
-   streamlit run app.py
+   echo OPENAI_API_KEY=sk-your-key-here > .env
    ```
 
-   The app will open at: **http://localhost:8501**
+3. **Ensure ChromaDB is populated:**
+   ```bash
+   # From root directory, run this once to index documents
+   python run_full_pipeline.py
+   ```
+
+### Startup
+
+From the root directory, run:
+
+```bash
+# Option 1: Using Python module (recommended)
+python -m streamlit run web_interface/app.py
+
+# Option 2: Direct streamlit command
+cd web_interface
+streamlit run app.py
+```
+
+The app will open automatically at: **http://localhost:8501**
+
+**To stop the server:** Press `Ctrl+C` in your terminal
+
+### Restart the Server
+
+If you've made changes or want to restart:
+```bash
+# Press Ctrl+C to stop current session
+# Then run the startup command again
+python -m streamlit run web_interface/app.py
+```
+
+### Adding New Documents
+
+After adding documents to `docs/` and running the ingestion pipeline:
+```bash
+python run_full_pipeline.py
+```
+
+Then refresh your browser (Ctrl+R) - the web interface will automatically detect new documents in ChromaDB.
 
 ---
 
