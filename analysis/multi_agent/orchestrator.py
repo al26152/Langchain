@@ -149,11 +149,13 @@ class Orchestrator:
             previous_gaps = critique_results[-1]["gaps"] if critique_results else []
 
             # STEP 1: Evidence Agent - Retrieve evidence
+            # Use config for k value, default to 30 to include strategic documents
+            k = Config.DEFAULT_RETRIEVAL_K if Config else 30
             evidence_result = self.evidence_agent.search(
                 query=query,
                 iteration_num=iteration_num,
                 previous_gaps=previous_gaps,
-                k=20,
+                k=k,
             )
 
             iteration_results.append(evidence_result)

@@ -139,14 +139,8 @@ class EvidenceAgent:
         # Extract primary organization from query
         primary_org = self._extract_primary_organization(query)
         if primary_org:
-            print(f"[ORG FILTER] Primary organization: {primary_org}")
-
-        # Determine filtering mode based on question
-        strict_mode = self._should_use_strict_mode(query, primary_org)
-        if strict_mode:
-            print(f"[ORG FILTER] Using STRICT mode (org-specific docs only)")
-        else:
-            print(f"[ORG FILTER] Using CONTEXT mode (org-specific + collaborative docs)")
+            print(f"[ORG RANK] Primary organization: {primary_org}")
+            print(f"[ORG RANK] Using ranking (org-specific first, then strategic context, then general)")
 
         # Expand query based on previous gaps
         expanded_query = self._expand_query(query, previous_gaps)
@@ -154,9 +148,9 @@ class EvidenceAgent:
         # Retrieve chunks from ChromaDB
         results = self.vectordb.similarity_search(expanded_query, k=k)
 
-        # Filter and re-rank by organization affinity
+        # Re-rank by organization affinity (no filtering - keep all relevant docs)
         if primary_org:
-            results = self._filter_by_organization_affinity(results, primary_org, strict_mode=strict_mode)
+            results = self._rank_by_organization_affinity(results, primary_org)
             # Tag documents by relevance for nuanced synthesis
             results = self._tag_documents_by_relevance(results, primary_org)
 
@@ -192,52 +186,6 @@ class EvidenceAgent:
             "gaps": gaps,
             "iteration": iteration_num,
         }
-
-    def _should_use_strict_mode(self, query: str, primary_org: Optional[str]) -> bool:
-        """
-        Determine if we should use strict mode (org-specific docs only) or
-        context mode (org-specific + collaborative docs).
-
-        Args:
-            query: The original query
-            primary_org: The primary organization detected
-
-        Returns:
-            True for strict mode, False for context mode
-        """
-        if not primary_org:
-            # No organization mentioned = use all docs
-            return False
-
-        query_lower = query.lower()
-
-        # Context keywords that suggest collaborative/comparative analysis is wanted
-        context_keywords = [
-            "work together", "collaboration", "partner", "integrate", "coordinate",
-            "relationship", "compared", "versus", "vs", "difference", "how do",
-            "what do", "joint", "shared", "together", "between", "across"
-        ]
-
-        # Strict keywords that suggest org-specific answer is wanted
-        strict_keywords = [
-            "what are", "what is", "priority", "challenge", "goal", "objective",
-            "plan", "strategy", "focus", "initiative", "strength", "weakness",
-            "role", "responsibility", "specific"
-        ]
-
-        # Count keyword matches
-        context_score = sum(1 for kw in context_keywords if kw in query_lower)
-        strict_score = sum(1 for kw in strict_keywords if kw in query_lower)
-
-        # Examples:
-        # "What are LTHT's priorities?" → strict_score=2 → STRICT MODE
-        # "How do LTHT and LCH work together?" → context_score=2 → CONTEXT MODE
-        # "What is LTHT's strategy?" → strict_score=2 → STRICT MODE
-
-        if context_score > strict_score:
-            return False  # Context mode
-        else:
-            return True   # Strict mode (default for org-specific queries)
 
     def _extract_primary_organization(self, query: str) -> Optional[str]:
         """
@@ -310,18 +258,17 @@ class EvidenceAgent:
 
         return results
 
-    def _filter_by_organization_affinity(self, results: List, primary_org: Optional[str], strict_mode: bool = False) -> List:
+    def _rank_by_organization_affinity(self, results: List, primary_org: Optional[str]) -> List:
         """
         Re-rank results to prioritize documents affiliated with the primary organization.
+        Uses ranking, NOT filtering - all relevant documents are kept.
 
         Args:
             results: List of retrieved documents
-            primary_org: Primary organization name to filter by
-            strict_mode: If True, only return docs about the primary organization.
-                        If False, prioritize primary org docs but include others for context.
+            primary_org: Primary organization name to rank by
 
         Returns:
-            Re-ranked results with organization-specific docs first (or only if strict_mode=True)
+            Re-ranked results with primary org docs first, then others
         """
         if not primary_org:
             return results
@@ -333,36 +280,36 @@ class EvidenceAgent:
             "Leeds and York Partnership NHS Foundation Trust": ["LYPFT", "Mental Health", "Partnership"],
         }
 
+        # Strategic context keywords that are important for all queries
+        strategic_keywords = ["10-year", "health plan", "strategy", "plan", "framework", "priority", "national", "nhs england"]
+
         primary_keywords = org_keywords.get(primary_org, [])
 
-        # Separate results into primary org docs and others
-        primary_org_docs = []
-        other_docs = []
-
+        # Score each document for ranking
+        scored_results = []
         for doc in results:
             source = doc.metadata.get("source", "").lower()
             content = doc.page_content.lower()
 
-            # Check if this document is about the primary organization
-            is_primary_org = any(kw.lower() in source or kw.lower() in content for kw in primary_keywords)
+            score = 0
 
-            if is_primary_org:
-                primary_org_docs.append(doc)
+            # PRIMARY: Direct mention of organization (rank: 3)
+            if any(kw.lower() in source or kw.lower() in content for kw in primary_keywords):
+                score = 3
+
+            # STRATEGIC: National/strategic context docs (rank: 2)
+            elif any(kw.lower() in source or kw.lower() in content for kw in strategic_keywords):
+                score = 2
+
+            # OTHER: General NHS/health context (rank: 1)
             else:
-                other_docs.append(doc)
+                score = 1
 
-        # In strict mode, only return primary org docs
-        if strict_mode:
-            if primary_org_docs:
-                return primary_org_docs
-            else:
-                # Fallback to all docs if no org-specific docs found
-                print(f"[ORG FILTER] No documents found specifically about {primary_org}")
-                print(f"[ORG FILTER] Falling back to all retrieved documents")
-                return results
+            scored_results.append((doc, score))
 
-        # In context mode, prioritize primary org docs but keep others for context
-        return primary_org_docs + other_docs
+        # Sort by score (descending), then preserve original order for ties
+        scored_results.sort(key=lambda x: x[1], reverse=True)
+        return [doc for doc, score in scored_results]
 
     def _expand_query(self, query: str, previous_gaps: Optional[List[Dict]]) -> str:
         """
@@ -403,7 +350,17 @@ class EvidenceAgent:
             except Exception as e:
                 print(f"[WARNING] KG expansion failed: {e}")
 
-        # STEP 3: Gap-based expansion - Subsequent iterations
+        # STEP 3: Strategic Keywords - Add for priority/strategy questions
+        # Explicitly include NHS 10-year plan and national strategy docs
+        strategy_keywords = ["priority", "priorities", "strategy", "plan", "goal", "objective"]
+        query_lower = query.lower()
+        if any(kw in query_lower for kw in strategy_keywords):
+            strategic_terms = ["10-year plan", "health plan England", "national health strategy", "NHS England planning framework", "long-term planning"]
+            if not any(term.lower() in expanded_query.lower() for term in strategic_terms):
+                expanded_query = f"{expanded_query} {' '.join(strategic_terms)}"
+                print(f"[STRATEGY EXPANSION] Added national strategic context")
+
+        # STEP 4: Gap-based expansion - Subsequent iterations
         if previous_gaps:
             gap_terms = []
             for gap in previous_gaps:

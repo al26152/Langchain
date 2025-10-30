@@ -68,7 +68,8 @@ class Config:
     # =========================================================================
 
     # Default number of chunks to retrieve from ChromaDB
-    DEFAULT_RETRIEVAL_K = 20
+    # Increased to 30 to ensure strategic documents like 10-year plan are included
+    DEFAULT_RETRIEVAL_K = 30
 
     # Maximum k value allowed (for advanced users)
     MAX_RETRIEVAL_K = 50
