@@ -6,18 +6,20 @@ This is a **Retrieval-Augmented Generation (RAG)** pipeline designed to analyze 
 
 ### What This Pipeline Does
 
-1. **Extracts and tracks document dates** - Automatically extracts publication dates, updated dates, fiscal years, and strategy timeframes
-2. **Ingests documents into a searchable vector database** - Uses OpenAI embeddings and ChromaDB for semantic search
-3. **Auto-tags documents** - Assigns Theme and Audience labels using GPT-3.5-turbo
-4. **Analyzes with multi-source synthesis** - Forces answers to cite 3+ different sources with explicit synthesis
-5. **Flags document recency** - Marks recent, aging, and archival documents; highlights strategies expiring soon
-6. **Provides interactive queries** - Ask strategic questions and get multi-source answers with date awareness
+1. **Classifies documents by type and level** - Automatically classifies documents as STRATEGIC_PLAN, OPERATIONAL_GUIDANCE, ORG_SPECIFIC, PARTNERSHIP, or GENERAL (with NATIONAL/SYSTEM/ORGANIZATION/LOCAL levels)
+2. **Extracts and tracks document dates** - Automatically extracts publication dates, updated dates, fiscal years, and strategy timeframes
+3. **Ingests documents into a searchable vector database** - Uses OpenAI embeddings and ChromaDB for semantic search
+4. **Auto-tags documents** - Assigns Theme and Audience labels using GPT-3.5-turbo
+5. **Analyzes with multi-source synthesis** - Forces answers to cite 3+ different sources with explicit synthesis
+6. **Flags document recency** - Marks recent, aging, and archival documents; highlights strategies expiring soon
+7. **Provides interactive queries** - Ask strategic questions and get multi-source answers with date awareness
 
 ### Why This Matters for NHS Strategy
 
 - **Recency awareness** - Healthcare strategies change rapidly; the system flags documents 2+ years old and strategies expiring within 1 year
 - **Multi-source thinking** - Forces synthesis across multiple documents rather than single-source answers
-- **Metadata tracking** - Each retrieved chunk includes publication date, theme, audience, and relevance flags
+- **Metadata tracking** - Each retrieved chunk includes publication date, theme, audience, document type, strategic level, organization, and relevance flags
+- **Document classification** - Automatic metadata-based classification (STRATEGIC_PLAN, OPERATIONAL_GUIDANCE, ORG_SPECIFIC, PARTNERSHIP, GENERAL) enables dynamic strategic document prioritization
 - **Complete temporal data** - All 30 documents indexed with full publication/strategy date metadata (100% coverage)
 - **Quick context** - Find relevant strategic information across 30 documents with 16,983+ indexed chunks
 
@@ -48,7 +50,14 @@ This is a **Retrieval-Augmented Generation (RAG)** pipeline designed to analyze 
 - `[STRATEGY EXPIRES 2025]` - Workforce strategy flagged ⚠️
 - `[NO DATE]` - 0 documents (all dates populated) ✓
 
-**Last Updated:** Oct 25, 2025 - Full database rebuild completed after document_dates.json sync. All 16,983 chunks now have complete metadata (dates, themes, audiences).
+**Last Updated:** Oct 30, 2025 - Implemented metadata-based document classification system. All 16,983 chunks now have document type, strategic level, and organization metadata for dynamic strategic document retrieval.
+
+---
+
+## 📚 Documentation
+
+- **[Document Classification Guide](docs/DOCUMENT_CLASSIFICATION.md)** - How the automatic document classification system works and how to re-classify documents
+- **[Multi-Agent System Architecture](MULTI_AGENT_SYSTEM_ARCHITECTURE.md)** - Detailed technical documentation of the RAG system components
 
 ---
 
