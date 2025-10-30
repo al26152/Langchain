@@ -176,6 +176,71 @@ class SynthesisAgent:
 
         return unique
 
+    def generate_longform_findings(self, query: str, evidence: List[Dict], topic: str = "") -> str:
+        """
+        Generate 600-word long-form structured findings.
+
+        Structure: Context (200w) -> Analysis (200w) -> Implications (200w)
+
+        Args:
+            query: Original question
+            evidence: Tagged evidence chunks
+            topic: Optional specific topic within the query
+
+        Returns:
+            600-word long-form markdown response
+        """
+        context_parts = []
+        for i, e in enumerate(evidence[:self.max_context_chunks], 1):
+            relevance = e.get('org_relevance', 'general').upper()
+            relevance_note = e.get('relevance_note', '')
+            relevance_marker = f"[{relevance}]"
+            if relevance_note:
+                relevance_marker += f" {relevance_note}"
+
+            context_parts.append(
+                f"[{i}] {relevance_marker}\n"
+                f"    Source: {e['source']}\n"
+                f"    Date: {e.get('date', 'Unknown')}\n"
+                f"    Content: {e['content'][:500]}"
+            )
+
+        context = "\n\n".join(context_parts)
+
+        prompt = f"""You are a strategic healthcare analyst synthesizing evidence into long-form findings.
+
+TASK: Generate a 600-word long-form response structured into three sections.
+
+STRUCTURE (EXACTLY as specified):
+1. CONTEXT (200 words): Describe the background, policy landscape, and strategic context
+2. ANALYSIS (200 words): Analyze the evidence, patterns, and findings
+3. IMPLICATIONS (200 words): Strategic implications and what this means going forward
+
+CRITICAL REQUIREMENTS:
+- Total: EXACTLY 600 words (200 + 200 + 200)
+- Each section is clearly labeled with ## headers
+- Each section must be substantive and use evidence from provided sources
+- Use [Source1, Source2] citations inline
+- For PATTERN evidence, acknowledge: "Like other trusts..."
+- For COLLABORATIVE evidence: "In collaborative initiatives..."
+- For PRIMARY evidence: Direct attribution
+
+EPISTEMIC CLARITY:
+- Distinguish [FACT] from [INFERENCE]
+- State assumptions explicitly
+- Include caveats where appropriate
+
+EVIDENCE:
+{context}
+
+QUESTION: {query}
+{f'TOPIC FOCUS: {topic}' if topic else ''}
+
+Generate the long-form response (exactly 600 words):"""
+
+        response = self.llm.invoke(prompt)
+        return response.content
+
     def _generate_answer(self, query: str, evidence: List[Dict]) -> str:
         """Generate synthesized answer with traceable findings using LLM."""
         # Build context from evidence

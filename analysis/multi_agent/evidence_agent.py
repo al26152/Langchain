@@ -112,12 +112,38 @@ class EvidenceAgent:
             fallback = Config.FALLBACK_DOCUMENT_COUNT if Config else 30
             return fallback
 
+    def _similarity_search_filtered(self, query: str, k: int, selected_documents: List[str]) -> List:
+        """
+        Execute similarity search limited to selected documents.
+
+        Args:
+            query: Search query
+            k: Number of chunks to retrieve
+            selected_documents: List of document IDs to restrict search to
+
+        Returns:
+            List of search results from selected documents only
+        """
+        # Get all results first
+        all_results = self.vectordb.similarity_search(query, k=k*2)  # Get more to account for filtering
+
+        # Filter to only selected documents
+        selected_set = set(selected_documents)
+        filtered_results = [
+            result for result in all_results
+            if result.metadata.get("source", "") in selected_set
+        ]
+
+        # Return top k after filtering
+        return filtered_results[:k]
+
     def search(
         self,
         query: str,
         iteration_num: int = 1,
         previous_gaps: Optional[List[Dict]] = None,
-        k: int = 20
+        k: int = 20,
+        selected_documents: Optional[List[str]] = None
     ) -> Dict:
         """
         Execute evidence search with coverage analysis.
@@ -127,12 +153,17 @@ class EvidenceAgent:
             iteration_num: Current iteration number
             previous_gaps: Gaps identified in previous iterations
             k: Number of chunks to retrieve
+            selected_documents: List of document IDs to search within (from DocumentSelectorAgent).
+                               If provided, search is restricted to these documents only.
+                               If None, searches all documents.
 
         Returns:
             Dict containing:
             - evidence: List of evidence chunks with metadata
             - metrics: Coverage metrics
             - gaps: Identified gaps
+            - document_filter_applied: Boolean indicating if document filtering was applied
+            - documents_searched: Number of documents in search scope
         """
         print(f"\n[ITERATION {iteration_num}] Evidence Agent: Searching for evidence...")
 
@@ -142,11 +173,20 @@ class EvidenceAgent:
             print(f"[ORG RANK] Primary organization: {primary_org}")
             print(f"[ORG RANK] Using ranking (org-specific first, then strategic context, then general)")
 
+        # Log document filtering if applied
+        if selected_documents:
+            print(f"[DOCUMENT FILTER] Restricting search to {len(selected_documents)} selected documents")
+            print(f"[DOCUMENT FILTER] (From DocumentSelectorAgent - Web context driven selection)")
+
         # Expand query based on previous gaps
         expanded_query = self._expand_query(query, previous_gaps)
 
         # Retrieve chunks from ChromaDB
-        results = self.vectordb.similarity_search(expanded_query, k=k)
+        # If document filter applied, use filtered search; otherwise search all
+        if selected_documents:
+            results = self._similarity_search_filtered(expanded_query, k, selected_documents)
+        else:
+            results = self.vectordb.similarity_search(expanded_query, k=k)
 
         # Boost strategic documents for priority/strategy questions (metadata-based, not hardcoded)
         results = self._boost_strategic_documents(results, query, k)
@@ -188,6 +228,8 @@ class EvidenceAgent:
             "metrics": metrics,
             "gaps": gaps,
             "iteration": iteration_num,
+            "document_filter_applied": selected_documents is not None,
+            "documents_searched": len(selected_documents) if selected_documents else self.total_documents,
         }
 
     def _boost_strategic_documents(self, results: List, query: str, k: int) -> List:

@@ -85,6 +85,60 @@ class CritiqueAgent:
             self.good_threshold = good_threshold or 75  # Updated from 60
             self.adequate_threshold = adequate_threshold or 50  # Updated from 40
 
+    def validate_document_selection(
+        self,
+        selected_documents: List[str],
+        query: str,
+        total_documents: int,
+        web_context: Optional[Dict] = None,
+    ) -> Dict:
+        """
+        Validate document selection from DocumentSelectorAgent.
+
+        Args:
+            selected_documents: List of selected document IDs
+            query: Original query
+            total_documents: Total documents in corpus
+            web_context: Context from WebLookupAgent (themes, priorities)
+
+        Returns:
+            Dict containing:
+            - selection_adequate: Boolean (is selection sufficient?)
+            - coverage_percent: What % of corpus was selected
+            - recommendation: Action to take (PROCEED / EXPAND / REVIEW)
+            - rationale: Why this recommendation
+        """
+        selection_size = len(selected_documents)
+        coverage_percent = (selection_size / total_documents) * 100
+
+        # Assess selection adequacy
+        recommendation = "PROCEED"
+        rationale = f"Selected {selection_size} of {total_documents} documents ({coverage_percent:.1f}%)"
+
+        # Check if selection might be too narrow
+        if coverage_percent < 30:  # Less than 30% of corpus
+            recommendation = "CAUTION"
+            rationale += " - Selection is narrow; may miss important context"
+
+        if coverage_percent < 15:  # Less than 15% of corpus
+            recommendation = "EXPAND"
+            rationale += " - Selection is too narrow; recommend expanding before RAG search"
+
+        # If web context provided, validate thematic alignment
+        if web_context and web_context.get("key_themes"):
+            themes = web_context["key_themes"]
+            # Note: This is simplified - could be enhanced with semantic matching
+            rationale += f"; Themes: {', '.join(themes[:2])}"
+
+        return {
+            "selection_adequate": recommendation in ["PROCEED", "CAUTION"],
+            "coverage_percent": coverage_percent,
+            "selection_size": selection_size,
+            "total_documents": total_documents,
+            "recommendation": recommendation,
+            "rationale": rationale,
+        }
+
     def analyze(
         self,
         evidence_result: Dict,
@@ -369,6 +423,57 @@ class CritiqueAgent:
 
         # Continue otherwise
         return True
+
+    def generate_document_expansion_gaps(
+        self,
+        gaps: List[Dict],
+    ) -> List[Dict]:
+        """
+        Generate gaps specifically for document expansion.
+
+        These gaps can be passed to DocumentSelectorAgent.expand_selection()
+        to request additional documents based on identified gaps.
+
+        Args:
+            gaps: Gaps from the analysis
+
+        Returns:
+            List of expansion gaps for DocumentSelectorAgent
+        """
+        expansion_gaps = []
+
+        # Extract gap types that DocumentSelectorAgent can address
+        for gap in gaps:
+            gap_type = gap.get("type", "")
+
+            # LOW_SOURCE_COVERAGE -> request more documents
+            if gap_type in ["low_source_coverage", "moderate_source_coverage"]:
+                expansion_gaps.append({
+                    "type": "low_document_coverage",
+                    "severity": gap.get("severity", "MEDIUM"),
+                    "reason": gap.get("message", "Need more documents"),
+                    "action": "Expand document selection to improve coverage",
+                })
+
+            # MISSING_THEME -> request documents about missing themes
+            elif gap_type == "low_theme_diversity":
+                expansion_gaps.append({
+                    "type": "missing_themes",
+                    "severity": "MEDIUM",
+                    "reason": f"Evidence spans only {gap.get('metric', 1)} theme(s)",
+                    "missing_themes": ["partnership", "finance", "innovation"],  # Default expansion themes
+                })
+
+            # INSUFFICIENT_RECENT_EVIDENCE -> request recent documents
+            elif gap_type == "insufficient_recent_evidence":
+                expansion_gaps.append({
+                    "type": "missing_time_period",
+                    "severity": "MEDIUM",
+                    "reason": "Need more recent evidence (2024-2025)",
+                    "missing_time_period": "2024",
+                })
+
+        return expansion_gaps
 
     def _generate_recommendations(
         self,

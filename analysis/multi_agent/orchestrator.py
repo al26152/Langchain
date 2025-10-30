@@ -65,6 +65,8 @@ try:
     EvidenceAgent = _import_agent_class("evidence_agent", "EvidenceAgent")
     CritiqueAgent = _import_agent_class("critique_agent", "CritiqueAgent")
     SynthesisAgent = _import_agent_class("synthesis_agent", "SynthesisAgent")
+    WebLookupAgent = _import_agent_class("web_lookup_agent", "WebLookupAgent")
+    DocumentSelectorAgent = _import_agent_class("document_selector_agent", "DocumentSelectorAgent")
 except ImportError as e:
     print(f"WARNING: Could not import agents: {str(e)}")
     raise
@@ -110,13 +112,156 @@ class Orchestrator:
         self.verbose = verbose
 
         # Initialize agents (they will use config defaults if not specified)
+        self.web_lookup_agent = WebLookupAgent(self.llm)
+        self.document_selector_agent = DocumentSelectorAgent(vectordb)
         self.evidence_agent = EvidenceAgent(vectordb, self.llm)
         self.critique_agent = CritiqueAgent(max_iterations=self.max_iterations)
         self.synthesis_agent = SynthesisAgent(self.llm)
 
+    def run_wide_then_deep_analysis(self, query: str) -> Dict:
+        """
+        Run complete 4-phase wide-then-deep analysis.
+
+        PHASES:
+        1. Web Lookup: Get external context (themes, priorities)
+        2. Document Selection: Filter documents using web context + metadata tags
+        3. Evidence Search: RAG search limited to selected documents
+        4. Analysis & Synthesis: Critique and generate long-form output
+
+        Args:
+            query: Strategic question to analyze
+
+        Returns:
+            Dict containing all phase results and final synthesis
+        """
+        print("="*80)
+        print("WIDE-THEN-DEEP 4-PHASE ANALYSIS")
+        print("="*80)
+        print(f"\nQuestion: {query}")
+        print(f"Start time: {datetime.now().strftime('%H:%M:%S')}\n")
+
+        # PHASE 1: Web Lookup - Get external context
+        print("\n" + "="*80)
+        print("PHASE 1: WEB LOOKUP (External Context)")
+        print("="*80)
+        web_context = self.web_lookup_agent.get_context(query)
+        print(f"[OK] Web context retrieved")
+        print(f"    Themes: {', '.join(web_context.get('key_themes', []))}")
+        print(f"    Priorities: {len(web_context.get('national_priorities', []))} identified")
+
+        # PHASE 2: Document Selection - Intelligently filter documents
+        print("\n" + "="*80)
+        print("PHASE 2: DOCUMENT SELECTION (Smart Filtering)")
+        print("="*80)
+        selection_result = self.document_selector_agent.select_documents(query, web_context)
+        selected_docs = selection_result["selected"]
+        print(f"[OK] Document selection complete")
+        print(f"    Selected: {selection_result['selected_count']} of {selection_result['total_documents']} documents")
+        print(f"    Coverage: {(selection_result['selected_count']/selection_result['total_documents']*100):.1f}%")
+
+        # Validate selection
+        validation = self.critique_agent.validate_document_selection(
+            selected_docs, query, selection_result["total_documents"], web_context
+        )
+        print(f"    Validation: {validation['recommendation']}")
+        if validation['recommendation'] == "EXPAND":
+            print(f"    [WARNING] Selection too narrow - expanding scope")
+            # TODO: Could trigger automatic expansion here
+
+        # PHASE 3: Evidence Search - RAG with document filter
+        print("\n" + "="*80)
+        print("PHASE 3: EVIDENCE RETRIEVAL (Limited to Selected Documents)")
+        print("="*80)
+        iteration_results = []
+        critique_results = []
+        iteration_num = 1
+
+        # Iteration loop (limited search space)
+        while iteration_num <= self.max_iterations:
+            print(f"\n{'='*80}")
+            print(f"ITERATION {iteration_num}")
+            print(f"{'='*80}")
+
+            # Get previous gaps
+            previous_gaps = critique_results[-1]["gaps"] if critique_results else []
+
+            # STEP 1: Evidence Agent - Search within selected documents
+            k = Config.DEFAULT_RETRIEVAL_K if Config else 20
+            evidence_result = self.evidence_agent.search(
+                query=query,
+                iteration_num=iteration_num,
+                previous_gaps=previous_gaps,
+                k=k,
+                selected_documents=selected_docs,  # FILTERED SEARCH
+            )
+
+            iteration_results.append(evidence_result)
+
+            # STEP 2: Critique Agent - Analyze quality
+            critique_result = self.critique_agent.analyze(
+                evidence_result=evidence_result,
+                iteration_history=iteration_results[:-1],
+                query=query,
+            )
+
+            critique_results.append(critique_result)
+
+            # STEP 3: Check stopping criteria
+            if not critique_result["continue_iteration"]:
+                print(f"\n{'='*80}")
+                print("STOPPING CRITERIA MET")
+                print(f"{'='*80}")
+                print(f"Reason: {self._get_stop_reason(critique_result, iteration_num)}")
+                break
+
+            iteration_num += 1
+
+        # PHASE 4: Synthesis - Generate final long-form report
+        print(f"\n{'='*80}")
+        print("PHASE 4: SYNTHESIS (Long-Form Analysis)")
+        print(f"{'='*80}")
+
+        final_critique = critique_results[-1]
+
+        synthesis_result = self.synthesis_agent.synthesize(
+            query=query,
+            iteration_results=iteration_results,
+            final_critique=final_critique,
+        )
+
+        # Summary
+        print(f"\n{'='*80}")
+        print("WIDE-THEN-DEEP ANALYSIS COMPLETE")
+        print(f"{'='*80}")
+        print(f"\nIterations: {len(iteration_results)}")
+        print(f"Sources consulted: {synthesis_result['unique_sources']}")
+        print(f"Evidence chunks: {synthesis_result['total_evidence_chunks']}")
+        print(f"Confidence: {synthesis_result['confidence_score']:.0f}%")
+        print(f"Quality: {final_critique['overall_quality']}")
+        print(f"\nEnd time: {datetime.now().strftime('%H:%M:%S')}")
+
+        return {
+            "query": query,
+            "phase1_web_context": web_context,
+            "phase2_document_selection": selection_result,
+            "final_report": synthesis_result["report_markdown"],
+            "answer": synthesis_result["answer"],
+            "confidence_score": synthesis_result["confidence_score"],
+            "quality_rating": final_critique["overall_quality"],
+            "iterations": len(iteration_results),
+            "unique_sources": synthesis_result["unique_sources"],
+            "total_chunks": synthesis_result["total_evidence_chunks"],
+            "epistemic_summary": synthesis_result["epistemic_summary"],
+            "all_iteration_results": iteration_results,
+            "all_critique_results": critique_results,
+            "synthesis_result": synthesis_result,
+        }
+
     def run_analysis(self, query: str) -> Dict:
         """
-        Run complete multi-agent analysis.
+        Run complete multi-agent analysis (original method - backward compatible).
+
+        This method is kept for backward compatibility. For new analysis, use run_wide_then_deep_analysis()
 
         Args:
             query: Strategic question to analyze
@@ -129,11 +274,12 @@ class Orchestrator:
             - all_results: Raw results from all iterations
         """
         print("="*80)
-        print("MULTI-AGENT ITERATIVE RAG ANALYSIS")
+        print("MULTI-AGENT ITERATIVE RAG ANALYSIS (Legacy Mode)")
         print("="*80)
         print(f"\nQuestion: {query}")
         print(f"Max iterations: {self.max_iterations}")
         print(f"Start time: {datetime.now().strftime('%H:%M:%S')}\n")
+        print("[NOTE] Using legacy mode - consider run_wide_then_deep_analysis() for better results\n")
 
         iteration_results = []
         critique_results = []
