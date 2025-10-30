@@ -1,25 +1,7 @@
 {
   "permissions": {
     "allow": [
-      "Bash(dir \"C:\\Users\\al261\\OneDrive\\Documents\\Langchain\" /s /b)",
-      "Bash(dir:*)",
-      "Bash(git add:*)",
-      "Bash(python clean_doc.py:*)",
-      "Bash(python run_full_pipeline.py:*)",
-      "Bash(mv:*)",
-      "Bash(python pipeline/ingest_pipeline.py:*)",
-      "Bash(python:*)",
-      "WebFetch(domain:www.cipd.org)",
-      "Bash(\".venv\\Scripts\\python\" build_knowledge_graph.py)",
-      "Bash(\".venv\\Scripts\\python\" demo_graph_queries.py)",
-      "Bash(\".venv\\Scripts\\python\" build_knowledge_graph_v3.py)",
-      "WebSearch",
-      "Bash(git commit:*)",
-      "Bash(\".\\.venv\\Scripts\\python\" analysis/multi_agent/run_multi_agent.py --question \"What are the key workforce priorities from the NHS 10-year plan?\" --max-iterations 2)",
-      "Bash(\".\\.venv\\Scripts\\python\" analysis/multi_agent/run_multi_agent.py --question \"What are key NHS 10-year plan workforce priorities?\" --max-iterations 2 --output improved_report.md)",
-      "Bash(\"..\\..\\..\\.venv\\Scripts\\python\" knowledge_graph_agent.py)",
-      "Bash(\".\\.venv\\Scripts\\python\" analysis/multi_agent/run_multi_agent.py --question \"What can we understand about elective care and hospital discharges in Leeds, particularly the relationship between LTHT acute services and LCH community services? What are the challenges, bottlenecks, and what could happen if discharge processes aren''t well coordinated?\" --max-iterations 5 --output elective_care_discharge_WITH_KG.md)",
-      "Bash(pip install:*)"
+      "Bash(\"C:\\Users\\al261\\OneDrive\\Documents\\Langchain\\.venv\\Scripts\\python\" \"C:\\Users\\al261\\OneDrive\\Documents\\Langchain\\test_entity_resolution.py\")"
     ],
     "deny": [],
     "ask": []

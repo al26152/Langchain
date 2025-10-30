@@ -26,19 +26,34 @@ import re
 from typing import List, Dict, Set, Tuple
 from pathlib import Path
 
+# Import Entity Resolver
+try:
+    from analysis.entity_resolution import EntityResolver
+except ImportError:
+    EntityResolver = None  # Fallback if entity resolution not available
+
 
 class KnowledgeGraphAgent:
     """Agent for knowledge graph-based query expansion."""
 
-    def __init__(self, kg_path: str = "knowledge_graph_improved.json"):
+    def __init__(self, kg_path: str = "knowledge_graph_improved.json", use_entity_resolution: bool = True):
         """
         Initialize Knowledge Graph Agent.
 
         Args:
             kg_path: Path to knowledge graph JSON file
+            use_entity_resolution: Whether to use EntityResolver for entity lookups (default True)
         """
         self.kg_path = Path(kg_path)
         self.kg = self._load_kg()
+
+        # Initialize Entity Resolver if available
+        self.entity_resolver = None
+        if use_entity_resolution and EntityResolver is not None:
+            try:
+                self.entity_resolver = EntityResolver()
+            except Exception as e:
+                print(f"[WARNING] Could not initialize Entity Resolver in KG Agent: {e}")
 
         # Build reverse lookup for fast entity search
         self.entity_lookup = self._build_entity_lookup()
@@ -59,24 +74,19 @@ class KnowledgeGraphAgent:
         """
         Build lowercase entity lookup for fuzzy matching.
 
+        If EntityResolver is available, it will be used for primary lookups.
+        This method builds a fallback lookup from the knowledge graph.
+
         Returns:
             Dict mapping lowercase entity name to (entity_type, original_name)
         """
         lookup = {}
+
+        # If EntityResolver is available, it handles aliases automatically
+        # Just build basic lookup from KG entities
         for entity_type, entities in self.kg.get("entities", {}).items():
             for entity in entities:
-                # Store original and common abbreviations
                 lookup[entity.lower()] = (entity_type, entity)
-
-                # Handle common abbreviations
-                if entity == "Leeds Community Healthcare NHS Trust":
-                    lookup["lch"] = (entity_type, entity)
-                    lookup["leeds community"] = (entity_type, entity)
-                elif entity == "Leeds Teaching Hospitals NHS Trust":
-                    lookup["ltht"] = (entity_type, entity)
-                    lookup["leeds teaching"] = (entity_type, entity)
-                elif entity == "Leeds and York Partnership NHS Foundation Trust":
-                    lookup["lypft"] = (entity_type, entity)
 
         return lookup
 
@@ -118,12 +128,28 @@ class KnowledgeGraphAgent:
         """
         Extract entities mentioned in the query.
 
+        Uses EntityResolver if available for better alias recognition.
+
         Args:
             query: User query string
 
         Returns:
             List of dicts with entity_type, entity_name, matched_term
         """
+        # Use EntityResolver if available (better alias handling)
+        if self.entity_resolver:
+            entities = self.entity_resolver.extract_entities(query)
+            # Convert to KG format
+            kg_entities = []
+            for entity in entities:
+                kg_entities.append({
+                    "entity_type": entity["entity_type"],
+                    "entity_name": entity["canonical_name"],
+                    "matched_term": entity["matched_alias"],
+                })
+            return kg_entities
+
+        # Fallback to original implementation
         query_lower = query.lower()
         found_entities = []
 

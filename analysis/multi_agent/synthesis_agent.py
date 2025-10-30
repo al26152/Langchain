@@ -33,18 +33,53 @@ sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspa
 
 from langchain_openai import ChatOpenAI
 
+# Import configuration
+try:
+    from config import Config
+except ImportError:
+    print("[WARNING] Could not import config, using defaults")
+    Config = None
+
+# Import Entity Resolver
+try:
+    from analysis.entity_resolution import EntityResolver
+except ImportError:
+    EntityResolver = None  # Fallback if entity resolution not available
+
 
 class SynthesisAgent:
     """Agent responsible for synthesizing evidence into final report."""
 
-    def __init__(self, llm: Optional[ChatOpenAI] = None):
+    def __init__(self, llm: Optional[ChatOpenAI] = None, use_entity_resolution: bool = True, max_context_chunks: Optional[int] = None):
         """
         Initialize Synthesis Agent.
 
         Args:
             llm: Language model for answer generation
+            use_entity_resolution: Whether to normalize entity names in output (default True)
+            max_context_chunks: Maximum evidence chunks to use in synthesis (from config if not provided)
         """
-        self.llm = llm or ChatOpenAI(model="gpt-4o", temperature=0.5)
+        # Use config for defaults
+        if Config:
+            default_model = Config.DEFAULT_LLM_MODEL
+            default_temp = Config.DEFAULT_TEMPERATURE
+            self.max_context_chunks = max_context_chunks or Config.MAX_SYNTHESIS_CHUNKS
+        else:
+            default_model = "gpt-4o"
+            default_temp = 0.5
+            self.max_context_chunks = max_context_chunks or 30  # Increased from 20
+
+        self.llm = llm or ChatOpenAI(model=default_model, temperature=default_temp)
+
+        # Initialize Entity Resolver if available
+        self.entity_resolver = None
+        if use_entity_resolution and EntityResolver is not None:
+            try:
+                self.entity_resolver = EntityResolver()
+                print("[OK] Entity Resolver initialized for answer normalization")
+            except Exception as e:
+                print(f"[WARNING] Could not initialize Entity Resolver: {e}")
+                self.entity_resolver = None
 
     def synthesize(
         self,
@@ -78,12 +113,26 @@ class SynthesisAgent:
         unique_evidence = self._deduplicate_evidence(all_evidence)
 
         # Tag evidence with epistemic types
-        from evidence_agent import EvidenceAgent
+        import importlib.util
+        current_dir = os.path.dirname(os.path.abspath(__file__))
+        evidence_agent_path = os.path.join(current_dir, "evidence_agent.py")
+        spec = importlib.util.spec_from_file_location("evidence_agent", evidence_agent_path)
+        evidence_module = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(evidence_module)
+        EvidenceAgent = evidence_module.EvidenceAgent
+
         temp_agent = EvidenceAgent(None, self.llm)
         tagged_evidence = temp_agent.tag_evidence_batch(unique_evidence)
 
         # Generate synthesized answer using LLM
         answer = self._generate_answer(query, tagged_evidence)
+
+        # Normalize entity names in answer
+        if self.entity_resolver:
+            original_length = len(answer)
+            answer = self.entity_resolver.normalize_text(answer, entity_types=["organizations", "services"])
+            if len(answer) != original_length:
+                print("[NORMALIZATION] Standardized entity names in answer")
 
         # Calculate confidence score
         confidence_score = self._calculate_confidence(tagged_evidence, final_critique)
@@ -131,38 +180,64 @@ class SynthesisAgent:
         """Generate synthesized answer with traceable findings using LLM."""
         # Build context from evidence
         context_parts = []
-        for i, e in enumerate(evidence[:20], 1):  # Limit to top 20 for context window
+        # Use configurable limit (default 30, increased from 20)
+        for i, e in enumerate(evidence[:self.max_context_chunks], 1):
+            # Include relevance information to guide synthesis
+            relevance = e.get('org_relevance', 'general').upper()
+            relevance_note = e.get('relevance_note', '')
+            relevance_marker = f"[{relevance}]"
+            if relevance_note:
+                relevance_marker += f" {relevance_note}"
+
             context_parts.append(
-                f"[{i}] Source: {e['source']}\n"
+                f"[{i}] {relevance_marker}\n"
+                f"    Source: {e['source']}\n"
                 f"    Date: {e.get('date', 'Unknown')}\n"
                 f"    Content: {e['content'][:500]}"
             )
 
         context = "\n\n".join(context_parts)
 
-        prompt = f"""You are a strategic healthcare analyst synthesizing evidence for workforce planning.
+        prompt = f"""You are a strategic healthcare analyst synthesizing evidence from NHS documents.
 
-TASK: Generate strategic findings with full traceability.
+TASK: Generate strategic findings with full traceability to answer the user's question.
 
 CRITICAL INSTRUCTIONS:
 
-1. IDENTIFY KEY FINDINGS (3-5 major insights)
+1. UNDERSTAND DOCUMENT RELEVANCE:
+   Each evidence item is marked with its relevance type:
+   - [PRIMARY] = Directly about the target organization
+   - [PATTERN] = From other organizations (indicates broader patterns)
+   - [COLLABORATIVE] = Cross-organizational initiatives
+
+   Use this to frame findings appropriately:
+   - For PRIMARY evidence: Direct attribution ("LYPFT is...")
+   - For PATTERN evidence: Acknowledge broader context ("Like other trusts, LYPFT...")
+   - For COLLABORATIVE evidence: Joint initiative framing ("In collaborative efforts, LYPFT...")
+
+2. IDENTIFY KEY FINDINGS (3-5 major insights)
    - Look for patterns across multiple sources
    - Identify consensus vs. contradictions
-   - Focus on strategic implications for workforce planning
+   - Focus on insights that directly answer the question
+   - Use relevance markers to add nuance to your findings
 
-2. FOR EACH FINDING, STRUCTURE AS:
+3. FOR EACH FINDING, STRUCTURE AS:
 
    **Finding Title**
 
    [SYNTHESIZED] Your synthesis combining multiple sources, with inline citations [Source1, Source2].
+
+   NOTE: If using PATTERN or COLLABORATIVE evidence, acknowledge the source type:
+   - "Like other trusts, LYPFT..." (for PATTERN evidence)
+   - "In collaborative initiatives, LYPFT..." (for COLLABORATIVE evidence)
+   - Direct statements for PRIMARY evidence
 
    Supporting Evidence:
    - [FACT] "Direct quote from document"
      → Source name, specific location if available
 
    Strategic Implication:
-   [INFERENCE] What this means strategically for LCH workforce planning.
+   [INFERENCE] What this means in the context of the question asked.
 
    Basis for inference:
    - FACT: List the facts this is based on
@@ -171,17 +246,18 @@ CRITICAL INSTRUCTIONS:
 
    Caution: Any risks of over-interpretation or conditions that might invalidate this.
 
-3. EVIDENCE TYPE DEFINITIONS:
+4. EVIDENCE TYPE DEFINITIONS:
    - [FACT] = Direct quote or specific data from authoritative source
    - [SYNTHESIZED] = Your combination of multiple facts into coherent insight
    - [INFERENCE] = Your strategic interpretation/implication
 
-4. CRITICAL: For inferences, clearly separate what the documents STATE vs what YOU INFER.
+5. CRITICAL: For inferences, clearly separate what the documents STATE vs what YOU INFER.
 
-5. Guard against over-interpretation:
+6. Guard against over-interpretation:
    - If documents don't explicitly state something, note it as an inference
    - Include "Caution" notes when making strategic leaps
    - Acknowledge uncertainties and conditions
+   - Be explicit about when using PATTERN evidence (infer from other orgs)
 
 EVIDENCE:
 {context}

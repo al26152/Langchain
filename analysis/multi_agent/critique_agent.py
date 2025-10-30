@@ -21,8 +21,21 @@ USAGE:
   critique = agent.analyze(evidence_result, iteration_history)
 """
 
+import sys
+import os
 from typing import List, Dict, Optional
 from collections import Counter
+
+# Add project root to path for config import
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))))
+
+# Import configuration
+try:
+    from config import Config
+except ImportError:
+    # Fallback if config not available
+    print("[WARNING] Could not import config, using defaults")
+    Config = None
 
 
 class CritiqueAgent:
@@ -30,24 +43,47 @@ class CritiqueAgent:
 
     def __init__(
         self,
-        min_sources: int = 5,
-        min_coverage_percent: float = 15.0,
-        min_recent_percent: float = 30.0,
-        max_iterations: int = 5,
+        min_sources: Optional[int] = None,
+        min_coverage_percent: Optional[float] = None,
+        min_recent_percent: Optional[float] = None,
+        max_iterations: Optional[int] = None,
+        excellent_threshold: Optional[int] = None,
+        good_threshold: Optional[int] = None,
+        adequate_threshold: Optional[int] = None,
     ):
         """
         Initialize Critique Agent.
+
+        All parameters are optional and will use config.py defaults if not provided.
+        This allows easy customization while maintaining centralized configuration.
 
         Args:
             min_sources: Minimum unique sources for ADEQUATE coverage
             min_coverage_percent: Minimum % of total documents for ADEQUATE
             min_recent_percent: Minimum % of recent evidence (<1 year)
             max_iterations: Maximum iterations before forcing stop
+            excellent_threshold: Score threshold for EXCELLENT rating
+            good_threshold: Score threshold for GOOD rating
+            adequate_threshold: Score threshold for ADEQUATE rating
         """
-        self.min_sources = min_sources
-        self.min_coverage_percent = min_coverage_percent
-        self.min_recent_percent = min_recent_percent
-        self.max_iterations = max_iterations
+        # Use config defaults if values not provided
+        if Config:
+            self.min_sources = min_sources or Config.MIN_SOURCES
+            self.min_coverage_percent = min_coverage_percent or Config.MIN_COVERAGE_PERCENT
+            self.min_recent_percent = min_recent_percent or Config.MIN_RECENT_PERCENT
+            self.max_iterations = max_iterations or Config.MAX_ITERATIONS
+            self.excellent_threshold = excellent_threshold or Config.EXCELLENT_THRESHOLD
+            self.good_threshold = good_threshold or Config.GOOD_THRESHOLD
+            self.adequate_threshold = adequate_threshold or Config.ADEQUATE_THRESHOLD
+        else:
+            # Fallback to old defaults if config not available
+            self.min_sources = min_sources or 5
+            self.min_coverage_percent = min_coverage_percent or 15.0
+            self.min_recent_percent = min_recent_percent or 30.0
+            self.max_iterations = max_iterations or 5
+            self.excellent_threshold = excellent_threshold or 90  # Updated from 80
+            self.good_threshold = good_threshold or 75  # Updated from 60
+            self.adequate_threshold = adequate_threshold or 50  # Updated from 40
 
     def analyze(
         self,
@@ -178,12 +214,12 @@ class CritiqueAgent:
             elif recent_percent >= 30:
                 score += 5
 
-        # Rating based on score
-        if score >= 80:
+        # Rating based on score (using config thresholds)
+        if score >= self.excellent_threshold:
             rating = "EXCELLENT"
-        elif score >= 60:
+        elif score >= self.good_threshold:
             rating = "GOOD"
-        elif score >= 40:
+        elif score >= self.adequate_threshold:
             rating = "ADEQUATE"
         else:
             rating = "WEAK"

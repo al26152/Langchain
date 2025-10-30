@@ -32,15 +32,42 @@ sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspa
 from langchain_chroma import Chroma
 from langchain_openai import ChatOpenAI
 
-# Import agents - handle both package and direct execution
+# Import configuration
 try:
-    from .evidence_agent import EvidenceAgent
-    from .critique_agent import CritiqueAgent
-    from .synthesis_agent import SynthesisAgent
+    from config import Config
 except ImportError:
-    from evidence_agent import EvidenceAgent
-    from critique_agent import CritiqueAgent
-    from synthesis_agent import SynthesisAgent
+    print("[WARNING] Could not import config, using defaults")
+    Config = None
+
+# Import agents - handle both package and direct execution
+import importlib
+import importlib.util
+
+def _import_agent_class(agent_name, class_name):
+    """Import an agent class flexibly using importlib."""
+    current_dir = os.path.dirname(os.path.abspath(__file__))
+    module_path = os.path.join(current_dir, f"{agent_name}.py")
+
+    # Load module directly from file path
+    try:
+        spec = importlib.util.spec_from_file_location(agent_name, module_path)
+        if spec is None:
+            raise ImportError(f"Could not create spec for {module_path}")
+        module = importlib.util.module_from_spec(spec)
+        sys.modules[agent_name] = module
+        spec.loader.exec_module(module)
+        return getattr(module, class_name)
+    except Exception as e:
+        raise ImportError(f"Failed to import {class_name} from {agent_name}: {str(e)}")
+
+# Import all agent classes
+try:
+    EvidenceAgent = _import_agent_class("evidence_agent", "EvidenceAgent")
+    CritiqueAgent = _import_agent_class("critique_agent", "CritiqueAgent")
+    SynthesisAgent = _import_agent_class("synthesis_agent", "SynthesisAgent")
+except ImportError as e:
+    print(f"WARNING: Could not import agents: {str(e)}")
+    raise
 
 
 class Orchestrator:
@@ -55,7 +82,7 @@ class Orchestrator:
         self,
         vectordb: Chroma,
         llm: Optional[ChatOpenAI] = None,
-        max_iterations: int = 5,
+        max_iterations: Optional[int] = None,
         verbose: bool = True,
     ):
         """
@@ -63,18 +90,28 @@ class Orchestrator:
 
         Args:
             vectordb: ChromaDB vector store
-            llm: Language model (optional, defaults to gpt-4o)
-            max_iterations: Maximum iterations allowed
+            llm: Language model (optional, defaults from config)
+            max_iterations: Maximum iterations allowed (defaults from config)
             verbose: Enable detailed logging
         """
         self.vectordb = vectordb
-        self.llm = llm or ChatOpenAI(model="gpt-4o", temperature=0.5)
-        self.max_iterations = max_iterations
+
+        # Use config for defaults
+        if Config:
+            default_model = Config.DEFAULT_LLM_MODEL
+            default_temp = Config.DEFAULT_TEMPERATURE
+            self.max_iterations = max_iterations or Config.MAX_ITERATIONS
+        else:
+            default_model = "gpt-4o"
+            default_temp = 0.5
+            self.max_iterations = max_iterations or 5
+
+        self.llm = llm or ChatOpenAI(model=default_model, temperature=default_temp)
         self.verbose = verbose
 
-        # Initialize agents
+        # Initialize agents (they will use config defaults if not specified)
         self.evidence_agent = EvidenceAgent(vectordb, self.llm)
-        self.critique_agent = CritiqueAgent(max_iterations=max_iterations)
+        self.critique_agent = CritiqueAgent(max_iterations=self.max_iterations)
         self.synthesis_agent = SynthesisAgent(self.llm)
 
     def run_analysis(self, query: str) -> Dict:

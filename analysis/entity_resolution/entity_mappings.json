@@ -1,0 +1,374 @@
+{
+  "metadata": {
+    "version": "1.0",
+    "last_updated": "2025-10-29",
+    "description": "Entity resolution mappings for NHS Strategic Analysis System"
+  },
+  "organizations": {
+    "Leeds Community Healthcare NHS Trust": {
+      "canonical_name": "Leeds Community Healthcare NHS Trust",
+      "aliases": [
+        "LCH",
+        "LCH Trust",
+        "Leeds Community Healthcare",
+        "Leeds Community Health",
+        "Leeds Community",
+        "Community Healthcare Leeds",
+        "Leeds Community NHS"
+      ],
+      "abbreviation": "LCH",
+      "entity_type": "ORGANIZATION",
+      "priority": "HIGH",
+      "context_keywords": ["community", "healthcare", "leeds"],
+      "org_type": "NHS Trust"
+    },
+    "Leeds Teaching Hospitals NHS Trust": {
+      "canonical_name": "Leeds Teaching Hospitals NHS Trust",
+      "aliases": [
+        "LTHT",
+        "Leeds Teaching Hospitals",
+        "Leeds Teaching Hospital",
+        "Leeds Teaching",
+        "Teaching Hospitals Trust",
+        "LTH",
+        "Leeds Teaching NHS Trust"
+      ],
+      "abbreviation": "LTHT",
+      "entity_type": "ORGANIZATION",
+      "priority": "HIGH",
+      "context_keywords": ["acute", "teaching", "hospital", "ltht"],
+      "org_type": "NHS Trust"
+    },
+    "Leeds and York Partnership NHS Foundation Trust": {
+      "canonical_name": "Leeds and York Partnership NHS Foundation Trust",
+      "aliases": [
+        "LYPFT",
+        "Leeds and York Partnership",
+        "Leeds York Partnership",
+        "Leeds & York Partnership",
+        "LYPFT NHS",
+        "Leeds York Partnership NHS Foundation Trust"
+      ],
+      "abbreviation": "LYPFT",
+      "entity_type": "ORGANIZATION",
+      "priority": "HIGH",
+      "context_keywords": ["mental health", "partnership", "leeds", "york"],
+      "org_type": "NHS Foundation Trust"
+    },
+    "NHS England": {
+      "canonical_name": "NHS England",
+      "aliases": [
+        "NHSE",
+        "NHS E",
+        "National Health Service England"
+      ],
+      "abbreviation": "NHSE",
+      "entity_type": "ORGANIZATION",
+      "priority": "HIGH",
+      "context_keywords": ["national", "england", "nhs"],
+      "org_type": "National Body"
+    },
+    "Integrated Care Boards": {
+      "canonical_name": "Integrated Care Boards",
+      "aliases": [
+        "ICBs",
+        "ICB",
+        "Integrated Care Board",
+        "Integrated Care System Boards"
+      ],
+      "abbreviation": "ICB",
+      "entity_type": "ORGANIZATION",
+      "priority": "HIGH",
+      "context_keywords": ["integrated", "care", "board", "icb"],
+      "org_type": "Statutory Body"
+    },
+    "Leeds City Council": {
+      "canonical_name": "Leeds City Council",
+      "aliases": [
+        "LCC",
+        "Leeds Council",
+        "City of Leeds Council"
+      ],
+      "abbreviation": "LCC",
+      "entity_type": "ORGANIZATION",
+      "priority": "MEDIUM",
+      "context_keywords": ["council", "local authority", "leeds"],
+      "org_type": "Local Authority"
+    },
+    "Primary Care Networks": {
+      "canonical_name": "Primary Care Networks",
+      "aliases": [
+        "PCN",
+        "PCNs",
+        "Primary Care Network",
+        "GP Networks"
+      ],
+      "abbreviation": "PCN",
+      "entity_type": "ORGANIZATION",
+      "priority": "HIGH",
+      "context_keywords": ["primary care", "network", "gp", "pcn"],
+      "org_type": "Network"
+    },
+    "GP Confederations": {
+      "canonical_name": "GP Confederations",
+      "aliases": [
+        "GP Confed",
+        "GP Confederation",
+        "General Practice Confederations",
+        "GP Fed",
+        "GP Federations"
+      ],
+      "abbreviation": "GP Confed",
+      "entity_type": "ORGANIZATION",
+      "priority": "MEDIUM",
+      "context_keywords": ["gp", "general practice", "confederation"],
+      "org_type": "Network"
+    },
+    "Birmingham Community Health NHS Foundation Trust": {
+      "canonical_name": "Birmingham Community Health NHS Foundation Trust",
+      "aliases": [
+        "Birmingham Community Health NHS",
+        "Birmingham Community Health",
+        "BCH NHS"
+      ],
+      "abbreviation": "BCH",
+      "entity_type": "ORGANIZATION",
+      "priority": "LOW",
+      "context_keywords": ["birmingham", "community"],
+      "org_type": "NHS Foundation Trust"
+    },
+    "Derbyshire Community Health Services NHS Foundation Trust": {
+      "canonical_name": "Derbyshire Community Health Services NHS Foundation Trust",
+      "aliases": [
+        "Derbyshire Community Health",
+        "DCHS NHS",
+        "Derbyshire Community"
+      ],
+      "abbreviation": "DCHS",
+      "entity_type": "ORGANIZATION",
+      "priority": "LOW",
+      "context_keywords": ["derbyshire", "community"],
+      "org_type": "NHS Foundation Trust"
+    }
+  },
+  "services": {
+    "Intermediate Care": {
+      "canonical_name": "Intermediate Care",
+      "aliases": [
+        "IC",
+        "intermediate care services",
+        "step-down care",
+        "step down care",
+        "intermediate care beds"
+      ],
+      "abbreviation": "IC",
+      "entity_type": "SERVICE",
+      "priority": "HIGH",
+      "context_keywords": ["intermediate", "step-down", "rehabilitation"]
+    },
+    "Community Services": {
+      "canonical_name": "Community Services",
+      "aliases": [
+        "community care",
+        "community health services",
+        "community healthcare"
+      ],
+      "entity_type": "SERVICE",
+      "priority": "HIGH",
+      "context_keywords": ["community", "outreach"]
+    },
+    "Acute Services": {
+      "canonical_name": "Acute Services",
+      "aliases": [
+        "acute care",
+        "acute hospital services",
+        "secondary care",
+        "hospital services"
+      ],
+      "entity_type": "SERVICE",
+      "priority": "HIGH",
+      "context_keywords": ["acute", "hospital", "emergency"]
+    },
+    "Mental Health Services": {
+      "canonical_name": "Mental Health Services",
+      "aliases": [
+        "MH services",
+        "mental healthcare",
+        "psychological services",
+        "psychiatric services"
+      ],
+      "abbreviation": "MH",
+      "entity_type": "SERVICE",
+      "priority": "HIGH",
+      "context_keywords": ["mental health", "psychiatric", "psychological"]
+    },
+    "Primary Care": {
+      "canonical_name": "Primary Care",
+      "aliases": [
+        "GP services",
+        "general practice",
+        "family medicine",
+        "primary healthcare"
+      ],
+      "entity_type": "SERVICE",
+      "priority": "HIGH",
+      "context_keywords": ["primary", "gp", "general practice"]
+    },
+    "Elective Care": {
+      "canonical_name": "Elective Care",
+      "aliases": [
+        "elective surgery",
+        "planned care",
+        "scheduled care",
+        "non-emergency care"
+      ],
+      "entity_type": "SERVICE",
+      "priority": "HIGH",
+      "context_keywords": ["elective", "planned", "scheduled"]
+    },
+    "Emergency Care": {
+      "canonical_name": "Emergency Care",
+      "aliases": [
+        "A&E",
+        "A and E",
+        "emergency department",
+        "ED",
+        "urgent care",
+        "emergency services"
+      ],
+      "abbreviation": "ED",
+      "entity_type": "SERVICE",
+      "priority": "HIGH",
+      "context_keywords": ["emergency", "urgent", "a&e"]
+    }
+  },
+  "conditions": {
+    "Chronic Obstructive Pulmonary Disease": {
+      "canonical_name": "Chronic Obstructive Pulmonary Disease",
+      "aliases": [
+        "COPD",
+        "chronic obstructive pulmonary disorder",
+        "chronic lung disease"
+      ],
+      "abbreviation": "COPD",
+      "entity_type": "CONDITION",
+      "priority": "HIGH",
+      "context_keywords": ["copd", "respiratory", "lung"]
+    },
+    "Cardiovascular Disease": {
+      "canonical_name": "Cardiovascular Disease",
+      "aliases": [
+        "CVD",
+        "heart disease",
+        "cardiac disease",
+        "cardiovascular disorders"
+      ],
+      "abbreviation": "CVD",
+      "entity_type": "CONDITION",
+      "priority": "HIGH",
+      "context_keywords": ["cardiovascular", "heart", "cardiac"]
+    },
+    "Type 2 Diabetes": {
+      "canonical_name": "Type 2 Diabetes",
+      "aliases": [
+        "T2D",
+        "diabetes mellitus type 2",
+        "non-insulin dependent diabetes",
+        "NIDDM"
+      ],
+      "abbreviation": "T2D",
+      "entity_type": "CONDITION",
+      "priority": "HIGH",
+      "context_keywords": ["diabetes", "t2d", "blood sugar"]
+    },
+    "Mental Health Conditions": {
+      "canonical_name": "Mental Health Conditions",
+      "aliases": [
+        "mental illness",
+        "psychiatric disorders",
+        "mental disorders",
+        "psychological conditions"
+      ],
+      "entity_type": "CONDITION",
+      "priority": "HIGH",
+      "context_keywords": ["mental health", "psychiatric", "psychological"]
+    }
+  },
+  "roles": {
+    "Chief Executive Officer": {
+      "canonical_name": "Chief Executive Officer",
+      "aliases": [
+        "CEO",
+        "Chief Executive",
+        "CE",
+        "Chief Exec"
+      ],
+      "abbreviation": "CEO",
+      "entity_type": "ROLE",
+      "priority": "MEDIUM",
+      "context_keywords": ["chief", "executive", "ceo"]
+    },
+    "Chief Nursing Officer": {
+      "canonical_name": "Chief Nursing Officer",
+      "aliases": [
+        "CNO",
+        "Chief Nurse",
+        "Director of Nursing"
+      ],
+      "abbreviation": "CNO",
+      "entity_type": "ROLE",
+      "priority": "MEDIUM",
+      "context_keywords": ["nursing", "nurse", "cno"]
+    },
+    "Medical Director": {
+      "canonical_name": "Medical Director",
+      "aliases": [
+        "MD",
+        "Clinical Director",
+        "Chief Medical Officer",
+        "CMO"
+      ],
+      "abbreviation": "MD",
+      "entity_type": "ROLE",
+      "priority": "MEDIUM",
+      "context_keywords": ["medical", "clinical", "director"]
+    }
+  },
+  "pathways": {
+    "Discharge Pathway": {
+      "canonical_name": "Discharge Pathway",
+      "aliases": [
+        "hospital discharge",
+        "discharge process",
+        "discharge planning",
+        "discharge to assess"
+      ],
+      "entity_type": "PATHWAY",
+      "priority": "HIGH",
+      "context_keywords": ["discharge", "pathway", "transition"]
+    },
+    "Referral Pathway": {
+      "canonical_name": "Referral Pathway",
+      "aliases": [
+        "referral process",
+        "referral route",
+        "patient referral"
+      ],
+      "entity_type": "PATHWAY",
+      "priority": "HIGH",
+      "context_keywords": ["referral", "pathway", "route"]
+    },
+    "Care Pathway": {
+      "canonical_name": "Care Pathway",
+      "aliases": [
+        "clinical pathway",
+        "care pathway",
+        "patient pathway",
+        "care route"
+      ],
+      "entity_type": "PATHWAY",
+      "priority": "HIGH",
+      "context_keywords": ["care", "pathway", "clinical"]
+    }
+  }
+}

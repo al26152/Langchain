@@ -34,17 +34,30 @@ sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspa
 from langchain_chroma import Chroma
 from langchain_openai import ChatOpenAI
 
+# Import configuration
+try:
+    from config import Config
+except ImportError:
+    print("[WARNING] Could not import config, using defaults")
+    Config = None
+
 # Import Knowledge Graph Agent
 try:
     from analysis.multi_agent.knowledge_graph_agent import KnowledgeGraphAgent
 except ImportError:
     KnowledgeGraphAgent = None  # Fallback if KG not available
 
+# Import Entity Resolver
+try:
+    from analysis.entity_resolution import EntityResolver
+except ImportError:
+    EntityResolver = None  # Fallback if entity resolution not available
+
 
 class EvidenceAgent:
     """Agent responsible for evidence retrieval and coverage analysis."""
 
-    def __init__(self, vectordb: Chroma, llm: Optional[ChatOpenAI] = None, use_kg: bool = True):
+    def __init__(self, vectordb: Chroma, llm: Optional[ChatOpenAI] = None, use_kg: bool = True, use_entity_resolution: bool = True):
         """
         Initialize Evidence Agent.
 
@@ -52,9 +65,19 @@ class EvidenceAgent:
             vectordb: ChromaDB vector store instance
             llm: Language model for epistemic classification (optional)
             use_kg: Whether to use Knowledge Graph for query expansion (default True)
+            use_entity_resolution: Whether to use Entity Resolver for alias expansion (default True)
         """
         self.vectordb = vectordb
-        self.llm = llm or ChatOpenAI(model="gpt-4o-mini", temperature=0.3)
+
+        # Use config for epistemic classification LLM defaults
+        if Config:
+            default_model = Config.EPISTEMIC_LLM_MODEL
+            default_temp = Config.EPISTEMIC_TEMPERATURE
+        else:
+            default_model = "gpt-4o-mini"
+            default_temp = 0.3
+
+        self.llm = llm or ChatOpenAI(model=default_model, temperature=default_temp)
         self.total_documents = self._count_total_documents()
 
         # Initialize Knowledge Graph Agent if available
@@ -67,6 +90,17 @@ class EvidenceAgent:
                 print(f"[WARNING] Could not initialize Knowledge Graph Agent: {e}")
                 self.kg_agent = None
 
+        # Initialize Entity Resolver if available
+        self.entity_resolver = None
+        if use_entity_resolution and EntityResolver is not None:
+            try:
+                self.entity_resolver = EntityResolver()
+                stats = self.entity_resolver.get_statistics()
+                print(f"[OK] Entity Resolver initialized ({stats['total_entities']} entities, {stats['total_aliases']} aliases)")
+            except Exception as e:
+                print(f"[WARNING] Could not initialize Entity Resolver: {e}")
+                self.entity_resolver = None
+
     def _count_total_documents(self) -> int:
         """Count total unique documents in ChromaDB."""
         try:
@@ -74,7 +108,9 @@ class EvidenceAgent:
             sources = set(m.get("source", "") for m in all_data.get("metadatas", []))
             return len(sources)
         except:
-            return 30  # Fallback to known count
+            # Use config fallback if available
+            fallback = Config.FALLBACK_DOCUMENT_COUNT if Config else 30
+            return fallback
 
     def search(
         self,
@@ -100,11 +136,29 @@ class EvidenceAgent:
         """
         print(f"\n[ITERATION {iteration_num}] Evidence Agent: Searching for evidence...")
 
+        # Extract primary organization from query
+        primary_org = self._extract_primary_organization(query)
+        if primary_org:
+            print(f"[ORG FILTER] Primary organization: {primary_org}")
+
+        # Determine filtering mode based on question
+        strict_mode = self._should_use_strict_mode(query, primary_org)
+        if strict_mode:
+            print(f"[ORG FILTER] Using STRICT mode (org-specific docs only)")
+        else:
+            print(f"[ORG FILTER] Using CONTEXT mode (org-specific + collaborative docs)")
+
         # Expand query based on previous gaps
         expanded_query = self._expand_query(query, previous_gaps)
 
         # Retrieve chunks from ChromaDB
         results = self.vectordb.similarity_search(expanded_query, k=k)
+
+        # Filter and re-rank by organization affinity
+        if primary_org:
+            results = self._filter_by_organization_affinity(results, primary_org, strict_mode=strict_mode)
+            # Tag documents by relevance for nuanced synthesis
+            results = self._tag_documents_by_relevance(results, primary_org)
 
         # Extract evidence with metadata
         evidence = []
@@ -118,6 +172,8 @@ class EvidenceAgent:
                 "chunk_type": doc.metadata.get("chunk_type", "narrative"),
                 "epistemic_type": None,  # Will be classified later
                 "confidence": None,  # Will be calculated later
+                "org_relevance": doc.metadata.get("org_relevance", "general"),  # Primary, pattern, or collaborative
+                "relevance_note": doc.metadata.get("relevance_note", ""),  # Explanation of relevance
             })
 
         # Calculate coverage metrics
@@ -137,9 +193,180 @@ class EvidenceAgent:
             "iteration": iteration_num,
         }
 
+    def _should_use_strict_mode(self, query: str, primary_org: Optional[str]) -> bool:
+        """
+        Determine if we should use strict mode (org-specific docs only) or
+        context mode (org-specific + collaborative docs).
+
+        Args:
+            query: The original query
+            primary_org: The primary organization detected
+
+        Returns:
+            True for strict mode, False for context mode
+        """
+        if not primary_org:
+            # No organization mentioned = use all docs
+            return False
+
+        query_lower = query.lower()
+
+        # Context keywords that suggest collaborative/comparative analysis is wanted
+        context_keywords = [
+            "work together", "collaboration", "partner", "integrate", "coordinate",
+            "relationship", "compared", "versus", "vs", "difference", "how do",
+            "what do", "joint", "shared", "together", "between", "across"
+        ]
+
+        # Strict keywords that suggest org-specific answer is wanted
+        strict_keywords = [
+            "what are", "what is", "priority", "challenge", "goal", "objective",
+            "plan", "strategy", "focus", "initiative", "strength", "weakness",
+            "role", "responsibility", "specific"
+        ]
+
+        # Count keyword matches
+        context_score = sum(1 for kw in context_keywords if kw in query_lower)
+        strict_score = sum(1 for kw in strict_keywords if kw in query_lower)
+
+        # Examples:
+        # "What are LTHT's priorities?" → strict_score=2 → STRICT MODE
+        # "How do LTHT and LCH work together?" → context_score=2 → CONTEXT MODE
+        # "What is LTHT's strategy?" → strict_score=2 → STRICT MODE
+
+        if context_score > strict_score:
+            return False  # Context mode
+        else:
+            return True   # Strict mode (default for org-specific queries)
+
+    def _extract_primary_organization(self, query: str) -> Optional[str]:
+        """
+        Extract the primary organization mentioned in the query.
+
+        Args:
+            query: The original query
+
+        Returns:
+            Canonical organization name or None
+        """
+        if not self.entity_resolver:
+            return None
+
+        try:
+            entities = self.entity_resolver.extract_entities(query, entity_types=["organizations"])
+            if entities:
+                # Return the first (most relevant) organization
+                return entities[0].get("canonical_name")
+        except:
+            pass
+
+        return None
+
+    def _tag_documents_by_relevance(self, results: List, primary_org: Optional[str]) -> List:
+        """
+        Tag documents with relevance metadata for nuanced analysis.
+        Allows synthesis agent to treat different sources appropriately.
+
+        Args:
+            results: List of retrieved documents
+
+        Returns:
+            Same documents with added 'org_relevance' metadata:
+            - 'primary': Directly about the target organization
+            - 'pattern': From other organizations (could indicate patterns)
+            - 'collaborative': About collaborative initiatives
+        """
+        if not primary_org:
+            return results
+
+        org_keywords = {
+            "Leeds Teaching Hospitals NHS Trust": ["LTHT", "Teaching", "Acute", "Hospital"],
+            "Leeds Community Healthcare NHS Trust": ["LCH", "Community"],
+            "Leeds and York Partnership NHS Foundation Trust": ["LYPFT", "Mental Health", "Partnership"],
+        }
+
+        primary_keywords = org_keywords.get(primary_org, [])
+
+        for doc in results:
+            source = doc.metadata.get("source", "").lower()
+            content = doc.page_content.lower()
+
+            # Check what type of document this is
+            is_primary = any(kw.lower() in source or kw.lower() in content for kw in primary_keywords)
+            is_collaborative = any(
+                kw.lower() in content
+                for kw in ["collaboration", "joint", "shared", "partnership", "integrated", "together"]
+            )
+
+            if is_primary:
+                doc.metadata["org_relevance"] = "primary"
+                doc.metadata["relevance_note"] = "Direct information about target organization"
+            elif is_collaborative:
+                doc.metadata["org_relevance"] = "collaborative"
+                doc.metadata["relevance_note"] = "Cross-organizational collaborative initiative"
+            else:
+                doc.metadata["org_relevance"] = "pattern"
+                doc.metadata["relevance_note"] = "Pattern from other organization (may apply broadly)"
+
+        return results
+
+    def _filter_by_organization_affinity(self, results: List, primary_org: Optional[str], strict_mode: bool = False) -> List:
+        """
+        Re-rank results to prioritize documents affiliated with the primary organization.
+
+        Args:
+            results: List of retrieved documents
+            primary_org: Primary organization name to filter by
+            strict_mode: If True, only return docs about the primary organization.
+                        If False, prioritize primary org docs but include others for context.
+
+        Returns:
+            Re-ranked results with organization-specific docs first (or only if strict_mode=True)
+        """
+        if not primary_org:
+            return results
+
+        # Organization keywords to match in document metadata
+        org_keywords = {
+            "Leeds Teaching Hospitals NHS Trust": ["LTHT", "Teaching", "Acute", "Hospital"],
+            "Leeds Community Healthcare NHS Trust": ["LCH", "Community"],
+            "Leeds and York Partnership NHS Foundation Trust": ["LYPFT", "Mental Health", "Partnership"],
+        }
+
+        primary_keywords = org_keywords.get(primary_org, [])
+
+        # Separate results into primary org docs and others
+        primary_org_docs = []
+        other_docs = []
+
+        for doc in results:
+            source = doc.metadata.get("source", "").lower()
+            content = doc.page_content.lower()
+
+            # Check if this document is about the primary organization
+            is_primary_org = any(kw.lower() in source or kw.lower() in content for kw in primary_keywords)
+
+            if is_primary_org:
+                primary_org_docs.append(doc)
+            else:
+                other_docs.append(doc)
+
+        # In strict mode, only return primary org docs
+        if strict_mode:
+            if primary_org_docs:
+                return primary_org_docs
+            else:
+                # Fallback to all docs if no org-specific docs found
+                print(f"[ORG FILTER] No documents found specifically about {primary_org}")
+                print(f"[ORG FILTER] Falling back to all retrieved documents")
+                return results
+
+        # In context mode, prioritize primary org docs but keep others for context
+        return primary_org_docs + other_docs
+
     def _expand_query(self, query: str, previous_gaps: Optional[List[Dict]]) -> str:
         """
-        Expand query using Knowledge Graph (iteration 1) or gaps (subsequent iterations).
+        Expand query using Entity Resolution, Knowledge Graph, and gaps.
 
         Args:
             query: Original query
@@ -148,19 +375,35 @@ class EvidenceAgent:
         Returns:
             Expanded query string
         """
-        # Iteration 1: Use Knowledge Graph for entity-based expansion
+        expanded_query = query
+
+        # STEP 1: Entity Resolution - Always run first to handle aliases
+        if self.entity_resolver:
+            try:
+                expanded_query = self.entity_resolver.expand_query(expanded_query, max_aliases_per_entity=2)
+                if expanded_query != query:
+                    # Extract entities to show what was expanded
+                    entities = self.entity_resolver.extract_entities(query, entity_types=["organizations", "services"])
+                    if entities:
+                        entity_names = [e["canonical_name"] for e in entities[:3]]
+                        print(f"[ENTITY EXPANSION] Detected: {', '.join(entity_names)}")
+                        print(f"[ENTITY EXPANSION] Added aliases for better retrieval")
+            except Exception as e:
+                print(f"[WARNING] Entity expansion failed: {e}")
+
+        # STEP 2: Knowledge Graph - Iteration 1 only (entity-based expansion)
         if not previous_gaps and self.kg_agent:
             try:
-                kg_result = self.kg_agent.expand_query(query, max_expansion=5)
+                kg_result = self.kg_agent.expand_query(expanded_query, max_expansion=5)
 
                 if kg_result.get("kg_used") and kg_result.get("expansion_terms"):
                     print(f"[KG EXPANSION] Found entities: {', '.join([e['entity_name'] for e in kg_result['entities_found']])}")
                     print(f"[KG EXPANSION] Added related: {', '.join(kg_result['expansion_terms'][:3])}...")
-                    return kg_result["expanded_query"]
+                    expanded_query = kg_result["expanded_query"]
             except Exception as e:
                 print(f"[WARNING] KG expansion failed: {e}")
 
-        # Subsequent iterations: Use gap-based expansion
+        # STEP 3: Gap-based expansion - Subsequent iterations
         if previous_gaps:
             gap_terms = []
             for gap in previous_gaps:
@@ -175,11 +418,10 @@ class EvidenceAgent:
                     gap_terms.append(gap.get("relationship", ""))
 
             if gap_terms:
-                expanded = f"{query} {' '.join(gap_terms)}"
+                expanded_query = f"{expanded_query} {' '.join(gap_terms)}"
                 print(f"[GAP EXPANSION] Added: {', '.join(gap_terms)}")
-                return expanded
 
-        return query
+        return expanded_query
 
     def _calculate_metrics(self, evidence: List[Dict]) -> Dict:
         """Calculate coverage metrics from evidence."""
