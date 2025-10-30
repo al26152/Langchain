@@ -1,8 +1,7 @@
 {
   "permissions": {
     "allow": [
-      "Bash(\"C:\\Users\\al261\\OneDrive\\Documents\\Langchain\\.venv\\Scripts\\python\" \"C:\\Users\\al261\\OneDrive\\Documents\\Langchain\\test_entity_resolution.py\")",
-      "Bash(\"C:\\Users\\al261\\OneDrive\\Documents\\Langchain\\.venv\\Scripts\\python\" -c \"\nimport sys\nsys.path.insert(0, ''.'')\nfrom langchain_chroma import Chroma\nfrom langchain_openai import OpenAIEmbeddings\n\n# Load the database\ndb = Chroma(persist_directory=''chroma_db_test'', embedding_function=OpenAIEmbeddings())\n\n# Get all documents\nall_data = db.get()\nprint(f''Total chunks in ChromaDB: {len(all_data[\"\"ids\"\"])}'')\n\n# Check for 10-year plan\nten_year_chunks = [m for m in all_data[''metadatas''] if ''10-year'' in m.get(''source'', '''').lower() or ''health plan for england'' in m.get(''source'', '''').lower()]\nprint(f''10-year plan chunks found: {len(ten_year_chunks)}'')\n\n# List all unique sources\nsources = set(m.get(''source'', ''Unknown'') for m in all_data[''metadatas''])\nprint(f''\\nTotal unique sources ({len(sources)}):'')\nfor source in sorted(sources)[:15]:\n    count = len([m for m in all_data[''metadatas''] if m.get(''source'') == source])\n    print(f''  - {source}: {count} chunks'')\n\")"
+      "Bash(\"C:\\Users\\al261\\OneDrive\\Documents\\Langchain\\.venv\\Scripts\\python\" -c \"from langchain_chroma import Chroma; from langchain_openai import OpenAIEmbeddings; db = Chroma(persist_directory=''chroma_db_test'', embedding_function=OpenAIEmbeddings()); data = db.get(limit=5); import json; print(json.dumps([m for m in data.get(''metadatas'', [])], indent=2))\")"
     ],
     "deny": [],
     "ask": []

@@ -137,6 +137,30 @@ class Config:
     KNOWLEDGE_GRAPH_ENABLED = True
 
     # =========================================================================
+    # DOCUMENT CLASSIFICATION SETTINGS (Metadata-Based Retrieval)
+    # =========================================================================
+
+    # Valid document types (auto-assigned during ingestion)
+    DOCUMENT_TYPES = [
+        "STRATEGIC_PLAN",        # NHS England 10-year plans, national health strategies
+        "OPERATIONAL_GUIDANCE",  # Planning frameworks, operational guidance
+        "ORG_SPECIFIC",         # Annual reports, board papers, organizational strategies
+        "PARTNERSHIP",          # Health and Care Partnership documents
+        "GENERAL"               # Other NHS/health context
+    ]
+
+    # Valid strategic levels (auto-assigned during ingestion)
+    STRATEGIC_LEVELS = [
+        "NATIONAL",     # NHS England, national policy level
+        "SYSTEM",       # Integrated Care System, partnerships
+        "ORGANIZATION", # Individual trust/council documents
+        "LOCAL"         # Local authority documents
+    ]
+
+    # Enable metadata-based strategic document boosting
+    STRATEGIC_BOOST_ENABLED = True
+
+    # =========================================================================
     # WEB INTERFACE SETTINGS
     # =========================================================================
 

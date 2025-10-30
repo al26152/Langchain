@@ -32,10 +32,15 @@ METADATA STORED PER CHUNK:
   - source: filename
   - date: publication/strategy date
   - year_range: [start, end] for multi-year strategies
-  - theme: auto-assigned category
-  - audience: target audience
+  - theme: auto-assigned category (Theme tagging)
+  - audience: target audience (Theme tagging)
+  - document_type: classification (STRATEGIC_PLAN, OPERATIONAL_GUIDANCE, ORG_SPECIFIC, PARTNERSHIP, GENERAL)
+  - strategic_level: classification (NATIONAL, SYSTEM, ORGANIZATION, LOCAL)
+  - organization: primary organization mentioned
   - element_type: Partition type (Title, NarrativeText, etc)
   - page_number: document page reference
+  - chunk_type: narrative, table_data, or table_context
+  - content_category: optional content type (staff_wellbeing_metrics, performance_benchmark)
 
 USAGE:
   python ingest_pipeline.py
@@ -71,7 +76,7 @@ import os
 # Add parent directory to path so we can import utils
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-from utils.utils import auto_tag
+from utils.utils import auto_tag, classify_document_type
 
 # Import clean_docs - handle both direct execution and package import
 try:
@@ -225,6 +230,17 @@ def clean_and_ingest(docs_path: str, vectordb: Chroma, existing_sources: Set[str
         else:
             print("- No sufficient text for auto-tagging. Using defaults.")
 
+        # Classify document by type, strategic level, and organization
+        doc_type, strategic_level, organization = "GENERAL", "LOCAL", "Unknown"
+        if doc_content_for_tagging.strip():
+            try:
+                doc_type, strategic_level, organization = classify_document_type(filename, doc_content_for_tagging.strip())
+                print(f"- Classified: **Type = '{doc_type}'**, **Level = '{strategic_level}'**, **Organization = '{organization}'**")
+            except Exception as e:
+                print(f"[WARN] Document classification error: {e}")
+        else:
+            print("- No sufficient text for classification. Using defaults.")
+
         # Create document chunks with metadata
         current_document_chunks = []
         for i, element in enumerate(elements):
@@ -253,9 +269,12 @@ def clean_and_ingest(docs_path: str, vectordb: Chroma, existing_sources: Set[str
                 "date": doc_date,  # Publication/strategy date (YYYY-MM-DD or null)
                 "theme": theme,
                 "audience": audience,
+                "document_type": doc_type,  # NEW: classification (STRATEGIC_PLAN, OPERATIONAL_GUIDANCE, etc.)
+                "strategic_level": strategic_level,  # NEW: classification (NATIONAL, SYSTEM, ORGANIZATION, LOCAL)
+                "organization": organization,  # NEW: primary organization mentioned
                 "element_type": type(element).__name__,
                 "page_number": getattr(element.metadata, "page_number", "N/A"),
-                "chunk_type": chunk_type,  # NEW: narrative, table_data, or table_context
+                "chunk_type": chunk_type,  # narrative, table_data, or table_context
             }
 
             # Year_range for multi-year strategies

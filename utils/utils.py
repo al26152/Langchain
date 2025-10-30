@@ -94,3 +94,101 @@ def auto_tag(snippet: str) -> Tuple[str, str]:
     audience = audience_match.group(1).strip() if audience_match else "unknown"
 
     return theme, audience
+
+
+# ============================================================================
+# DOCUMENT CLASSIFICATION FUNCTIONALITY
+# ============================================================================
+# Uses GPT-3.5-turbo to automatically classify documents by:
+# - Document Type: STRATEGIC_PLAN, OPERATIONAL_GUIDANCE, ORG_SPECIFIC, PARTNERSHIP, GENERAL
+# - Strategic Level: NATIONAL, SYSTEM, ORGANIZATION, LOCAL
+# - Organization: LYPFT, LCH, LTHT, NHS England, Leeds City Council, etc.
+#
+# This enables dynamic metadata-based retrieval without hardcoded keywords.
+# ============================================================================
+
+CLASSIFICATION_PROMPT = PromptTemplate.from_template(
+    "Classify this document excerpt:\n\n{content}\n\n"
+    "Respond exactly in this format:\n"
+    "DocumentType: <STRATEGIC_PLAN|OPERATIONAL_GUIDANCE|ORG_SPECIFIC|PARTNERSHIP|GENERAL>\n"
+    "StrategicLevel: <NATIONAL|SYSTEM|ORGANIZATION|LOCAL>\n"
+    "Organization: <organization name or 'Unknown'>\n\n"
+    "Guidelines:\n"
+    "- STRATEGIC_PLAN: NHS England 10-year plans, national health strategies\n"
+    "- OPERATIONAL_GUIDANCE: Planning frameworks, operational guidance\n"
+    "- ORG_SPECIFIC: Annual reports, board papers, strategy from specific trust/organization\n"
+    "- PARTNERSHIP: Health and Care Partnership documents\n"
+    "- GENERAL: Other health/NHS context\n"
+    "- NATIONAL: NHS England, national policy\n"
+    "- SYSTEM: Integrated Care System, partnerships\n"
+    "- ORGANIZATION: Individual trust/council documents\n"
+    "- LOCAL: Local authority documents"
+)
+
+# Initialize GPT-3.5-turbo for document classification
+LLM_CLASSIFICATION = ChatOpenAI(model="gpt-3.5-turbo", temperature=0.2)
+
+
+def classify_document_type(filename: str, content_sample: str) -> Tuple[str, str, str]:
+    """
+    Automatically classify a document by type, strategic level, and organization.
+
+    This function uses GPT-3.5-turbo to analyze a document and assign classification
+    metadata. These labels enable dynamic retrieval based on document importance and
+    organizational relevance, removing the need for hardcoded keywords.
+
+    Args:
+        filename (str): Document filename for context
+        content_sample (str): Text excerpt for classification (typically 500-2000 characters)
+
+    Returns:
+        Tuple[str, str, str]: (document_type, strategic_level, organization)
+            - document_type: One of STRATEGIC_PLAN, OPERATIONAL_GUIDANCE, ORG_SPECIFIC, PARTNERSHIP, GENERAL
+            - strategic_level: One of NATIONAL, SYSTEM, ORGANIZATION, LOCAL
+            - organization: The primary organization mentioned (e.g., "LYPFT", "NHS England")
+
+    Example:
+        >>> doc_type, level, org = classify_document_type(
+        ...     "NHS 10-year plan.md",
+        ...     "The NHS Long Term Plan sets out..."
+        ... )
+        >>> print(doc_type, level, org)
+        "STRATEGIC_PLAN", "NATIONAL", "NHS England"
+
+    Error Handling:
+        If parsing fails, returns ("GENERAL", "LOCAL", "Unknown") as safe defaults
+    """
+    # Format the prompt with the content sample
+    full_prompt = CLASSIFICATION_PROMPT.format(content=content_sample)
+
+    try:
+        # Call GPT-3.5-turbo to classify the document
+        response_msg = LLM_CLASSIFICATION.invoke([HumanMessage(content=full_prompt)])
+        raw = response_msg.content
+
+        # Parse classification using regex
+        doc_type_match = re.search(r"DocumentType:\s*(.+)", raw)
+        strategic_level_match = re.search(r"StrategicLevel:\s*(.+)", raw)
+        org_match = re.search(r"Organization:\s*(.+)", raw)
+
+        # Safely extract values
+        document_type = doc_type_match.group(1).strip() if doc_type_match else "GENERAL"
+        strategic_level = strategic_level_match.group(1).strip() if strategic_level_match else "LOCAL"
+        organization = org_match.group(1).strip() if org_match else "Unknown"
+
+        # Validate document type
+        valid_types = ["STRATEGIC_PLAN", "OPERATIONAL_GUIDANCE", "ORG_SPECIFIC", "PARTNERSHIP", "GENERAL"]
+        if document_type not in valid_types:
+            document_type = "GENERAL"
+
+        # Validate strategic level
+        valid_levels = ["NATIONAL", "SYSTEM", "ORGANIZATION", "LOCAL"]
+        if strategic_level not in valid_levels:
+            strategic_level = "LOCAL"
+
+        return document_type, strategic_level, organization
+
+    except Exception as e:
+        # Log error but return safe defaults
+        print(f"[WARN] Document classification error: {e}")
+        return "GENERAL", "LOCAL", "Unknown"

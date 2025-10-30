@@ -148,6 +148,9 @@ class EvidenceAgent:
         # Retrieve chunks from ChromaDB
         results = self.vectordb.similarity_search(expanded_query, k=k)
 
+        # Boost strategic documents for priority/strategy questions (metadata-based, not hardcoded)
+        results = self._boost_strategic_documents(results, query, k)
+
         # Re-rank by organization affinity (no filtering - keep all relevant docs)
         if primary_org:
             results = self._rank_by_organization_affinity(results, primary_org)
@@ -186,6 +189,53 @@ class EvidenceAgent:
             "gaps": gaps,
             "iteration": iteration_num,
         }
+
+    def _boost_strategic_documents(self, results: List, query: str, k: int) -> List:
+        """
+        Boost strategic documents for priority/strategy questions using metadata.
+
+        Instead of hardcoded keywords, this uses the document_type and strategic_level
+        metadata added during ingestion to identify and prioritize strategic documents.
+
+        Args:
+            results: Search results from similarity_search
+            query: Original query
+            k: Number of results
+
+        Returns:
+            Reordered results with strategic documents promoted
+        """
+        # Check if query is asking about priorities/strategy
+        strategy_keywords = ["priority", "priorities", "strategy", "plan", "goal", "objective", "strategic"]
+        query_lower = query.lower()
+        is_strategy_query = any(kw in query_lower for kw in strategy_keywords)
+
+        if not is_strategy_query:
+            return results
+
+        # Separate results by document classification
+        strategic_results = []
+        other_results = []
+
+        for doc in results:
+            doc_type = doc.metadata.get("document_type", "GENERAL")
+            strategic_level = doc.metadata.get("strategic_level", "LOCAL")
+
+            # Boost STRATEGIC_PLAN and OPERATIONAL_GUIDANCE documents
+            if doc_type in ["STRATEGIC_PLAN", "OPERATIONAL_GUIDANCE"]:
+                strategic_results.append(doc)
+            else:
+                other_results.append(doc)
+
+        # If we found strategic documents, add them to the front while keeping all results
+        if strategic_results:
+            print(f"[STRATEGIC BOOST] Found {len(strategic_results)} strategic documents for strategy query")
+            # Reorder: strategic first, then original ordering for others
+            combined = strategic_results + other_results
+            # Keep total results limited to k
+            return combined[:k]
+
+        return results
 
     def _extract_primary_organization(self, query: str) -> Optional[str]:
         """
@@ -350,17 +400,9 @@ class EvidenceAgent:
             except Exception as e:
                 print(f"[WARNING] KG expansion failed: {e}")
 
-        # STEP 3: Strategic Keywords - Add for priority/strategy questions
-        # Explicitly include NHS 10-year plan and national strategy docs
-        strategy_keywords = ["priority", "priorities", "strategy", "plan", "goal", "objective"]
-        query_lower = query.lower()
-        if any(kw in query_lower for kw in strategy_keywords):
-            strategic_terms = ["10-year plan", "health plan England", "national health strategy", "NHS England planning framework", "long-term planning"]
-            if not any(term.lower() in expanded_query.lower() for term in strategic_terms):
-                expanded_query = f"{expanded_query} {' '.join(strategic_terms)}"
-                print(f"[STRATEGY EXPANSION] Added national strategic context")
-
-        # STEP 4: Gap-based expansion - Subsequent iterations
+        # STEP 3: Gap-based expansion - Subsequent iterations
+        # NOTE: Strategic document boost is now handled via metadata filtering in retrieval
+        # (see _retrieve_with_metadata_boost method)
         if previous_gaps:
             gap_terms = []
             for gap in previous_gaps:
