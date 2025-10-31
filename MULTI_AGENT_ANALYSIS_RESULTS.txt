@@ -1,0 +1,169 @@
+Traceback (most recent call last):
+  File "<string>", line 55, in <module>
+    print(answer)
+    ~~~~~^^^^^^^^
+  File "C:\Users\al261\AppData\Local\Programs\Python\Python313\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u2192' in position 822: character maps to <undefined>
+
+================================================================================
+MULTI-AGENT ANALYSIS: NHS 10-YEAR PLAN WORKFORCE PRIORITIES
+Impact on Leeds Community Healthcare
+================================================================================
+
+[SETUP] Initializing multi-agent system...
+[OK] Extracted 30 documents from ChromaDB
+[OK] Knowledge Graph Agent initialized
+[OK] Entity Resolver initialized (27 entities, 112 aliases)
+[OK] Entity Resolver initialized for answer normalization
+
+[PHASE 1: WEB LOOKUP - Retrieving Current Context]
+--------------------------------------------------------------------------------
+Query: NHS 10-year plan outlines several key workforce priorities aimed at addressing 
+current and future healthcare needs. Can you research and find out what they are 
+and how they will impact Leeds Community Healthcare? Also consider the current 
+risks and issues that will need to be addressed.
+
+[EXECUTING] Running Wide-Then-Deep 4-phase analysis...
+================================================================================
+WIDE-THEN-DEEP 4-PHASE ANALYSIS
+================================================================================
+
+Question: 
+NHS 10-year plan outlines several key workforce priorities aimed at addressing 
+current and future healthcare needs. Can you research and find out what they are 
+and how they will impact Leeds Community Healthcare? Also consider the current 
+risks and issues that will need to be addressed.
+
+Start time: 12:48:55
+
+
+================================================================================
+PHASE 1: WEB LOOKUP (External Context)
+================================================================================
+
+[PHASE 1: WEB LOOKUP]
+Getting external context for: 
+NHS 10-year plan outlines several key workforce priorities aimed at a
+
+[WEB LOOKUP]
+Searching for context: 
+NHS 10-year plan outlines several key workforce priorities aimed at a
+Search query: 
+NHS 10-year plan outlines several key workforce priorities aimed at addressing 
+current and future healthcare needs. Can you research and find out what they are 
+and how they will impact Leeds Community Healthcare? Also consider the current 
+risks and issues that will need to be addressed.
+
+Search completed - extracting context...
+
+[CONTEXT EXTRACTED]
+Key themes: Workforce priorities, Healthcare needs, Service efficiency, Innovation in healthcare
+Priorities identified: 4
+[OK] Web context retrieved
+    Themes: Workforce priorities, Healthcare needs, Service efficiency, Innovation in healthcare
+    Priorities: 4 identified
+
+================================================================================
+PHASE 2: DOCUMENT SELECTION (Smart Filtering)
+================================================================================
+
+[PHASE 2: DOCUMENT SELECTION]
+Filtering 30 documents based on web context...
+
+[SELECTION COMPLETE]
+Selected: 15 of 30 documents
+Themes: Workforce priorities, Healthcare needs
+[OK] Document selection complete
+    Selected: 15 of 30 documents
+    Coverage: 50.0%
+    Validation: PROCEED
+
+================================================================================
+PHASE 3: EVIDENCE RETRIEVAL (Limited to Selected Documents)
+================================================================================
+
+================================================================================
+ITERATION 1
+================================================================================
+
+[ITERATION 1] Evidence Agent: Searching for evidence...
+[ORG RANK] Primary organization: Leeds Community Healthcare NHS Trust
+[ORG RANK] Using ranking (org-specific first, then strategic context, then general)
+[DOCUMENT FILTER] Restricting search to 15 selected documents
+[DOCUMENT FILTER] (From DocumentSelectorAgent - Web context driven selection)
+[ENTITY EXPANSION] Detected: Leeds Community Healthcare NHS Trust, Leeds Community Healthcare NHS Trust, Community Services
+[ENTITY EXPANSION] Added aliases for better retrieval
+[KG EXPANSION] Found entities: Leeds Community Healthcare NHS Trust, Leeds Community Healthcare NHS Trust, Community Services, Leeds Community Healthcare NHS Trust, Leeds Community Healthcare NHS Trust, Leeds Community Healthcare NHS Trust, Community Services, Community Services
+[KG EXPANSION] Added related: Primary Care Partnership, Birmingham Community Health NHS, Birmingham Community Health NHS Foundation Trust...
+[ITERATION 1] Retrieved 16 chunks from 6 documents
+[ITERATION 1] Coverage: 20.0% of total documents
+
+[ITERATION 1] Critique Agent: Analyzing evidence quality...
+[ITERATION 1] Quality: ADEQUATE
+[ITERATION 1] Sources: 6 (20.0%)
+[ITERATION 1] Gaps: 2 identified
+[ITERATION 1] -> Triggering Iteration 2
+
+================================================================================
+ITERATION 2
+================================================================================
+
+[ITERATION 2] Evidence Agent: Searching for evidence...
+[ORG RANK] Primary organization: Leeds Community Healthcare NHS Trust
+[ORG RANK] Using ranking (org-specific first, then strategic context, then general)
+[DOCUMENT FILTER] Restricting search to 15 selected documents
+[DOCUMENT FILTER] (From DocumentSelectorAgent - Web context driven selection)
+[ENTITY EXPANSION] Detected: Leeds Community Healthcare NHS Trust, Leeds Community Healthcare NHS Trust, Community Services
+[ENTITY EXPANSION] Added aliases for better retrieval
+[ITERATION 2] Retrieved 16 chunks from 7 documents
+[ITERATION 2] Coverage: 23.3% of total documents
+
+[ITERATION 2] Critique Agent: Analyzing evidence quality...
+[ITERATION 2] Quality: GOOD
+[ITERATION 2] Sources: 7 (23.3%)
+[ITERATION 2] Gaps: 2 identified
+[ITERATION 2] [OK] CONVERGENCE DETECTED (diminishing returns)
+[ITERATION 2] [OK] STOPPING (sufficient quality or max iterations)
+
+================================================================================
+STOPPING CRITERIA MET
+================================================================================
+Reason: Good quality + convergence detected
+
+================================================================================
+PHASE 4: SYNTHESIS (Long-Form Analysis)
+================================================================================
+
+[SYNTHESIS] Generating final report...
+[OK] Knowledge Graph Agent initialized
+[OK] Entity Resolver initialized (27 entities, 112 aliases)
+[NORMALIZATION] Standardized entity names in answer
+[SYNTHESIS] [OK] Complete - Confidence: 70%
+
+================================================================================
+WIDE-THEN-DEEP ANALYSIS COMPLETE
+================================================================================
+
+Iterations: 2
+Sources consulted: 7
+Evidence chunks: 18
+Confidence: 70%
+Quality: GOOD
+
+End time: 12:49:27
+
+================================================================================
+ANALYSIS COMPLETE
+================================================================================
+
+[QUALITY METRICS]
+  Quality Rating: GOOD
+  Confidence Score: 70%
+  Iterations: 2
+  Sources Consulted: 7 documents
+  Total Evidence Chunks: 18
+
+[ANSWER]
+================================================================================
