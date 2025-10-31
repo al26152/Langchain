@@ -62,6 +62,8 @@ This is a **Retrieval-Augmented Generation (RAG)** pipeline designed to analyze 
 
 ## 📚 Documentation
 
+- **[Wide-Then-Deep Architecture](WIDE_THEN_DEEP_ARCHITECTURE.md)** - 4-phase analysis pipeline (Web Lookup → Document Selection → Evidence Retrieval → Synthesis)
+- **[WebLookupAgent Guide](analysis/multi_agent/WEBLOOKUP_AGENT_GUIDE.md)** - Dynamic web search implementation for current NHS/Leeds healthcare context
 - **[Document Classification Guide](docs/DOCUMENT_CLASSIFICATION.md)** - How the automatic document classification system works and how to re-classify documents
 - **[Multi-Agent System Architecture](MULTI_AGENT_SYSTEM_ARCHITECTURE.md)** - Detailed technical documentation of the RAG system components
 

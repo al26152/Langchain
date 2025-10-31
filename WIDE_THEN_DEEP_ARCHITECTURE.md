@@ -96,7 +96,11 @@ This document describes the complete Wide-Then-Deep 4-Phase Analysis Architectur
 }
 ```
 
-**Current Implementation:** Rule-based (detects query keywords) → Ready for API integration (actual web search)
+**Current Implementation:** ✓ UPGRADED - Dynamic web search via DuckDuckGo API (as of Nov 1, 2025)
+- Searches actual web for NHS/Leeds healthcare context
+- Dynamically extracts themes, priorities, and policies
+- Always current, not hardcoded
+- Gracefully degrades if search unavailable
 
 ---
 
