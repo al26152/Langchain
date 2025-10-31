@@ -240,6 +240,20 @@ class PipelineOrchestrator:
         self.log("  - Run strategic analysis: python analysis/analyze_pipeline.py")
         self.log("  - For QA validation next time: python run_full_pipeline.py --validate")
 
+        # Knowledge Graph maintenance reminder
+        self.log("\n" + "=" * 60)
+        self.log("📊 KNOWLEDGE GRAPH MAINTENANCE REMINDER", "INFO")
+        self.log("=" * 60)
+        self.log("⚠️  If you added NEW documents or it's been >30 days:")
+        self.log("   Consider rebuilding the knowledge graph:", "INFO")
+        self.log("")
+        self.log("   python analysis/knowledge_graph/build_knowledge_graph_framework.py")
+        self.log("")
+        self.log("   • Time: ~15-20 minutes")
+        self.log("   • Cost: ~$3-5 (OpenAI API)")
+        self.log("   • Last built: Oct 25, 2025 (30 documents)")
+        self.log("=" * 60)
+
         return True
 
 

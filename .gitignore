@@ -98,3 +98,14 @@ Thumbs.db
 # This is created when subprocess output is misdirected to Windows null device
 nul
 NUL
+
+# ============================================================================
+# GENERATED OUTPUT AND TEMPORARY FILES
+# ============================================================================
+# Generated reports and analysis outputs
+outputs/
+archived_reports/
+
+# Temporary files
+*.tmp
+*.temp

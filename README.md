@@ -57,7 +57,6 @@ This is a **Retrieval-Augmented Generation (RAG)** pipeline designed to analyze 
 - ✅ Organization-specific analysis working (Leeds Community Healthcare focus validated)
 - ✅ Writing style guide application successful
 - ✅ 70% confidence, GOOD quality output (suitable for strategic planning use)
-- ✅ See SESSION_CLOSEOUT_OCT_31_2025.md for detailed testing results
 
 ---
 
@@ -306,6 +305,59 @@ python run_full_pipeline.py --validate
 python pipeline/eval_dates.py
 python pipeline/ingest_pipeline.py
 ```
+
+---
+
+## 📊 Knowledge Graph Maintenance
+
+The system includes a **Knowledge Graph** that powers entity-aware query expansion. This graph is built from document analysis and improves search coverage by discovering relationships between services, organizations, and care pathways.
+
+### Current Knowledge Graph Status
+
+| Metric | Value |
+|--------|-------|
+| **Last Built** | Oct 25, 2025 |
+| **Documents Analyzed** | 30 |
+| **Entities Extracted** | 200 (16 orgs, 115 services, 25 pathways, 9 roles, 35 conditions) |
+| **Total Relationships** | 19,374 |
+| **Strong Relationships** | 88 (provides, uses, manages - 0.5%) |
+| **Co-mention Relationships** | 19,286 (99.5%) |
+
+### When to Rebuild the Knowledge Graph
+
+Rebuild when:
+- ✓ **New documents added** to the corpus (>2-3 new documents)
+- ✓ **30+ days have passed** since last rebuild (semantic drift)
+- ✓ **Major changes** to document content or organization structure
+- ✗ **Single document update** - Not worth the cost for minor updates
+
+### How to Rebuild the Knowledge Graph
+
+```bash
+python analysis/knowledge_graph/build_knowledge_graph_framework.py
+```
+
+**What happens:**
+1. Extracts entities from all documents (organizations, services, pathways, roles, conditions)
+2. Discovers relationships between entities using LLM analysis
+3. Saves to `knowledge_graph_improved.json` (4-5 MB file)
+4. Available immediately for next query
+
+**Time & Cost:**
+- ⏱️ Runtime: ~15-20 minutes (depends on document count)
+- 💰 Cost: ~$3-5 (OpenAI API calls)
+
+### Knowledge Graph in Use
+
+The knowledge graph:
+- **Expands queries** with related entities (e.g., "LCH" → finds related services and partnerships)
+- **Improves search coverage** by discovering implicit relationships (e.g., services that work together)
+- **Supports semantic queries** like "What organizations partner with LTHT?"
+- **Weights relationships** by type (strong: provides/uses/manages, weak: co-mention)
+
+**Note:** The graph is **static** (not rebuilt per query) for cost efficiency. Dynamic per-query rebuilds would cost $0.50-1.00 per question.
+
+**For more details:** See `analysis/knowledge_graph/README_KG_REFRESH.md`
 
 ---
 
