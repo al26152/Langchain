@@ -1,7 +1,7 @@
 {
   "permissions": {
     "allow": [
-      "Bash(\".\\.venv\\Scripts\\python\" -c \"\nimport sys\nsys.path.insert(0, ''''.'''')\nfrom dotenv import load_dotenv\nload_dotenv()\n\nfrom langchain_chroma import Chroma\nfrom langchain_openai import OpenAIEmbeddings\nfrom analysis.multi_agent.enhanced_evidence_agent import EnhancedEvidenceAgent\n\n# Initialize quietly\nembeddings = OpenAIEmbeddings()\ndb = Chroma(persist_directory=''''chroma_db_test'''', embedding_function=embeddings)\nagent = EnhancedEvidenceAgent(db, context_map_path=''''context_map.json'''')\n\n# Test query\nquery = ''''What are the workforce challenges for Leeds?''''\n\nprint(''''ENHANCED EVIDENCE AGENT TEST'''')\nprint(''''=''''*60)\nprint(''''Query: {}''''.format(query))\n\n# Search\nresult = agent.search(query, iteration_num=1)\n\nprint(''''\\n[RETRIEVAL]'''')\nprint(''''  Chunks: {}''''.format(len(result.get(''''chunks'''', []))))\nprint(''''  Documents: {}''''.format(len(result.get(''''sources'''', []))))\n\n# Check for context map features\nprint(''''\\n[CONTEXT MAPPING]'''')\nif result.get(''''context_map_available''''):\n    print(''''  Status: Context map available'''')\n    if ''''evidence_chains'''' in result:\n        print(''''  Evidence chains: {}''''.format(len(result.get(''''evidence_chains'''', []))))\n    if ''''context_insights'''' in result:\n        print(''''  Insights: {}''''.format(len(result.get(''''context_insights'''', []))))\nelse:\n    print(''''  Status: Context map not available'''')\n\nprint(''''=''''*60)\n\")"
+      "Bash(\".\\.venv\\Scripts\\python\" -m pip install -q python-docx)"
     ],
     "deny": [],
     "ask": []
