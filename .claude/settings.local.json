@@ -1,7 +1,7 @@
 {
   "permissions": {
     "allow": [
-      "Bash(\".\\.venv\\Scripts\\python\" -m pip install -q python-docx)"
+      "Bash(\"C:\\Users\\al261\\OneDrive\\Documents\\Langchain\\.venv\\Scripts\\python\" run_workforce_analysis.py)"
     ],
     "deny": [],
     "ask": []
