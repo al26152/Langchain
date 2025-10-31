@@ -26,10 +26,12 @@ import sys
 import os
 from typing import Dict, List, Optional
 from datetime import datetime
+import json
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))))
 
 from langchain_openai import ChatOpenAI
+from langchain_community.tools import DuckDuckGoSearchRun
 
 
 class WebLookupAgent:
@@ -46,6 +48,7 @@ class WebLookupAgent:
             llm: Language model for context analysis
         """
         self.llm = llm or ChatOpenAI(model="gpt-4o-mini", temperature=0.3)
+        self.search = DuckDuckGoSearchRun()
 
     def get_context(self, query: str) -> Dict:
         """
@@ -70,12 +73,12 @@ class WebLookupAgent:
 
     def _analyze_query_context(self, query: str) -> Dict:
         """
-        Analyze query to extract context themes and suggest approach.
-        In production, this would be replaced with actual web search.
+        Dynamically search the web for NHS and Leeds healthcare context.
+        Extracts themes, priorities, and current information relevant to the query.
         """
-        query_lower = query.lower()
+        print("\n[WEB LOOKUP]")
+        print("Searching for context: {}".format(query[:70]))
 
-        # Identify what the query is about
         context_data = {
             "query": query,
             "timestamp": datetime.now().isoformat(),
@@ -83,114 +86,174 @@ class WebLookupAgent:
             "key_themes": [],
             "national_priorities": [],
             "relevant_policies": [],
-            "validation_framework": {}
+            "validation_framework": {},
+            "sources": []
         }
 
-        # Detect major themes from query
-        if "10-year" in query_lower or "10 year" in query_lower:
-            context_data["key_themes"].append("NHS 10-Year Plan for Neighbourhood Health")
-            context_data["national_priorities"] = [
-                "Prevention - shift to prevention and early intervention",
-                "Integration - full integration of primary and community care",
-                "Workforce - 25,000 additional clinical staff needed nationally",
-                "Inequity - address health disparities across regions",
-                "Innovation - adopt new models and technologies"
-            ]
-            context_data["external_context"] = """
-The NHS 10-Year Plan (2024-2034) sets out strategic direction for England's health service.
-Key pillars:
-1. Prevention: Shift from treatment to prevention (smoking, obesity, mental health)
-2. Integration: Community and primary care fully integrated at place level
-3. Workforce: Major recruitment challenge (25,000+ staff), focus on retention
-4. Equity: Reduce health disparities, focus on deprived areas
-5. Innovation: Use AI, genomics, new care models
+        # Step 1: Formulate smart search query
+        search_query = self._formulate_search_query(query)
+        print("Search query: {}".format(search_query))
 
-For organizations like LCH, this means:
-- Partnership is non-negotiable (integrated care boards are the structure)
-- Workforce competition will be intense
-- Health inequalities are central to planning, not peripheral
-- Innovation in service delivery expected
-            """
+        # Step 2: Perform web search
+        try:
+            search_results = self.search.run(search_query)
+            print("Search completed - extracting context...")
+        except Exception as e:
+            print("[WARNING] Web search failed: {}".format(str(e)))
+            return self._get_fallback_context(query, context_data)
 
-        elif "workforce" in query_lower or "staff" in query_lower:
-            context_data["key_themes"].append("Workforce Planning and Development")
-            context_data["national_priorities"] = [
-                "Recruitment of 25,000 additional clinical staff nationally",
-                "Retention: Current turnover 15% nationally, target <12%",
-                "Skill mix: More varied roles (apprenticeships, practitioners)",
-                "Flexible working: Essential for retention",
-                "Health inequalities in workforce distribution"
-            ]
-            context_data["external_context"] = """
-Workforce Context (NHS 2024-2025):
-- National vacancy rate: 11% (some regions higher)
-- Turnover: 15% nationally (concerning for stability)
-- Most competitive areas: Mental health, community nursing, allied health
-- Solution approaches:
-  * Local recruitment pipelines (apprenticeships)
-  * Flexible contracts (part-time, job-sharing)
-  * Career development and progression
-  * Address health disparities in recruitment
-            """
-
-        elif "partnership" in query_lower or "integration" in query_lower:
-            context_data["key_themes"].append("Partnership and Integrated Care")
-            context_data["national_priorities"] = [
-                "Integrated Care Boards (ICBs) as governance structure",
-                "Place-based integration (health and social care)",
-                "Collaborative planning across NHS, local government, social care",
-                "Shared outcomes and risk"
-            ]
-            context_data["external_context"] = """
-Partnership/Integration Context (NHS 2024-2025):
-- ICBs are statutory bodies that commission and coordinate care
-- Place-level partnerships include councils, voluntary sector
-- Success depends on: Trust, aligned incentives, shared data
-- Common challenges: Competition for funding, governance complexity
-- Community trusts like LCH are essential to partnership success
-            """
-
-        elif "health inequalities" in query_lower or "inequalities" in query_lower:
-            context_data["key_themes"].append("Health Inequalities and Equity")
-            context_data["national_priorities"] = [
-                "Reduce life expectancy gap (currently 8-10 years by region)",
-                "Focus on deprived populations and underserved areas",
-                "Address workforce shortages in high-need areas",
-                "Social determinants: housing, employment, education"
-            ]
-            context_data["external_context"] = """
-Health Inequalities Context (NHS 2024-2025):
-- England has significant regional disparities (8-10 year life expectancy gap)
-- Root causes are social (housing, employment, education), not just healthcare
-- NHS role: Direct care + partnerships with councils/local government
-- Community trusts are key (closest to communities, can address local needs)
-- Data-driven targeting is essential (identify highest-need populations)
-            """
-
+        # Step 3: Extract context from results using LLM
+        if search_results and search_results.strip():
+            context_data = self._extract_context_from_results(
+                query=query,
+                search_results=search_results,
+                context_data=context_data
+            )
         else:
-            # Generic NHS context
-            context_data["key_themes"].append("NHS Strategy and Governance")
-            context_data["external_context"] = """
-Current NHS Context (2024-2025):
-- Financial pressures across all trusts
-- Workforce shortages in most specialties
-- Focus on integration and partnership
-- Health inequalities are strategic priority
-- Digital transformation accelerating
-            """
+            print("[INFO] No web search results found - using minimal context")
+            context_data["external_context"] = "Web search returned no results for this query."
+            context_data["key_themes"].append("Query-specific context unavailable")
 
-        # Add validation framework (how to evaluate if local approach is sound)
+        # Add validation framework
         context_data["validation_framework"] = {
-            "alignment_with_national": "Is local approach aligned with 10-year plan pillars?",
+            "alignment_with_national": "Is local approach aligned with current NHS strategic direction?",
             "workforce_competitiveness": "Is local strategy competitive in current market?",
             "partnership_effectiveness": "Are partnerships enabling or constraining?",
             "equity_impact": "Does approach address or worsen inequalities?",
             "sustainability": "Can current approach be sustained given financial constraints?"
         }
 
-        print("\n[CONTEXT IDENTIFIED]")
+        print("\n[CONTEXT EXTRACTED]")
         print("Key themes: {}".format(", ".join(context_data["key_themes"])))
-        print("National priorities: {}".format(len(context_data["national_priorities"])))
+        print("Priorities identified: {}".format(len(context_data["national_priorities"])))
+
+        return context_data
+
+    def _formulate_search_query(self, user_query: str) -> str:
+        """
+        Intelligently formulate web search query.
+        - Keeps user query intent (doesn't force geographic restrictions)
+        - Adds NHS/healthcare context
+        - Adds Leeds/West Yorkshire context if relevant
+        """
+        query_lower = user_query.lower()
+
+        # Check if Leeds/LCH/LTHT/West Yorkshire already mentioned
+        has_local_context = any(term in query_lower for term in [
+            "leeds", "lch", "ltht", "west yorkshire", "yorkshire"
+        ])
+
+        # Check if clearly national policy question
+        is_national_policy = any(term in query_lower for term in [
+            "national policy", "nhs england", "government", "department of health"
+        ])
+
+        # Build search query
+        search_parts = [user_query]
+
+        # Add NHS context (always relevant)
+        if "nhs" not in query_lower:
+            search_parts.append("NHS")
+
+        # Add Leeds context if not already mentioned and query seems healthcare-focused
+        if not has_local_context and not is_national_policy and (
+            any(term in query_lower for term in [
+                "service", "healthcare", "care", "staff", "workforce",
+                "partnership", "integration", "community"
+            ])
+        ):
+            search_parts.append("Leeds")
+
+        search_query = " ".join(search_parts)
+        return search_query
+
+    def _extract_context_from_results(self, query: str, search_results: str, context_data: Dict) -> Dict:
+        """
+        Use LLM to extract themes, priorities, and context from web search results.
+        """
+        extraction_prompt = """
+You are analyzing NHS/healthcare web search results to extract strategic context.
+
+USER QUERY: {}
+
+WEB SEARCH RESULTS:
+{}
+
+Please extract:
+1. Key NHS/healthcare themes mentioned (2-4 themes as bullet points)
+2. Current priorities or initiatives (3-5 priorities mentioned)
+3. Relevant policies or strategic direction (2-4 items)
+4. Overall context summary (2-3 sentences)
+
+Format your response as JSON with keys:
+- themes: list of identified themes
+- priorities: list of priorities mentioned
+- policies: list of relevant policies
+- summary: text summary of findings
+
+If the search results are sparse or irrelevant, indicate that in the summary.
+"""
+
+        try:
+            response = self.llm.invoke(
+                extraction_prompt.format(query, search_results[:2000])  # Limit results to token budget
+            )
+
+            # Parse LLM response
+            try:
+                # Try to extract JSON from response
+                response_text = response.content
+                json_start = response_text.find("{")
+                json_end = response_text.rfind("}") + 1
+
+                if json_start >= 0 and json_end > json_start:
+                    json_str = response_text[json_start:json_end]
+                    extracted = json.loads(json_str)
+
+                    context_data["key_themes"] = extracted.get("themes", [])
+                    context_data["national_priorities"] = extracted.get("priorities", [])
+                    context_data["relevant_policies"] = extracted.get("policies", [])
+                    context_data["external_context"] = extracted.get("summary", "")
+
+                    # Track that content came from web search
+                    if extracted.get("summary", "").lower() != "sparse":
+                        context_data["sources"].append("Web search - current results")
+
+                else:
+                    # Fall back to parsing response text
+                    context_data["external_context"] = response_text[:500]
+                    context_data["key_themes"].append("Query-relevant context from web")
+
+            except json.JSONDecodeError:
+                # If JSON parsing fails, use response as-is
+                context_data["external_context"] = response.content[:500]
+                context_data["key_themes"].append("Query-relevant context from web")
+
+        except Exception as e:
+            print("[WARNING] LLM extraction failed: {}".format(str(e)))
+            context_data["external_context"] = "Could not extract structured context from search results."
+            context_data["key_themes"].append("Query-relevant context")
+
+        return context_data
+
+    def _get_fallback_context(self, query: str, context_data: Dict) -> Dict:
+        """
+        Provide basic fallback context when web search fails.
+        """
+        print("[INFO] Using fallback context")
+
+        context_data["external_context"] = """
+Web search unavailable. Providing baseline NHS/Leeds healthcare context:
+- NHS strategic focus on workforce, integration, and equity
+- Community healthcare organizations are central to place-based partnerships
+- Regional pressures: financial sustainability, service integration, health disparities
+"""
+        context_data["key_themes"] = ["NHS Strategy", "Community Partnership", "Health Equity"]
+        context_data["national_priorities"] = [
+            "Workforce recruitment and retention",
+            "Health and social care integration",
+            "Health inequalities reduction"
+        ]
 
         return context_data
 
