@@ -2,7 +2,8 @@
   "permissions": {
     "allow": [
       "Bash(\"C:\\Users\\al261\\OneDrive\\Documents\\Langchain\\.venv\\Scripts\\python\" run_workforce_analysis.py)",
-      "Bash(\"C:\\Users\\al261\\OneDrive\\Documents\\Langchain\\.venv\\Scripts\\python\" run_workforce_analysis_deep.py)"
+      "Bash(\"C:\\Users\\al261\\OneDrive\\Documents\\Langchain\\.venv\\Scripts\\python\" run_workforce_analysis_deep.py)",
+      "Bash(\".\\.venv\\Scripts\\python.exe\":*)"
     ],
     "deny": [],
     "ask": []
