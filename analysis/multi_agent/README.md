@@ -2,11 +2,12 @@
 
 ## Overview
 
-An advanced evidence-gathering system that uses multiple AI agents working together to iteratively search, validate, and synthesize evidence from your document corpus. The system automatically detects gaps in evidence coverage and refines its search until sufficient quality is achieved.
+An advanced evidence-gathering system that combines **external web evidence** with **local corpus evidence** to answer strategic questions with maximum context and rigor. Multiple AI agents work together iteratively to search, validate, and synthesize evidence. The system automatically detects gaps and refines its search until sufficient quality is achieved.
 
 ## Key Features
 
-- **Knowledge Graph Integration** ✨ **[NEW]**: Uses entity relationships to expand searches intelligently
+- **Web Evidence Integration** ✨ **[NEW]**: Automatically retrieves and merges external web evidence with local documents
+- **Knowledge Graph Integration**: Uses entity relationships to expand searches intelligently
 - **Iterative Evidence Gathering**: Automatically expands searches based on detected gaps
 - **Real-Time Gap Detection**: Alerts you to missing evidence as analysis progresses
 - **Epistemic Categorization**: Every claim tagged as FACT / ASSUMPTION / INFERENCE
@@ -14,36 +15,48 @@ An advanced evidence-gathering system that uses multiple AI agents working toget
 - **Confidence Scoring**: 0-100% confidence based on evidence quality
 - **Self-Refinement**: System critiques its own work and improves automatically
 
-## The 4 Agents (+ Knowledge Graph Integration)
+## The 5 Agents (+ Knowledge Graph Integration)
 
-### 1. Evidence Agent ✨ **[Enhanced with KG + Metadata-Based Classification]**
+### 0. Web Lookup Agent ✨ **[NEW - PRE-PHASE]**
+- **Searches the web for current NHS/healthcare context**
+- **Extracts key evidence points from web results** (not just themes)
+- **Returns structured web evidence items with claims, details, sources**
+- Provides external validation framework
+- Gracefully degrades if web unavailable
+- See: [Web Evidence Integration Guide](WEB_EVIDENCE_INTEGRATION.md)
+
+### 1. Evidence Agent ✨ **[Enhanced with Web Evidence + KG + Metadata]**
 - Retrieves relevant chunks from ChromaDB
+- **Merges web evidence with local evidence** (in first iteration only)
 - **Uses Knowledge Graph to expand queries with related entities**
 - **Uses document metadata (type, strategic level, organization) for smart prioritization**
 - **Identifies missing relationships between entities**
-- Calculates coverage metrics (source count, date distribution)
+- Calculates coverage metrics (source count, date distribution, evidence sources)
 - Identifies evidence gaps
-- Classifies epistemic types (FACT/ASSUMPTION/INFERENCE)
+- Classifies epistemic types (FACT/ASSUMPTION/INFERENCE/EXTERNAL_EVIDENCE)
 - **Automatically boosts strategic documents (10-year plans, operational guidance) for strategy queries**
 
 ### 2. Critique Agent
-- Analyzes evidence quality
+- Analyzes combined evidence quality (local + web)
 - Detects gaps in coverage
 - Checks epistemic quality (fact ratio, assumption validation)
 - Decides whether to continue iterations
 - Detects convergence (diminishing returns)
 
 ### 3. Synthesis Agent
-- Generates LLM-based synthesized answer
-- Creates comprehensive markdown report
+- Generates LLM-based synthesized answer using all evidence sources
+- Creates comprehensive markdown report with evidence attribution
 - Calculates overall confidence score
-- Provides epistemic breakdown
+- Provides epistemic breakdown (including external evidence types)
+- Distinguishes local findings from external validation
 
 ### 4. Orchestrator
+- **Calls Web Lookup Agent as PRE-PHASE** (before iteration loop)
 - Coordinates workflow between agents
+- Passes web evidence to Evidence Agent in first iteration
 - Manages iteration loop
 - Enforces stopping criteria
-- Aggregates results
+- Aggregates results and tracks web evidence usage
 
 ## Usage
 
@@ -76,9 +89,23 @@ python analysis/multi_agent/run_multi_agent.py \
 ```
 User: "What are the key workforce challenges for LCH 2026-2031?"
 
+================================================================================
+PRE-PHASE: WEB LOOKUP (External Context & Evidence)
+================================================================================
+[WEB LOOKUP] Searching for context and evidence...
+[OK] Web context retrieved
+    Themes: Workforce, Partnership, Equity
+    Priorities: 3 identified
+    Web evidence: 5 items extracted
+      - NHS England guidance on integrated care...
+      - 2025 planning framework emphasizes...
+      - National workforce shortage: 25K staff...
+
 [ITERATION 1] Evidence Agent: Searching for evidence...
-[ITERATION 1] Retrieved 18 chunks from 3 documents
-[ITERATION 1] Coverage: 10.0% of total documents
+[WEB EVIDENCE] Merging 5 web items into evidence base
+[ITERATION 1] Retrieved 23 chunks from 3 documents (18 local + 5 web)
+[ITERATION 1] Coverage: 10.0% of documents
+[ITERATION 1] Web evidence: 5 external sources included
 [ITERATION 1] Critique Agent: Analyzing evidence quality...
 [ITERATION 1] Quality: WEAK
 [ITERATION 1] Sources: 3 (10.0%)

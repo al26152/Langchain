@@ -143,29 +143,38 @@ class EvidenceAgent:
         iteration_num: int = 1,
         previous_gaps: Optional[List[Dict]] = None,
         k: int = 20,
-        selected_documents: Optional[List[str]] = None
+        selected_documents: Optional[List[str]] = None,
+        web_evidence: Optional[List[Dict]] = None
     ) -> Dict:
         """
-        Execute evidence search with coverage analysis.
+        Execute evidence search with coverage analysis, including web evidence.
 
         Args:
             query: Search query
             iteration_num: Current iteration number
             previous_gaps: Gaps identified in previous iterations
-            k: Number of chunks to retrieve
+            k: Number of chunks to retrieve from local documents
             selected_documents: List of document IDs to search within (from DocumentSelectorAgent).
                                If provided, search is restricted to these documents only.
                                If None, searches all documents.
+            web_evidence: List of evidence items from web lookup (optional).
+                         If provided, these will be merged with local evidence.
 
         Returns:
             Dict containing:
-            - evidence: List of evidence chunks with metadata
+            - evidence: List of evidence chunks (local + web) with metadata
             - metrics: Coverage metrics
             - gaps: Identified gaps
             - document_filter_applied: Boolean indicating if document filtering was applied
             - documents_searched: Number of documents in search scope
+            - web_evidence_included: Boolean indicating if web evidence was merged
         """
         print(f"\n[ITERATION {iteration_num}] Evidence Agent: Searching for evidence...")
+
+        # Track if web evidence is being used
+        web_evidence_included = web_evidence is not None and len(web_evidence) > 0
+        if web_evidence_included:
+            print(f"[WEB EVIDENCE] Merging {len(web_evidence)} web evidence items with local search")
 
         # Extract primary organization from query
         primary_org = self._extract_primary_organization(query)
@@ -213,6 +222,11 @@ class EvidenceAgent:
                 "relevance_note": doc.metadata.get("relevance_note", ""),  # Explanation of relevance
             })
 
+        # Merge web evidence if provided
+        if web_evidence_included:
+            evidence = self._merge_web_evidence(evidence, web_evidence)
+            print(f"[WEB EVIDENCE] Merged {len(web_evidence)} web items into evidence base")
+
         # Calculate coverage metrics
         metrics = self._calculate_metrics(evidence)
 
@@ -222,6 +236,8 @@ class EvidenceAgent:
         # Log progress
         print(f"[ITERATION {iteration_num}] Retrieved {len(evidence)} chunks from {metrics['source_count']} documents")
         print(f"[ITERATION {iteration_num}] Coverage: {metrics['coverage_percent']:.1f}% of total documents")
+        if web_evidence_included:
+            print(f"[ITERATION {iteration_num}] Web evidence: {len(web_evidence)} external sources included")
 
         return {
             "evidence": evidence,
@@ -230,6 +246,7 @@ class EvidenceAgent:
             "iteration": iteration_num,
             "document_filter_applied": selected_documents is not None,
             "documents_searched": len(selected_documents) if selected_documents else self.total_documents,
+            "web_evidence_included": web_evidence_included,
         }
 
     def _boost_strategic_documents(self, results: List, query: str, k: int) -> List:
@@ -512,6 +529,43 @@ class EvidenceAgent:
             "source_distribution": dict(source_distribution),
             "total_chunks": len(evidence),
         }
+
+    def _merge_web_evidence(self, local_evidence: List[Dict], web_evidence: List[Dict]) -> List[Dict]:
+        """
+        Merge web evidence with local evidence.
+
+        Converts web evidence items into the same format as local evidence
+        so they can be treated uniformly in synthesis and analysis.
+
+        Args:
+            local_evidence: List of evidence dicts from ChromaDB
+            web_evidence: List of evidence dicts from web lookup
+
+        Returns:
+            Combined list of evidence (local + web)
+        """
+        merged = list(local_evidence)
+
+        for web_item in web_evidence:
+            # Convert web evidence to local evidence format
+            evidence_dict = {
+                "content": web_item.get("content", ""),
+                "page_content": web_item.get("content", ""),  # Alias for compatibility
+                "source": web_item.get("source", "Web Search"),
+                "document": "External Web Source: {}".format(web_item.get("source", "Web")),
+                "theme": "External Context",
+                "date_extracted": datetime.now().isoformat(),
+                "epistemic_type": "EXTERNAL_EVIDENCE",  # Mark as external
+                "confidence": "MEDIUM",  # Web sources are medium confidence
+                "detail": web_item.get("detail", ""),
+                "relevance": web_item.get("relevance", "Provides external context"),
+                "org": "NHS England/External",
+                "org_relevance": "comparative",
+                "relevance_note": "External evidence from web search - use for validation/context"
+            }
+            merged.append(evidence_dict)
+
+        return merged
 
     def _identify_gaps(self, evidence: List[Dict], metrics: Dict, query: str) -> List[Dict]:
         """Identify gaps in evidence coverage."""

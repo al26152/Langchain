@@ -52,7 +52,7 @@ class WebLookupAgent:
 
     def get_context(self, query: str) -> Dict:
         """
-        Get external context for a query.
+        Get external context AND evidence from web.
 
         Returns:
             Dict with:
@@ -61,12 +61,13 @@ class WebLookupAgent:
             - national_priorities: What NHS England is prioritizing
             - relevant_policies: Recent relevant policy documents
             - validation_framework: How to evaluate local approach vs national
+            - web_evidence: List of evidence items from web search
+            - sources: List of web sources used
         """
-        print("\n[PHASE 1: WEB LOOKUP]")
-        print("Getting external context for: {}".format(query[:70]))
+        print("\n[PRE-PHASE: WEB LOOKUP]")
+        print("Getting external context and evidence for: {}".format(query[:70]))
 
-        # Since we can't do actual web search in this environment,
-        # we'll use knowledge about NHS strategy
+        # Get both context and evidence from web
         context = self._analyze_query_context(query)
 
         return context
@@ -74,10 +75,10 @@ class WebLookupAgent:
     def _analyze_query_context(self, query: str) -> Dict:
         """
         Dynamically search the web for NHS and Leeds healthcare context.
-        Extracts themes, priorities, and current information relevant to the query.
+        Extracts themes, priorities, evidence snippets relevant to the query.
         """
         print("\n[WEB LOOKUP]")
-        print("Searching for context: {}".format(query[:70]))
+        print("Searching for context and evidence: {}".format(query[:70]))
 
         context_data = {
             "query": query,
@@ -87,7 +88,8 @@ class WebLookupAgent:
             "national_priorities": [],
             "relevant_policies": [],
             "validation_framework": {},
-            "sources": []
+            "sources": [],
+            "web_evidence": []  # NEW: Store web evidence items
         }
 
         # Step 1: Formulate smart search query
@@ -97,22 +99,31 @@ class WebLookupAgent:
         # Step 2: Perform web search
         try:
             search_results = self.search.run(search_query)
-            print("Search completed - extracting context...")
+            print("Search completed - extracting context and evidence...")
         except Exception as e:
             print("[WARNING] Web search failed: {}".format(str(e)))
-            return self._get_fallback_context(query, context_data)
+            print("[INFO] Proceeding with local evidence only")
+            # Return minimal context - no fallback themes
+            return context_data
 
-        # Step 3: Extract context from results using LLM
+        # Step 3: Extract context AND evidence from results
         if search_results and search_results.strip():
             context_data = self._extract_context_from_results(
                 query=query,
                 search_results=search_results,
                 context_data=context_data
             )
+            # Step 4: Extract evidence snippets
+            context_data = self._extract_evidence_from_results(
+                query=query,
+                search_results=search_results,
+                context_data=context_data
+            )
         else:
-            print("[INFO] No web search results found - using minimal context")
-            context_data["external_context"] = "Web search returned no results for this query."
-            context_data["key_themes"].append("Query-specific context unavailable")
+            # This should be extremely rare on the public web
+            print("[WARNING] Web search returned no results - proceeding with local evidence only")
+            context_data["external_context"] = ""
+            # Leave key_themes and web_evidence empty
 
         # Add validation framework
         context_data["validation_framework"] = {
@@ -236,24 +247,75 @@ If the search results are sparse or irrelevant, indicate that in the summary.
 
         return context_data
 
-    def _get_fallback_context(self, query: str, context_data: Dict) -> Dict:
+    def _extract_evidence_from_results(self, query: str, search_results: str, context_data: Dict) -> Dict:
         """
-        Provide basic fallback context when web search fails.
-        """
-        print("[INFO] Using fallback context")
+        Extract evidence snippets from web search results.
 
-        context_data["external_context"] = """
-Web search unavailable. Providing baseline NHS/Leeds healthcare context:
-- NHS strategic focus on workforce, integration, and equity
-- Community healthcare organizations are central to place-based partnerships
-- Regional pressures: financial sustainability, service integration, health disparities
+        Parses search results to identify and structure evidence items that can
+        be combined with local evidence in the Evidence Agent.
+        """
+        extraction_prompt = """
+You are extracting key evidence points from healthcare web search results.
+
+USER QUERY: {}
+
+WEB SEARCH RESULTS:
+{}
+
+Please extract 3-5 key evidence points that directly address the query.
+For each point, provide:
+- The claim/finding
+- Supporting detail or statistic (if mentioned)
+- Source indicator (website name or document type)
+
+Format as JSON with array of objects:
+[
+  {{
+    "claim": "The key finding or statement",
+    "detail": "Supporting detail, statistics, or context",
+    "source_type": "Website name or document type",
+    "relevance": "How this addresses the query"
+  }},
+  ...
+]
+
+Focus on factual claims that can validate or contextualize local findings.
+If search results are sparse, return empty array.
 """
-        context_data["key_themes"] = ["NHS Strategy", "Community Partnership", "Health Equity"]
-        context_data["national_priorities"] = [
-            "Workforce recruitment and retention",
-            "Health and social care integration",
-            "Health inequalities reduction"
-        ]
+
+        try:
+            response = self.llm.invoke(
+                extraction_prompt.format(query, search_results[:2000])
+            )
+
+            response_text = response.content
+            json_start = response_text.find("[")
+            json_end = response_text.rfind("]") + 1
+
+            if json_start >= 0 and json_end > json_start:
+                json_str = response_text[json_start:json_end]
+                evidence_items = json.loads(json_str)
+
+                # Format evidence for Evidence Agent consumption
+                web_evidence = []
+                for item in evidence_items:
+                    web_evidence.append({
+                        "content": item.get("claim", ""),
+                        "detail": item.get("detail", ""),
+                        "source": item.get("source_type", "Web Search"),
+                        "relevance": item.get("relevance", ""),
+                        "type": "WEB_EVIDENCE"
+                    })
+
+                context_data["web_evidence"] = web_evidence
+                if web_evidence:
+                    print("[OK] Extracted {} evidence items from web".format(len(web_evidence)))
+                    for item in web_evidence[:3]:
+                        print("  - {}".format(item["content"][:80]))
+
+        except Exception as e:
+            print("[WARNING] Could not extract evidence from web results: {}".format(str(e)))
+            context_data["web_evidence"] = []
 
         return context_data
 

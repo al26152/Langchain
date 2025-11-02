@@ -50,22 +50,24 @@ This is a **Retrieval-Augmented Generation (RAG)** pipeline designed to analyze 
 - `[STRATEGY EXPIRES 2025]` - Workforce strategy flagged ⚠️
 - `[NO DATE]` - 0 documents (all dates populated) ✓
 
-**Last Updated:** Oct 31, 2025 - **WIDE-THEN-DEEP WORKFLOW VALIDATION COMPLETE**
-- ✅ 4-phase architecture validated with multi-dimensional strategic planning scenarios
-- ✅ All 5 strategic shifts successfully identified (Hospital→Community, Treatment→Prevention, Traditional→Digital, Isolated→Integrated, Expansion→Productivity)
-- ✅ All 3 planning dimensions covered (Clinical Activity, Financial Sustainability, Workforce Integration)
-- ✅ Organization-specific analysis working (Leeds Community Healthcare focus validated)
-- ✅ Writing style guide application successful
-- ✅ 70% confidence, GOOD quality output (suitable for strategic planning use)
+**Last Updated:** Nov 2, 2025 - **WEB EVIDENCE INTEGRATION COMPLETE**
+- ✅ Web Lookup Agent now extracts evidence (not just context)
+- ✅ Evidence Agent merges web + local evidence automatically
+- ✅ Pre-phase workflow: Web Lookup → Evidence Gathering → Critique → Synthesis
+- ✅ External evidence marked with `EXTERNAL_EVIDENCE` type for transparency
+- ✅ Web evidence seamlessly integrated with local corpus evidence
+- ✅ System uses both sources for comprehensive strategic analysis
+- ✅ Graceful degradation if web search unavailable
 
 ---
 
 ## 📚 Documentation
 
-- **[Wide-Then-Deep Architecture](WIDE_THEN_DEEP_ARCHITECTURE.md)** - 4-phase analysis pipeline (Web Lookup → Document Selection → Evidence Retrieval → Synthesis)
-- **[WebLookupAgent Guide](analysis/multi_agent/WEBLOOKUP_AGENT_GUIDE.md)** - Dynamic web search implementation for current NHS/Leeds healthcare context
+- **[Web Evidence Integration Guide](analysis/multi_agent/WEB_EVIDENCE_INTEGRATION.md)** ✨ **[NEW]** - How web evidence is extracted and merged with local corpus
+- **[WebLookupAgent Guide](analysis/multi_agent/WEBLOOKUP_AGENT_GUIDE.md)** - Web search + evidence extraction for NHS/Leeds context
+- **[Multi-Agent System Architecture](analysis/multi_agent/README.md)** - Complete multi-agent workflow with web + local evidence
+- **[Wide-Then-Deep Architecture](WIDE_THEN_DEEP_ARCHITECTURE.md)** - Advanced 4-phase analysis pipeline (Web Lookup → Document Selection → Evidence Retrieval → Synthesis)
 - **[Document Classification Guide](docs/DOCUMENT_CLASSIFICATION.md)** - How the automatic document classification system works and how to re-classify documents
-- **[Multi-Agent System Architecture](MULTI_AGENT_SYSTEM_ARCHITECTURE.md)** - Detailed technical documentation of the RAG system components
 
 ---
 

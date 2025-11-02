@@ -259,9 +259,13 @@ class Orchestrator:
 
     def run_analysis(self, query: str) -> Dict:
         """
-        Run complete multi-agent analysis (original method - backward compatible).
+        Run complete multi-agent analysis with web lookup pre-phase.
 
-        This method is kept for backward compatibility. For new analysis, use run_wide_then_deep_analysis()
+        WORKFLOW:
+        - PRE-PHASE: Web Lookup - Get external context and evidence
+        - PHASE 1: Evidence Agent - Retrieve local + web evidence
+        - PHASE 2: Critique Agent - Analyze quality and identify gaps
+        - PHASE 3: Synthesis Agent - Generate comprehensive answer
 
         Args:
             query: Strategic question to analyze
@@ -272,18 +276,33 @@ class Orchestrator:
             - confidence_score: Overall confidence (0-100)
             - iterations: Number of iterations run
             - all_results: Raw results from all iterations
+            - web_evidence_used: Boolean indicating if web evidence was included
         """
         print("="*80)
-        print("MULTI-AGENT ITERATIVE RAG ANALYSIS (Legacy Mode)")
+        print("MULTI-AGENT ITERATIVE RAG ANALYSIS WITH WEB LOOKUP")
         print("="*80)
         print(f"\nQuestion: {query}")
         print(f"Max iterations: {self.max_iterations}")
         print(f"Start time: {datetime.now().strftime('%H:%M:%S')}\n")
-        print("[NOTE] Using legacy mode - consider run_wide_then_deep_analysis() for better results\n")
+
+        # PRE-PHASE: Web Lookup - Get external context and evidence
+        print("="*80)
+        print("PRE-PHASE: WEB LOOKUP (External Context & Evidence)")
+        print("="*80)
+        web_context = self.web_lookup_agent.get_context(query)
+        web_evidence = web_context.get("web_evidence", [])
+        print(f"[OK] Web context retrieved")
+        print(f"    Themes: {', '.join(web_context.get('key_themes', []))}")
+        print(f"    Priorities: {len(web_context.get('national_priorities', []))} identified")
+        if web_evidence:
+            print(f"    Web evidence: {len(web_evidence)} items extracted")
+        else:
+            print(f"    Web evidence: None found (will use local search only)")
 
         iteration_results = []
         critique_results = []
         iteration_num = 1
+        web_evidence_used = False
 
         # Iteration loop
         while iteration_num <= self.max_iterations:
@@ -294,7 +313,7 @@ class Orchestrator:
             # Get previous gaps
             previous_gaps = critique_results[-1]["gaps"] if critique_results else []
 
-            # STEP 1: Evidence Agent - Retrieve evidence
+            # STEP 1: Evidence Agent - Retrieve evidence (local + web)
             # Use config for k value, default to 30 to include strategic documents
             k = Config.DEFAULT_RETRIEVAL_K if Config else 30
             evidence_result = self.evidence_agent.search(
@@ -302,7 +321,11 @@ class Orchestrator:
                 iteration_num=iteration_num,
                 previous_gaps=previous_gaps,
                 k=k,
+                web_evidence=web_evidence if iteration_num == 1 else None,  # Add web evidence in first iteration only
             )
+            # Track if web evidence was used
+            if evidence_result.get("web_evidence_included"):
+                web_evidence_used = True
 
             iteration_results.append(evidence_result)
 
@@ -362,6 +385,8 @@ class Orchestrator:
             "all_iteration_results": iteration_results,
             "all_critique_results": critique_results,
             "synthesis_result": synthesis_result,
+            "web_evidence_used": web_evidence_used,
+            "web_context": web_context,
         }
 
     def _get_stop_reason(self, critique: Dict, iteration_num: int) -> str:

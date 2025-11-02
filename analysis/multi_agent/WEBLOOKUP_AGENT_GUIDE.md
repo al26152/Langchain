@@ -1,14 +1,15 @@
-# WebLookupAgent - Dynamic Web Search Implementation
+# WebLookupAgent - Dynamic Web Search + Evidence Extraction
 
-**Date:** November 1, 2025
+**Date:** November 2, 2025
 **Status:** Production Ready ✓
 **File:** `analysis/multi_agent/web_lookup_agent.py`
+**Enhancement:** ✨ Now extracts and returns structured web evidence items
 
 ---
 
 ## Overview
 
-The **WebLookupAgent** is Phase 1 of the Wide-Then-Deep 4-phase analysis architecture. It provides **dynamic, current context** about NHS and Leeds healthcare by searching the web in real-time, rather than relying on hardcoded rules.
+The **WebLookupAgent** is the **PRE-PHASE** of the multi-agent iterative RAG system. It provides **dynamic, current context AND evidence** about NHS and Leeds healthcare by searching the web in real-time.
 
 ### What It Does
 
@@ -16,7 +17,8 @@ The **WebLookupAgent** is Phase 1 of the Wide-Then-Deep 4-phase analysis archite
 2. **Formulates a smart search query** - Adds NHS/Leeds context intelligently (not forced)
 3. **Searches the web** - Uses DuckDuckGo API to find current information
 4. **Extracts structured context** - Uses Claude to pull out themes, priorities, and policies
-5. **Returns framed context** - Provides structured output for document selection phase
+5. **Extracts evidence items** ✨ **[NEW]** - Uses Claude to extract key evidence points from search results
+6. **Returns combined output** - Provides context, priorities, and structured evidence items to downstream agents
 
 ### Why This Matters
 
@@ -74,6 +76,21 @@ context = agent.get_context("What are workforce priorities for Leeds Community H
     "relevant_policies": ["Policy A", "Policy B"],
     "external_context": "Summary of web findings...",
     "validation_framework": {...},
+    "web_evidence": [  # ✨ NEW - Structured evidence items
+        {
+            "content": "NHS England's 25K workforce target...",
+            "detail": "Requires recruitment of 25,000 clinical staff nationally",
+            "source": "NHS England",
+            "relevance": "Provides national benchmark for workforce planning"
+        },
+        {
+            "content": "Integration of community and mental health services...",
+            "detail": "New guidance on partnership structures in 2025",
+            "source": "NHSE Policy",
+            "relevance": "Directly relevant to LCH partnership strategy"
+        },
+        ...
+    ],
     "sources": ["Web search - current results"]
 }
 ```
@@ -102,7 +119,7 @@ Intelligently adds context without forcing restrictions:
 - Only adds Leeds if healthcare-focused AND location not mentioned
 - Always adds NHS (healthcare domain marker)
 
-#### 3. `_extract_context_from_results(query, search_results, context_data)` - LLM Extraction
+#### 3. `_extract_context_from_results(query, search_results, context_data)` - Context Extraction
 Uses Claude to extract themes and priorities from search results:
 
 ```python
@@ -129,20 +146,58 @@ Extract:
 - Themes emerge from context, not keywords
 - Synthesis required for clarity
 
-#### 4. `_get_fallback_context(query)` - Graceful Degradation
-If web search fails, returns basic NHS/Leeds context:
+#### 4. `_extract_evidence_from_results(query, search_results, context_data)` - Evidence Extraction ✨ **[NEW]**
+Uses Claude to extract key evidence points from search results:
 
 ```python
-{
-    "external_context": "Web search unavailable. Providing baseline NHS/Leeds healthcare context...",
-    "key_themes": ["NHS Strategy", "Community Partnership", "Health Equity"],
-    "national_priorities": [
-        "Workforce recruitment and retention",
-        "Health and social care integration",
-        "Health inequalities reduction"
-    ]
-}
+# LLM Prompt:
+"""
+USER QUERY: What are workforce priorities for Leeds?
+
+WEB SEARCH RESULTS:
+[Search results text...]
+
+Extract 3-5 key evidence points that directly address the query.
+For each point, provide:
+- The claim/finding
+- Supporting detail or statistic
+- Source indicator
+- Relevance to query
+
+Format as JSON:
+[
+  {
+    "claim": "The key finding",
+    "detail": "Supporting detail, statistics",
+    "source_type": "Website name",
+    "relevance": "How this addresses the query"
+  },
+  ...
+]
+"""
+
+# Returns: Structured evidence items for Evidence Agent
 ```
+
+**Why Separate Evidence Extraction?**
+- Beyond context/themes, we need **actual evidence claims**
+- Evidence items include specific findings, statistics, policies
+- Each item is attributed to a source
+- Can be merged with local evidence in Evidence Agent
+- Provides external validation for local findings
+
+#### 4. Graceful Degradation - No Fallback
+If web search fails (rare), the system:
+- Returns empty context (no misleading fallback themes)
+- Proceeds with local evidence only
+- No false signals or hardcoded defaults
+- User sees clear warning: "[WARNING] Web search failed"
+
+**Why no fallback?**
+- Web is massive - unlikely to return zero results
+- If search fails, local evidence still works fine
+- No point injecting potentially irrelevant themes
+- Keeps system simple and transparent
 
 ---
 
@@ -216,34 +271,72 @@ If web search fails, returns basic NHS/Leeds context:
 
 ---
 
-## Integration with Wide-Then-Deep Pipeline
+## Integration with Multi-Agent Pipeline
 
-### Phase 1 Output → Phase 2 Input
+### PRE-PHASE Output → PHASE 1+ Input
 
 ```python
-# Phase 1: WebLookupAgent
+# PRE-PHASE: WebLookupAgent
 context = web_lookup_agent.get_context(query)
-# Returns: themes, priorities, policies, validation_framework
+# Returns: {
+#   "key_themes": [...],
+#   "national_priorities": [...],
+#   "external_context": "...",
+#   "web_evidence": [  # ✨ NEW - Structured evidence items
+#     {"content": "...", "detail": "...", "source": "...", ...},
+#     ...
+#   ]
+# }
 
-# Phase 2: DocumentSelectorAgent
-selected_docs = doc_selector.select_documents(
-    query=query,
-    web_context=context  # ← Uses web context to score documents
-)
-# Scores documents using identified themes + metadata tags
-
-# Phase 3: EvidenceAgent
+# PHASE 1 (Iteration 1): EvidenceAgent
 evidence = evidence_agent.search(
     query=query,
-    selected_documents=selected_docs  # ← Searches within curated set
+    iteration_num=1,
+    web_evidence=context["web_evidence"]  # ✨ NEW - Pass web evidence to first iteration
+)
+# Evidence Agent:
+# 1. Searches ChromaDB for local evidence
+# 2. Merges web evidence into combined evidence list
+# 3. Returns unified evidence with source attribution
+
+# PHASE 2: CritiqueAgent
+critique = critique_agent.critique(
+    evidence=evidence,  # Contains both local + web evidence
+    query=query
 )
 
-# Phase 4: SynthesisAgent
+# PHASE 3: SynthesisAgent
 report = synthesis_agent.synthesize(
+    evidence=evidence,  # Includes web evidence with EXTERNAL_EVIDENCE type
     query=query,
-    evidence=evidence,
-    context=context  # ← Grounds synthesis in web context
+    context=context  # Grounds synthesis in web context
 )
+# Synthesis Agent:
+# 1. Generates answer using all evidence sources
+# 2. Distinguishes local findings from external validation
+# 3. Attributes claims to appropriate sources
+```
+
+**Flow Diagram:**
+```
+Query
+  ↓
+WebLookupAgent (PRE-PHASE)
+  ├─ Web search
+  ├─ Extract context (themes, priorities)
+  ├─ Extract evidence (claims, details, sources)
+  └─ Return: context + web_evidence
+       ↓
+   EvidenceAgent (PHASE 1, Iter 1)
+     ├─ Search ChromaDB
+     ├─ Merge web_evidence
+     └─ Return: combined evidence
+          ↓
+      CritiqueAgent (PHASE 2)
+        └─ Analyze combined evidence
+             ↓
+         SynthesisAgent (PHASE 3)
+           └─ Generate answer with full attribution
 ```
 
 ---
@@ -292,18 +385,20 @@ def _formulate_search_query(self, user_query):
 
 ## Error Handling
 
-### Web Search Fails
+### Web Search Fails (Rare)
 ```
-→ `_get_fallback_context()` returns baseline NHS context
-→ System continues with generic context
-→ User sees notice: "Web search unavailable..."
+→ Warning logged: "[WARNING] Web search failed: {error}"
+→ System continues with local evidence only
+→ No fallback themes injected
+→ User sees warning in console
 ```
 
-### Search Returns No Results
+### Search Returns No Results (Extremely Rare)
 ```
-→ Minimal context returned: "No specific results found"
-→ System continues with sparse context
-→ Document selection uses query + generic themes
+→ Warning logged: "[WARNING] Web search returned no results"
+→ web_evidence = [] (empty)
+→ key_themes = [] (empty)
+→ System proceeds with local evidence only
 ```
 
 ### LLM Extraction Fails
@@ -361,7 +456,7 @@ for q in test_queries:
 | **LLM Extraction Time** | 2-5 seconds |
 | **Total Phase 1 Time** | 3-8 seconds |
 | **API Cost Per Query** | ~$0.02-0.05 |
-| **Graceful Degradation** | Yes - fallback to baseline context |
+| **Graceful Degradation** | Yes - continues with local evidence only if web fails |
 | **Internet Required** | Yes - for web search |
 | **Cache Friendly** | Yes - could be cached across similar queries |
 
@@ -382,8 +477,8 @@ for q in test_queries:
 
 | Issue | Solution |
 |-------|----------|
-| "Web search unavailable" | Check internet connection; may be DuckDuckGo rate limit |
-| "No themes extracted" | Query too specific or niche; fallback context used |
+| "[WARNING] Web search failed" | Network/API issue (rare); system proceeds with local evidence |
+| "No themes or evidence extracted" | Query too specific or niche; system continues with local search |
 | "Wrong context returned" | Check `_formulate_search_query()` logic; may not match query intent |
 | "Slow performance" | DuckDuckGo search slow; consider caching common queries |
 | "Missing Leeds context" | Query may not trigger Leeds detection; check query keywords |

@@ -106,6 +106,10 @@ NUL
 outputs/
 archived_reports/
 
+# Multi-agent test outputs and logs
+test_output.log
+multi_agent_report_*.md
+
 # Temporary files
 *.tmp
 *.temp
