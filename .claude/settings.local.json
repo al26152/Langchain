@@ -4,7 +4,12 @@
       "Bash(\"C:\\Users\\al261\\OneDrive\\Documents\\Langchain\\.venv\\Scripts\\python\" run_workforce_analysis.py)",
       "Bash(\"C:\\Users\\al261\\OneDrive\\Documents\\Langchain\\.venv\\Scripts\\python\" run_workforce_analysis_deep.py)",
       "Bash(\".\\.venv\\Scripts\\python.exe\":*)",
-      "Bash(python analysis/multi_agent/run_multi_agent.py:*)"
+      "Bash(python analysis/multi_agent/run_multi_agent.py:*)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(\"C:\\Users\\al261\\OneDrive\\Documents\\Langchain\\.venv\\Scripts\\python.exe\":*)",
+      "Bash(git push:*)",
+      "Bash(git checkout:*)"
     ],
     "deny": [],
     "ask": []
