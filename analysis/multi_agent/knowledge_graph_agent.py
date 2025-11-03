@@ -447,17 +447,28 @@ class KnowledgeGraphAgent:
                 - retrieved_sources: Sources that were retrieved (optional)
 
         Returns:
-            Dict with identified gaps
+            Dict with identified gaps and detailed relationship information
         """
         query = params.get("query", "")
         retrieved_sources = params.get("retrieved_sources", [])
 
         # Use existing identify_missing_relationships method
         gaps = self.identify_missing_relationships(query, retrieved_sources)
+
+        # Build summary of gaps
+        gap_summary = {
+            "entity_pairs": len(gaps),
+            "relationships_identified": [g.get("relationship", "") for g in gaps if g.get("relationship")],
+            "suggested_searches": [g.get("action", "") for g in gaps if g.get("action")],
+        }
+
         return {
-            "status": "success",
+            "status": "complete",
             "action": "find_gaps",
             "gaps_identified": len(gaps),
+            "gaps": gaps,  # Include actual gap details for other agents to use
+            "gap_summary": gap_summary,
+            "entities_examined": len(self.extract_entities(query)),
         }
 
     def _suggest_searches_request(self, params: Dict) -> Dict:
