@@ -45,7 +45,7 @@ def main():
         # Initialize vector store
         print("[PHASE 1] Initializing evidence repository...")
         embeddings = OpenAIEmbeddings()
-        vectordb = Chroma(persist_directory="chroma_db", embedding_function=embeddings)
+        vectordb = Chroma(persist_directory="chroma_db_test", embedding_function=embeddings)
         print("[OK] Vector store loaded")
 
         # Initialize orchestrator with hub
