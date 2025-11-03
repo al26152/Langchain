@@ -327,22 +327,91 @@ First search will use these {} documents. If gaps identified, will expand to:
         Args:
             params: Dict with keys:
                 - current_selection: Current selected docs
-                - gaps: Gaps to address
-                - expansion_size: How many additional docs
+                - gaps: Gaps to address (list of gap descriptions)
+                - expansion_size: How many additional docs to find
+                - query: Original query context
 
         Returns:
-            Dict with expansion results
+            Dict with expansion results including newly added documents
         """
         current = params.get("current_selection", [])
         gaps = params.get("gaps", [])
         expansion_size = params.get("expansion_size", 10)
+        query = params.get("query", "")
 
-        # TODO: Implement expansion logic
+        current_set = set(current) if current else set()
+        added_documents = []
+
+        if not gaps:
+            return {
+                "status": "complete",
+                "action": "expand_selection",
+                "current_size": len(current),
+                "added_documents": [],
+                "new_size": len(current),
+            }
+
+        # Convert gaps to string for ranking (treat as extended query)
+        gap_query = " ".join(gaps) if isinstance(gaps, list) else str(gaps)
+        gap_query_lower = gap_query.lower()
+
+        # Score all documents for gap relevance
+        gap_ranked = []
+        for doc_id, metadata in self.all_documents.items():
+            # Skip documents already in selection
+            if doc_id in current_set:
+                continue
+
+            score = 0
+            doc_source_lower = doc_id.lower()
+
+            # 1. Gap keyword match (highest priority)
+            gap_keywords = gap_query_lower.split()
+            for keyword in gap_keywords:
+                if keyword in doc_source_lower or keyword in metadata.get("theme", "").lower():
+                    score += 25
+
+            # 2. Theme relevance to gaps
+            doc_theme = metadata.get("theme", "").lower()
+            if any(gap_keyword in doc_theme for gap_keyword in gap_keywords):
+                score += 15
+
+            # 3. Document type relevance
+            doc_type = metadata.get("document_type", "").lower()
+            if doc_type in ["strategic_plan", "operational_guidance", "org_specific"]:
+                score += 10
+
+            # 4. Strategic level
+            strategic_level = metadata.get("strategic_level", "").lower()
+            if strategic_level == "organization":
+                score += 8
+            elif strategic_level == "system":
+                score += 6
+
+            # 5. Organization specificity
+            if "lch" in doc_source_lower or "leeds community" in doc_source_lower:
+                score += 5
+
+            if score > 0:
+                gap_ranked.append((doc_id, score))
+
+        # Sort by relevance to gaps
+        gap_ranked.sort(key=lambda x: x[1], reverse=True)
+
+        # Select top documents up to expansion_size
+        for doc_id, score in gap_ranked[:expansion_size]:
+            added_documents.append(doc_id)
+
+        # Return results
         return {
-            "status": "pending",
+            "status": "complete",
             "action": "expand_selection",
             "current_size": len(current),
             "gaps_addressed": len(gaps),
+            "added_documents": added_documents,
+            "new_size": len(current) + len(added_documents),
+            "gap_keywords": gap_keywords[:5] if gap_keywords else [],
+            "added_count": len(added_documents),
         }
 
     def _validate_selection(self, params: Dict) -> Dict:
