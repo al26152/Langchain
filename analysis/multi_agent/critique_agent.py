@@ -502,3 +502,101 @@ class CritiqueAgent:
             recommendations.append("[CONVERGENCE] Search strategy may be exhausted - consider different query angles")
 
         return recommendations
+
+    def handle_request(self, action: str, params: Dict) -> Dict:
+        """
+        Handle requests from other agents via the hub.
+
+        Args:
+            action: Action to perform
+            params: Action parameters
+
+        Returns:
+            Result dict
+
+        SUPPORTED ACTIONS:
+        - generate_expansion_request: Create document expansion request
+        - request_web_search: Request targeted web search
+        - validate_synthesis: Validate partial synthesis results
+        """
+        if action == "generate_expansion_request":
+            # Generate document expansion based on gaps
+            return self._generate_expansion_request(params)
+
+        elif action == "request_web_search":
+            # Request targeted web search for specific topics
+            return self._request_web_search(params)
+
+        elif action == "validate_synthesis":
+            # Validate synthesis against quality criteria
+            return self._validate_synthesis(params)
+
+        else:
+            return {"status": "error", "message": f"Unknown action: {action}"}
+
+    def _generate_expansion_request(self, params: Dict) -> Dict:
+        """
+        Generate document expansion request based on identified gaps.
+
+        Args:
+            params: Dict with keys:
+                - gaps: List of gap dicts
+                - current_selection_size: Current document selection
+
+        Returns:
+            Dict with expansion request
+        """
+        gaps = params.get("gaps", [])
+        current_size = params.get("current_selection_size", 0)
+
+        # TODO: Implement expansion request generation
+        return {
+            "status": "pending",
+            "action": "generate_expansion_request",
+            "gaps_count": len(gaps),
+        }
+
+    def _request_web_search(self, params: Dict) -> Dict:
+        """
+        Request targeted web search for specific topics.
+
+        Args:
+            params: Dict with keys:
+                - search_topics: Topics to search for
+                - priority: Priority level
+
+        Returns:
+            Dict with search request
+        """
+        topics = params.get("search_topics", [])
+        priority = params.get("priority", "MEDIUM")
+
+        # TODO: Implement web search request
+        return {
+            "status": "pending",
+            "action": "request_web_search",
+            "topics": len(topics),
+            "priority": priority,
+        }
+
+    def _validate_synthesis(self, params: Dict) -> Dict:
+        """
+        Validate partial synthesis results.
+
+        Args:
+            params: Dict with keys:
+                - synthesis_text: Text to validate
+                - evidence_base: Supporting evidence
+
+        Returns:
+            Dict with validation results
+        """
+        synthesis_text = params.get("synthesis_text", "")
+        evidence = params.get("evidence_base", [])
+
+        # TODO: Implement synthesis validation
+        return {
+            "status": "pending",
+            "action": "validate_synthesis",
+            "text_length": len(synthesis_text),
+        }

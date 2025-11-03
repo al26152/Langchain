@@ -484,3 +484,101 @@ class DataQualityAgent:
             markdown += f"- {metric}\n"
 
         return markdown
+
+    def handle_request(self, action: str, params: Dict) -> Dict:
+        """
+        Handle requests from other agents via the hub.
+
+        Args:
+            action: Action to perform
+            params: Action parameters
+
+        Returns:
+            Result dict
+
+        SUPPORTED ACTIONS:
+        - assess_quality: Assess data quality of evidence
+        - identify_gaps: Identify data gaps
+        - generate_quality_report: Generate quality assessment report
+        """
+        if action == "assess_quality":
+            # Assess data quality
+            return self._assess_quality(params)
+
+        elif action == "identify_gaps":
+            # Identify data gaps
+            return self._identify_gaps(params)
+
+        elif action == "generate_quality_report":
+            # Generate quality report
+            return self._generate_quality_report(params)
+
+        else:
+            return {"status": "error", "message": f"Unknown action: {action}"}
+
+    def _assess_quality(self, params: Dict) -> Dict:
+        """
+        Assess data quality of evidence.
+
+        Args:
+            params: Dict with evidence to assess
+
+        Returns:
+            Dict with quality assessment
+        """
+        evidence = params.get("evidence", [])
+        query = params.get("query", "")
+
+        # TODO: Implement quality assessment
+        return {
+            "status": "pending",
+            "action": "assess_quality",
+            "evidence_assessed": len(evidence),
+        }
+
+    def _identify_gaps(self, params: Dict) -> Dict:
+        """
+        Identify data gaps.
+
+        Args:
+            params: Dict with assessment context
+
+        Returns:
+            Dict with identified gaps
+        """
+        assessment = params.get("assessment", {})
+        evidence = params.get("evidence", [])
+
+        # TODO: Implement gap identification
+        return {
+            "status": "pending",
+            "action": "identify_gaps",
+            "gaps_identified": 0,
+        }
+
+    def _generate_quality_report(self, params: Dict) -> Dict:
+        """
+        Generate quality assessment report.
+
+        Args:
+            params: Dict with assessment data
+
+        Returns:
+            Dict with report
+        """
+        assessment = params.get("assessment", {})
+
+        # Use existing generate_markdown_report
+        if assessment:
+            report = self.generate_markdown_report(assessment)
+            return {
+                "status": "success",
+                "action": "generate_quality_report",
+                "report": report,
+            }
+        else:
+            return {
+                "status": "error",
+                "action": "generate_quality_report",
+                "message": "No assessment provided",
+            }

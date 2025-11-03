@@ -379,6 +379,129 @@ class KnowledgeGraphAgent:
 
         return suggestions[:top_n]
 
+    def handle_request(self, action: str, params: Dict) -> Dict:
+        """
+        Handle requests from other agents via the hub.
+
+        Args:
+            action: Action to perform
+            params: Action parameters
+
+        Returns:
+            Result dict
+
+        SUPPORTED ACTIONS:
+        - expand_query: Expand query with KG relationships
+        - find_gaps: Identify relationship gaps in knowledge graph
+        - suggest_searches: Suggest related searches
+        - validate_entities: Validate entity relationships
+        """
+        if action == "expand_query":
+            # Expand query using KG
+            return self._expand_query_request(params)
+
+        elif action == "find_gaps":
+            # Identify gaps in KG
+            return self._find_gaps_request(params)
+
+        elif action == "suggest_searches":
+            # Suggest related searches
+            return self._suggest_searches_request(params)
+
+        elif action == "validate_entities":
+            # Validate entities and relationships
+            return self._validate_entities_request(params)
+
+        else:
+            return {"status": "error", "message": f"Unknown action: {action}"}
+
+    def _expand_query_request(self, params: Dict) -> Dict:
+        """
+        Expand query using knowledge graph.
+
+        Args:
+            params: Dict with keys:
+                - query: Query to expand
+
+        Returns:
+            Dict with expanded query
+        """
+        query = params.get("query", "")
+
+        # Use existing expand_query method
+        result = self.expand_query(query)
+        return {
+            "status": "success",
+            "action": "expand_query",
+            "expanded_query": result.get("expanded_query"),
+            "entities_found": len(result.get("entities_found", [])),
+        }
+
+    def _find_gaps_request(self, params: Dict) -> Dict:
+        """
+        Find gaps in knowledge graph.
+
+        Args:
+            params: Dict with keys:
+                - query: Query context
+                - retrieved_sources: Sources that were retrieved (optional)
+
+        Returns:
+            Dict with identified gaps
+        """
+        query = params.get("query", "")
+        retrieved_sources = params.get("retrieved_sources", [])
+
+        # Use existing identify_missing_relationships method
+        gaps = self.identify_missing_relationships(query, retrieved_sources)
+        return {
+            "status": "success",
+            "action": "find_gaps",
+            "gaps_identified": len(gaps),
+        }
+
+    def _suggest_searches_request(self, params: Dict) -> Dict:
+        """
+        Suggest related searches.
+
+        Args:
+            params: Dict with keys:
+                - query: Original query
+                - top_n: Number of suggestions
+
+        Returns:
+            Dict with search suggestions
+        """
+        query = params.get("query", "")
+        top_n = params.get("top_n", 5)
+
+        suggestions = self.suggest_related_searches(query, top_n)
+        return {
+            "status": "success",
+            "action": "suggest_searches",
+            "suggestions": suggestions,
+        }
+
+    def _validate_entities_request(self, params: Dict) -> Dict:
+        """
+        Validate entity relationships.
+
+        Args:
+            params: Dict with keys:
+                - entities: Entities to validate
+
+        Returns:
+            Dict with validation results
+        """
+        entities = params.get("entities", [])
+
+        # TODO: Implement entity validation
+        return {
+            "status": "pending",
+            "action": "validate_entities",
+            "entities_validated": len(entities),
+        }
+
 
 # Test function
 if __name__ == "__main__":

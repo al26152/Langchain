@@ -289,6 +289,108 @@ First search will use these {} documents. If gaps identified, will expand to:
             "change": len(set2) - len(set1)
         }
 
+    def handle_request(self, action: str, params: Dict) -> Dict:
+        """
+        Handle requests from other agents via the hub.
+
+        Args:
+            action: Action to perform
+            params: Action parameters
+
+        Returns:
+            Result dict
+
+        SUPPORTED ACTIONS:
+        - expand_selection: Expand document selection based on gaps
+        - validate_selection: Validate current selection
+        - recommend_documents: Recommend documents for specific topics
+        """
+        if action == "expand_selection":
+            # Expand document selection
+            return self._expand_selection(params)
+
+        elif action == "validate_selection":
+            # Validate current selection
+            return self._validate_selection(params)
+
+        elif action == "recommend_documents":
+            # Recommend documents for specific topics
+            return self._recommend_documents(params)
+
+        else:
+            return {"status": "error", "message": f"Unknown action: {action}"}
+
+    def _expand_selection(self, params: Dict) -> Dict:
+        """
+        Expand document selection based on identified gaps.
+
+        Args:
+            params: Dict with keys:
+                - current_selection: Current selected docs
+                - gaps: Gaps to address
+                - expansion_size: How many additional docs
+
+        Returns:
+            Dict with expansion results
+        """
+        current = params.get("current_selection", [])
+        gaps = params.get("gaps", [])
+        expansion_size = params.get("expansion_size", 10)
+
+        # TODO: Implement expansion logic
+        return {
+            "status": "pending",
+            "action": "expand_selection",
+            "current_size": len(current),
+            "gaps_addressed": len(gaps),
+        }
+
+    def _validate_selection(self, params: Dict) -> Dict:
+        """
+        Validate current selection against criteria.
+
+        Args:
+            params: Dict with keys:
+                - selection: Selected documents
+                - query: Original query
+                - web_context: Web context
+
+        Returns:
+            Dict with validation results
+        """
+        selection = params.get("selection", [])
+        query = params.get("query", "")
+        web_context = params.get("web_context", {})
+
+        # TODO: Implement validation logic
+        return {
+            "status": "pending",
+            "action": "validate_selection",
+            "selection_size": len(selection),
+        }
+
+    def _recommend_documents(self, params: Dict) -> Dict:
+        """
+        Recommend documents for specific topics.
+
+        Args:
+            params: Dict with keys:
+                - topics: Topics to find documents for
+                - max_docs: Maximum documents to recommend
+
+        Returns:
+            Dict with recommendations
+        """
+        topics = params.get("topics", [])
+        max_docs = params.get("max_docs", 10)
+
+        # TODO: Implement recommendation logic
+        return {
+            "status": "pending",
+            "action": "recommend_documents",
+            "topics": len(topics),
+        }
+
 
 def demo_selector():
     """Demo the document selector."""

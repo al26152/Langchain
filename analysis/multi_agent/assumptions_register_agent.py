@@ -450,3 +450,102 @@ class AssumptionsRegisterAgent:
         markdown += f"| **ASSUMPTION** | {summary['assumption_count']} | {summary['assumption_percentage']} |\n\n"
 
         return markdown
+
+    def handle_request(self, action: str, params: Dict) -> Dict:
+        """
+        Handle requests from other agents via the hub.
+
+        Args:
+            action: Action to perform
+            params: Action parameters
+
+        Returns:
+            Result dict
+
+        SUPPORTED ACTIONS:
+        - register_assumption: Register a new assumption
+        - validate_assumptions: Validate assumptions against evidence
+        - generate_register_report: Generate assumptions register report
+        """
+        if action == "register_assumption":
+            # Register a new assumption
+            return self._register_assumption(params)
+
+        elif action == "validate_assumptions":
+            # Validate assumptions
+            return self._validate_assumptions(params)
+
+        elif action == "generate_register_report":
+            # Generate register report
+            return self._generate_register_report(params)
+
+        else:
+            return {"status": "error", "message": f"Unknown action: {action}"}
+
+    def _register_assumption(self, params: Dict) -> Dict:
+        """
+        Register a new assumption.
+
+        Args:
+            params: Dict with assumption details
+
+        Returns:
+            Dict with registration result
+        """
+        assumption = params.get("assumption", "")
+        source = params.get("source", "")
+        confidence = params.get("confidence", 0.5)
+
+        # TODO: Implement assumption registration
+        return {
+            "status": "pending",
+            "action": "register_assumption",
+            "assumption_registered": True,
+        }
+
+    def _validate_assumptions(self, params: Dict) -> Dict:
+        """
+        Validate assumptions against evidence.
+
+        Args:
+            params: Dict with assumptions to validate
+
+        Returns:
+            Dict with validation results
+        """
+        assumptions = params.get("assumptions", [])
+        evidence = params.get("evidence", [])
+
+        # TODO: Implement assumption validation
+        return {
+            "status": "pending",
+            "action": "validate_assumptions",
+            "assumptions_validated": len(assumptions),
+        }
+
+    def _generate_register_report(self, params: Dict) -> Dict:
+        """
+        Generate assumptions register report.
+
+        Args:
+            params: Dict with report parameters
+
+        Returns:
+            Dict with report
+        """
+        register = params.get("register", {})
+
+        # Use existing generate_markdown_report
+        if register:
+            report = self.generate_markdown_report(register)
+            return {
+                "status": "success",
+                "action": "generate_register_report",
+                "report": report,
+            }
+        else:
+            return {
+                "status": "error",
+                "action": "generate_register_report",
+                "message": "No register provided",
+            }

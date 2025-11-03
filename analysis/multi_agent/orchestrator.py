@@ -39,6 +39,16 @@ except ImportError:
     print("[WARNING] Could not import config, using defaults")
     Config = None
 
+# Import AgentHub
+try:
+    from analysis.multi_agent.agent_hub import AgentHub
+except ImportError:
+    try:
+        from agent_hub import AgentHub
+    except ImportError:
+        print("[ERROR] Could not import AgentHub")
+        raise
+
 # Import agents - handle both package and direct execution
 import importlib
 import importlib.util
@@ -67,6 +77,7 @@ try:
     SynthesisAgent = _import_agent_class("synthesis_agent", "SynthesisAgent")
     WebLookupAgent = _import_agent_class("web_lookup_agent", "WebLookupAgent")
     DocumentSelectorAgent = _import_agent_class("document_selector_agent", "DocumentSelectorAgent")
+    KnowledgeGraphAgent = _import_agent_class("knowledge_graph_agent", "KnowledgeGraphAgent")
 except ImportError as e:
     print(f"WARNING: Could not import agents: {str(e)}")
     raise
@@ -86,6 +97,7 @@ class Orchestrator:
         llm: Optional[ChatOpenAI] = None,
         max_iterations: Optional[int] = None,
         verbose: bool = True,
+        use_hub: bool = True,
     ):
         """
         Initialize Orchestrator.
@@ -95,6 +107,7 @@ class Orchestrator:
             llm: Language model (optional, defaults from config)
             max_iterations: Maximum iterations allowed (defaults from config)
             verbose: Enable detailed logging
+            use_hub: Enable AgentHub for bidirectional communication (default True)
         """
         self.vectordb = vectordb
 
@@ -110,6 +123,7 @@ class Orchestrator:
 
         self.llm = llm or ChatOpenAI(model=default_model, temperature=default_temp)
         self.verbose = verbose
+        self.use_hub = use_hub
 
         # Initialize agents (they will use config defaults if not specified)
         self.web_lookup_agent = WebLookupAgent(self.llm)
@@ -117,6 +131,175 @@ class Orchestrator:
         self.evidence_agent = EvidenceAgent(vectordb, self.llm)
         self.critique_agent = CritiqueAgent(max_iterations=self.max_iterations)
         self.synthesis_agent = SynthesisAgent(self.llm)
+        self.knowledge_graph_agent = KnowledgeGraphAgent()
+
+        # Initialize AgentHub for bidirectional communication
+        if self.use_hub:
+            self.hub = AgentHub(verbose=verbose)
+            self.hub.register_agent("web_lookup", self.web_lookup_agent)
+            self.hub.register_agent("document_selector", self.document_selector_agent)
+            self.hub.register_agent("evidence", self.evidence_agent)
+            self.hub.register_agent("critique", self.critique_agent)
+            self.hub.register_agent("synthesis", self.synthesis_agent)
+            self.hub.register_agent("knowledge_graph", self.knowledge_graph_agent)
+
+            if self.verbose:
+                print("[OK] AgentHub initialized with 6 agents registered")
+
+    def run_analysis_with_hub(self, query: str) -> Dict:
+        """
+        Run analysis using AgentHub for bidirectional agent communication.
+
+        This method enables true multi-agent collaboration where agents can
+        request actions from each other, not just follow a sequential pipeline.
+
+        WORKFLOW:
+        - PRE-PHASE: Web Lookup - Get external context and evidence
+        - PHASE 1-N: Hub-driven iteration with feedback loops
+          * EvidenceAgent searches based on previous gaps
+          * CritiqueAgent can request DocumentSelector expansion
+          * CritiqueAgent can request targeted WebLookup
+          * SynthesisAgent can request additional evidence
+        - FINAL: SynthesisAgent generates comprehensive answer
+
+        Args:
+            query: Strategic question to analyze
+
+        Returns:
+            Dict containing all results and analysis metadata
+        """
+        print("="*80)
+        print("MULTI-AGENT NETWORK ANALYSIS (HUB-BASED)")
+        print("="*80)
+        print(f"\nQuestion: {query}")
+        print(f"Max iterations: {self.max_iterations}")
+        print(f"Start time: {datetime.now().strftime('%H:%M:%S')}\n")
+
+        # PRE-PHASE: Web Lookup
+        print("="*80)
+        print("PRE-PHASE: WEB LOOKUP (External Context & Evidence)")
+        print("="*80)
+        web_context = self.web_lookup_agent.get_context(query)
+        web_evidence = web_context.get("web_evidence", [])
+        print(f"[OK] Web context retrieved")
+        print(f"    Themes: {', '.join(web_context.get('key_themes', []))}")
+        print(f"    Priorities: {len(web_context.get('national_priorities', []))} identified")
+        if web_evidence:
+            print(f"    Web evidence: {len(web_evidence)} items extracted")
+        else:
+            print(f"    Web evidence: None found (will use local search only)")
+
+        # Initialize hub state
+        self.hub.update_shared_state({
+            "web_context": web_context,
+            "evidence_pool": web_evidence if web_evidence else [],
+            "iteration_history": [],
+            "critique_history": [],
+            "web_search_invoked": True,
+            "last_web_search_iteration": 0,
+        })
+
+        iteration_results = []
+        critique_results = []
+        iteration_num = 1
+        web_evidence_used = False if not web_evidence else True
+
+        # PHASE 1-N: Iteration loop with hub coordination
+        while iteration_num <= self.max_iterations:
+            print(f"\n{'='*80}")
+            print(f"ITERATION {iteration_num}")
+            print(f"{'='*80}")
+
+            # Get previous gaps for Evidence Agent
+            previous_gaps = critique_results[-1]["gaps"] if critique_results else []
+
+            # STEP 1: Evidence Agent searches (may respond to requests from other agents)
+            k = Config.DEFAULT_RETRIEVAL_K if Config else 30
+            evidence_result = self.evidence_agent.search(
+                query=query,
+                iteration_num=iteration_num,
+                previous_gaps=previous_gaps,
+                k=k,
+                web_evidence=web_evidence if iteration_num == 1 else None,
+            )
+
+            iteration_results.append(evidence_result)
+            self.hub.append_to_state("iteration_history", evidence_result)
+
+            if evidence_result.get("web_evidence_included"):
+                web_evidence_used = True
+
+            # STEP 2: Critique Agent analyzes and can request actions
+            critique_result = self.critique_agent.analyze(
+                evidence_result=evidence_result,
+                iteration_history=iteration_results[:-1],
+                query=query,
+            )
+
+            critique_results.append(critique_result)
+            self.hub.append_to_state("critique_history", critique_result)
+
+            # STEP 3: Process critique and send hub requests for bidirectional communication
+            if self.use_hub:
+                self._process_critique_for_hub_requests(
+                    critique_result, iteration_num, query
+                )
+
+            # STEP 4: Check stopping criteria
+            if not critique_result["continue_iteration"]:
+                print(f"\n{'='*80}")
+                print("STOPPING CRITERIA MET")
+                print(f"{'='*80}")
+                print(f"Reason: {self._get_stop_reason(critique_result, iteration_num)}")
+                break
+
+            iteration_num += 1
+
+        # FINAL: Synthesis - Generate comprehensive answer
+        print(f"\n{'='*80}")
+        print("SYNTHESIS PHASE")
+        print(f"{'='*80}")
+
+        final_critique = critique_results[-1]
+        synthesis_result = self.synthesis_agent.synthesize(
+            query=query,
+            iteration_results=iteration_results,
+            final_critique=final_critique,
+        )
+
+        # Summary
+        print(f"\n{'='*80}")
+        print("ANALYSIS COMPLETE (HUB-BASED)")
+        print(f"{'='*80}")
+        print(f"\nIterations: {len(iteration_results)}")
+        print(f"Sources consulted: {synthesis_result['unique_sources']}")
+        print(f"Evidence chunks: {synthesis_result['total_evidence_chunks']}")
+        print(f"Confidence: {synthesis_result['confidence_score']:.0f}%")
+        print(f"Quality: {final_critique['overall_quality']}")
+        print(f"\nEnd time: {datetime.now().strftime('%H:%M:%S')}")
+
+        # Log communication summary
+        comm_summary = self.hub.get_communication_summary()
+        print(f"\nAgent Communications: {comm_summary['total_messages']} messages")
+
+        return {
+            "query": query,
+            "final_report": synthesis_result["report_markdown"],
+            "answer": synthesis_result["answer"],
+            "confidence_score": synthesis_result["confidence_score"],
+            "quality_rating": final_critique["overall_quality"],
+            "iterations": len(iteration_results),
+            "unique_sources": synthesis_result["unique_sources"],
+            "total_chunks": synthesis_result["total_evidence_chunks"],
+            "epistemic_summary": synthesis_result["epistemic_summary"],
+            "all_iteration_results": iteration_results,
+            "all_critique_results": critique_results,
+            "synthesis_result": synthesis_result,
+            "web_evidence_used": web_evidence_used,
+            "web_context": web_context,
+            "hub_communications": self.hub.get_communication_log(),
+            "hub_summary": comm_summary,
+        }
 
     def run_wide_then_deep_analysis(self, query: str) -> Dict:
         """
@@ -406,6 +589,86 @@ class Orchestrator:
                 return "Adequate quality + convergence + no high-priority gaps"
 
         return "Stopping criteria met"
+
+    def _process_critique_for_hub_requests(
+        self, critique_result: Dict, iteration_num: int, query: str
+    ) -> None:
+        """
+        Process critique results and send appropriate hub requests.
+
+        Enables bidirectional agent communication:
+        - High-priority gaps trigger document expansion requests
+        - Weak quality triggers targeted web search requests
+        - Contradictions trigger synthesis validation requests
+
+        Args:
+            critique_result: Result from CritiqueAgent.analyze()
+            iteration_num: Current iteration number
+            query: Original query
+        """
+        if not self.use_hub:
+            return
+
+        gaps = critique_result.get("gaps", [])
+        quality = critique_result.get("overall_quality", "ADEQUATE")
+
+        # INTERACTION 1: Request document expansion for high-priority gaps
+        high_priority_gaps = [g for g in gaps if g.get("severity") == "HIGH"]
+        if high_priority_gaps and self.hub.get_agent("document_selector"):
+            print(f"\n[HUB] Critique detected {len(high_priority_gaps)} high-priority gaps")
+            print(f"[HUB] Requesting document expansion via DocumentSelectorAgent")
+
+            expansion_request = self.hub.send_message(
+                from_agent="orchestrator",
+                to_agent="document_selector",
+                action="expand_selection",
+                params={
+                    "gaps": high_priority_gaps,
+                    "query": query,
+                    "iteration": iteration_num,
+                },
+                priority=8,
+            )
+
+            # Process request (simplified - in production would be async)
+            results = self.hub.process_queue()
+            if results.get("successful") > 0:
+                print(f"[HUB] Document expansion processed")
+
+        # INTERACTION 2: Request targeted web search for weak quality
+        if quality == "WEAK" and iteration_num <= 3:
+            if self.hub.get_agent("web_lookup"):
+                print(f"\n[HUB] Quality is WEAK - requesting targeted web search")
+
+                web_request = self.hub.send_message(
+                    from_agent="orchestrator",
+                    to_agent="web_lookup",
+                    action="search_for_gaps",
+                    params={
+                        "gaps": gaps[:3],  # Top 3 gaps
+                        "query": query,
+                        "iteration": iteration_num,
+                    },
+                    priority=7,
+                )
+
+                results = self.hub.process_queue()
+                if results.get("successful") > 0:
+                    print(f"[HUB] Web search request processed")
+
+        # INTERACTION 3: Request knowledge graph expansion
+        if self.hub.get_agent("knowledge_graph"):
+            kg_request = self.hub.send_message(
+                from_agent="orchestrator",
+                to_agent="knowledge_graph",
+                action="find_gaps",
+                params={
+                    "query": query,
+                    "iteration": iteration_num,
+                },
+                priority=5,
+            )
+            results = self.hub.process_queue()
 
     def save_report(self, result: Dict, output_path: str = None) -> str:
         """

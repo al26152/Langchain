@@ -486,7 +486,8 @@ class EvidenceAgent:
         # Source diversity
         unique_sources = set(e["source"] for e in evidence)
         source_count = len(unique_sources)
-        coverage_percent = (source_count / self.total_documents) * 100
+        # Guard against division by zero if no documents in vector store
+        coverage_percent = (source_count / max(self.total_documents, 1)) * 100
 
         # Date distribution
         date_counts = {"recent": 0, "moderate": 0, "old": 0, "unknown": 0}
@@ -623,8 +624,12 @@ class EvidenceAgent:
                 })
 
         # Gap 3: Single-source dominance
-        max_chunks_per_source = max(metrics["source_distribution"].values())
-        if max_chunks_per_source > len(evidence) * 0.5:
+        source_dist = metrics["source_distribution"]
+        if source_dist:  # Only check if there are sources
+            max_chunks_per_source = max(source_dist.values())
+        else:
+            max_chunks_per_source = 0
+        if source_dist and max_chunks_per_source > len(evidence) * 0.5:
             dominant_source = [s for s, c in metrics["source_distribution"].items() if c == max_chunks_per_source][0]
             gaps.append({
                 "type": "single_source_dominance",
@@ -755,3 +760,106 @@ class EvidenceAgent:
             evidence["confidence"] = confidence
 
         return evidence_list
+
+    def handle_request(self, action: str, params: Dict) -> Dict:
+        """
+        Handle requests from other agents via the hub.
+
+        Args:
+            action: Action to perform
+            params: Action parameters
+
+        Returns:
+            Result dict
+
+        SUPPORTED ACTIONS:
+        - search_targeted: Search for specific gaps with boosted web evidence
+        - expand_search: Expand search with additional query terms
+        - resolve_contradictions: Request evidence to resolve contradictions
+        """
+        if action == "search_targeted":
+            # CritiqueAgent requesting targeted search for specific gaps
+            return self._search_targeted(params)
+
+        elif action == "expand_search":
+            # Request to expand search with additional terms
+            return self._expand_search(params)
+
+        elif action == "resolve_contradictions":
+            # SynthesisAgent requesting specific evidence
+            return self._resolve_contradictions(params)
+
+        else:
+            return {"status": "error", "message": f"Unknown action: {action}"}
+
+    def _search_targeted(self, params: Dict) -> Dict:
+        """
+        Perform targeted search for specific gaps.
+
+        Args:
+            params: Dict with keys:
+                - gaps: List of gap dicts
+                - boost_web: Whether to include web evidence
+                - k: Number of results
+
+        Returns:
+            Dict with evidence results
+        """
+        gaps = params.get("gaps", [])
+        boost_web = params.get("boost_web", False)
+        k = params.get("k", 10)
+
+        # TODO: Implement targeted search logic based on gap types
+        return {
+            "status": "pending",
+            "action": "search_targeted",
+            "gaps_targeted": len(gaps),
+            "web_boost": boost_web,
+        }
+
+    def _expand_search(self, params: Dict) -> Dict:
+        """
+        Expand search with additional query terms.
+
+        Args:
+            params: Dict with keys:
+                - original_query: Original query string
+                - expansion_terms: Terms to add
+                - k: Number of results
+
+        Returns:
+            Dict with expanded search results
+        """
+        original_query = params.get("original_query", "")
+        expansion_terms = params.get("expansion_terms", [])
+        k = params.get("k", 10)
+
+        # TODO: Implement expanded search logic
+        return {
+            "status": "pending",
+            "action": "expand_search",
+            "expansion_terms": len(expansion_terms),
+        }
+
+    def _resolve_contradictions(self, params: Dict) -> Dict:
+        """
+        Request evidence to resolve contradictions.
+
+        Args:
+            params: Dict with keys:
+                - contradiction_description: What's contradictory
+                - conflicting_sources: Source docs involved
+                - resolution_strategy: How to resolve
+
+        Returns:
+            Dict with resolution evidence
+        """
+        contradiction = params.get("contradiction_description", "")
+        sources = params.get("conflicting_sources", [])
+
+        # TODO: Implement contradiction resolution search
+        return {
+            "status": "pending",
+            "action": "resolve_contradictions",
+            "conflicting_sources": len(sources),
+        }

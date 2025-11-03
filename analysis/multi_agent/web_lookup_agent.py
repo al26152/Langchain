@@ -455,6 +455,103 @@ If search results are sparse, return empty array.
         framework = context.get("validation_framework", {})
         return list(framework.values())
 
+    def handle_request(self, action: str, params: Dict) -> Dict:
+        """
+        Handle requests from other agents via the hub.
+
+        Args:
+            action: Action to perform
+            params: Action parameters
+
+        Returns:
+            Result dict
+
+        SUPPORTED ACTIONS:
+        - search_targeted: Perform targeted web search for specific topics
+        - search_for_gaps: Search web for identified knowledge gaps
+        - validate_external: Validate local findings against external sources
+        """
+        if action == "search_targeted":
+            # Perform targeted web search
+            return self._search_targeted(params)
+
+        elif action == "search_for_gaps":
+            # Search for specific gaps identified by other agents
+            return self._search_for_gaps(params)
+
+        elif action == "validate_external":
+            # Validate findings against external sources
+            return self._validate_external(params)
+
+        else:
+            return {"status": "error", "message": f"Unknown action: {action}"}
+
+    def _search_targeted(self, params: Dict) -> Dict:
+        """
+        Perform targeted web search for specific topics.
+
+        Args:
+            params: Dict with keys:
+                - topics: List of search topics
+                - query: Original query context
+
+        Returns:
+            Dict with search results
+        """
+        topics = params.get("topics", [])
+        query = params.get("query", "")
+
+        # TODO: Implement targeted web search
+        return {
+            "status": "pending",
+            "action": "search_targeted",
+            "topics_searched": len(topics),
+        }
+
+    def _search_for_gaps(self, params: Dict) -> Dict:
+        """
+        Search web for identified knowledge gaps.
+
+        Args:
+            params: Dict with keys:
+                - gaps: List of gap descriptions
+                - query: Original query
+
+        Returns:
+            Dict with gap-filling search results
+        """
+        gaps = params.get("gaps", [])
+        query = params.get("query", "")
+
+        # TODO: Implement gap search
+        return {
+            "status": "pending",
+            "action": "search_for_gaps",
+            "gaps_to_address": len(gaps),
+        }
+
+    def _validate_external(self, params: Dict) -> Dict:
+        """
+        Validate local findings against external sources.
+
+        Args:
+            params: Dict with keys:
+                - findings: Findings to validate
+                - query: Original query
+
+        Returns:
+            Dict with validation results
+        """
+        findings = params.get("findings", [])
+        query = params.get("query", "")
+
+        # TODO: Implement external validation
+        return {
+            "status": "pending",
+            "action": "validate_external",
+            "findings_to_validate": len(findings),
+        }
+
 
 def demo_web_lookup():
     """Demo the web lookup agent."""

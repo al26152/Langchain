@@ -503,8 +503,8 @@ Understanding what we **know** vs what we **assume** vs what we **infer**:
 | Type | Count | Ratio |
 |------|-------|-------|
 | **FACT** | {epistemic_summary['fact_count']} | {epistemic_summary['fact_ratio']:.1%} |
-| **ASSUMPTION** | {epistemic_summary['assumption_count']} | {(epistemic_summary['assumption_count']/total*100):.0f}% |
-| **INFERENCE** | {epistemic_summary['inference_count']} | {(epistemic_summary['inference_count']/total*100):.0f}% |
+| **ASSUMPTION** | {epistemic_summary['assumption_count']} | {(epistemic_summary['assumption_count']/max(total,1)*100):.0f}% |
+| **INFERENCE** | {epistemic_summary['inference_count']} | {(epistemic_summary['inference_count']/max(total,1)*100):.0f}% |
 
 **Quality Assessment**: {"Strong evidence base (fact-heavy)" if epistemic_summary['fact_ratio'] > 0.3 else "[WARNING] Inference-heavy - findings based on interpretations rather than hard data. Recommend searching for official reports with verified statistics." if epistemic_summary['fact_ratio'] < 0.2 else "Balanced mix of facts and reasoning"}
 
@@ -638,3 +638,100 @@ For explicit reasoning chains (e.g., "Given X and Y, we conclude Z"), future enh
         report += f"\n---\n\n*Report generated: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}*\n"
 
         return report
+
+    def handle_request(self, action: str, params: Dict) -> Dict:
+        """
+        Handle requests from other agents via the hub.
+
+        Args:
+            action: Action to perform
+            params: Action parameters
+
+        Returns:
+            Result dict
+
+        SUPPORTED ACTIONS:
+        - generate_partial_synthesis: Generate partial synthesis for validation
+        - request_evidence: Request specific evidence for contradictions
+        - validate_confidence: Validate confidence score against criteria
+        """
+        if action == "generate_partial_synthesis":
+            # Generate partial synthesis from current evidence
+            return self._generate_partial_synthesis(params)
+
+        elif action == "request_evidence":
+            # Request specific evidence for contradictions
+            return self._request_evidence(params)
+
+        elif action == "validate_confidence":
+            # Validate confidence score
+            return self._validate_confidence(params)
+
+        else:
+            return {"status": "error", "message": f"Unknown action: {action}"}
+
+    def _generate_partial_synthesis(self, params: Dict) -> Dict:
+        """
+        Generate partial synthesis from current evidence pool.
+
+        Args:
+            params: Dict with keys:
+                - evidence: Evidence items to synthesize
+                - query: Original query
+
+        Returns:
+            Dict with partial synthesis
+        """
+        evidence = params.get("evidence", [])
+        query = params.get("query", "")
+
+        # TODO: Implement partial synthesis generation
+        return {
+            "status": "pending",
+            "action": "generate_partial_synthesis",
+            "evidence_count": len(evidence),
+        }
+
+    def _request_evidence(self, params: Dict) -> Dict:
+        """
+        Request specific evidence for contradictions.
+
+        Args:
+            params: Dict with keys:
+                - contradiction: Description of contradiction
+                - conflicting_sources: Sources involved
+
+        Returns:
+            Dict with request
+        """
+        contradiction = params.get("contradiction", "")
+        sources = params.get("conflicting_sources", [])
+
+        # TODO: Implement evidence request
+        return {
+            "status": "pending",
+            "action": "request_evidence",
+            "conflicting_sources": len(sources),
+        }
+
+    def _validate_confidence(self, params: Dict) -> Dict:
+        """
+        Validate confidence score against criteria.
+
+        Args:
+            params: Dict with keys:
+                - current_confidence: Current confidence score
+                - evidence_base: Supporting evidence
+
+        Returns:
+            Dict with validation results
+        """
+        confidence = params.get("current_confidence", 0)
+        evidence_base = params.get("evidence_base", [])
+
+        # TODO: Implement confidence validation
+        return {
+            "status": "pending",
+            "action": "validate_confidence",
+            "current_confidence": confidence,
+        }
