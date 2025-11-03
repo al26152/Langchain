@@ -1,7 +1,8 @@
 # Knowledge Graph Refresh Guide
 
-**Last Updated:** Oct 31, 2025
-**KG Last Built:** Oct 25, 2025 (30 documents)
+**Last Updated:** Nov 2, 2025
+**KG Last Built:** Nov 2, 2025 - MERGED TO MAIN (30 documents)
+**Status:** ✅ Filtered version available + improved entity resolution
 
 ---
 
@@ -13,6 +14,43 @@ python analysis/knowledge_graph/build_knowledge_graph_framework.py
 ```
 
 Done! The graph is immediately available for next query.
+
+---
+
+## Recent Updates (November 2, 2025)
+
+### New Improvements Merged to Main
+
+**Filtering & Noise Reduction:**
+- ✅ `knowledge_graph_filtered.json` - Cleaned version with noise reduction
+- ✅ Improved entity resolution for better query matching
+- ✅ Enhanced relationship mapping with refined confidence scoring
+
+**Testing & Validation:**
+- ✅ `TEST_QUESTIONS_KG_EVALUATION.md` - Test suite for validating KG quality
+- ✅ Comprehensive evaluation framework with predefined test questions
+
+**Build Framework Enhancement:**
+- ✅ Refactored `build_knowledge_graph_framework.py` - cleaner, more efficient
+- ✅ Better entity extraction and relationship discovery
+- ✅ Improved relationship weighting and filtering
+
+**Available Graphs:**
+- `knowledge_graph_improved.json` - Main graph (better quality)
+- `knowledge_graph_filtered.json` - Filtered version (less noise, faster queries)
+
+### How to Validate KG Quality
+
+Use the new test suite to validate the KG on your questions:
+
+```bash
+# Review test questions
+cat TEST_QUESTIONS_KG_EVALUATION.md
+
+# Run multi-agent analysis with one of the test questions
+python analysis/multi_agent/run_multi_agent.py \
+  --question "Test question from suite"
+```
 
 ---
 

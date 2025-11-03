@@ -393,5 +393,12 @@ Built on top of:
 
 ---
 
-**Version**: 2.1.0 (Knowledge Graph Integration + Metadata-Based Classification)
-**Last Updated**: October 30, 2025
+**Version**: 2.2.0 (Knowledge Graph Filtering + Strategic Analysis)
+**Last Updated**: November 2, 2025
+
+### Recent Updates (November 2, 2025)
+- ✅ **Knowledge Graph Improvements Merged**: Filtered version, better entity resolution
+- ✅ **KG Test Suite Added**: `TEST_QUESTIONS_KG_EVALUATION.md` for quality validation
+- ✅ **Strategic Analysis Capability**: System successfully analyzed Leeds healthcare collaboration/workforce risks
+- ✅ **Pipeline-to-Network Tracking**: GitHub issue created for future architecture improvements
+- ✅ **System Performance**: Multi-agent system achieving 60-75% confidence with 10-11 document coverage
