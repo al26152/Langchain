@@ -26,10 +26,10 @@ def main():
 
     # Strategic question for senior analyst
     query = (
-        "As a senior analyst supporting Leeds Community Healthcare's response to the NHS 10-Year Plan, "
-        "identify the key workforce themes that emerge from our organisational risks and issues. "
-        "What evidence supports these themes, and how do they align with integrated care delivery requirements? "
-        "What are the critical gaps that could impact service delivery?"
+        "Building on the national 10-year health plan, what are the specific barriers and enablers "
+        "for LCH, LTHT, and Leeds-based primary care organisations to co-develop a neighbourhood workforce ecosystem? "
+        "How can we address health inequalities while managing financial constraints, and what partnerships "
+        "or training programs are needed?"
     )
 
     print("\n" + "="*100)
@@ -102,17 +102,24 @@ def main():
         print("="*100)
 
         answer = result_hub['answer']
-        # Save answer to file to avoid Unicode encoding issues with Windows terminal
-        answer_path = f"strategic_workforce_themes_{datetime.now().strftime('%Y%m%d_%H%M%S')}.txt"
-        with open(answer_path, 'w', encoding='utf-8') as f:
-            f.write(answer)
-        print(f"\n[ANSWER SAVED] Key findings written to: {answer_path}")
-
-        # Save comprehensive report
+        # Save HUB answer to markdown file
         timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-        report_path = f"strategic_workforce_analysis_{timestamp}.md"
+        hub_answer_path = f"ANALYSIS_HUB_BASED_FINDINGS_{timestamp}.md"
+        with open(hub_answer_path, 'w', encoding='utf-8') as f:
+            f.write("# HUB-BASED ANALYSIS FINDINGS\n\n")
+            f.write(f"**Analysis Type:** Hub-Based (Bidirectional Agent Network)\n\n")
+            f.write(f"**Timestamp:** {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}\n\n")
+            f.write(f"**Confidence:** {result_hub['confidence_score']:.0f}%\n\n")
+            f.write(f"**Sources:** {result_hub['unique_sources']} documents\n\n")
+            f.write(f"**Chunks:** {result_hub['total_chunks']} evidence chunks\n\n")
+            f.write("---\n\n")
+            f.write(answer)
+        print(f"\n[HUB FINDINGS] Saved to: {hub_answer_path}")
+
+        # Save comprehensive hub report
+        report_path = f"ANALYSIS_HUB_REPORT_{timestamp}.md"
         orchestrator.save_report(result_hub, report_path)
-        print(f"\n[REPORT] Full analysis saved: {report_path}")
+        print(f"[HUB REPORT] Full analysis saved: {report_path}")
 
         # Show hub communication details
         print(f"\n" + "="*100)
@@ -138,6 +145,20 @@ def main():
         orchestrator_no_hub = Orchestrator(vectordb, use_hub=False, verbose=False)
         print("\nRunning traditional sequential pipeline analysis...")
         result_pipeline = orchestrator_no_hub.run_analysis(query)
+
+        # Save PIPELINE answer to markdown file
+        pipeline_answer_path = f"ANALYSIS_PIPELINE_FINDINGS_{timestamp}.md"
+        pipeline_answer = result_pipeline['answer']
+        with open(pipeline_answer_path, 'w', encoding='utf-8') as f:
+            f.write("# PIPELINE-BASED ANALYSIS FINDINGS\n\n")
+            f.write(f"**Analysis Type:** Traditional Pipeline (Sequential)\n\n")
+            f.write(f"**Timestamp:** {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}\n\n")
+            f.write(f"**Confidence:** {result_pipeline['confidence_score']:.0f}%\n\n")
+            f.write(f"**Sources:** {result_pipeline['unique_sources']} documents\n\n")
+            f.write(f"**Chunks:** {result_pipeline['total_chunks']} evidence chunks\n\n")
+            f.write("---\n\n")
+            f.write(pipeline_answer)
+        print(f"[PIPELINE FINDINGS] Saved to: {pipeline_answer_path}")
 
         conf_diff = result_hub['confidence_score'] - result_pipeline['confidence_score']
         sources_diff = result_hub['unique_sources'] - result_pipeline['unique_sources']
