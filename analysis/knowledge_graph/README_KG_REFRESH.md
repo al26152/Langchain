@@ -1,8 +1,8 @@
 # Knowledge Graph Refresh Guide
 
-**Last Updated:** Nov 2, 2025
-**KG Last Built:** Nov 2, 2025 - MERGED TO MAIN (30 documents)
-**Status:** ✅ Filtered version available + improved entity resolution
+**Last Updated:** Nov 4, 2025
+**KG Last Built:** Nov 4, 2025 (30 documents)
+**Status:** ✅ Phase 1 Complete - Confidence scoring, pattern extraction, test suite added
 
 ---
 
@@ -17,39 +17,67 @@ Done! The graph is immediately available for next query.
 
 ---
 
-## Recent Updates (November 2, 2025)
+## Recent Updates (November 4, 2025) - Phase 1 Complete
 
-### New Improvements Merged to Main
+### Phase 1: Infrastructure & Confidence Scoring
 
-**Filtering & Noise Reduction:**
-- ✅ `knowledge_graph_filtered.json` - Cleaned version with noise reduction
-- ✅ Improved entity resolution for better query matching
-- ✅ Enhanced relationship mapping with refined confidence scoring
+**Testing & Quality Assessment:**
+- ✅ `test_kg_quality.py` - Comprehensive KG quality metrics
+  - Entity coverage analysis
+  - Relationship distribution metrics
+  - Connectivity analysis
+  - Semantic quality scoring
+  - Quality grade: 79.6/100 (Grade B)
 
-**Testing & Validation:**
-- ✅ `TEST_QUESTIONS_KG_EVALUATION.md` - Test suite for validating KG quality
-- ✅ Comprehensive evaluation framework with predefined test questions
+**Confidence Scoring System:**
+- ✅ All relationships now have confidence scores (0.0-1.0)
+  - Explicit relationships: 0.65-0.8 (based on type)
+    - `provides`: 0.75 (most reliable)
+    - `partners_with`: 0.8 (partnership explicit)
+    - `uses`: 0.7 (resource usage)
+  - Implicit relationships: 0.0-0.5 (based on co-occurrence frequency)
+    - Capped at 0.5 for fair weighting
+    - Formula: min(co_mention_count/10, 0.5)
 
-**Build Framework Enhancement:**
-- ✅ Refactored `build_knowledge_graph_framework.py` - cleaner, more efficient
-- ✅ Better entity extraction and relationship discovery
-- ✅ Improved relationship weighting and filtering
+**Pattern-Based Extraction:**
+- ✅ `pattern_extractor.py` - High-precision pattern matching
+  - Partnerships: 85% confidence ("Board to Board", "partnership with")
+  - Care pathways: 75-82% confidence ("discharge pathway", "referral")
+  - Service provision: 80% confidence ("X provides Y")
+  - Validation against known entities
+  - Ready for integration into KG builder (Phase 2)
+
+**Noise Filtering:**
+- ✅ `filter_kg_noise.py` - Fixed Unicode encoding issues
+- ✅ Removes 99.3% of weak co-mentions with threshold=5
+- ✅ Preserves all 145 semantic relationships
 
 **Available Graphs:**
-- `knowledge_graph_improved.json` - Main graph (better quality)
-- `knowledge_graph_filtered.json` - Filtered version (less noise, faster queries)
+- `knowledge_graph_improved.json` - Main graph with confidence scores
+- `knowledge_graph_filtered.json` - Filtered version (99.3% noise reduction)
 
 ### How to Validate KG Quality
 
-Use the new test suite to validate the KG on your questions:
+Use the quality assessment suite to check KG health:
 
 ```bash
-# Review test questions
-cat TEST_QUESTIONS_KG_EVALUATION.md
+# Run comprehensive quality assessment
+python analysis/knowledge_graph/test_kg_quality.py
 
-# Run multi-agent analysis with one of the test questions
+# This produces:
+# - Entity coverage metrics
+# - Relationship distribution
+# - Connectivity analysis
+# - Quality score (0-100)
+# - Recommendations for improvement
+```
+
+Or test with actual queries:
+
+```bash
+# Run multi-agent analysis with test questions
 python analysis/multi_agent/run_multi_agent.py \
-  --question "Test question from suite"
+  --question "What are LCH's key partnerships?"
 ```
 
 ---
@@ -63,22 +91,30 @@ The **Knowledge Graph** is a structured network of entities and relationships ex
 - **Better search coverage** - Prevents missing relevant documents due to naming variations
 - **Organization context** - Understands partnerships and service networks
 
-### Current Graph Structure
+### Current Graph Structure (Phase 1 - Nov 4, 2025)
 
 ```
-Entities (200 total):
-  • Organizations: 16 (LCH, LTHT, LYPFT, etc.)
-  • Services: 115 (Community Nursing, Mental Health, etc.)
-  • Care Pathways: 25 (Discharge, Step-up/down, etc.)
-  • Roles: 9 (Clinicians, Medical Directors, etc.)
-  • Conditions: 35 (Mental Health, Cancer, etc.)
+Entities (224 total):
+  • Organizations: 24 (LCH, LTHT, LYPFT, NHS England, West Yorkshire ICB, etc.)
+  • Services: 118 (Community Nursing, Mental Health, Diabetes Management, etc.)
+  • Care Pathways: 16 (Discharge, Referral, Integration, etc.)
+  • Roles: 15 (Clinicians, Medical Directors, Managers, etc.)
+  • Conditions: 48 (Mental Health, Cancer, Diabetes, Respiratory, etc.)
 
-Relationships (19,374 total):
-  • Strong semantic links: 88 (0.5%)
-    - provides: 81 relationships
-    - uses: 6 relationships
-    - manages: 1 relationship
-  • Co-mention signals: 19,286 (99.5%)
+Relationships (21,510 total):
+  • Explicit semantic links: 124 (0.58%)
+    - provides: 114 relationships (avg confidence: 0.75)
+    - partners_with: 2 relationships (confidence: 0.8)
+    - uses: 8 relationships (confidence: 0.7)
+  • Implicit co-mention signals: 21,386 (99.42%)
+    - Avg confidence: 0.22 (capped at 0.5)
+    - Frequency-based weighting applied
+
+Confidence Scoring:
+  • All relationships scored 0.0-1.0
+  • Explicit avg: 0.74
+  • Implicit avg: 0.22
+  • Quality grade: B (79.6/100)
 ```
 
 ---
@@ -140,17 +176,31 @@ ls -la analysis/knowledge_graph/knowledge_graph_improved.json
 
 ## Understanding Your Graph
 
-### Relationship Types
+### Relationship Types with Confidence Scoring
 
 **Strong Semantic Relationships** (Use for precise queries)
-- `provides`: "Organization A provides Service B" (81 relationships)
-- `uses`: "Service A uses Technology B" (6 relationships)
-- `manages`: "Role A manages Service B" (1 relationship)
+- `provides`: "Organization A provides Service B"
+  - Count: 114 relationships
+  - Avg confidence: 0.75 (high reliability)
+  - Best for: Service discovery, organizational capability search
 
-**Co-mention Relationships** (Use for discovery)
-- `mentioned_together_in`: "Entity A and B appear in same document" (19,286 relationships)
-- Quality varies; useful for finding adjacent topics
-- Can include false positives (unrelated concepts in same document)
+- `partners_with`: "Organization A partners with Organization B"
+  - Count: 2 relationships
+  - Confidence: 0.8 (explicit when stated)
+  - Best for: Partnership discovery, collaboration networks
+
+- `uses`: "Service A uses Resource/Technology B"
+  - Count: 8 relationships
+  - Confidence: 0.7 (moderate reliability)
+  - Best for: Integration discovery
+
+**Co-mention Relationships** (Use for discovery with caution)
+- `mentioned_together_in`: "Entity A and B appear in same document"
+  - Count: 21,386 relationships
+  - Avg confidence: 0.22 (low, based on frequency)
+  - Quality: Varies by document context
+  - Best for: Finding adjacent topics, potential connections
+  - ⚠️ Note: Can include false positives (unrelated concepts in same document)
 
 ### Example Relationships
 
@@ -158,16 +208,31 @@ ls -la analysis/knowledge_graph/knowledge_graph_improved.json
 {
   "source": "Leeds Community Healthcare NHS Trust",
   "target": "Community Nursing Service",
-  "relationship": "provides"
+  "relationship": "provides",
+  "confidence": 0.75,
+  "co_occurrence_count": 12
   // Strong signal: LCH definitely provides this service
+  // High confidence from explicit LLM extraction
 }
 
 {
   "source": "Mental Health Service",
   "target": "Primary Care Integration",
-  "relationship": "mentioned_together_in"
-  // Weak signal: Both appear in documents about integration
-  // Might be relevant, might be coincidence
+  "relationship": "mentioned_together_in",
+  "confidence": 0.18,
+  "co_occurrence_count": 2,
+  "documents": ["West_Yorkshire_ICB_Strategy.md"]
+  // Weak signal: Both appear together in 2 documents
+  // Low confidence - might be relevant or coincidence
+  // Use only for discovery, not as strong evidence
+}
+
+{
+  "source": "Leeds Teaching Hospitals NHS Trust",
+  "target": "Leeds Community Healthcare NHS Trust",
+  "relationship": "partners_with",
+  "confidence": 0.8
+  // Very strong signal: Board-to-Board partnership explicitly stated
 }
 ```
 
@@ -261,5 +326,22 @@ Budget ~$5 for safe margin.
 
 ---
 
-**Last Updated:** Oct 31, 2025
+## Coming Soon (Phases 2-7)
+
+Following phases will enhance the KG further:
+
+- **Phase 2**: Pattern-based extraction integration (partnerships, pathways, services)
+- **Phase 3**: Metadata-driven service attribution from document ownership
+- **Phase 4**: Enhanced LLM extraction with targeted two-pass approach
+- **Phase 5**: Entity resolution and relationship deduplication
+- **Phase 6**: KG Agent integration with confidence-weighted query expansion
+- **Phase 7**: Automated refresh script and pipeline integration
+
+Track progress on the `enhancement/KG` branch.
+
+---
+
+**Last Updated:** Nov 4, 2025
+**Phase:** 1 of 7 (Infrastructure & Confidence Scoring)
 **Maintained By:** Project Team
+**Repository Branch:** `enhancement/KG`
