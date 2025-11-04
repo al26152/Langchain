@@ -13,7 +13,10 @@
       "Bash(gh issue create:*)",
       "Bash(python:*)",
       "Bash(.venvScriptsactivate)",
-      "Bash(\".venv\\Scripts\\python.exe\" -c \"import chromadb, langchain, openai, networkx; print(''All core dependencies loaded'')\")"
+      "Bash(\".venv\\Scripts\\python.exe\" -c \"import chromadb, langchain, openai, networkx; print(''All core dependencies loaded'')\")",
+      "Bash(.venvScriptspython.exe analysis/multi_agent/run_multi_agent.py)",
+      "Bash(\".venv\\Scripts\\python.exe\" analysis/multi_agent/run_multi_agent.py)",
+      "Bash(\".venv\\Scripts\\python.exe\" analysis/multi_agent/run_multi_agent.py --question \"How can Leeds and West Yorkshire transition from separate organisational workforce systems to genuinely integrated systems that enable professionals to work flexibly across organisational boundaries in support of neighbourhood care delivery\")"
     ],
     "deny": [],
     "ask": []
