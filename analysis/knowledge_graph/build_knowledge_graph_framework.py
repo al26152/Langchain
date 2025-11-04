@@ -336,8 +336,31 @@ for entity_type, queries in FRAMEWORK_QUERIES.items():
                         if isinstance(entities, list):
                             all_extractions[found_type].extend(entities)
 
-                    # Collect relationships
+                    # Collect relationships with confidence scoring
                     for rel in data.get("relationships", []):
+                        # Add confidence score based on relationship type
+                        rel_type = rel.get("relationship", "unknown")
+
+                        # Explicit relationships from LLM get high confidence
+                        if rel_type == "provides":
+                            confidence = 0.75  # Provides is most common/reliable
+                        elif rel_type == "partners_with":
+                            confidence = 0.8   # Partnership explicit when stated
+                        elif rel_type == "uses":
+                            confidence = 0.7   # Using a resource/tool
+                        elif rel_type == "manages":
+                            confidence = 0.75  # Management relationship
+                        elif rel_type == "focuses_on":
+                            confidence = 0.65  # Focus areas may be ambiguous
+                        elif rel_type == "regulates":
+                            confidence = 0.8   # Regulatory relationships clear
+                        else:
+                            confidence = 0.6   # Default for other types
+
+                        # Add confidence if not already present
+                        if "confidence" not in rel:
+                            rel["confidence"] = confidence
+
                         all_relationships.append(rel)
 
                     # Track document mentions
@@ -390,10 +413,11 @@ for entity_type, entities in all_extractions.items():
     if removed > 0:
         print(f"  {entity_type}: {len(cleaned_entities[entity_type])} unique (removed {removed} duplicates)")
 
-# Find implicit relationships from co-occurrence
+# Find implicit relationships from co-occurrence with confidence scoring
 print("\n[STEP 4] Finding implicit relationships from co-occurrence...")
 
 implicit_rels = []
+co_occurrence_counts = {}  # Track co-mention frequency
 all_entities_list = []
 for entities in cleaned_entities.values():
     all_entities_list.extend(entities)
@@ -424,10 +448,20 @@ for i, entity1 in enumerate(all_entities_list):
         common_docs = docs1 & docs2
 
         if common_docs:
+            # Count co-occurrences for confidence scoring
+            pair_key = tuple(sorted([entity1, entity2]))
+            co_occurrence_counts[pair_key] = len(common_docs)
+
+            # Confidence = min(co-mention_count / 10, 0.5)
+            # Co-mentions max out at 0.5 confidence
+            confidence = min(len(common_docs) / 10.0, 0.5)
+
             implicit_rels.append({
                 "source": entity1,
                 "target": entity2,
                 "relationship": "mentioned_together_in",
+                "confidence": round(confidence, 2),
+                "co_occurrence_count": len(common_docs),
                 "documents": list(common_docs)[:1]
             })
 
@@ -460,6 +494,18 @@ output_data = {
         "total_relationships": len(all_relationships),
         "extraction_method": "Framework-Based (NHS Service Standards)",
         "implicit_relationships": len(implicit_rels),
+        "explicit_relationships": len(all_relationships) - len(implicit_rels),
+        "confidence_scoring": "enabled",
+        "confidence_stats": {
+            "explicit_relationships_avg_confidence": round(
+                sum(r.get("confidence", 0) for r in all_relationships if r.get("relationship") != "mentioned_together_in") /
+                max(1, len(all_relationships) - len(implicit_rels)), 2
+            ),
+            "implicit_relationships_avg_confidence": round(
+                sum(r.get("confidence", 0) for r in all_relationships if r.get("relationship") == "mentioned_together_in") /
+                max(1, len(implicit_rels)), 2
+            ),
+        },
     },
     "framework": {
         "service_types": SERVICE_FRAMEWORK["service_types"],
@@ -485,6 +531,17 @@ for entity_type, entities in final_entities.items():
 print(f"\nRelationships: {len(all_relationships)}")
 print(f"  Explicit: {len(all_relationships) - len(implicit_rels)}")
 print(f"  Implicit (co-occurrence): {len(implicit_rels)}")
+
+print(f"\nConfidence Scores:")
+explicit_rels = [r for r in all_relationships if r.get("relationship") != "mentioned_together_in"]
+implicit_rels_scored = [r for r in all_relationships if r.get("relationship") == "mentioned_together_in"]
+
+if explicit_rels:
+    avg_explicit = sum(r.get("confidence", 0) for r in explicit_rels) / len(explicit_rels)
+    print(f"  Explicit relationships (avg): {avg_explicit:.2f}")
+if implicit_rels_scored:
+    avg_implicit = sum(r.get("confidence", 0) for r in implicit_rels_scored) / len(implicit_rels_scored)
+    print(f"  Co-mention relationships (avg): {avg_implicit:.2f}")
 
 print("\n" + "="*80)
 print("✓ Framework-based extraction ready for all organizations!")

@@ -86,9 +86,9 @@ class KGNoiseFilter:
         timestamp = datetime.now().strftime("%H:%M:%S")
         symbol = {
             "INFO": "[i]",
-            "SUCCESS": "[✓]",
+            "SUCCESS": "[OK]",
             "WARNING": "[!]",
-            "ERROR": "[✗]",
+            "ERROR": "[XX]",
             "DEBUG": "[*]"
         }.get(level, "[*]")
         print(f"[{timestamp}] {symbol} {message}")

@@ -1,0 +1,969 @@
+{
+  "entities": {
+    "ORGANIZATIONS": [
+      "Birmingham Community Health NHS",
+      "Birmingham Community Health NHS Foundation Trust",
+      "CQC Care Quality Commission",
+      "Cancer alliances",
+      "Community Healthcare Services Provider Collaborative",
+      "Derbyshire Community Health Services NHS Foundation Trust",
+      "Health Innovation North",
+      "Health Professions Council",
+      "ICBs",
+      "LCH Trust",
+      "LYPFT",
+      "Leeds City Council",
+      "Leeds Community",
+      "Leeds Community Healthcare NHS Trust",
+      "Leeds Teaching Hospitals NHS Trust",
+      "Leeds and York Partnership NHS Foundation Trust",
+      "NHS",
+      "NHS England",
+      "NHS West Yorkshire Integrated Care Board",
+      "Services NHS Foundation Trust",
+      "The Healthy Leeds Plan",
+      "West Yorkshire Global Partnerships",
+      "West Yorkshire Health and Care Partnership Board",
+      "YAS",
+      "independent health and care providers"
+    ],
+    "SERVICES": [
+      "Art Therapy",
+      "Biomedical Science",
+      "Cancer Diagnosis",
+      "Cardiac Rehabilitation",
+      "Cardiac Service",
+      "Children Urgent Care",
+      "Children and Families service",
+      "Children and Young People's Mental Health Services (CYPMHS)",
+      "Children's Ambulatory Paediatric Service (CAPS)",
+      "Clinic Treatment Pathways",
+      "Clinical Imaging",
+      "Clinical Science",
+      "Community Healthcare Services",
+      "Community Health",
+      "Community Health Services Two-hour Urgent Response",
+      "Community Health Transformation - physical health severe mental illness",
+      "Community Intravenous Administration Service",
+      "Community Mental Health transformation - Psychological therapies",
+      "Community Neurological Rehab Service",
+      "Community Nursing",
+      "Community Therapy Service",
+      "Community-based group peer support sessions for diabetes and unhealthy maternal weight",
+      "Complex Physical Disabilities Care",
+      "Dementia Assessment and Referral",
+      "Dementia Care",
+      "Dental Services",
+      "Diabetes Management",
+      "Diabetes Remission",
+      "Diabetes Treatment",
+      "Diagnosis Pathway",
+      "Diagnostics",
+      "Dieticians",
+      "Digital-first pathways",
+      "Discharge to Assessment (D2A) pathways",
+      "Disease Prevention",
+      "Drug Trials",
+      "Early Help Services",
+      "Elective Care",
+      "Elective Operation",
+      "Emergency Care",
+      "End of Life Care",
+      "End-of-life care support",
+      "Frailty Management",
+      "General Practice",
+      "Gestational Diabetes targeted healthy eating and physical activity",
+      "Health Promotion",
+      "Hearing Aid Dispensing",
+      "Home Care",
+      "Home Screening Tests",
+      "Hospital at Home",
+      "Inpatient",
+      "Inpatient Care",
+      "Integrated Care",
+      "Integrated Intermediate Care",
+      "Intermediate Care Services",
+      "Intermediate care",
+      "Long-term Health Conditions Management",
+      "Maternity Mental Health Service",
+      "Maternity Services",
+      "Maternity and Neonatal Care",
+      "Medication Management",
+      "Mental Health",
+      "Mental Health Inpatient Services",
+      "NHS services",
+      "National Diabetes Prevention Programme",
+      "Neighbourhood Nights Palliative and End of Life Care",
+      "Neuro Disability Clinic",
+      "Neurodiversity Identification, Assessment and Support",
+      "Occupational Therapy",
+      "Operating Department Practitioners",
+      "Orthoptics",
+      "Outpatient",
+      "Outpatient Care",
+      "Palliative Care",
+      "Palliative and End of Life Care",
+      "Paramedics",
+      "Physical Health Conditions",
+      "Physiotherapy",
+      "Planned Care",
+      "Planned Care Services",
+      "Podiatry",
+      "Preventative Care",
+      "Primary Care",
+      "Proactive Care",
+      "Prosthetics",
+      "Psychology",
+      "Pulmonary Rehabilitation",
+      "Quick Response",
+      "Radiography",
+      "Reablement and Recovery Services",
+      "Rehabilitation and Recovery Beds",
+      "Rehabilitation services for stroke, cardiac and pulmonary conditions",
+      "Research regarding mental health and brain disorders",
+      "Same Day Emergency Care",
+      "Secondary Care",
+      "Short-term Rehabilitation",
+      "Single Point Urgent Referral",
+      "Social Care",
+      "Social Care Services",
+      "Specialist Therapies",
+      "Speech and Language Therapy",
+      "Stroke Rehabilitation",
+      "Surgical Technologies",
+      "Therapies",
+      "Translational Research",
+      "Urgent Care Services",
+      "Urgent Community Response",
+      "Youth service",
+      "cancer support service",
+      "early diagnosis",
+      "high-quality care",
+      "treatment capacity for urgent suspected cancer (USC) pathways"
+    ],
+    "PATHWAYS": [
+      "Elective Recovery",
+      "Care pathways",
+      "Clinical Pathway",
+      "Discharge Pathways",
+      "Integrated Care Pathway",
+      "Integrated Intermediate Care",
+      "Integrated ways across health and social care",
+      "Mental Health Collaborative",
+      "Patient Flow Services",
+      "Referral Pathways",
+      "Referral routes",
+      "SPUR pathway",
+      "Step-down Pathways",
+      "Step-down discharge planning pathway",
+      "Step-up Pathways",
+      "Step-up referral pathway",
+      "USC pathway",
+      "commissioning pathways"
+    ],
+    "ROLES": [
+      "Advanced Practice Roles",
+      "Allied Health Professionals",
+      "Dentistry",
+      "Doctors",
+      "Health Visitors",
+      "Imaging and Therapeutic Equipment Technicians",
+      "Leadership",
+      "Management",
+      "Medical Assistants",
+      "Medical Records and Health Information Technicians",
+      "Medical Secretaries",
+      "Medical and Dental Prosthetic Technicians",
+      "Medical and Pathology Laboratory Technicians",
+      "Midwives",
+      "Nurses",
+      "Nursing",
+      "Pharmacists",
+      "Pharmacy"
+    ],
+    "CONDITIONS": [
+      "Autism",
+      "Blood Diseases",
+      "Brain disorders",
+      "Cancers",
+      "Cardiac",
+      "Cardiometabolic Disease",
+      "Cardiovascular Diseases",
+      "Chronic Conditions",
+      "Communicable Diseases",
+      "Complex Conditions",
+      "Complex Physical Disabilities",
+      "Dementia",
+      "Diabetes",
+      "Diseases of the Respiratory System",
+      "End of life care",
+      "Endocrine Diseases",
+      "Epilepsy",
+      "Frailty",
+      "Functional Neurological Disorder",
+      "Gestational Diabetes",
+      "Head injuries",
+      "Kidney Diseases",
+      "Learning Disabilities",
+      "Mental Ill-health",
+      "Mental Health Conditions",
+      "Mental Illness",
+      "Multimorbidity",
+      "Multiple Long-term Health Conditions",
+      "Multiple sclerosis",
+      "Musculoskeletal Disease",
+      "Neurodiversity",
+      "Palliative care",
+      "Physical Health Conditions",
+      "Physical injuries",
+      "Poor Mental Health",
+      "Poor Physical Health",
+      "Pulmonary",
+      "Respiratory Illness",
+      "Respiratory disease",
+      "Severe Mental Illness",
+      "Stroke",
+      "Trauma",
+      "cardiovascular",
+      "dental health",
+      "haematology",
+      "musculoskeletal",
+      "oncology"
+    ]
+  },
+  "relationships": [
+    {
+      "source": "West Yorkshire Health and Care Partnership",
+      "target": "Community Healthcare Services",
+      "relationship": "provides"
+    },
+    {
+      "source": "LCH Trust",
+      "target": "Community Healthcare Services",
+      "relationship": "provides"
+    },
+    {
+      "source": "West Yorkshire Health and Care Partnership Board",
+      "target": "NHS services",
+      "relationship": "provides"
+    },
+    {
+      "source": "Community Healthcare Services Provider Collaborative",
+      "target": "high-quality care",
+      "relationship": "provides"
+    },
+    {
+      "source": "independent health and care providers",
+      "target": "high-quality care",
+      "relationship": "provides"
+    },
+    {
+      "source": "West Yorkshire Health and Care Partnership",
+      "target": "Community Healthcare Services",
+      "relationship": "provides"
+    },
+    {
+      "source": "NHS England",
+      "target": "Integrated Care",
+      "relationship": "provides"
+    },
+    {
+      "source": "NHS West Yorkshire Integrated Care Board",
+      "target": "Integrated Care",
+      "relationship": "provides"
+    },
+    {
+      "source": "West Yorkshire Health and Care Partnership",
+      "target": "Integrated Care",
+      "relationship": "provides"
+    },
+    {
+      "source": "NHS England",
+      "target": "Primary Care",
+      "relationship": "provides"
+    },
+    {
+      "source": "NHS England",
+      "target": "General Practice",
+      "relationship": "provides"
+    },
+    {
+      "source": "NHS England",
+      "target": "Mental Health",
+      "relationship": "provides"
+    },
+    {
+      "source": "NHS England",
+      "target": "Cancer Diagnosis",
+      "relationship": "provides"
+    },
+    {
+      "source": "NHS England",
+      "target": "Diabetes Treatment",
+      "relationship": "provides"
+    },
+    {
+      "source": "NHS England",
+      "target": "Primary Care",
+      "relationship": "provides"
+    },
+    {
+      "source": "NHS England",
+      "target": "Secondary Care",
+      "relationship": "provides"
+    },
+    {
+      "source": "NHS England",
+      "target": "Community Health",
+      "relationship": "provides"
+    },
+    {
+      "source": "NHS England",
+      "target": "Social Care",
+      "relationship": "provides"
+    },
+    {
+      "source": "NHS England",
+      "target": "Inpatient",
+      "relationship": "provides"
+    },
+    {
+      "source": "NHS England",
+      "target": "Outpatient",
+      "relationship": "provides"
+    },
+    {
+      "source": "West Yorkshire Health and Care Partnership",
+      "target": "Community Healthcare Services",
+      "relationship": "provides"
+    },
+    {
+      "source": "NHS England",
+      "target": "Social Care Services",
+      "relationship": "provides"
+    },
+    {
+      "source": "NHS England",
+      "target": "Community Healthcare Services",
+      "relationship": "provides"
+    },
+    {
+      "source": "Leeds Community Healthcare NHS Trust",
+      "target": "Community Health Services Two-hour Urgent Response",
+      "relationship": "provides"
+    },
+    {
+      "source": "West Yorkshire Health and Care Partnership",
+      "target": "Community Healthcare Services",
+      "relationship": "provides"
+    },
+    {
+      "source": "West Yorkshire Health and Care Partnership",
+      "target": "Early Help Services",
+      "relationship": "provides"
+    },
+    {
+      "source": "Leeds and York Partnership NHS Foundation Trust",
+      "target": "Mental Health Inpatient Services",
+      "relationship": "provides"
+    },
+    {
+      "source": "NHS England",
+      "target": "Same Day Emergency Care",
+      "relationship": "provides"
+    },
+    {
+      "source": "NHS England",
+      "target": "Emergency Care",
+      "relationship": "provides"
+    },
+    {
+      "source": "Leeds Teaching Hospital NHS Trust",
+      "target": "Planned Care",
+      "relationship": "provides"
+    },
+    {
+      "source": "NHS England",
+      "target": "Elective Care",
+      "relationship": "provides"
+    },
+    {
+      "source": "Leeds Teaching Hospital NHS Trust",
+      "target": "Elective Recovery",
+      "relationship": "uses"
+    },
+    {
+      "source": "Leeds Teaching Hospital NHS Trust",
+      "target": "Clinical Imaging",
+      "relationship": "provides"
+    },
+    {
+      "source": "Leeds Teaching Hospital NHS Trust",
+      "target": "Diagnostics",
+      "relationship": "provides"
+    },
+    {
+      "source": "Leeds and York Partnership NHS Foundation Trust",
+      "target": "Mental Health Inpatient Services",
+      "relationship": "provides"
+    },
+    {
+      "source": "Leeds Community Healthcare NHS Trust",
+      "target": "Community Health Transformation – Physical Health Severe Mental Illness",
+      "relationship": "provides"
+    },
+    {
+      "source": "Leeds Community Healthcare NHS Trust",
+      "target": "Mental Health Collaborative",
+      "relationship": "uses"
+    },
+    {
+      "source": "West Yorkshire Health and Care Partnership",
+      "target": "Dental Services",
+      "relationship": "provides"
+    },
+    {
+      "source": "LCH Trust",
+      "target": "Community Dental Service",
+      "relationship": "provides"
+    },
+    {
+      "source": "NHS England",
+      "target": "Short-term Rehabilitation",
+      "relationship": "provides"
+    },
+    {
+      "source": "NHS England",
+      "target": "Reablement and Recovery Services",
+      "relationship": "provides"
+    },
+    {
+      "source": "NHS England",
+      "target": "Integrated Intermediate Care",
+      "relationship": "provides"
+    },
+    {
+      "source": "West Yorkshire Health and Care Partnership",
+      "target": "Stroke Rehabilitation",
+      "relationship": "provides"
+    },
+    {
+      "source": "West Yorkshire Health and Care Partnership",
+      "target": "Cardiac Rehabilitation",
+      "relationship": "provides"
+    },
+    {
+      "source": "West Yorkshire Health and Care Partnership",
+      "target": "Pulmonary Rehabilitation",
+      "relationship": "provides"
+    },
+    {
+      "source": "Leeds Community Healthcare NHS Trust",
+      "target": "Community Therapy Service",
+      "relationship": "provides"
+    },
+    {
+      "source": "Leeds Community Healthcare NHS Trust",
+      "target": "Rehabilitation and Recovery Beds",
+      "relationship": "provides"
+    },
+    {
+      "source": "Leeds Community",
+      "target": "Children and Young People's Mental Health Services (CYPMHS)",
+      "relationship": "provides"
+    },
+    {
+      "source": "NHS England",
+      "target": "Palliative Care",
+      "relationship": "provides"
+    },
+    {
+      "source": "NHS England",
+      "target": "End of Life Care",
+      "relationship": "provides"
+    },
+    {
+      "source": "NHS England",
+      "target": "Home Care",
+      "relationship": "provides"
+    },
+    {
+      "source": "NHS England",
+      "target": "Community Nursing",
+      "relationship": "provides"
+    },
+    {
+      "source": "NHS England",
+      "target": "Social Care",
+      "relationship": "provides"
+    },
+    {
+      "source": "West Yorkshire Health and Care Partnership",
+      "target": "Maternity and Neonatal Care",
+      "relationship": "provides"
+    },
+    {
+      "source": "NHS West Yorkshire Integrated Care Board",
+      "target": "Maternity Mental Health Service",
+      "relationship": "provides"
+    },
+    {
+      "source": "Leeds Community",
+      "target": "Children and Families service",
+      "relationship": "provides"
+    },
+    {
+      "source": "Leeds Community",
+      "target": "Youth service",
+      "relationship": "provides"
+    },
+    {
+      "source": "NHS England",
+      "target": "early diagnosis",
+      "relationship": "provides"
+    },
+    {
+      "source": "NHS England",
+      "target": "diagnostic",
+      "relationship": "provides"
+    },
+    {
+      "source": "NHS England",
+      "target": "treatment capacity for urgent suspected cancer (USC) pathways",
+      "relationship": "provides"
+    },
+    {
+      "source": "Cancer alliances",
+      "target": "NHS England",
+      "relationship": "partners_with"
+    },
+    {
+      "source": "Cancer alliances",
+      "target": "ICBs",
+      "relationship": "partners_with"
+    },
+    {
+      "source": "Cancer alliances",
+      "target": "USC pathway",
+      "relationship": "uses"
+    },
+    {
+      "source": "Leeds Community Healthcare NHS Trust",
+      "target": "Community Intravenous Administration Service",
+      "relationship": "provides"
+    },
+    {
+      "source": "Leeds Community Healthcare NHS Trust",
+      "target": "Cardiac Service",
+      "relationship": "provides"
+    },
+    {
+      "source": "West Yorkshire Health and Care Partnership",
+      "target": "Rehabilitation services for stroke, cardiac and pulmonary conditions",
+      "relationship": "provides"
+    },
+    {
+      "source": "Health Innovation North",
+      "target": "cardiovascular",
+      "relationship": "focuses_on"
+    },
+    {
+      "source": "NHS England",
+      "target": "National Diabetes Prevention Programme",
+      "relationship": "provides"
+    },
+    {
+      "source": "NHS England",
+      "target": "Diabetes Remission",
+      "relationship": "provides"
+    },
+    {
+      "source": "NHS England",
+      "target": "Gestational Diabetes targeted healthy eating and physical activity",
+      "relationship": "provides"
+    },
+    {
+      "source": "NHS England",
+      "target": "Community-based group peer support sessions for diabetes and unhealthy maternal weight",
+      "relationship": "provides"
+    },
+    {
+      "source": "Leeds and York Partnership NHS Foundation Trust",
+      "target": "Mental health inpatient services",
+      "relationship": "provides"
+    },
+    {
+      "source": "Leeds Teaching Hospitals NHS Trust",
+      "target": "Surgical Technologies",
+      "relationship": "provides"
+    },
+    {
+      "source": "Leeds Teaching Hospitals NHS Trust",
+      "target": "Translational Research",
+      "relationship": "provides"
+    },
+    {
+      "source": "Health Innovation North",
+      "target": "Medication Management",
+      "relationship": "provides"
+    },
+    {
+      "source": "Leeds Community Healthcare NHS Trust",
+      "target": "Community Neurological Rehab Service",
+      "relationship": "provides"
+    },
+    {
+      "source": "Leeds Community Healthcare NHS Trust",
+      "target": "Neuro Disability Clinic",
+      "relationship": "provides"
+    },
+    {
+      "source": "The Healthy Leeds Plan",
+      "target": "Dementia Assessment and Referral",
+      "relationship": "provides"
+    },
+    {
+      "source": "The Healthy Leeds Plan",
+      "target": "Neurodiversity Identification, Assessment and Support",
+      "relationship": "provides"
+    },
+    {
+      "source": "NHS England",
+      "target": "Home Screening Tests",
+      "relationship": "provides"
+    },
+    {
+      "source": "Leeds Teaching Hospitals NHS Trust",
+      "target": "Drug Trials",
+      "relationship": "provides"
+    },
+    {
+      "source": "Leeds Teaching Hospitals NHS Trust",
+      "target": "Therapies",
+      "relationship": "provides"
+    },
+    {
+      "source": "Health Innovation North",
+      "target": "Specialist Therapies",
+      "relationship": "provides"
+    },
+    {
+      "source": "Leeds Community",
+      "target": "Rehabilitation and Recovery Beds",
+      "relationship": "provides"
+    },
+    {
+      "source": "NHS England",
+      "target": "Short-term Rehabilitation",
+      "relationship": "provides"
+    },
+    {
+      "source": "NHS England",
+      "target": "Reablement and Recovery Services",
+      "relationship": "provides"
+    },
+    {
+      "source": "NHS England",
+      "target": "Integrated Intermediate Care",
+      "relationship": "uses"
+    },
+    {
+      "source": "Leeds Community",
+      "target": "Neighbourhood Nights Palliative and End of Life Care",
+      "relationship": "provides"
+    },
+    {
+      "source": "LYPFT",
+      "target": "Palliative and End of Life Care",
+      "relationship": "provides"
+    },
+    {
+      "source": "NHS England",
+      "target": "Digital-first pathways",
+      "relationship": "provides"
+    },
+    {
+      "source": "NHS England",
+      "target": "Intermediate care",
+      "relationship": "provides"
+    },
+    {
+      "source": "NHS England",
+      "target": "Urgent care services",
+      "relationship": "provides"
+    },
+    {
+      "source": "NHS England",
+      "target": "Planned care services",
+      "relationship": "provides"
+    },
+    {
+      "source": "NHS England",
+      "target": "End-of-life care support",
+      "relationship": "provides"
+    },
+    {
+      "source": "NHS England",
+      "target": "Care pathways",
+      "relationship": "uses"
+    },
+    {
+      "source": "NHS England",
+      "target": "Referral pathways",
+      "relationship": "uses"
+    },
+    {
+      "source": "NHS England",
+      "target": "Discharge pathways",
+      "relationship": "uses"
+    },
+    {
+      "source": "NHS England",
+      "target": "Step-up pathways",
+      "relationship": "uses"
+    },
+    {
+      "source": "NHS England",
+      "target": "Step-down pathways",
+      "relationship": "uses"
+    },
+    {
+      "source": "NHS England",
+      "target": "Urgent Community Response",
+      "relationship": "provides"
+    },
+    {
+      "source": "NHS England",
+      "target": "Hospital at Home",
+      "relationship": "provides"
+    },
+    {
+      "source": "West Yorkshire Health and Care Partnership Board",
+      "target": "Referral routes",
+      "relationship": "uses"
+    },
+    {
+      "source": "YAS",
+      "target": "Urgent Community Response",
+      "relationship": "provides"
+    },
+    {
+      "source": "YAS",
+      "target": "SPUR pathway",
+      "relationship": "uses"
+    },
+    {
+      "source": "Leeds Community Healthcare NHS Trust",
+      "target": "Discharge to Assessment (D2A) pathways",
+      "relationship": "provides"
+    },
+    {
+      "source": "Leeds City Council",
+      "target": "Discharge Pathways",
+      "relationship": "provides"
+    },
+    {
+      "source": "Leeds City Council",
+      "target": "Intermediate Care Services",
+      "relationship": "provides"
+    },
+    {
+      "source": "NHS England",
+      "target": "Step-up Pathways",
+      "relationship": "provides"
+    },
+    {
+      "source": "NHS England",
+      "target": "Step-down Pathways",
+      "relationship": "provides"
+    },
+    {
+      "source": "NHS England",
+      "target": "Integrated Intermediate Care",
+      "relationship": "provides"
+    },
+    {
+      "source": "NHS England",
+      "target": "Step-up Pathways",
+      "relationship": "uses"
+    },
+    {
+      "source": "NHS England",
+      "target": "Step-down Pathways",
+      "relationship": "uses"
+    },
+    {
+      "source": "NHS England",
+      "target": "Referral Pathways",
+      "relationship": "uses"
+    },
+    {
+      "source": "LCH Trust",
+      "target": "Diagnosis Pathway",
+      "relationship": "provides"
+    },
+    {
+      "source": "LCH Trust",
+      "target": "Clinic Treatment Pathways",
+      "relationship": "provides"
+    },
+    {
+      "source": "Leeds Teaching Hospitals NHS Trust",
+      "target": "Dieticians",
+      "relationship": "provides"
+    },
+    {
+      "source": "Leeds Teaching Hospitals NHS Trust",
+      "target": "Occupational Therapy",
+      "relationship": "provides"
+    },
+    {
+      "source": "Leeds Teaching Hospitals NHS Trust",
+      "target": "Operating Department Practitioners",
+      "relationship": "provides"
+    },
+    {
+      "source": "Leeds Teaching Hospitals NHS Trust",
+      "target": "Physiotherapy",
+      "relationship": "provides"
+    },
+    {
+      "source": "Leeds Teaching Hospitals NHS Trust",
+      "target": "Podiatry",
+      "relationship": "provides"
+    },
+    {
+      "source": "Leeds Teaching Hospitals NHS Trust",
+      "target": "Radiography",
+      "relationship": "provides"
+    },
+    {
+      "source": "Leeds Teaching Hospitals NHS Trust",
+      "target": "Speech and Language Therapy",
+      "relationship": "provides"
+    },
+    {
+      "source": "Leeds Teaching Hospitals NHS Trust",
+      "target": "Orthoptics",
+      "relationship": "provides"
+    },
+    {
+      "source": "Leeds Teaching Hospitals NHS Trust",
+      "target": "Paramedics",
+      "relationship": "provides"
+    },
+    {
+      "source": "Leeds Teaching Hospitals NHS Trust",
+      "target": "Psychology",
+      "relationship": "provides"
+    },
+    {
+      "source": "Leeds Teaching Hospitals NHS Trust",
+      "target": "Art Therapy",
+      "relationship": "provides"
+    },
+    {
+      "source": "Leeds Teaching Hospitals NHS Trust",
+      "target": "Hearing Aid Dispensing",
+      "relationship": "provides"
+    },
+    {
+      "source": "Leeds Teaching Hospitals NHS Trust",
+      "target": "Clinical Science",
+      "relationship": "provides"
+    },
+    {
+      "source": "Leeds Teaching Hospitals NHS Trust",
+      "target": "Biomedical Science",
+      "relationship": "provides"
+    },
+    {
+      "source": "Leeds Teaching Hospitals NHS Trust",
+      "target": "Prosthetics",
+      "relationship": "provides"
+    },
+    {
+      "source": "Health Professions Council",
+      "target": "Allied Health Professionals",
+      "relationship": "regulates"
+    },
+    {
+      "source": "West Yorkshire Health and Care Partnership Board",
+      "target": "Primary Care",
+      "relationship": "provides"
+    },
+    {
+      "source": "West Yorkshire Health and Care Partnership Board",
+      "target": "Community Health",
+      "relationship": "provides"
+    },
+    {
+      "source": "West Yorkshire Health and Care Partnership Board",
+      "target": "Mental Health",
+      "relationship": "provides"
+    },
+    {
+      "source": "West Yorkshire Health and Care Partnership Board",
+      "target": "Diabetes Management",
+      "relationship": "provides"
+    },
+    {
+      "source": "West Yorkshire Health and Care Partnership Board",
+      "target": "Frailty Management",
+      "relationship": "provides"
+    },
+    {
+      "source": "West Yorkshire Health and Care Partnership Board",
+      "target": "Dementia Care",
+      "relationship": "provides"
+    },
+    {
+      "source": "West Yorkshire Health and Care Partnership Board",
+      "target": "Maternity Services",
+      "relationship": "provides"
+    },
+    {
+      "source": "Leeds Teaching Hospitals NHS Trust",
+      "target": "Inpatient Care",
+      "relationship": "provides"
+    },
+    {
+      "source": "NHS England",
+      "target": "Elective Operation",
+      "relationship": "provides"
+    },
+    {
+      "source": "NHS England",
+      "target": "Emergency Care",
+      "relationship": "provides"
+    },
+    {
+      "source": "Leeds Community Healthcare NHS Trust",
+      "target": "Community Health Services",
+      "relationship": "provides"
+    },
+    {
+      "source": "Leeds Community Healthcare NHS Trust",
+      "target": "Quick Response",
+      "relationship": "provides"
+    },
+    {
+      "source": "NHS England",
+      "target": "Complex Physical Disabilities Care",
+      "relationship": "provides"
+    },
+    {
+      "source": "NHS England",
+      "target": "Long-term Health Conditions Management",
+      "relationship": "provides"
+    }
+  ],
+  "metadata": {
+    "original_total": 21252,
+    "filtered_total": 145,
+    "removed_count": 21107,
+    "threshold": 5,
+    "filtered_date": "2025-11-04T10:28:35.896200",
+    "filter_version": "1.0"
+  }
+}
