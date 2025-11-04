@@ -10,7 +10,10 @@
       "Bash(\"C:\\Users\\al261\\OneDrive\\Documents\\Langchain\\.venv\\Scripts\\python.exe\":*)",
       "Bash(git push:*)",
       "Bash(git checkout:*)",
-      "Bash(gh issue create:*)"
+      "Bash(gh issue create:*)",
+      "Bash(python:*)",
+      "Bash(.venvScriptsactivate)",
+      "Bash(\".venv\\Scripts\\python.exe\" -c \"import chromadb, langchain, openai, networkx; print(''All core dependencies loaded'')\")"
     ],
     "deny": [],
     "ask": []
